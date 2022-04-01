@@ -13,20 +13,10 @@
             <link>https://catena-x.net/blog/Office Hours</link>
             <guid>Office Hours</guid>
             <pubDate>Fri, 01 Apr 2022 00:00:00 GMT</pubDate>
-            <description><![CDATA[In our todays office hours, we discussed the following topics]]></description>
-            <content:encoded><![CDATA[<p>In our todays office hours, we discussed the following topics</p><ol><li>News from the DevSecOps Team</li><li>News from the Security Team (e.g. our new tooling)</li><li>Hands-On</li></ol><p>You find the recording <a href="https://bcgcatenax.sharepoint.com/:f:/s/CommunitiesofPractises/EkMga9rBDCNCgWn-PU4fipcBv2fnSL9lx5Yw4TFUv1TUwg?e=jv2r2k" target="_blank" rel="noopener noreferrer">here</a></p>]]></content:encoded>
+            <description><![CDATA[In our today's office hours, we discussed the following topics]]></description>
+            <content:encoded><![CDATA[<p>In our today's office hours, we discussed the following topics</p><ol><li>News from the DevSecOps Team<ol><li>Good progress on vault setup</li></ol></li><li>News from the Security Team<ol><li>Short introduction into VeraCode</li><li>VeraCode replaces SonarCloud as mandatory quality and security gate for release 1</li></ol></li><li>Hands-On</li></ol><p>You find the recording <a href="https://bcgcatenax.sharepoint.com/:f:/s/CommunitiesofPractises/EkMga9rBDCNCgWn-PU4fipcBv2fnSL9lx5Yw4TFUv1TUwg?e=jv2r2k" target="_blank" rel="noopener noreferrer">here</a></p>]]></content:encoded>
             <category>news</category>
             <category>officehour</category>
-        </item>
-        <item>
-            <title><![CDATA[Launch of our support / landing page]]></title>
-            <link>https://catena-x.net/blog/launch-landing-page</link>
-            <guid>launch-landing-page</guid>
-            <pubDate>Fri, 01 Apr 2022 00:00:00 GMT</pubDate>
-            <description><![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet]]></description>
-            <content:encoded><![CDATA[<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>]]></content:encoded>
-            <category>hola</category>
-            <category>docusaurus</category>
         </item>
     </channel>
 </rss>
