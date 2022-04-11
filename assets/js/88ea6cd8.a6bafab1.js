@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkcatenax_ng=self.webpackChunkcatenax_ng||[]).push([[526],{2745:function(a){a.exports=JSON.parse('{"allTagsPath":"/blog/tags","name":"officehour","count":2,"permalink":"/blog/tags/officehour"}')}}]);
