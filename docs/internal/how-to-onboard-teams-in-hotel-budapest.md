@@ -128,21 +128,22 @@ $ echo -n "<username\>:<PAT\>\" | base64
 $ echo -n  '{"auths":{"ghcr.io":{"auth":"<base-64 encoded PAT "\}}}' | base64  
 If the output is divided into 2 lines, just add the second line to the first (without space)  
 - Create a dockerconfigjson.yaml  
-    kind: Secret   
+```
+    kind: Secret  
     type: kubernetes.io/dockerconfigjson  
     apiVersion: v1  
     metadata:  
-          name: <name of the pull secret\>  
-          labels:  
-                app: app-name  
+        name: <name of the pull secret\>  
+        labels:  
+            app: app-name  
     data:  
         .dockerconfigjson: <base64 encoded auth part, output from second base64 encoding\>  
-
+```
 - Then add the secret to the cluster  
 kubectl create -f dockerconfigjson.yaml  
 - pull secret has to be added to the product´s code  
 imagePullSecrets:  
-    - name: <name of the pull secret\>  
+    - name: <name of the pull secret>  
 
 ## Enable access to a private package (own secret over vault)  
 - to be done
