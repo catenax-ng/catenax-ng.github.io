@@ -112,9 +112,10 @@ kubectl apply –f <name of yaml-file\> -n argocd
 settings - Developer settings - Personal access token.  
 Be sure to give just the needed rights (read:package will be sufficient to deploy)  
 - Now do a base64 encoding for the PAT  
-$ echo -n "<username\>:<PAT\>\" | base64  
+$ echo -n "<username\>:<PAT\>" | base64  
 - Create a file “.dockerconfigjson” containing the base-64 encoded PAT  
-```{  
+```
+{  
     "auths":  
     {  
         "ghcr.io":  
@@ -125,7 +126,7 @@ $ echo -n "<username\>:<PAT\>\" | base64
 }
 ```  
 - Do a base 64 encoding for the auth part  
-$ echo -n  '{"auths":{"ghcr.io":{"auth":"<base-64 encoded PAT "\}}}' | base64  
+$ echo -n  '{"auths":{"ghcr.io":{"auth":"<base-64 encoded PAT\>"\}}}' | base64  
 If the output is divided into 2 lines, just add the second line to the first (without space)  
 - Create a dockerconfigjson.yaml  
 ```
