@@ -16,7 +16,7 @@ As of now, you can access Vault with the following authentication methods:
 - AppRole
 
 Github Token is intendet for personal login into Vault. The AppRole method is used for machine logins, aka your ArgoCD 
-application will use this method to authenticate aginst Vault.
+application will use this method to authenticate against Vault.
 
 Planned login/authentication methods:
 - OIDC login (using GitHub as SSO, as you know it from ArgoCD UI)
@@ -24,13 +24,14 @@ Planned login/authentication methods:
 ### Login With GitHub Token
 #### Create GitHub Token
 To be able to use GitHub Token as login method with Vault you first have to create a personal token with appropriate
-permissions granted. To create a personalized token 
+permissions granted. To create a personalized token:
+
 - login into GitHub and goto [Settings -> Token](https://github.com/settings/tokens).
 - click on the _Generate new token_ button in the upper right corner 
-- add a note that fits your needs (this helps you to identify the intent of the token later)
-- select a expiration date matching your needs for your token (it's up to you to deside about expiration)
+- add a _Note_ that fits your needs (this helps you to identify the intent of the token later)
+- select a _Expiration_ date matching your needs for your token (it's up to you to deside about expiration)
 - grant at least [_read:org_](https://www.vaultproject.io/docs/auth/github) permissions to your token
-- click on _generate token_ at the bottom of the form.
+- click on _Generate token_ at the bottom of the form.
 
 After these steps GitHub will show you the token.
 > **Note:**<br>
@@ -52,7 +53,7 @@ following steps:
 ```shell
 $ export GH_TOKEN="YOUR_TOKEN"
 $ export VAULT_ADDR="https://vault.vault.demo.catena-x.net:443"
-$ vault login -method=github token=$YOUR_TOKEN
+$ vault login -method=github token=$GH_TOKEN
 Success! You are now authenticated. The token information displayed below
 is already stored in the token helper. You do NOT need to run "vault login"
 again. Future Vault requests will automatically use this token.
@@ -93,7 +94,7 @@ After you have created your first secret in Vault, the path is created inside yo
 ![Vault secret store folder structure](assets/vault-folder-structure.png)
 
 ### Using the Vault Cli
-To create a secret using the CLI execute the follwing command `vault kv put path/to/secret key1=value2 [key2=value2], 
+To create a secret using the CLI execute the follwing command `vault kv put path/to/secret key1=value2 [key2=value2]`, 
 example:
 
 ```shell
