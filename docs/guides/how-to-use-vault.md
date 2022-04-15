@@ -6,7 +6,7 @@ met:
 - your product-team must have been onboarded to Catena-X NG GitHub organization
 
 For guidance of how to use secret with an ArgoCD application, please refer to
-[How To Use Vault Secrets With ArgoCD](./howto-use-vault-secrets-with-argocd.md).
+[_How To Use Vault Secrets With ArgoCD_](howto-use-vault-secrets-with-argocd.md).
 
 The Catena-X Vault instance URL is: [https://vault.vault.demo.catena-x.net](https://vault.vault.demo.catena-x.net)
 
@@ -17,8 +17,9 @@ As of now, you can access Vault with the following authentication methods:
 - GitHub (Token based)
 - AppRole
 
-Github Token is intendet for personal login into Vault. The AppRole method is used for machine logins, aka your ArgoCD
-application will use this method to authenticate against Vault.
+GitHub Token is intended for personal login to Vault. The AppRole method is used for machine logins, aka your ArgoCD
+application will use this method to authenticate against Vault. This guide will cover only the login methods for
+personal login methods.
 
 Planned login/authentication methods:
 
@@ -28,39 +29,42 @@ Planned login/authentication methods:
 
 #### Create GitHub Token
 
-To be able to use GitHub Token as login method with Vault you first have to create a personal token with appropriate
+To be able to use GitHub Token as login method with Vault you have to create a personal token with appropriate
 permissions granted. To create a personalized token:
 
-- login into GitHub and goto [Settings -> Token](https://github.com/settings/tokens).
+- login to GitHub and go to [Settings / Developer settings / Personal access tokens](https://github.com/settings/tokens)
+  .
 - click on the _Generate new token_ button in the upper right corner
 - add a _Note_ that fits your needs (this helps you to identify the intent of the token later)
-- select a _Expiration_ date matching your needs for your token (it's up to you to deside about expiration)
-- grant at least [_read:org_](https://www.vaultproject.io/docs/auth/github) permissions to your token
+- select an _Expiration_ date
+- grant [_read:org_](https://www.vaultproject.io/docs/auth/github) permissions to your token
 - click on _Generate token_ at the bottom of the form.
 
 After these steps GitHub will show you the token.
 
-:::caution
+:::danger
 
-GitHub will show the token **only once** in WebUI. If you miss to safe the token in any kind (we strongly suggest to
-use e.g. [KeePass](https://keepass.info) (or any other password manager) for storing personal sensitive data) you'll
-have to generate a new token (and revoke the old one).
+GitHub will show the token **only once** after creation. If you miss to safe the token in any kind you'll have to
+generate a new token and revoke the old one for security reasons.
+
+We strongly suggest to use a password manager like [KeePass](https://keepass.info) (or any other password manager) to
+store personal sensitive data.
 
 :::
 
-#### Using The Token For Login
+#### Using The Token To Login
 
 ##### WebUI
 
-To login into Vault using your generated GitHub token, goto [Vault](https://vault.vault.demo.catena-x.net), select
+To log in to Vault using your generated GitHub token, go to [Vault](https://vault.vault.demo.catena-x.net), select
 _GitHub_ as Method and enter your token in the field _GitHub token_:
 
-![Vault Login Page](./assets/vault-login-page.png)
+![Vault Login Page](assets/vault-login-page.png)
 
 ##### CLI
 
-You can also use the [Vault Cli](https://www.vaultproject.io/downloads) manage your secrets. To login in CLI execute the
-following steps:
+You can also use the [Vault Cli](https://www.vaultproject.io/downloads) to manage your secrets. To login in CLI execute
+the following steps:
 
 ```shell
 $ export GH_TOKEN="YOUR_TOKEN"
@@ -95,13 +99,7 @@ After login to Vault, you'll have access to the Vault secret engine/store create
 To create a secret
 
 - click on _Create secret +_ in the upper right area
-- enter a _Path for this secret_, this will be the secret name<br>
-  :::tip
-  
-  We strongly suggest to organize secrets in folders based on its intention. Vault will automatically create
-  subfolders, if you enter a specific path.
-  
-  :::
+- enter a _Path for this secret_, this will be the secret name
 - add as many _Secret data_ lines, as you require to store in this secret
 - click on the _Save_ button to store your first secret
 
@@ -113,10 +111,16 @@ easily.
 
 ![Vault secret store folder structure](assets/vault-folder-structure.png)
 
+:::tip
+
+We strongly suggest to organize secrets in folders based on its intention. Vault will automatically create folders, if
+you enter a specific path.
+
+:::
+
 ### Using the Vault Cli
 
-To create a secret using the CLI execute the follwing command `vault kv put path/to/secret key1=value2 [key2=value2]`,
-example:
+To create a secret using the CLI execute the command `vault kv put path/to/secret key1=value2 [key2=value2]`, example:
 
 ```shell
 $ vault kv put product-team-example/hello foo=bar
