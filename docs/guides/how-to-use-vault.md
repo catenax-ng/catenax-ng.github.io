@@ -100,11 +100,13 @@ To create a secret
   
   We strongly suggest to organize secrets in folders based on its intention. Vault will automatically create
   subfolders, if you enter a specific path.
+  
   :::
 - add as many _Secret data_ lines, as you require to store in this secret
 - click on the _Save_ button to store your first secret
 
 ![create your first secret](assets/vault-add-first-secret.png)
+Secret data values have been made visible for demonstration purpose. By default values aren't visible in plain text.
 
 After you have created your first secret in Vault, the path is created inside your secret store and can be browsed
 easily.
