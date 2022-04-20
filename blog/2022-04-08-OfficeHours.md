@@ -19,5 +19,5 @@ In our today's office hours, we discussed the following topics
    1. How do you work with Secrets and ArgoCD? -> Currently you send your secrets manually to us and we will apply it in your namespace. The vault integration is very close to finish, then you will be able to reference inside ArgoCD secrets from vault
    1. How to work with Helm dependencies? This was asked in context of how to seperate the catena-x specific helm chart and your product helm chart. The motivation for separation is to have not catena-x specific code in your repository -> There is no particular requirement to keep catena-x specifics out of your repository. Best practice might be to have a release process which removes all catena-x specific files (which would then also generate a documentation and other things)
 1. Hands-on
-   
+
 You find the recording [here](https://bcgcatenax.sharepoint.com/:f:/r/sites/CommunitiesofPractises/Shared%20Documents/CX-CoP%20DevSecOps/Office_Hours_Regular_Recordings?csf=1&web=1&e=YezRwb)
