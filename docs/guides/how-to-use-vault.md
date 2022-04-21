@@ -1,4 +1,6 @@
-# How To Use HashiCorp Vault
+---
+title: How To Use HashiCorp Vault
+--- 
 
 This guide is a small howto about how to store your secrets using HashiCorp Vault. Following prerequisites have to be
 met:
@@ -10,7 +12,7 @@ For guidance of how to use secret with an ArgoCD application, please refer to
 
 The Catena-X Vault instance URL is: [https://vault.vault.demo.catena-x.net](https://vault.vault.demo.catena-x.net)
 
-## Login To Vault
+## Available Vault Login Methods
 
 As of now, you can access Vault with the following authentication methods:
 
@@ -25,9 +27,7 @@ Planned login/authentication methods:
 
 - OIDC login (using GitHub as SSO, as you know it from ArgoCD UI)
 
-### Login With GitHub Token
-
-#### Create GitHub Token
+## Create GitHub Token
 
 To be able to use GitHub Token as login method with Vault you have to create a personal token with appropriate
 permissions granted. To create a personalized token:
@@ -52,16 +52,16 @@ store personal sensitive data.
 
 :::
 
-#### Using The Token To Login
+## Using The Token To Login
 
-##### WebUI
+### Vault WebUI
 
 To log in to Vault using your generated GitHub token, go to [Vault](https://vault.vault.demo.catena-x.net), select
 _GitHub_ as Method and enter your token in the field _GitHub token_:
 
 ![Vault Login Page](assets/vault-login-page.png)
 
-##### CLI
+### Vault CLI
 
 You can also use the [Vault Cli](https://www.vaultproject.io/downloads) to manage your secrets. To login in CLI execute
 the following steps:
@@ -90,7 +90,7 @@ $
 
 ## Create A Secret
 
-### Using The WebUI
+### Vault WebUI
 
 After login to Vault, you'll have access to the Vault secret engine/store created for your product-team.
 
@@ -118,7 +118,7 @@ you enter a specific path.
 
 :::
 
-### Using the Vault Cli
+### Vault Cli
 
 To create a secret using the CLI execute the command `vault kv put path/to/secret key1=value2 [key2=value2]`, example:
 
@@ -139,13 +139,13 @@ version            1
 
 ## Read A Secret
 
-### WebUI
+### Vault WebUI
 
 Login to Vault and browse to the secret you need, and click on the copy icon.
 
 ![Copy Secret](assets/vault-copy-secret-webui.png)
 
-### CLI
+### Vault CLI
 
 To read a secret using the CLI execute the command `vault kv get path/to/secret`, example:
 

@@ -1,4 +1,6 @@
-# How to deploy an application on 'Hotel Budapest'
+---
+title: How to deploy an application on 'Hotel Budapest'
+---
 
 This guide is a small "how-to" about deploying applications with ArgoCD.
 Following prerequisites have to be met:
