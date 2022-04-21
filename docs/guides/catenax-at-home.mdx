@@ -160,10 +160,10 @@ The request payload to create an EDC Asset is:
 
 The most relevant part of the edc payload are the fields `assetDto#asset:prop:id` and `dataAddressDto:endpoint`.
 
-Field | Description
---- | --- |
-`asset#properties#asset:prop:id` | The value of this field has to match the following pattern **<DIGITAL_TWIN_ID>-<DIGITAL_TWIN_SUBMODEL_ID>**. The Digital Twin Registry allows you to set the ids by yourself. You can generate the ids (UUIDv4) for the EDC Asset and use the same ids to create the Digital Twin and Submodel in the Digital Twin Registry. For an example, please have a look at the Postman collection.|
-`dataAddress#properties#endpoint` | This is the URL of your submodel server that provides the data we created in **Step 1**. You are free to define the URL on your own. The only requirement is that it returns the requested data for the Digital Twins submodel.** |
+| Field                             | Description                                                                                                                                                                                                                                                                                                                                                                                |
+|-----------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `asset#properties#asset:prop:id`  | The value of this field has to match the following pattern **<DIGITAL_TWIN_ID>-<DIGITAL_TWIN_SUBMODEL_ID>**. The Digital Twin Registry allows you to set the ids by yourself. You can generate the ids (UUIDv4) for the EDC Asset and use the same ids to create the Digital Twin and Submodel in the Digital Twin Registry. For an example, please have a look at the Postman collection. |
+| `dataAddress#properties#endpoint` | This is the URL of your submodel server that provides the data we created in **Step 1**. You are free to define the URL on your own. The only requirement is that it returns the requested data for the Digital Twins submodel.**                                                                                                                                                          |
 
 
 
@@ -196,9 +196,9 @@ The request payload to create an EDC policy is:
 }
 ```
 
-Field | Description
---- | --- |
-`permissions[0]#target` | Must match the EDC asset id `asset#properties#asset:prop:id`.|
+| Field                   | Description                                                   |
+|-------------------------|---------------------------------------------------------------|
+| `permissions[0]#target` | Must match the EDC asset id `asset#properties#asset:prop:id`. |
 
 :::note Action
 Please run the request `3. Create an EDC policy` in the **Postman** collection.
@@ -221,10 +221,10 @@ The request payload for the creating an EDC contract definition is:
 }
 ```
 
-Field | Description
---- | --- |
-`accessPolicyId` | Must match the EDC policy uuid. |
-`contractPolicyId` | **TBD: Is this correct?** Must match the EDC policy uuid. |
+| Field              | Description                                               |
+|--------------------|-----------------------------------------------------------|
+| `accessPolicyId`   | Must match the EDC policy uuid.                           |
+| `contractPolicyId` | **TBD: Is this correct?** Must match the EDC policy uuid. |
 
 
 :::note Action
@@ -279,9 +279,9 @@ The payload for the creation of a digital twin is:
                 {
                     "interface": "SUBMODEL-1.0RC02",
                     "protocolInformation": {
-                        // {{providerControlPlaneDockerInternal}}/{{digitalTwinId}}-{{digitalTwinSubmodelId}}
+                        // {{providerControlPlaneDockerInternal}}/{{providerBpn}}/{{digitalTwinId}}-{{digitalTwinSubmodelId}}
                         // highlight-next-line
-                        "endpointAddress": "edc://provider-control-plane:8080/urn:uuid:365e6fbe-bb34-11ec-8422-0242ac120002-urn:uuid:61125dc3-5e6f-4f4b-838d-447432b97918/submodel?content=value&extent=withBlobValue",
+                        "endpointAddress": "http://provider-control-plane:8080/some-bpn/urn:uuid:365e6fbe-bb34-11ec-8422-0242ac120002-urn:uuid:61125dc3-5e6f-4f4b-838d-447432b97918/submodel?content=value&extent=withBlobValue",
                         "endpointProtocol": "IDS/ECLIPSE DATASPACE CONNECTOR",
                         "endpointProtocolVersion": "0.0.1-SNAPSHOT"
                     }
@@ -292,14 +292,14 @@ The payload for the creation of a digital twin is:
 }
 ```
 
-Field | Description
---- | --- |
-`globalAssetId#value[0]` | The global asset id is meant to identify a physical asset uniquely. The MAC-Address a real world example. In the manufacturing world such a global asset id does not yet exist. Therefore the value here must be equal to the Digital Twin id (#identification).  |
-`specificAssetIds` | Your digital twin can be searched for by sspecificAssetIds. |
-`identification` | The uuid you can set by yourself. |
-`submodeldescriptors[0]#identification` | The uuid you can set by yourself. |
-`submodeldescriptors[0]#semanticId[0]#value` | The urn of the Semantic Model. The Semantic Model describes the structure of the data your submodel endpoint returns. It is the structure definition that a data consumer expects when calling your submodel endpoint.|
-`submodeldescriptors[0]#endpoints[0]#protocolInformation#endpointAddress` | The URL must be structured as in the example above. The URL contains the asset id (**<DIGITAL_TWIN_ID>-<DIGITAL_TWIN_SUBMODEL_ID>**) which is used to filter for an EDC Asset to get the endpoint of your submodel endpoint in `dataAddress#properties#endpoint`. |
+| Field                                                                     | Description                                                                                                                                                                                                                                                                                             |
+|---------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `globalAssetId#value[0]`                                                  | The global asset id is meant to identify a physical asset uniquely. The MAC-Address a real world example. In the manufacturing world such a global asset id does not yet exist. Therefore the value here must be equal to the Digital Twin id (#identification).                                        |
+| `specificAssetIds`                                                        | Your digital twin can be searched for by sspecificAssetIds.                                                                                                                                                                                                                                             |
+| `identification`                                                          | The uuid you can set by yourself.                                                                                                                                                                                                                                                                       |
+| `submodeldescriptors[0]#identification`                                   | The uuid you can set by yourself.                                                                                                                                                                                                                                                                       |
+| `submodeldescriptors[0]#semanticId[0]#value`                              | The urn of the Semantic Model. The Semantic Model describes the structure of the data your submodel endpoint returns. It is the structure definition that a data consumer expects when calling your submodel endpoint.                                                                                  |
+| `submodeldescriptors[0]#endpoints[0]#protocolInformation#endpointAddress` | The URL must be structured as in the example above. The URL contains the Business-Partner-Number (BPN) and the asset id (**<DIGITAL_TWIN_ID>-<DIGITAL_TWIN_SUBMODEL_ID>**) which is used to filter for an EDC Asset to get the endpoint of your submodel endpoint in `dataAddress#properties#endpoint`. |
 
 :::note Action
 Please run the request `5. Create a Digital Twin` of the **Postman** collection.
@@ -391,7 +391,7 @@ Take a look to the `SubmodelDescriptor#endpoints#endpointAddress` in the respons
 ```
 
 The endpoint address is different from what we registered in `Step 5`.
-Please run the Postman Request `1.3 NON-PROXY Query for a Digital Twin` of the **Postman** collection.
+Please run the Postman Request `1.2 NON-PROXY Query for a Digital Twin` of the **Postman** collection.
 The request is targeted directly to the Digital Twin registry.
 
 ```json
@@ -403,7 +403,7 @@ The request is targeted directly to the Digital Twin registry.
                     "interface": "SUBMODEL-1.0RC02",
                     "protocolInformation": {
                         // highlight-next-line
-                        "endpointAddress": "edc://provider-control-plane:8090/urn:uuid:365e6fbe-bb34-11ec-8422-0242ac120002-urn:uuid:61125dc3-5e6f-4f4b-838d-447432b97918/submodel?content=value&extent=withBlobValue",
+                        "endpointAddress": "http://provider-control-plane:8090/some-bpn/urn:uuid:365e6fbe-bb34-11ec-8422-0242ac120002-urn:uuid:61125dc3-5e6f-4f4b-838d-447432b97918/submodel?content=value&extent=withBlobValue",
                         "endpointProtocol": "IDS/ECLIPSE DATASPACE CONNECTOR",
                         "endpointProtocolVersion": "0.0.1-SNAPSHOT"
                     }
