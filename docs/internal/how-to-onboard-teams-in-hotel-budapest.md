@@ -100,18 +100,42 @@ kubectl apply –f <name of yaml-file\> -n argocd
 **Now argoCD access to all existing projects (read-only) and the 'own' project (read/write) is possible!**
 
 ## Enable access to a private repository via deploy key
-the **project/product** has to generate an ssh-key
-  - e.g. ssh-keygen -t ed25519  
-  - don´t use a passphrase  
-  - save key to a safe place  
-  - add sshPublicKey to your Github repo under settings - deploy key  
 
-create a key/value pair in the the vault https://vault.vault.demo.catena-x.net/  
-  - create secret  
-  - path "deploy-key"  
-  - key "project-name-deploy-key"  
-  - value sshPrivateKey  
-  - give this information to devsecops team  
+:::note
+#### the ***project/product*** has to follow the steps  
+
+which can be found here: [How to prepare a private repo](how-to-prepare-a-private-repo)
+
+:::
+
+#### the ***devsecops team*** has to do following steps
+  - go to catenax-ng\k8s-cluster-stack\environments\environment\argo-repos
+  - add a file named <product-name\>-repo.yaml  
+
+e.g. for product-semantics (product-semantics-repo.yaml)
+```bash 
+apiVersion: v1
+kind: Secret
+metadata:
+  name: product-semantics-repo
+  namespace: argocd
+  annotations:
+    avp.kubernetes.io/path: "semantics/data/deploy-key"
+  labels:
+    argocd.argoproj.io/secret-type: repository
+stringData:
+  type: git
+  url: git@github.com:catenax-ng/product-semantics
+  name: product-semantics-repo
+  project: project-semantics
+  sshPrivateKey: |
+    <semantics-deploy-key>
+```	
+  - add following line to \catenax-ng\k8s-cluster-stack\environments\hotel-budapest\kustomization.yaml
+```bash
+  - argo-repos/product-semantics-repo.yaml
+```
+
 
 ## Enable access to a private package (central pull secret)  
 - Create a PAT within Github user account (machine user)  
