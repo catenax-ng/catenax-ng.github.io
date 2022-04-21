@@ -1,7 +1,7 @@
 ---
 title: How To Use Vault Secrets With ArgoCD
 ---
-This guide is a small howto about how to use secrets stored in HashiCorp Vault with your ArgoCD applications (with Helm
+This guide is a small howto about using secrets stored in HashiCorp Vault with your ArgoCD applications (with Helm
 charts or Kustomize). Following prerequisites have to be met:
 
 - you must have stored your secret inside your Vault tenant
