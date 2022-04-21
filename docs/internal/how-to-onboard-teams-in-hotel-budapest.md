@@ -100,12 +100,18 @@ kubectl apply –f <name of yaml-file\> -n argocd
 **Now argoCD access to all existing projects (read-only) and the 'own' project (read/write) is possible!**
 
 ## Enable access to a private repository via deploy key
-- Create an ssh-key (SHA2), e.g “ssh-keygen –t ed25519" without passphrase and save to a safe location  
-- In Github move to the private repository - settings - deploy key  
-- Add deploy key (paste public key into)  
-- In ArgoCD create a repository (settings, Repositories, connect repo using SSH)  
-- Add name, Repository URL, SSH private key data, check “Skip server data”  
-- Now the ArgoCD App can be created  
+the **project/product** has to generate an ssh-key
+  - e.g. ssh-keygen -t ed25519  
+  - don´t use a passphrase  
+  - save key to a safe place  
+  - add sshPublicKey to your Github repo under settings - deploy key  
+
+create a key/value pair in the the vault https://vault.vault.demo.catena-x.net/  
+  - create secret  
+  - path "deploy-key"  
+  - key "project-name-deploy-key"  
+  - value sshPrivateKey  
+  - give this information to devsecops team  
 
 ## Enable access to a private package (central pull secret)  
 - Create a PAT within Github user account (machine user)  
