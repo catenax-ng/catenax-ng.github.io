@@ -104,7 +104,7 @@ kubectl apply –f <name of yaml-file\> -n argocd
 :::note
 #### the ***project/product*** has to follow the steps  
 
-which can be found here: [How to prepare a private repo](how-to-prepare-a-private-repo)
+which can be found here: [How to prepare a private repo](guides/how-to-prepare-a-private-repo)
 
 :::
 

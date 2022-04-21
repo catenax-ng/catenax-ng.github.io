@@ -14,8 +14,9 @@ title: How to prepare a private repo
 
   - navigate to https://vault.vault.demo.catena-x.net/  
   - click your Secrets Engine
-  - create secret
-  - path "deploy-key"
-  - name the key "<project-name\>-deploy-key"
+  - click "Create secret +"
+  - in field "Path for this secret" type "deploy-key"
+  - under "Secret data" name the key "<project-name\>-deploy-key"
   - paste your sshPrivateKey to the value field
-  - give this information to devsecops team
+  - save
+  - provide this information to DevSecOps team with your ArgoCD project request
