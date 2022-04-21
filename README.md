@@ -21,7 +21,6 @@ If there are any issues with wrong/outdated links, the github action will fail. 
 
 Mini guide for proceeding with documentation on [Catena-X page](https://catenax-ng.github.io/)
 
-- Procedures (for the Team and also for internal operators) must be documented
 - Documentation is written as a markdown file. Contributions are done via pull request
 - We use [markdownlint](https://www.npmjs.com/package/markdownlint) in a pre-commit hook.
 
