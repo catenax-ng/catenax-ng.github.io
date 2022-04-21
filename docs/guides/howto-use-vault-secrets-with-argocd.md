@@ -2,15 +2,19 @@
 title: How To Use Vault Secrets With ArgoCD
 ---
 This guide is a small howto about using secrets stored in HashiCorp Vault with your ArgoCD applications (with Helm
-charts or Kustomize). Following prerequisites have to be met:
+charts or Kustomize).
 
-- you must have stored your secret inside your Vault tenant
-- vault placeholders inside app dependend files (ArgoCD App, helm, kustomize, etc.)
-- you must have configured your ArgoCD application to use at least one ArgoCD Vault Plugin (AVP) using the _
-  vault-secret_
+:::info tl;dr
+To use vault secrets with your ArgoCD app, you have to
+
+- store your secret inside your Vault tenant
+- insert placeholders to app dependend files (ArgoCD App, helm, kustomize, etc.)
+- configure your ArgoCD application to use an ArgoCD Vault Plugin (AVP) using the _vault-secret_
 
 For guidance of how to use Vault and store a secret inside Vault, please refer to
 [How To Use Vault](how-to-use-vault.md).
+
+:::
 
 ## Add Placeholder To Your Code
 
@@ -87,7 +91,7 @@ To enable your ArgoCD app to use the AVP plugin there are two mandatory steps re
 
 :::info Your Vault Secret
 
-The _vault-secret_ have been created for each product-team during onboarding.
+The _vault-secret_ has been created for each product-team during onboarding.
 
 :::
 
