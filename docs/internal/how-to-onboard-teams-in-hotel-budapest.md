@@ -103,16 +103,16 @@ kubectl apply –f <name of yaml-file\> -n argocd
 ## Enable access to a private repository via deploy key
 
 :::note
-#### the ***project/product*** has to follow the steps
+#### The project/product has to follow the steps
 
 which can be found here: [How to prepare a private repo](guides/how-to-prepare-a-private-repo)
 
 :::
 
-#### the ***devsecops team*** has to do following steps
-- go to catenax-ng\k8s-cluster-stack\environments\<environment\>\argo-repos
-- add a file named <product-name\>-repo.yaml
-- add the new file to the environments kustomization.yaml
+#### The devsecops team has to do following steps
+- Go to catenax-ng\k8s-cluster-stack\environments\<environment\>\argo-repos
+- Add a file named <product-name\>-repo.yaml
+- Add the new file to the environments kustomization.yaml
 
 e.g. for product-semantics (product-semantics-repo.yaml)
 ```bash
@@ -133,7 +133,7 @@ project: project-semantics
 sshPrivateKey: |
 <semantics-deploy-key>
 ```
-- add following line to \catenax-ng\k8s-cluster-stack\environments\hotel-budapest\kustomization.yaml
+- Add following line to \catenax-ng\k8s-cluster-stack\environments\hotel-budapest\kustomization.yaml
 ```bash
 - argo-repos/product-semantics-repo.yaml
 ```
@@ -174,9 +174,11 @@ data:
 ```
 - Then add the secret to the cluster
 kubectl create -f dockerconfigjson.yaml
-- pull secret has to be added to the product´s code
-imagePullSecrets:
-- name: <name of the pull secret\>
+- Pull secret has to be added to the product´s code
+  ```bash
+  imagePullSecrets:
+    - name: <name of the pull secret\>
+  ```
 
 ## Enable access to a private package (own secret over vault)
-- to be done
+- To be done
