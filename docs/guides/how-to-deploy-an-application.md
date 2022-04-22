@@ -10,7 +10,7 @@ Following prerequisites have to be met:
   - as public [package on GitHub](https://github.com/orgs/catenax-ng/packages) ...
   - or on _cxtsiacr.azurecr.io_ -> not recommended, since no scans can be done on these images
   - or as private [package on GitHub](https://github.com/orgs/catenax-ng/packages) -> Does not work yet. Pull secrets have to be provided
-- If your Github repository is set to private, you first have to process the steps documented here: [prepare for private repos](how-to-prepare-a-private-repo)
+- If your GitHub repository is set to private, you first have to process the steps documented here: [prepare for private repos](how-to-prepare-a-private-repo)
 - An ArgoCD project needs to be created by the DevSecOps team for you.
 
 If these prerequisites are met, you can log in to ArgoCD with your GitHub account here: [https://argo.demo.catena-x.net/](https://argo.demo.catena-x.net/applications)
@@ -20,14 +20,14 @@ If these prerequisites are met, you can log in to ArgoCD with your GitHub accoun
 After logging in to ArgoCDs UI, you'll see an overview of all already existing Applications. To create a new one, click the
 _NEW APP_ button on the top left. You'll need to choose an application name, which is used to display the application on
 ArgoCD's application overview. Also, you have to select the project that was created for your team, since this will be the
-only one that your user has privileges for to create applications. The following example show, how the UI for creating an
+only one that your user has privileges for to create applications. The following example shows, how the UI for creating an
 application looks like:
 
 ![Add application metadata](assets/new_application_metadata.png)
 
 Beside application name and project, the attribute _sync policy_ is interesting to choose carefully. There are two options
 _Manual_ and _Automatic_. The _Manual_ sync policy means, that you are in full control of when kubernetes resources you defined
-in you git repository are being created. _Automatic_ on the other hand tells ArgoCD to watch your Git repository.
+in your GitHub repository are being created. _Automatic_ on the other hand tells ArgoCD to watch your Git repository.
 On a regular basis, it checks for changes in the git history and will auto-apply the resources if there are any.
 
 ## Specify Git repository URL containing your helm chart
@@ -82,7 +82,7 @@ After app creation, you'll find your application with a yellow bar and the statu
 
 ![Unsynced app](assets/new_application_unsynced_app.png)
 
-By clicking the 'Sync' button, you can tell ArgoCD to create all the kubernetes resources defined in your git repository.
+By clicking the 'Sync' button, you can tell ArgoCD to create all the kubernetes resources defined in your GitHub repository.
 This process can take a while. If successful, you'll see the application turning from yellow and OutOfSync to
 green and Synced. You can also click on the application to open the details page.
 This will show you a graph of all the resource created.

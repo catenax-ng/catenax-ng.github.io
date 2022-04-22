@@ -2,7 +2,7 @@
 title: How to prepare a private repo
 ---
 
-*** if your Github repo is set to private, you have to do following to be able to onboard ***
+*** if your GitHub repo is set to private, you have to do following to be able to onboard ***
 
 #### 1. create an ssh-key
   - e.g. ssh-keygen -t ed25519
@@ -10,7 +10,7 @@ title: How to prepare a private repo
   - save key to a safe place
   - add sshPublicKey to your Github repo under settings - deploy key
 
-#### 2. create a key/value pair in the the vault
+#### 2. create a key/value pair in the vault
 
   - navigate to https://vault.vault.demo.catena-x.net/
   - click your Secrets Engine
