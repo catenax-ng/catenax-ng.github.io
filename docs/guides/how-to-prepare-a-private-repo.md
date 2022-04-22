@@ -12,7 +12,7 @@ title: How to prepare a private repo
 
 #### 2. create a key/value pair in the the vault
 
-  - navigate to https://vault.vault.demo.catena-x.net/  
+  - navigate to https://vault.vault.demo.catena-x.net/
   - click your Secrets Engine
   - click "Create secret +"
   - in field "Path for this secret" type "deploy-key"

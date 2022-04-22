@@ -91,29 +91,30 @@ argoCD \> settings \> projects \> ‘project’ \> roles
 ![image8.png](assets/image8.png)  
 
 ## Create a new argocd project with yaml-file
-- Start (e.g. with PowerShell) from where the yaml-file is located  
-- Check, if in the right cluster:  
-kubectl config current-context  
-- run the yaml-file in namespace 'argocd':  
-kubectl apply –f <name of yaml-file\> -n argocd  
+- Start (e.g. with PowerShell) from where the yaml-file is located
+- Check, if in the right cluster:
+kubectl config current-context
+- run the yaml-file in namespace 'argocd':
+kubectl apply –f <name of yaml-file\> -n argocd
 
 **Now argoCD access to all existing projects (read-only) and the 'own' project (read/write) is possible!**
 
 ## Enable access to a private repository via deploy key
 
 :::note
-#### the ***project/product*** has to follow the steps  
+#### the ***project/product*** has to follow the steps
 
 which can be found here: [How to prepare a private repo](guides/how-to-prepare-a-private-repo)
 
 :::
 
 #### the ***devsecops team*** has to do following steps
-  - go to catenax-ng\k8s-cluster-stack\environments\environment\argo-repos
-  - add a file named <product-name\>-repo.yaml  
+  - go to catenax-ng\k8s-cluster-stack\environments\<environment\>\argo-repos
+  - add a file named <product-name\>-repo.yaml
+  - add the new file to the environments kustomization.yaml
 
 e.g. for product-semantics (product-semantics-repo.yaml)
-```bash 
+```bash
 apiVersion: v1
 kind: Secret
 metadata:
@@ -130,7 +131,7 @@ stringData:
   project: project-semantics
   sshPrivateKey: |
     <semantics-deploy-key>
-```	
+```
   - add following line to \catenax-ng\k8s-cluster-stack\environments\hotel-budapest\kustomization.yaml
 ```bash
   - argo-repos/product-semantics-repo.yaml
