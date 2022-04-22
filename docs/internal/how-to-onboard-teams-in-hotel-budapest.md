@@ -147,15 +147,15 @@ Be sure to give just the needed rights (read:package will be sufficient to deplo
 $ echo -n "<username\>:<PAT\>" | base64
 - Create a file “.dockerconfigjson” containing the base-64 encoded PAT
 ```
-{
-"auths":
-{
-"ghcr.io":
-{
-"auth":"<base-64 encoded PAT>"
-}
-}
-}
+  {
+    "auths":
+    {
+      "ghcr.io":
+      {
+        "auth":"<base-64 encoded PAT>"
+      }
+    }
+  }
 ```
 - Do a base 64 encoding for the auth part
 $ echo -n'{"auths":{"ghcr.io":{"auth":"<base-64 encoded PAT\>"\}}}' | base64
@@ -176,7 +176,7 @@ data:
 kubectl create -f dockerconfigjson.yaml
 - pull secret has to be added to the product´s code
 imagePullSecrets:
-- name: <name of the pull secret>
+- name: <name of the pull secret\>
 
 ## Enable access to a private package (own secret over vault)
 - to be done
