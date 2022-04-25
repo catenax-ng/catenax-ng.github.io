@@ -119,19 +119,19 @@ e.g. for product-semantics (product-semantics-repo.yaml)
 apiVersion: v1
 kind: Secret
 metadata:
-name: product-semantics-repo
-namespace: argocd
-annotations:
-avp.kubernetes.io/path: "semantics/data/deploy-key"
-labels:
-argocd.argoproj.io/secret-type: repository
+  name: product-semantics-repo
+  namespace: argocd
+  annotations:
+    avp.kubernetes.io/path: "semantics/data/deploy-key"
+  labels:
+    argocd.argoproj.io/secret-type: repository
 stringData:
-type: git
-url: git@github.com:catenax-ng/product-semantics
-name: product-semantics-repo
-project: project-semantics
-sshPrivateKey: |
-<semantics-deploy-key>
+  type: git
+  url: git@github.com:catenax-ng/product-semantics
+  name: product-semantics-repo
+  project: project-semantics
+  sshPrivateKey: |
+    <semantics-deploy-key>
 ```
 - Add following line to \catenax-ng\k8s-cluster-stack\environments\hotel-budapest\kustomization.yaml
 ```bash
@@ -166,11 +166,11 @@ kind: Secret
 type: kubernetes.io/dockerconfigjson
 apiVersion: v1
 metadata:
-name: <name of the pull secret>
-labels:
-app: app-name
+  name: budapest-machine-user-read-package
+  labels:
+    app: app-name
 data:
-.dockerconfigjson: <base64 encoded auth part, output from second base64 encoding>
+  .dockerconfigjson: <base64 encoded auth part, output from second base64 encoding>
 ```
 - Then add the secret to the cluster
 ```
