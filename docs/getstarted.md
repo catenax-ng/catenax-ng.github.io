@@ -4,18 +4,22 @@ sidebar_position: 2
 
 # Get Started
 
-This page gives you a short overview over all critical things you need to know to get started. Pls be aware that all other documentation is here for your to browse & share. 
+This page gives you a short overview over all critical things you need to know to get started. Pls be aware that all other documentation is here for your to browse & share.
 
 ## Who are we
+
 We are the DevSecOps Tooling team inside Catena-X. You find our Team page in [Confluence](https://confluence.catena-x.net/display/ARTI/Product%3A+DevSecOps+Tooling).
 
 ## What do we provide
+
 We provide the platform stack of Catena-X as sane default in context of open source. We also provide environments to all Catena-X members for them to run their product/component on this platform stack.
 
 ## What we do NOT provide
+
 We are not responsible for all topics regarding Infrastructure. We do not manage JIRA, MS Teams and other centrally used services. If it is connected to environments and running your product/component, we are, otherwise we are not.
 
 ## How to get support
+
 This documentation should be your entry point to everything you need to know to run a product/component in Catena-X.
 
 Please get onboarded through your team members first, before creating requests or questions on our support channel. We are happy to help you, but to keep the capacity available to us to develop more and better features for you, we would ask you to try to use existing materials first.
@@ -24,8 +28,7 @@ We have a MS Teams Support channel ([Communities of Practices -> CX - CoP DevSec
 
 In case you prefer a hands-on/direct approach, we have an office hour every friday between 13:00-15:00 (german timezone). You can find the calendar invite [here](https://confluence.catena-x.net/pages/viewpage.action?pageId=25228715#InternalCatenaXinformationforsharingthroughLanding/Supportpage-OfficeHourCalendarInvite).
 
-The format of our Office Hour has a short update section at the beginning and after that its open for everyone to ask questions or discuss specific questions you have. 
-
+The format of our Office Hour has a short update section at the beginning and after that its open for everyone to ask questions or discuss specific questions you have.
 
 If you still feel lost or you don't feel confident to use our open office hour in a big group, feel free to request a direct [consulting](/docs/resources) with us.
 
@@ -43,6 +46,4 @@ For everything you need to request, pls go to our [Things to request](/docs/reso
 - Request access to environments
 - Use ArgoCD to deploy your product / component
 
-
 ## How to create a support ticket
-

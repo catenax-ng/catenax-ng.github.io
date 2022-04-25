@@ -1,17 +1,20 @@
 ---
-title: How to onboard teams in Hotel Budapest
 slug: /how-to-onboard-teams-in-hotel-budapest
 ---
 
+# How to onboard teams in 'Hotel Budapest'
 
-**This guide is only for those who operate the environment**
+These guide is
+**only for those who operate the environment**
 
 ## Which channel can/should be used to ask for onboarding
+
 Teams-channel [CX - CoP DevSecOps](https://teams.microsoft.com/l/channel/19%3a9a3c4a05a3514d07b973c13e7b468709%40thread.tacv2/CX%2520-%2520CoP%2520DevSecOps?groupId=17b1a2dc-67fb-4a49-a2ed-dd1344321439&tenantId=1ad22c6d-2f08-4f05-a0ba-e17f6ce88380)
 
 If the link doesn't work for you try: "Communities of Practices" → "hidden Channels" → "CX - CoP DevSecOps" in your Catena-X Teams.
 
 ## What we need from a team member
+
 who wants to login to GitHub Catena-X and deploy
 
 1. **GitHub user**
@@ -32,20 +35,21 @@ invited person gets an email with invitation – by accepting the invitation, th
 
 **Now the person has been invited and added as member to the organization**
 
-
 **Troubleshooting:**
 If the person gets no email: the person should check the github notifications-box or/and email spam folder
 
 ## Creating a Jira-task
-1. who wants which access
-2. use ‘labels’ for differentiate tasks e.g. 'onboarding', 'maintainer switched'
-3. add to current sprint
-***example of description in a Jira-task:***
-Contact Person: <name of the person\>
-- Invite to catenax-ng
-- Invite to team <name of the team (same as github project name)\>
-- Setup RBAC rules for team
-- Setup kubernetes namespace and ArgoCD Project
+
+1. who wants which access  
+2. use ‘labels’ for differentiate tasks e.g. 'onboarding', 'maintainer switched'  
+3. add to current sprint  
+***example of description in a Jira-task:***  
+Contact Person: <name of the person\>  
+
+- Invite to catenax-ng  
+- Invite to team <name of the team (same as github project name)\>  
+- Setup RBAC rules for team  
+- Setup kubernetes namespace and ArgoCD Project  
 
 ***Situation a:***
 Add person to an existing team:
@@ -75,6 +79,7 @@ https://argo.demo.catena-x.net/
 ![image7.png](assets/image7.png)
 
 ## Allow argoCD login for teams that want to deploy
+
 Take ‘template’ from environment-documentation/hotel-budapest/projects/ duplicate, rename and customize:
 - Argo project-name: new name of the argo project (in our case: same as github project name)
 - K8s namespace: new name of the K8s namespace (in our case is the naming convention: 'product-<github project name\>')
@@ -98,69 +103,44 @@ kubectl config current-context
 - run the yaml-file in namespace 'argocd':
 kubectl apply –f <name of yaml-file\> -n argocd
 
-**Now argoCD access to all existing projects (read-only) and the 'own' project (read/write) is possible!**
+### Now argoCD access to all existing projects (read-only) and the 'own' project (read/write) is possible
 
 ## Enable access to a private repository via deploy key
 
-:::note
-#### The project/product has to follow the steps
 
-which can be found here: [How to prepare a private repo](guides/how-to-prepare-a-private-repo)
-
-:::
-
-#### The devsecops team has to do following steps
-- Go to catenax-ng\k8s-cluster-stack\environments\<environment\>\argo-repos
-- Add a file named <product-name\>-repo.yaml
-- Add the new file to the environments kustomization.yaml
-
-e.g. for product-semantics (product-semantics-repo.yaml)
-```bash
-apiVersion: v1
-kind: Secret
-metadata:
-name: product-semantics-repo
-namespace: argocd
-annotations:
-avp.kubernetes.io/path: "semantics/data/deploy-key"
-labels:
-argocd.argoproj.io/secret-type: repository
-stringData:
-type: git
-url: git@github.com:catenax-ng/product-semantics
-name: product-semantics-repo
-project: project-semantics
-sshPrivateKey: |
-<semantics-deploy-key>
-```
-- Add following line to \catenax-ng\k8s-cluster-stack\environments\hotel-budapest\kustomization.yaml
-```bash
-- argo-repos/product-semantics-repo.yaml
-```
+- Create an ssh-key (SHA2), e.g “ssh-keygen –t ed25519" without passphrase and save to a safe location  
+- In Github move to the private repository - settings - deploy key  
+- Add deploy key (paste public key into)  
+- In ArgoCD create a repository (settings, Repositories, connect repo using SSH)  
+- Add name, Repository URL, SSH private key data, check “Skip server data”  
+- Now the ArgoCD App can be created  
 
 ## Enable access to a private package (central pull secret)
 
-- Create a PAT within Github user account (machine user)
-settings - Developer settings - Personal access token.
-Be sure to give just the needed rights (read:package will be sufficient to deploy)
-- Now do a base64 encoding for the PAT
-$ echo -n "<username\>:<PAT\>" | base64
+- Create a PAT within Github user account (machine user)  
+settings - Developer settings - Personal access token.  
+Be sure to give just the needed rights (read:package will be sufficient to deploy)  
+- Now do a base64 encoding for the PAT  
+$ echo -n "<username\>:<PAT\>" | base64  
 - Create a file “.dockerconfigjson” containing the base-64 encoded PAT
+
 ```
-  {
-    "auths":
-    {
-      "ghcr.io":
-      {
-        "auth":"<base-64 encoded PAT>"
-      }
-    }
-  }
+{  
+    "auths":  
+    {  
+        "ghcr.io":  
+            {  
+                "auth":"<base-64 encoded PAT>"  
+            }  
+    }  
+}
 ```
-- Do a base 64 encoding for the auth part
-$ echo -n'{"auths":{"ghcr.io":{"auth":"<base-64 encoded PAT\>"\}}}' | base64
-If the output is divided into 2 lines, just add the second line to the first (without space)
+
+- Do a base 64 encoding for the auth part  
+$ echo -n  '{"auths":{"ghcr.io":{"auth":"<base-64 encoded PAT\>"\}}}' | base64  
+If the output is divided into 2 lines, just add the second line to the first (without space)  
 - Create a dockerconfigjson.yaml
+
 ```
 kind: Secret
 type: kubernetes.io/dockerconfigjson
@@ -172,13 +152,16 @@ app: app-name
 data:
 .dockerconfigjson: <base64 encoded auth part, output from second base64 encoding\>
 ```
-- Then add the secret to the cluster
-kubectl create -f dockerconfigjson.yaml
-- Pull secret has to be added to the product´s code
-  ```bash
-  imagePullSecrets:
-    - name: <name of the pull secret\>
-  ```
+
+- Then add the secret to the cluster  
+kubectl create -f dockerconfigjson.yaml  
+- pull secret has to be added to the product´s code
+
+```
+imagePullSecrets:  
+    - name: <name of the pull secret>
+```
 
 ## Enable access to a private package (own secret over vault)
-- To be done
+
+- to be done
