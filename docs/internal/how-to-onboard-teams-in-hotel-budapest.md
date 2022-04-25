@@ -32,7 +32,6 @@ invited person gets an email with invitation – by accepting the invitation, th
 
 **Now the person has been invited and added as member to the organization**
 
-
 **Troubleshooting:**
 If the person gets no email: the person should check the github notifications-box or/and email spam folder
 
