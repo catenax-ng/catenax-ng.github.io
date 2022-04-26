@@ -9,12 +9,14 @@ General documentation see [helm.sh](https://helm.sh/).
 Catena-X uses kubernetes as a platform abstraction which requires kubernetes resources and container images.
 
 In a cloud native environment, to be able to deploy software, you need two main components:
+
 - container image -> what to run
 - kubernetes resources -> how to run it
 
 To have more flexibility on how to bundle your kubernetes resources, we decided on helm. It provides basic templating, feature flags and separated values files for easy configuration.
 
 Helm comes with features which make it easy to use your helm chart from others:
+
 - values.yaml file which enables a central way to configure parameters of your setup
 - helm dependencies: If you need a database or any other service, you can pull in helm charts which provide that service and make your application runable independend from external dependencies. This also makes e2e testing much easier
 
