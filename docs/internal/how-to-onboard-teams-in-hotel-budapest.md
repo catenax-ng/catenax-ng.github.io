@@ -427,7 +427,7 @@ here: [How to prepare a private repo](guides/how-to-prepare-a-private-repo).
 
 - Pull secret has to be added to the product´s code
 
-  ```shell
+  ```yaml
   imagePullSecrets:
     - name: <name of the pull secret>
   ```
