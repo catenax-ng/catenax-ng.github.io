@@ -49,10 +49,12 @@ spec:
             backend:
               service:
                 # Name of the service, the ingress controller should route the traffic to, if the host/path combination is called
-                name: {{ .Values.service.name }}
+                # Adjust that to your service name
+                name: my-k8s-service
                 port:
                   # Port number, the kubernetes service is listening on
-                  number: {{ .Values.service.port }}
+                  # Adjust that to your services' port
+                  number: 8080
                   
   # Config for creating proper TLS certificates host has to match the one from the ingress rule
   tls:
@@ -68,10 +70,6 @@ A values.yaml used for this template could look like the following:
 ```yaml
 appName: "my-app"
 environment: "dev"
-
-service:
-  name: my-k8s-service
-  port: 8080
 
 ingress:
   enabled: true
