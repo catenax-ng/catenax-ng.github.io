@@ -12,7 +12,7 @@ and can manage multiple ingress definitions provided by you.
 
 ## Catena-X kubernetes cluster setup
 
-All the kubernetes clusters provided as demonstration environments by the DevSecOps team already come
+All the kubernetes clusters provided as demonstration environments at Catena-X already come
 with [ingress-nginx](https://kubernetes.github.io/ingress-nginx/)
 as ingress controller installed.
 
