@@ -18,7 +18,7 @@ Please use this section for brainstorming open topics or issues where we have to
 - How to handle teams which:
   - Requests more than one repository. How to identify those repos?
   - Or shall be a seperate product (team) created for this purpose?
-- Add our open topics here
+- Add your open topics here
 
 ## General
 
