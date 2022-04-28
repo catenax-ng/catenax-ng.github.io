@@ -7,6 +7,19 @@ This is a first proposal what topics will be handled by this naming convention.
 
 :::
 
+## To Discuss
+
+:::info
+
+Please use this section for brainstorming open topics or issues where we have to come to a decision.
+
+:::
+
+- How to handle teams which:
+  - Requests more than one repository. How to identify those repos?
+  - Or shall be a seperate product (team) created for this purpose?
+- Add our open topics here
+
 ## General
 
 In general terms we are talking about products, not about teams. A team might change, the product will
