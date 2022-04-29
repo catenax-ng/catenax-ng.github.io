@@ -2,11 +2,26 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://catena-x.net/blog</id>
     <title>Catena-x - DevSecOps Blog</title>
-    <updated>2022-04-22T00:00:00.000Z</updated>
+    <updated>2022-04-29T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://catena-x.net/blog"/>
     <subtitle>Catena-x - DevSecOps Blog</subtitle>
     <icon>https://catena-x.net/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[Office Hours 2022-04-29]]></title>
+        <id>Office Hours 2022-04-29</id>
+        <link href="https://catena-x.net/blog/Office Hours 2022-04-29"/>
+        <updated>2022-04-29T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[In our today's office hours, we discussed the following topics]]></summary>
+        <content type="html"><![CDATA[<p>In our today's office hours, we discussed the following topics</p><ol><li>News from the DevSecOps Team<ol><li>We changed the DNS setup (the Hotel Budapest means the INT, thats now reflexted in the URL), but the old Domain ist redirected</li><li>The Vault is available (see also <a href="/docs/guides/how-to-use-vault.md">link</a>)</li><li>The Dev environment is available</li></ol></li><li>News from the Security Team<ol><li>Some Veracode tipps and tricks</li><li>Containerscanning in progress</li></ol></li><li>Q&amp;A</li><li>Hands-on</li></ol><p>You find the
+recording <a href="https://bcgcatenax.sharepoint.com/:f:/r/sites/CommunitiesofPractises/Shared%20Documents/CX-CoP%20DevSecOps/Office_Hours_Regular_Recordings?csf=1&amp;web=1&amp;e=YezRwb" target="_blank" rel="noopener noreferrer">here</a></p>]]></content>
+        <author>
+            <name>DevSecOps Team</name>
+            <uri>https://github.com/catenax-ng</uri>
+        </author>
+        <category label="news" term="news"/>
+        <category label="officehour" term="officehour"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Office Hours 2022-04-22]]></title>
         <id>Office Hours 2022-04-2</id>
