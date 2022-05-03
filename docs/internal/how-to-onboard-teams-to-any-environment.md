@@ -63,7 +63,7 @@ GitHub organization:
 - Insert _Team name_ with naming schema `product-<productName>`
 - Add optional _Description_
 - Apply defaults for _Parent team_ and _Team visibility_
-- Click button _Create team_ to finaly create the team
+- Click button _Create team_ to finally create the team
 
 ### Add a Member To A GitHub Team
 
