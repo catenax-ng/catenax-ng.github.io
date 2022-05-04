@@ -1,8 +1,8 @@
 ---
-title: Activating Two Factor Authentication in GitHub
+title: How To Activate Two Factor Authentication in GitHub
 ---
 
-:::caution
+:::caution 2FA usage will be mandatory
 
 Starting Friday, 2022-05-13, the 2 Factor Authentication will be set mandatory for every member in the Catena-X NG organization in Github
 
@@ -10,10 +10,10 @@ Starting Friday, 2022-05-13, the 2 Factor Authentication will be set mandatory f
 
 **Here´s a description how you can activate 2FA in GitHub for your account**
 
-- open GitHub and go to your personal settings (avatar in the upper right corner of GitHub)
-- Settings
-- Password and authentication (menue on the left)
-- In section "Two-factor authentication" click on the green button "Enable two-factor-athentication"
+- open GitHub, login and go to your personal settings by clicking on the avatar in the upper right corner of GitHub
+- Choose "*Settings*"
+- click "*Password and authentication*" in the menue on the left hand side
+- In section "*Two-factor authentication*" click on the green button "*Enable two-factor-authentication*"
 
 	![2fa not enabled yet](assets/2fa-1.png)
 
