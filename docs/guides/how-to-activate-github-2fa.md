@@ -21,7 +21,7 @@ Starting Friday, 2022-05-20, the 2 Factor Authentication will be set mandatory f
 
 	![confirm 2fa](assets/2fa-2.png)
 
-- Select the method of your MFA ("Set up using an app" is preferred)
+- Select the method to use for your second factor ("Set up using an app" is preferred)
 
 	![select 2fa method](assets/2fa-3.png)
 
