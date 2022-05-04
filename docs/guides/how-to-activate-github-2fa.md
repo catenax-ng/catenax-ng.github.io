@@ -4,7 +4,7 @@ title: How To Activate Two Factor Authentication in GitHub
 
 :::caution 2FA usage will be mandatory
 
-Starting Friday, 2022-05-13, the 2 Factor Authentication will be set mandatory for every member in the Catena-X NG organization in Github
+Starting Friday, 2022-05-20, the 2 Factor Authentication will be set mandatory for every member in the Catena-X NG organization in Github
 
 :::
 
