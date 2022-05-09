@@ -83,13 +83,13 @@ An example tfvars file could look like the following:
 ```hcl
 # Example terraform AKS environment variable specification
 # /terraform/01_core_cluster/core.tfvars
-environment_name="core"
-k8s_vm_size="Standard_D8s_v4"
+environment_name = "core"
+k8s_vm_size      = "Standard_D8s_v4"
 ```
 
-Beside these variables, that you can safely commit to the repository, you also need to specify the client id and 
-client secret of the service principal, that should be assigned to the cluster.
-For this kind of variables, terraform provides a way to set specific environment variables, that have to be of the form
+Beside these variables, that you can safely commit to the repository, you also need to specify the client id and client
+secret of the service principal, that should be assigned to the cluster. For this kind of variables, terraform provides
+a way to set specific environment variables, that have to be of the form
 `TF_VAR_<variable-name>`. You can set the service principal config like follows:
 
 ```shell
@@ -97,8 +97,8 @@ export TF_VAR_service_principal_client_id=<sp client id>
 export TF_VAR_service_principal_client_secret=<sp client secret>
 ```
 
-With the variables specified in your tfvars and the service principal config set via environment variable,
-you can create the plan and apply it to Azure with the following command:
+With the variables specified in your tfvars and the service principal config set via environment variable, you can
+create the plan and apply it to Azure with the following command:
 
 ```shell
 # replace <environment> with the actual name of the environment you chose
@@ -114,4 +114,3 @@ created AKS cluster.
 
 You will also find a public IP with the naming pattern `cx-<envname>-public-ip` in a slightly different resource group,
 that Azure created automatically for the kubernetes nodes pool.
-
