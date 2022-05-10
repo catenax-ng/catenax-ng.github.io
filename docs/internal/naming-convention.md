@@ -96,7 +96,7 @@ tbd.
 | Secret Engine | _productName_             |                                                      |
 | AppRole       | _productName_             |                                                      |
 | Policy        | _policy-full-productName_ | for personal usage, e.g GitHub or OIDClogin          |
-| Policy        | _policy-read-producName_  | for AppRole usage with only read permissions granted |
+| Policy        | _policy-read-productName_  | for AppRole usage with only read permissions granted |
 
 ### Examples
 
