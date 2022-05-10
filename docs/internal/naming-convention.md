@@ -78,10 +78,10 @@ Currently, there are some teams that doesn't apply to this naming convention.
 
 ### Definition
 
-| Item       | Naming Convention | Additional description      |
-|:-----------|:------------------|-----------------------------|
-| Team       | _productName_     | Shall not contain shortcuts |
-| Repository | _productName_     | Shall not contain shortcuts |
+| Item       | Naming Convention                         | Additional description                                                                                                 |
+|:-----------|:------------------------------------------|------------------------------------------------------------------------------------------------------------------------|
+| Team       | _productName_                             | Shall not contain shortcuts                                                                                            |
+| Repository | _productName_  <br/>_productName-subName_ | Shall not contain shortcuts <br/> _productName-subName_ may be used for a second repo managed by GH team _productName_ |
 
 ### Examples
 
