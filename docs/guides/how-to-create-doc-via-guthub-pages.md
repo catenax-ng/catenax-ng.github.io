@@ -3,7 +3,7 @@ title: How To Create Documentation via GitHub Pages
 /slug: how-to-create-doc-via-guthub-pages
 ---
 
-**This is a short guide on how to create GitHub Pages and how to get them published. If you want to add some documentation for a Catena-X project/product, please follow the below mentioned steps.**
+This is a short guide on how to create GitHub Pages and how to get them published. If you want to add some documentation for a Catena-X project/product, please follow the below mentioned steps.
 
 ## General information
 
@@ -32,14 +32,14 @@ The pages then will automatically be rendered and reloaded in your browser.
 :::
 
 1. Create a new branch
-2. Pull the repo
-3. Create your pages
-4. Check them by running `npm run build`
-5. Check them by running `npm run lint`
-6. Check them by starting the development server with `npm start`, your default browser then should automatically start with [http://localhost:3000](http://localhost:3000)
-7. Add your changes
-8. Commit your changes
-9. Push your changes
-10. Create a pull request and assign to DevSecOps team for approval
-11. Merge into main branch after a colleague from DevSecOps approved
-12. The page(s) will be deployed through github actions and get visible for public
+2. Pull the repo.
+3. Create your pages.
+4. Check them by running `npm run build`.
+5. Check them by running `npm run lint`.
+6. Check them by starting the development server with `npm start`, your default browser then should automatically start with [http://localhost:3000](http://localhost:3000).
+7. Add your changes.
+8. Commit your changes.
+9. Push your changes.
+10. Create a pull request.
+11. Merge into main branch after a colleague from the DevSecOps team approved.
+12. The page(s) will be deployed through github actions and get visible for public.
