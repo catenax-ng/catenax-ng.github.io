@@ -7,6 +7,7 @@ Starting Friday, 2022-05-20, the 2 Factor Authentication will be set mandatory f
 :::
 
 ## What is 2FA and why do we need this?
+
 2FA stands for [Two-Factor Authentication](https://en.wikipedia.org/wiki/Multi-factor_authentication) and means that beside one unique *thing* which verifies that you are you, a second one is added:
 
 Typically, the first factor is your password and a second one can be an SMS code, RSA Token (typically used in companies for VPN), Tan Apps (for online banking) or authenticator apps on your phone which show a new 5-7 digit number every minute.
@@ -24,28 +25,27 @@ Especially when we write code, security is a very critical factor as your code w
 - click "*Password and authentication*" in the menue on the left hand side
 - In section "*Two-factor authentication*" click on the green button "*Enable two-factor-authentication*"
 
-	![2fa not enabled yet](assets/2fa-1.png)
+     ![2fa not enabled yet](assets/2fa-1.png)
 
 - Confirm with your GitHub password
 
-	![confirm 2fa](assets/2fa-2.png)
+     ![confirm 2fa](assets/2fa-2.png)
 
 - Select the method to use for your second factor ("Set up using an app" is preferred)
 
-	![select 2fa method](assets/2fa-3.png)
+     ![select 2fa method](assets/2fa-3.png)
 
 - Set up a new account with your Authenticator App as described, or follow  the other description depending on the hard-/software or other options you have, e.g. Authenticator App
 
-	![setup with authenticator app](assets/2fa-4.png)
-	
+     ![setup with authenticator app](assets/2fa-4.png)
+
 - Download and save your recovery codes (if the chosen option shows them)
 
-	![2fa done](assets/2fa-5.png)
-	
+     ![2fa done](assets/2fa-5.png)
+
 - Done, or setup additional authentication methods
 
-	![2fa done with additional](assets/2fa-6.png)
-
+     ![2fa done with additional](assets/2fa-6.png)
 
 ## Tips for using 2FA
 
@@ -64,19 +64,17 @@ This also lead to well known companies to support U2F. Cloudproviders, Email ser
 ### How to use a hardware key (example based on YubiKey)
 
 yubico provides one of the most used and supported hardware keys available: The [YubiKey](https://www.yubico.com/products/). The YubiKey comes in different sizes and standards:
+
 - Big one with USB-A and NFC: Perfect for your keychain and older devices which do not support usb-c. NFC can be used when you would like to use your key with your smartphone
 - Big one with USB-C and NFC: For your keychain and your smartphone per NFC
 - Big one with USB-C and lightning: For Apple users
 - Medium size with USB-C: Smaller but without NFC
 - Small size in USB-A or USB-C: For being always plugged in (only keep it plugged into devices which are secure -> which are at home for example)
 
-
 The easiest approach is to have 3 keys (in case of no additional device at home, only 2 are needed):
+
 1. One big YubiKey for your Keychain to be able to login when you are not at home
 2. One YubiKey as a backup for your safe at home
 3. One small one to have it always plugged in, in your laptop/desktop PC which you always have at home (in case you have one device always at home)
 
 If you buy your hardware key private, you can use it for your personal security and you don't need to move to another yubikey in case you change the company.
-
-
-

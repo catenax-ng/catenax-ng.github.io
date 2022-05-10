@@ -65,7 +65,7 @@ spec:
 {{- end }}
 ```
 
-A values.yaml used for this template could look like the following: 
+A values.yaml used for this template could look like the following:
 
 ```yaml
 appName: "my-app"
@@ -74,4 +74,3 @@ environment: "dev"
 ingress:
   enabled: true
 ```
-

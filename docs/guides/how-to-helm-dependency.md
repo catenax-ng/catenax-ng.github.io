@@ -8,6 +8,7 @@ The example application is [Backstage](https://backstage.io/) which by default i
 How to reference the Postgresql Helm chart:
 
 [Chart.yaml](https://github.com/backstage/backstage/blob/master/contrib/chart/backstage/Chart.yaml)
+
 ```
 ...
 dependencies:
@@ -17,6 +18,7 @@ dependencies:
     repository: https://charts.bitnami.com/bitnami
 ...
 ```
+
 Name should match the name in the Chart.yaml of the dependency Helm chart.
 
 The version field should contain a semantic version or version range.
@@ -32,6 +34,7 @@ The condition controls whether or not to install the dependency, in this case th
 How to en-/disable the deployment of Postgresql and configure it:
 
 [values.yaml](https://github.com/backstage/backstage/blob/master/contrib/chart/backstage/values.yaml)
+
 ```
 ...
 postgresql:
@@ -55,6 +58,7 @@ Further parameters that can be configured:
 Generate ca certs and random password for Postgresql:
 
 (e.g. templates\_helpers.tpl)
+
 ```
 {{/*
 Generate ca for postgresql
@@ -87,11 +91,13 @@ Generate a password for the postgres user used for the connections from the back
 {{ $pgPassword}}
 {{- end -}}
 ```
+
 Create a configmap or secret with the generated cert:
 
 (e.g. templates/...yaml)
 
 configmap - cert:
+
 ```
 {{- if .Values.postgresql.enabled }}
 ---
@@ -114,8 +120,11 @@ data:
 {{- fail (printf "\n\nPlease create the '%s' configmap with the CA certificate for your existing postgresql: kubectl create configmap %s --from-file=ca.crt" $caConfig $caConfig) }}
 {{- end }}
 {{- end }}
+
 ```
+
 secret - cert:
+
 ```
 {{- if .Values.postgresql.enabled }}
 ---
@@ -134,7 +143,9 @@ data:
 {{ include "generateCerts" . | indent 2 }}
 {{- end }}
 ```
+
 secret - password:
+
 ```
 apiVersion: v1
 kind: Secret
@@ -153,9 +164,11 @@ data:
   postgresql-password: {{ include postgresql.generateUserPassword . | b64enc }}
 {{- end }}
 ```
+
 Postgresql connetion settings:
 
 (backend deployment)
+
 ```
 apiVersion: apps/v1
 kind: Deployment
@@ -188,7 +201,9 @@ spec:
             name: {{ include "backstage.fullname" . }}-postgres-ca
         {{- end }}
 ```
+
 (values.yaml)
+
 ```
 ...
 appConfig:
