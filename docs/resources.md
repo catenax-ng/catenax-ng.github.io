@@ -55,7 +55,7 @@ the [CoP Channel](https://teams.microsoft.com/l/channel/19%3a9a3c4a05a3514d07b97
 
 ## Request environment
 
-> __BEWARE:__ We do not provide dedicated environments for single teams. We will provide a DEV, INT, and PRE-PROD
+> **BEWARE:** We do not provide dedicated environments for single teams. We will provide a DEV, INT, and PRE-PROD
 > environment and teams will collectively use these environments together.
 > A list of available environments can be found [in the Catena-X Confluence](https://confluence.catena-x.net/pages/viewpage.action?pageId=25228715).
 
@@ -88,7 +88,7 @@ We will provide azure services soon but only for critical / central services.
 ## Request access / setup SonarCloud
 
 Currently SonarCloud is NOT mandatory for Release 1. VeraCode is. If you want to use SonarCloud right now, you can
-request scanning of __public__ repositories (__private__ are not supported!).
+request scanning of **public** repositories (**private** are not supported!).
 
 Use [this Jira template](https://jira.catena-x.net/secure/CreateIssueDetails!init.jspa?pid=10212&issuetype=10401&components=10401&priority=3&summary=SonarCloud%20onboarding&description=Public%20repository%20...)
 for SonarCloud support.

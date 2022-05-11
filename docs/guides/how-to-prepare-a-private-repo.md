@@ -15,7 +15,7 @@ If your GitHub repo is set to private, you have to do following to be able to on
 
 - Navigate to [https://vault.vault.demo.catena-x.net](https://vault.vault.demo.catena-x.net)
 - Click your Secrets Engine
-- Click "*Create secret +*"
+- Click "_Create secret +_"
 - In field "Path for this secret" type "deploy-key"
 - Under "Secret data" name the key "<project-name\>-deploy-key"
 - Paste your sshPrivateKey to the value field

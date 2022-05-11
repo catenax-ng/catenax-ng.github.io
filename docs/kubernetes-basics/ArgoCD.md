@@ -42,8 +42,10 @@ enable auto sync:
 - On the left top corner you see the "App Details":
 
   ![argocd_appdetails.png](assets/argocd_appdetails.png)
+
 - Enable Auto Sync
 
   ![argocd_syncpolicy.png](assets/argocd_syncpolicy.png)
+
 - Enable "Self Heal" if you always want ArgoCD to keep your state in sync. Without this, ArgoCD will stop syncing as
   soon as your project is not green as it will not overwrite potential manual changes you made.

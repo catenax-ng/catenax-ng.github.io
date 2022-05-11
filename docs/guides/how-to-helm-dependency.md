@@ -57,7 +57,7 @@ Further parameters that can be configured:
 
 Generate ca certs and random password for Postgresql:
 
-(e.g. templates\_helpers.tpl)
+(e.g. templates_helpers.tpl)
 
 ```
 {{/*

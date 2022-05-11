@@ -8,7 +8,7 @@ Starting Friday, 2022-05-20, the 2 Factor Authentication will be set mandatory f
 
 ## What is 2FA and why do we need this?
 
-2FA stands for [Two-Factor Authentication](https://en.wikipedia.org/wiki/Multi-factor_authentication) and means that beside one unique *thing* which verifies that you are you, a second one is added:
+2FA stands for [Two-Factor Authentication](https://en.wikipedia.org/wiki/Multi-factor_authentication) and means that beside one unique _thing_ which verifies that you are you, a second one is added:
 
 Typically, the first factor is your password and a second one can be an SMS code, RSA Token (typically used in companies for VPN), Tan Apps (for online banking) or authenticator apps on your phone which show a new 5-7 digit number every minute.
 
@@ -21,31 +21,31 @@ Especially when we write code, security is a very critical factor as your code w
 ## How to activate 2FA in GitHub for your account
 
 - open GitHub, login and go to your personal settings by clicking on the avatar in the upper right corner of GitHub
-- Choose "*Settings*"
-- click "*Password and authentication*" in the menue on the left hand side
-- In section "*Two-factor authentication*" click on the green button "*Enable two-factor-authentication*"
+- Choose "_Settings_"
+- click "_Password and authentication_" in the menue on the left hand side
+- In section "_Two-factor authentication_" click on the green button "_Enable two-factor-authentication_"
 
-     ![2fa not enabled yet](assets/2fa-1.png)
+  ![2fa not enabled yet](assets/2fa-1.png)
 
 - Confirm with your GitHub password
 
-     ![confirm 2fa](assets/2fa-2.png)
+  ![confirm 2fa](assets/2fa-2.png)
 
 - Select the method to use for your second factor ("Set up using an app" is preferred)
 
-     ![select 2fa method](assets/2fa-3.png)
+  ![select 2fa method](assets/2fa-3.png)
 
-- Set up a new account with your Authenticator App as described, or follow  the other description depending on the hard-/software or other options you have, e.g. Authenticator App
+- Set up a new account with your Authenticator App as described, or follow the other description depending on the hard-/software or other options you have, e.g. Authenticator App
 
-     ![setup with authenticator app](assets/2fa-4.png)
+  ![setup with authenticator app](assets/2fa-4.png)
 
 - Download and save your recovery codes (if the chosen option shows them)
 
-     ![2fa done](assets/2fa-5.png)
+  ![2fa done](assets/2fa-5.png)
 
 - Done, or setup additional authentication methods
 
-     ![2fa done with additional](assets/2fa-6.png)
+  ![2fa done with additional](assets/2fa-6.png)
 
 ## Tips for using 2FA
 
@@ -53,7 +53,7 @@ Especially when we write code, security is a very critical factor as your code w
 This is a personal recommendation from us; Feel free to read this section.
 :::
 
-2FA is a relatively easy way of making your own data more secure. Plenty of data leaks happened in the last few years and our email accounts have lots of security  relevant information (personal data and recovery emails).
+2FA is a relatively easy way of making your own data more secure. Plenty of data leaks happened in the last few years and our email accounts have lots of security relevant information (personal data and recovery emails).
 
 The [FIDO Alliance](https://en.wikipedia.org/wiki/FIDO_Alliance) was created 2013 to ["help reduce the world’s over-reliance on passwords"](https://envzone.com/why-big-tech-is-striving-for-the-world-without-password/). Out of this efford came [FIDO2 Project](https://en.wikipedia.org/wiki/FIDO2_Project) to create strong authentication for the web which is extended by [Universal 2nd Factor](https://en.wikipedia.org/wiki/Universal_2nd_Factor).
 

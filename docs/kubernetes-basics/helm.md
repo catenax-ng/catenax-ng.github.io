@@ -70,9 +70,9 @@ If you run the same pod multiply times, it can be that the pods are running on t
 
 ### Configuration for multiply environments
 
-The current approach to manifest environment specific values is to provide a values.yaml with sane default values and overriding only relevant portions in a values-ENV.yaml file. Then referencing both values*.yaml files in argocd.
+The current approach to manifest environment specific values is to provide a values.yaml with sane default values and overriding only relevant portions in a values-ENV.yaml file. Then referencing both values\*.yaml files in argocd.
 
-If you don't want to have catena-x environment specific 'setting files/value-* files' in your repository, you can do a [release](https://docs.github.com/en/repositories/releasing-projects-on-github/about-releases) build and remove all files you don't want to officially release.
+If you don't want to have catena-x environment specific 'setting files/value-\* files' in your repository, you can do a [release](https://docs.github.com/en/repositories/releasing-projects-on-github/about-releases) build and remove all files you don't want to officially release.
 
 TODO: Add screenshot from argocd and from argocd application code.
 

@@ -49,7 +49,7 @@ dropdown at the end of the revision row from _Branches_ to _Tags_. This option c
 environments,
 where you want to provide other teams with specific stable versions of your app.
 
-> __HINT:__ If you are using private repositories and cannot set it to public, get in contact with the DevSecOps team,
+> **HINT:** If you are using private repositories and cannot set it to public, get in contact with the DevSecOps team,
 > and we will
 > configure repository access for ArgoCD
 
@@ -67,13 +67,13 @@ The next section of settings is about the destination. The destination is the ku
 ArgoCD
 should deploy your application to. On Hotel Budapest you are only allowed to deploy applications to the cluster, ArgoCD
 is running on.
-To specify that cluster, choose ```https://kubernetes.default.svc``` as the cluster URL.
+To specify that cluster, choose `https://kubernetes.default.svc` as the cluster URL.
 
 As namespace, you need to specify one, that is assigned to your project that you selected previously in the application
 metadata.
 Each product team usually has one project assigned and each project is allowed to use one namespace. The name of the
 namespace
-is usually ```product-<team-name>```.
+is usually `product-<team-name>`.
 
 > If you are unsure, what your assigned namespace is, you can either ask the DevSecOps team, or look at ArgoCDs Setting>
 > Projects
@@ -90,8 +90,8 @@ or even in-place values, like in the following screenshot.
 
 ![Specify helm values](assets/new_application_helm_values.png)
 
-Typically, you would want a specific values.yaml file named like ```values-<env-name>.yaml``` that overwrites just the
-environment specifics and select both, the ```values.yaml``` and the ```values-<env-name>.yaml``` files as values files
+Typically, you would want a specific values.yaml file named like `values-<env-name>.yaml` that overwrites just the
+environment specifics and select both, the `values.yaml` and the `values-<env-name>.yaml` files as values files
 in ArgoCD.
 
 If you specified all the settings, you can create the application, by clicking the _Create_ button on the top of the new

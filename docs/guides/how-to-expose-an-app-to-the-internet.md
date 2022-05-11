@@ -55,7 +55,7 @@ spec:
                   # Port number, the kubernetes service is listening on
                   # Adjust that to your services' port
                   number: 8080
-                  
+
   # Config for creating proper TLS certificates host has to match the one from the ingress rule
   tls:
     - hosts:

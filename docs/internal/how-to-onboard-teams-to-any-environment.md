@@ -130,6 +130,7 @@ To create the policies, login to Vault and
 - click on _Create ACL policy +_
 - enter the policy name in the _Name_ field
 - enter following to _Policy_ field:
+
   - for the _product-productName_ policy
 
   ```
@@ -137,7 +138,7 @@ To create the policies, login to Vault and
     capabilities = ["create", "read", "update", "delete", "list"]
   }
   ```
-  
+
   - for the _product-productName-ro_ policy
 
   ```
@@ -254,17 +255,17 @@ metadata:
 spec:
   description: Project for product-productName
   sourceRepos:
-    - '*'
+    - "*"
   destinations:
     - namespace: product-productName
       server: https://kubernetes.default.svc
   # Allow all namespaced-scoped resources to be created, except for ResourceQuota, LimitRange, NetworkPolicy
   namespaceResourceBlacklist:
-    - group: ''
+    - group: ""
       kind: ResourceQuota
-    - group: ''
+    - group: ""
       kind: LimitRange
-    - group: ''
+    - group: ""
       kind: NetworkPolicy
   roles:
     - name: team-admin
@@ -273,7 +274,6 @@ spec:
         - p, proj:product-productName:team-admin, applications, *, product-productName/*, allow
       groups:
         - catenax-ng:product-productName
-
 ```
 
 Store this manifest in [k8s-cluster-stack](https://github.com/catenax-ng/k8s-cluster-stack) repo in
@@ -387,15 +387,13 @@ here: [How to prepare a private repo](guides/how-to-prepare-a-private-repo).
 - Create a file `.dockerconfigjson` containing the base-64 encoded PAT
 
   ```json
-    {
-      "auths":
-      {
-        "ghcr.io":
-        {
-          "auth":"<base-64 encoded PAT>"
-        }
+  {
+    "auths": {
+      "ghcr.io": {
+        "auth": "<base-64 encoded PAT>"
       }
     }
+  }
   ```
 
 - Do a base 64 encoding for the auth part
@@ -405,6 +403,7 @@ here: [How to prepare a private repo](guides/how-to-prepare-a-private-repo).
   ```
 
   If the output is divided into 2 lines, just add the second line to the first (without space)
+
 - Create a file `dockerconfigjson.yaml`:
 
   ```yaml
@@ -420,7 +419,7 @@ here: [How to prepare a private repo](guides/how-to-prepare-a-private-repo).
   ```
 
 - Then add the secret to the cluster
-  
+
   ```shell
   kubectl create -f dockerconfigjson.yaml
   ```

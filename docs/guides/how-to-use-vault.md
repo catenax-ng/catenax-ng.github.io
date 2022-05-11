@@ -1,6 +1,6 @@
 ---
 title: How To Use HashiCorp Vault
---- 
+---
 
 This guide is a small howto about storing your secrets using HashiCorp Vault. Following prerequisites have to be
 met:
