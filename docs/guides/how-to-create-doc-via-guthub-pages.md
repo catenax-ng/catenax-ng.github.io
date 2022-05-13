@@ -11,6 +11,13 @@ This is a short guide on how to create GitHub Pages and how to get them publishe
 - To start developing your own pages, you should first install the Docusaurus development server by installing nodejs, for further information please visit following pages:
   - [https://docs.npmjs.com/downloading-and-installing-node-js-and-npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
   - [https://nodejs.org/de/download/](https://nodejs.org/de/download/)
+  - [https://docusaurus.io/docs/installation](https://docusaurus.io/docs/installation), e.g.
+    
+	```shell
+    npm i @docusaurus/core@latest @docusaurus/preset-classic@latest
+	```
+	
+  - [https://tutorial.docusaurus.io](https://tutorial.docusaurus.io)
 - The Documentation is written as a markdown file.
 - We use markdownlint in a pre-commit hook.
   - [How to configure markdown rules](https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md)
@@ -31,15 +38,14 @@ Start the  Docusaurus server (step 6) in an own instance of your git bash/comman
 The pages then will automatically be rendered and reloaded in your browser.
 :::
 
-1. Create a new branch
-2. Pull the repo.
-3. Create your pages.
-4. Check them by running `npm run build`.
-5. Check them by running `npm run lint`.
-6. Check them by starting the development server with `npm start`, your default browser then should automatically start with [http://localhost:3000](http://localhost:3000).
-7. Add your changes.
-8. Commit your changes.
-9. Push your changes.
-10. Create a pull request.
-11. Merge into main branch after a colleague from the DevSecOps team approved.
-12. The page(s) will be deployed through github actions and get visible for public.
+1. Create a new branch.
+2. Create your pages.
+3. Check them by running `npm run build`.
+4. Check them by running `npm run lint`.
+5. Check them by starting the development server with `npm start`, your default browser then should automatically start with [http://localhost:3000](http://localhost:3000).
+6. Add your changes.
+7. Commit your changes.
+8. Push your changes.
+9. Create a pull request. @catenax-ng/argocdadmins will be requested for review.
+10. Merge into main branch after a colleague from the argocdadmins team approved.
+11. The page(s) will be deployed through github actions and get visible for public.
