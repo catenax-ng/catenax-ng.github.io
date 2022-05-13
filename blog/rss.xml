@@ -4,10 +4,32 @@
         <title>Catena-x - DevSecOps Blog</title>
         <link>https://catena-x.net/blog</link>
         <description>Catena-x - DevSecOps Blog</description>
-        <lastBuildDate>Fri, 29 Apr 2022 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 13 May 2022 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[Office Hours 2022-05-13]]></title>
+            <link>https://catena-x.net/blog/Office Hours 2022-05-13</link>
+            <guid>Office Hours 2022-05-13</guid>
+            <pubDate>Fri, 13 May 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[In our today's office hours, we discussed the following topics]]></description>
+            <content:encoded><![CDATA[<p>In our today's office hours, we discussed the following topics</p><ol><li>News from the DevSecOps Team<ol><li>Last reminder of the upcoming 2FA enablement on 20th of May!</li><li>Slower support due to upcoming Kubecon and holidays</li></ol></li><li>News from the Security Team<ol><li>New <a href="/docs/security">security guides</a> for VeraCode, Trivy and Checkov</li></ol></li><li>Q&amp;A</li><li>Hands-on</li></ol><p>You find the
+recording <a href="https://bcgcatenax.sharepoint.com/:f:/r/sites/CommunitiesofPractises/Shared%20Documents/CX-CoP%20DevSecOps/Office_Hours_Regular_Recordings?csf=1&amp;web=1&amp;e=YezRwb" target="_blank" rel="noopener noreferrer">here</a></p>]]></content:encoded>
+            <category>news</category>
+            <category>officehour</category>
+        </item>
+        <item>
+            <title><![CDATA[Office Hours 2022-05-06]]></title>
+            <link>https://catena-x.net/blog/Office Hours 2022-05-06</link>
+            <guid>Office Hours 2022-05-06</guid>
+            <pubDate>Fri, 06 May 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[In our today's office hours, we discussed the following topics]]></description>
+            <content:encoded><![CDATA[<p>In our today's office hours, we discussed the following topics</p><ol><li>News from the DevSecOps Team<ol><li>There is a new page for the upcoming <a href="/docs/guides/how-to-use-2fa-with-github.md">2FA enablement</a> on Github</li></ol></li><li>News from the Security Team<ol><li>New collegues for the security team</li><li>Work in progress: VeraCode integration into Jira</li><li>Work in progress: VeraCode GitHub integration</li><li>There is a Security specific support hour on monday at 11am. Feel free to ask us for an invite if you are interested</li></ol></li><li>Q&amp;A</li><li>Hands-on</li></ol><p>You find the
+recording <a href="https://bcgcatenax.sharepoint.com/:f:/r/sites/CommunitiesofPractises/Shared%20Documents/CX-CoP%20DevSecOps/Office_Hours_Regular_Recordings?csf=1&amp;web=1&amp;e=YezRwb" target="_blank" rel="noopener noreferrer">here</a></p>]]></content:encoded>
+            <category>news</category>
+            <category>officehour</category>
+        </item>
         <item>
             <title><![CDATA[Office Hours 2022-04-29]]></title>
             <link>https://catena-x.net/blog/Office Hours 2022-04-29</link>
