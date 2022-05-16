@@ -46,6 +46,6 @@ The pages then will automatically be rendered and reloaded in your browser.
 6. Add your changes.
 7. Commit your changes.
 8. Push your changes.
-9. Create a pull request. @catenax-ng/argocdadmins will be requested for review.
-10. Merge into main branch after a colleague from the argocdadmins team approved.
+9. Create a pull request. Code owner Catena-X (ng)/ArgoCDAdmins (team) will automatically be requested for review.
+10. Merge into main branch after a colleague from the ArgoCDAdmins team approved.
 11. The page(s) will be deployed through github actions and get visible for public.
