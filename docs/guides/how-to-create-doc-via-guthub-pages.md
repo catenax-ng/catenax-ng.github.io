@@ -12,11 +12,11 @@ This is a short guide on how to create GitHub Pages and how to get them publishe
   - [https://docs.npmjs.com/downloading-and-installing-node-js-and-npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
   - [https://nodejs.org/de/download/](https://nodejs.org/de/download/)
   - [https://docusaurus.io/docs/installation](https://docusaurus.io/docs/installation), e.g.
-    
-	```shell
+
+    ```shell
     npm i @docusaurus/core@latest @docusaurus/preset-classic@latest
-	```
-	
+    ```
+
   - [https://tutorial.docusaurus.io](https://tutorial.docusaurus.io)
 - The Documentation is written as a markdown file.
 - We use markdownlint in a pre-commit hook.
