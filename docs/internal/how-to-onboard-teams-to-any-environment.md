@@ -399,7 +399,7 @@ here: [How to prepare a private repo](guides/how-to-prepare-a-private-repo).
 - Do a base 64 encoding for the auth part
 
   ```shell
-  echo -n'{"auths":{"ghcr.io":{"auth":"<base-64 encoded PAT\>"\}}}' | base64
+  echo -n'{"auths":{"ghcr.io":{"auth":"<base-64 encoded PAT>"}}}' | base64
   ```
 
   If the output is divided into 2 lines, just add the second line to the first (without space)
