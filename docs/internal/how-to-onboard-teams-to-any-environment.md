@@ -171,7 +171,7 @@ PI4.
 
 #### Create AppRole
 
-For each team to onboard a AppRole has to be created using the Vault CLI:
+For each team to onboard an AppRole has to be created using the Vault CLI:
 
 ```shell
 $ vault write auth/approle/role/product-productName \
@@ -204,9 +204,9 @@ vault read auth/approle/role/product-productName/role-id
 
 The command will output the _role_id_ for _product-productName_ AppRole. Remember the _role_id_ for later use.
 
-### Store The Teams role_id and secret_id In Vault
+### Store The Teams role_id And secret_id In Vault
 
-For later usage of team specific AppRole _role_id_ and secret_id_ we've to store them in our DevSecOps Vault:
+For later usage of team specific AppRole _role_id_ and _secret_id_ we've to store them in our DevSecOps Vault:
 
 - enter _devsecops_ secret engine
 - browse to _avp_config_
@@ -349,7 +349,7 @@ here: [How to prepare a private repo](guides/how-to-prepare-a-private-repo).
 
 :::
 
-- Go to `catenax-ng\k8s-cluster-stack\environments\hote-budapest\argo-repos`
+- Go to `catenax-ng\k8s-cluster-stack\environments\hotel-budapest\argo-repos`
 - Add a file named `<productName>-repo.yaml`, e.g. for _product-semantics_ (`product-semantics-repo.yaml`):
 
   ```yaml
@@ -431,6 +431,3 @@ here: [How to prepare a private repo](guides/how-to-prepare-a-private-repo).
     - name: <name of the pull secret>
   ```
 
-### Enable access to a private package (own secret over vault)
-
-- To be done
