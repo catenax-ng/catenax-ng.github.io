@@ -430,4 +430,3 @@ here: [How to prepare a private repo](guides/how-to-prepare-a-private-repo).
   imagePullSecrets:
     - name: <name of the pull secret>
   ```
-
