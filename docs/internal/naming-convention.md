@@ -91,12 +91,13 @@ tbd.
 
 ### Definition
 
-| Item          | Naming Convention         | Additional descr.                                    |
-|:--------------|:--------------------------|:-----------------------------------------------------|
-| Secret Engine | _productName_             |                                                      |
-| AppRole       | _productName_             |                                                      |
-| Policy        | _policy-full-productName_ | for personal usage, e.g GitHub or OIDClogin          |
-| Policy        | _policy-read-productName_  | for AppRole usage with only read permissions granted |
+| Item          | Naming Convention        | Additional descr.                                                                         |
+|:--------------|:-------------------------|:------------------------------------------------------------------------------------------|
+| Secret Engine | _productName_            |                                                                                           |
+| AppRole       | _productName_            |                                                                                           |
+| Policy        | _productName-policy-rw_  | for personal usage, e.g GitHub or OIDClogin                                               |
+| Policy        | _productName-policy-ro_  | for AppRole usage with only read permissions granted                                      |
+| Secret        | _productName-deploy-key_ | SSH private key (GitHub deploy key -> [docu](../guides/how-to-prepare-a-private-repo.md)) |
 
 ### Examples
 
@@ -147,16 +148,16 @@ Success! Data written to: auth/github/map/teams/productName
 
 | Item                       | Naming Convention            | Additional description                                                                                                                   |
 |:---------------------------|:-----------------------------|:-----------------------------------------------------------------------------------------------------------------------------------------|
-| Kubernetes Namespace       | _productName_                |                                                                                                                                          |
-| ArgoCD Project Name        | _productName_                |                                                                                                                                          |
+| Kubernetes Namespace       | _product-productName_        |                                                                                                                                          |
+| ArgoCD Project Name        | _project-productName_        |                                                                                                                                          |
 | ArgoCD Cluster Secret Name | _clusterName-cluster-secret_ | Representing the k8s secret name                                                                                                         |
-| ArgoCD Chilld Cluster Name | _clusterName_                | as of now, this is _dev_, _core_ or _hotel-budapest_. It might be later contain also _productName_ if a product will get its own cluster |
+| ArgoCD Child Cluster Name  | _clusterName_                | as of now, this is _dev_, _core_ or _hotel-budapest_. It might be later contain also _productName_ if a product will get its own cluster |
 
 ### Examples
 
 #### ArgoCD Project And Kubernetes Namespace
 
-Each Catena-X product will get its own ArgoCD project and Kubernetes namespace at target cluster. Therefor k8s namespace
+Each Catena-X product will get its own ArgoCD project and Kubernetes namespace at target cluster. Therefore, k8s namespace
 and ArgoCD project definition is handled within the same manifest file.
 
 ```yaml
@@ -164,22 +165,22 @@ apiVersion: v1
 kind: Namespace
 metadata:
   // highlight-next-line
-  name: [productName]
+  name: product-[productName]
 ---
 apiVersion: argoproj.io/v1alpha1
 kind: AppProject
 metadata:
   // highlight-next-line
-  name: [productName]
+  name: project-[productName]
   namespace: argocd
 spec:
   // highlight-next-line
-  description: Project for product-[productName]
+  description: Project for team [productName]
   sourceRepos:
     - '*'
   destinations:
     // highlight-next-line
-    - namespace: [productName]
+    - namespace: product-[productName]
       server: https://kubernetes.default.svc
   # Allow all namespaced-scoped resources to be created, except for ResourceQuota, LimitRange, NetworkPolicy
   namespaceResourceBlacklist:
@@ -194,9 +195,9 @@ spec:
       description: All access to applications inside project-bpdm. Read only on project itself
       policies:
       // highlight-next-line
-        - p, proj:[productName]:team-admin, applications, *, [productName]/*, allow
+        - p, proj:project-[productName]:team-admin, applications, *, project-[productName]/*, allow
       groups:
-        - catenax-ng:[productName]
+        - catenax-ng:product-[productName]
 ```
 
 #### ArgoCD Cluster Secret
