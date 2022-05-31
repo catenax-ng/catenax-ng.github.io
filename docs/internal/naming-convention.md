@@ -42,6 +42,10 @@ For any naming lowercase is used over UPPERCASE.
 
 ## Known Products
 
+:::info
+To be removed from document in future .
+:::
+
 Known products as of now are (extract of existing GitHub teams, incl. example and test teams):
 
 - ArgoCDAdmins
@@ -78,10 +82,10 @@ Currently, there are some teams that doesn't apply to this naming convention.
 
 ### Definition
 
-| Item       | Naming Convention                         | Additional description                                                                                                 |
-|:-----------|:------------------------------------------|------------------------------------------------------------------------------------------------------------------------|
-| Team       | _productName_                             | Shall not contain shortcuts                                                                                            |
-| Repository | _productName_  <br/>_productName-subName_ | Shall not contain shortcuts <br/> _productName-subName_ may be used for a second repo managed by GH team _productName_ |
+| Item       | Naming Convention     | Additional description      |
+|:-----------|:----------------------|-----------------------------|
+| Team       | _product-productName_ | Shall not contain shortcuts |
+| Repository | _product-productName_ | Shall not contain shortcuts |
 
 ### Examples
 
@@ -95,8 +99,8 @@ tbd.
 |:--------------|:-------------------------|:------------------------------------------------------------------------------------------|
 | Secret Engine | _productName_            |                                                                                           |
 | AppRole       | _productName_            |                                                                                           |
-| Policy        | _productName-policy-rw_  | for personal usage, e.g GitHub or OIDClogin                                               |
-| Policy        | _productName-policy-ro_  | for AppRole usage with only read permissions granted                                      |
+| Policy        | _productName-rw_         | for personal usage, e.g GitHub or OIDClogin                                               |
+| Policy        | _productName-ro_         | for AppRole usage with only read permissions granted                                      |
 | Secret        | _productName-deploy-key_ | SSH private key (GitHub deploy key -> [docu](../guides/how-to-prepare-a-private-repo.md)) |
 
 ### Examples
@@ -115,7 +119,15 @@ $ vault write auth/approle/role/productName \
     secret_id_num_uses=40
 Success! Data written to: auth/approle/role/productName
 
-# Issue Secret Id for Approle
+# List existing AppRole definitions
+$ vault list auth/approle/role
+Keys
+----
+AppRole1
+AppRole2
+AppRole3
+
+# Issue Secret Id for Approle (listed secret_id and secret_id_accessor doesn't exist)
 $ vault write -f auth/approle/role/productName/secret-id
 Key                   Value
 ---                   -----
@@ -123,22 +135,22 @@ secret_id             d8ff2be9-1ecb-4481-bfae-21071baf42c1
 secret_id_accessor    701e38a4-408d-4db0-94cc-3166c7277daa
 secret_id_ttl         10m
 
-# Read AppRole Id
+# Read AppRole Id (listed role_id doesn't exist)
 $ vault read auth/approle/role/productName/role-id
 Key        Value
 ---        -----
 role_id    89dd5e0d-2991-4d0c-bb1a-a8b12ee7228f
 
-# Create Policy (policy will be read from full_policy.hcl)
+# Create Policy (policy will be read from file full_policy.hcl)
 $ vault policy write policy-full-productName full_policy.hcl 
-Success! Uploaded policy: policy-full-productName
+Success! Uploaded policy: productName-rw
 
-# Create Policy (policy will be read from full_policy.hcl)
+# Create Policy (policy will be read from file full_policy.hcl)
 $ vault policy write policy-read-productName read_policy.hcl
-Success! Uploaded policy: policy-read-productName
+Success! Uploaded policy: productName-ro
 
 # Create GitHub auth mapping (with policy)
-$ vault write auth/github/map/teams/productName value=policy-full-productName
+$ vault write auth/github/map/teams/productName value=productName-rw
 Success! Data written to: auth/github/map/teams/productName
 ```
 
