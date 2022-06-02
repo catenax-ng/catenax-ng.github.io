@@ -18,7 +18,7 @@ If your GitHub repo is set to private, you have to do following to be able to on
 
 ### 2. Create a key/value pair in the vault
 
-- Navigate to [https://vault.vault.demo.catena-x.net](https://vault.vault.demo.catena-x.net)
+- Navigate to [https://vault.demo.catena-x.net](https://vault.vault.demo.catena-x.net)
 - Click your Secrets Engine
 - Click "*Create secret +*"
 - In field "Path for this secret" type "deploy-key"
