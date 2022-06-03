@@ -2,14 +2,14 @@
 title: How To Use Vault Secrets With ArgoCD
 ---
 
-This guide is a small howto about using secrets stored in HashiCorp Vault with your ArgoCD applications (with Helm
+This guide is a small how-to about using secrets stored in HashiCorp Vault with your ArgoCD applications (with Helm
 charts or Kustomize).
 
 :::info tl;dr
 To use vault secrets with your ArgoCD app, you have to
 
 - store your secret inside your Vault tenant
-- insert placeholders to app dependend files (ArgoCD App, helm, kustomize, etc.)
+- insert placeholders to app dependent files (ArgoCD App, helm, Kustomize, etc.)
 - configure your ArgoCD application to use an ArgoCD Vault Plugin (AVP) using the _vault-secret_
 
 For guidance of how to use Vault and store a secret inside Vault, please refer to
@@ -66,8 +66,8 @@ secret.
 If you're using secrets from different paths within one file you must use placeholder with inline path definition, as
 only one secret path can be provided by annotation.
 
-Please keep in mind that the path must contain _data_ (e.g. `product-team-example/data/hello`) otherwize you'll get an
-error message about _secret not found_ or similiar.
+Please keep in mind that the path must contain _data_ (e.g. `product-team-example/data/hello`) otherwise you'll get an
+error message about _secret not found_ or similar.
 
 :::
 
@@ -132,7 +132,7 @@ spec:
     // highlight-end
 ```
 
-To configure your ArgoCD application to use an AVP plugin using the ArgoCD WebUI after the _Destination_ section you
+To configure your ArgoCD application to use an AVP plugin using the ArgoCD Web UI after the _Destination_ section you
 have to select _Plugin_ from the dropdown selector, select the appropriate AVP plugin and enter the secret information:
 
 ![Select Plugin](assets/avp_plugin_webui1.png "Select Plugin")
@@ -142,7 +142,7 @@ have to select _Plugin_ from the dropdown selector, select the appropriate AVP p
 ### Use multiple helm values file when using AVP
 
 Please read here if your application is using helm chart. If you use not only default `values.yaml`, but also provide an
-additional value file. Please use vault plugin `argocd-vault-plugin-helm-args` and configure it like the example:
+additional value file. The priority will be given to the last (right-most) file specified. (see: [Helm Documentation](https://helm.sh/docs/helm/helm_install/)) Please use vault plugin `argocd-vault-plugin-helm-args` and configure it like the example:
 
 ![Multiple Helm values](assets/vault-multiple-helm-values.png "AVP configuration")
 
@@ -160,7 +160,7 @@ For different approaches there are different ArgoCD Vault Plugins (AVP) availabl
 
 ### _argocd-vault-plugin_
 
-Use this AVP plugin when your ArgoCD app is based on plain kubernetes manifest files, and you want to pull secrets from
+Use this AVP plugin when your ArgoCD app is based on plain Kubernetes manifest files, and you want to pull secrets from
 vault into your app.
 
 The App manifest should contain:
@@ -185,7 +185,7 @@ The App manifest should contain:
 
 ### _argocd-vault-plugin-helm-args_
 
-Use this AVP plugin when your ArgoCD app is based on helm charts but you have e.g. environment
+Use this AVP plugin when your ArgoCD app is based on helm charts, but you have e.g. environment
 specific `values-env.yaml` files to apply, and you want to pull secrets from vault into your app.
 
 The App manifest should contain:
@@ -203,7 +203,7 @@ The App manifest should contain:
 
 ### _argocd-vault-plugin-kustomize_
 
-Use this AVP plugin when your ArgoCD app is based on plain kubernetes manifest files, and you want to pull secrets from
+Use this AVP plugin when your ArgoCD app is based on plain Kubernetes manifest files, and you want to pull secrets from
 vault into your app.
 
 The App manifest should contain:
