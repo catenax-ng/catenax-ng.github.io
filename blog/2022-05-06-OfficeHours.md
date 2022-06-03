@@ -8,7 +8,7 @@ tags: [news, officehour]
 In our today's office hours, we discussed the following topics
 
 1. News from the DevSecOps Team
-    1. There is a new page for the upcoming [2FA enablement](../docs/guides/how-to-use-2fa-with-github.md) on Github
+    1. There is a new page for the upcoming [2FA enablement](/docs/guides/how-to-use-2fa-with-github) on Github
 1. News from the Security Team
     1. New collegues for the security team
     2. Work in progress: VeraCode integration into Jira

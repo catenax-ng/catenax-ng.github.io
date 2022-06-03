@@ -13,7 +13,7 @@ In our today's office hours, we discussed the following topics
     3. Monitoring got started. We will be able to provide basic monitoring very soon
     4. The argocd vault plugin changed. You no longer need to reference the vault token. Please see our updated documentation [How to use vault secrets with argocd](/docs/guides/howto-use-vault-secrets-with-argocd)
 1. News from the Security Team
-    1. For VeraCode we now have JIRA integration. Check out the [documentation](/docs/security/veracode-jira-plugin.md) today!
+    1. For VeraCode we now have JIRA integration. Check out the [documentation](/docs/security/veracode-jira-plugin) today!
 1. Q&A
 1. Hands-on
 
