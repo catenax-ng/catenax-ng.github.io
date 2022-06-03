@@ -9,11 +9,11 @@ In our today's office hours, we discussed the following topics
 
 1. News from the DevSecOps Team
     1. 2FA enablement has been postponed from today to 30th of May. Too much members would have lost the GitHub org membership.
-	1. pull secret `machineuser-pull-secret-ro` has been deployed and can be used.
+    11. pull secret `machineuser-pull-secret-ro` has been deployed and can be used.
 1. News from the Security Team
     1. New tool in evaluation for automatic web site scanning.
-	1. Jira integration available.
-	1. penetration test evaluation is ongoing.
+    11. Jira integration available.
+    111. penetration test evaluation is ongoing.
 1. Q&A
 1. Hands-on
 
