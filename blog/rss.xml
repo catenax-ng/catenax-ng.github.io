@@ -20,6 +20,17 @@ recording <a href="https://bcgcatenax.sharepoint.com/:f:/r/sites/CommunitiesofPr
             <category>officehour</category>
         </item>
         <item>
+            <title><![CDATA[Office Hours 2022-05-20]]></title>
+            <link>https://catena-x.net/blog/Office Hours 2022-05-20</link>
+            <guid>Office Hours 2022-05-20</guid>
+            <pubDate>Fri, 20 May 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[In our today's office hours, we discussed the following topics]]></description>
+            <content:encoded><![CDATA[<p>In our today's office hours, we discussed the following topics</p><ol><li>News from the DevSecOps Team<ol><li>2FA enablement has been postponed from today to 30th of May. Too much members would have lost the GitHub org membership.</li><li>pull secret <code>machineuser-pull-secret-ro</code> has been deployed and can be used.</li></ol></li><li>News from the Security Team<ol><li>New tool in evaluation for automatic web site scanning.</li><li>Jira integration available.</li><li>penetration test evaluation is ongoing.</li></ol></li><li>Q&amp;A</li><li>Hands-on</li></ol><p>You find the
+recording <a href="https://bcgcatenax.sharepoint.com/:f:/r/sites/CommunitiesofPractises/Shared%20Documents/CX-CoP%20DevSecOps/Office_Hours_Regular_Recordings?csf=1&amp;web=1&amp;e=YezRwb" target="_blank" rel="noopener noreferrer">here</a></p>]]></content:encoded>
+            <category>news</category>
+            <category>officehour</category>
+        </item>
+        <item>
             <title><![CDATA[Office Hours 2022-05-13]]></title>
             <link>https://catena-x.net/blog/Office Hours 2022-05-13</link>
             <guid>Office Hours 2022-05-13</guid>
