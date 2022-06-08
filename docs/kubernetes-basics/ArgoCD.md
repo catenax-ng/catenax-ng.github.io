@@ -1,3 +1,7 @@
+---
+sidebar_position: 1
+---
+
 # ArgoCD
 
 We use [ArgoCD](https://argo-cd.readthedocs.io/en/stable/).

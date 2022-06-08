@@ -2,4 +2,4 @@
 slug: /guides
 ---
 
-# Guides
+# Base Guides
