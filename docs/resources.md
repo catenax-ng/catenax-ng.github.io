@@ -93,6 +93,17 @@ request scanning of **public** repositories (**private** are not supported!).
 Use [this Jira template](https://jira.catena-x.net/secure/CreateIssueDetails!init.jspa?pid=10212&issuetype=10401&components=10401&priority=3&summary=SonarCloud%20onboarding&description=Public%20repository%20...)
 for SonarCloud support.
 
+## Request assistance from Security team
+
+The Catena-X Security expert team is happy to provide assistance with all security related topics. Use [this Jira template](https://jira.catena-x.net/secure/CreateIssueDetails!init.jspa?pid=10212&issuetype=10401&components=10401&priority=3&summary=Security%20request&description=Please%20specify%20the%20type%20of%20request.%20Exemplary%20requests%20are%3A%20%0A%20%20-%20Veracode%20%28initial%20setup%2C%20github%20integration%2C%20Jira%20integration%29%20%0A%20%20-%20Trivvy%20%0A%20%20-%20Checkov%20%0A%20%20-%20Gitguardian%20%0A%20%20-%20Pentesting%20%0A%20%20-%20Security%20risk%20assessment%20%28RRA%2C%20Threat%20modeling%2C%20Code%20reviews%29%0A&assignee=christian.winnen%40mhp.com) for Support from the Security team. Exemplary requests are:
+
+* Security risk assessment (RRA, Threat modeling, Code reviews)
+* Pentesting
+* Veracode (initial setup, github integration, Jira integration)
+* Trivvy
+* Checkov
+* Gitguardian
+
 ## General consulting requests
 
 We are happy to help you out on several topics regarding DevSecOps. The following sections describe some of the most
