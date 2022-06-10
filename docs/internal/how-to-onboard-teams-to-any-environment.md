@@ -131,10 +131,10 @@ To create the policies, login to Vault and
 - enter the policy name in the _Name_ field
 - enter following to _Policy_ field:
 
-  - for the _product-productName_ policy
+  - for the _productName-rw_ policy
 
   ```
-  path "product-productName/*" {
+  path "productName-rw/*" {
     capabilities = ["create", "read", "update", "delete", "list"]
   }
   ```
@@ -153,7 +153,7 @@ To enable GitHub Token auth for any product-team a GitHub auth mapping has to be
 CLI is required.
 
 ```shell
-vault write auth/github/map/teams/product-team-name value=product-team-name
+vault write auth/github/map/teams/product-team-name value=productName-rw
 ```
 
 :::info
