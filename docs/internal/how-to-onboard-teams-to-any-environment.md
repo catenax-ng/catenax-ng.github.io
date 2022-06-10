@@ -118,11 +118,10 @@ To enable/create a new secret engine for a product-team,
 
 There will be 2 policies created for each team, following this naming schema:
 
-- _product-productName-rw_
-- _product-productName-ro_
+- _productName-rw_
+- _productName-ro_
 
-The _product-productName-rw_ policy will be applied to personal auth methods (as of now GitHub Token), the _
-product-productName-ro_ policy will be applied to AppRole auth method.
+The _productName-rw_ policy will be applied to personal auth methods (as of now GitHub Token), the _productName-ro_ policy will be applied to AppRole auth method.
 
 To create the policies, login to Vault and
 
@@ -134,15 +133,15 @@ To create the policies, login to Vault and
   - for the _productName-rw_ policy
 
   ```
-  path "productName-rw/*" {
+  path "productName/*" {
     capabilities = ["create", "read", "update", "delete", "list"]
   }
   ```
 
-  - for the _product-productName-ro_ policy
+  - for the _productName-ro_ policy
 
   ```
-  path "product-productName/*" {
+  path "productName/*" {
     capabilities = ["read"]
   }
   ```
@@ -158,7 +157,7 @@ vault write auth/github/map/teams/product-team-name value=productName-rw
 
 :::info
 
-`value=productName-rw` links to the policy _product-productName_ created in the step before.
+`value=productName-rw` links to the policy _productName-rw_ created in the step before.
 
 To be able to use the Vault CLI please refer to [How to use Vault docu](../guides/how-to-use-vault.md#vault-cli)
 
