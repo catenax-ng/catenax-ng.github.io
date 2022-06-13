@@ -21,8 +21,8 @@ Open Source Licenses are **contracts** that define (among other things) the term
 
 A distinction is made between:
 
-* self written code
-* 3rd party libraries
+- self written code
+- 3rd party libraries
 
 ### Self written code
 
