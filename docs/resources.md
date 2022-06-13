@@ -17,7 +17,8 @@ resource you want.
 | 5 |new environment (**please see the notes below**) |[Jira template](https://jira.catena-x.net/secure/CreateIssueDetails!init.jspa?pid=10212&issuetype=10401&components=10401&priority=3&summary=NEW%20ENVIRONMENT&description=%0APurpose%3A%20_environment_purpose_%0ARequested%20by%3A%20_person_requesting_the_demonstration_environment_%0AEnd%20date%20of%20demonstration%3A%20_dd.mm.yyyy_%0ATeams%20participating%3A%0A-%20_product_team_name_)|
 | 6 |databases and other Azure services               |see notes below|
 | 7 |access / setup SonarCloud                        |[Jira template](https://jira.catena-x.net/secure/CreateIssueDetails!init.jspa?pid=10212&issuetype=10401&components=10401&priority=3&summary=SonarCloud%20onboarding&description=Public%20repository%20...)|
-| 8 |**blank** template for any requirement           |[Jira template](https://jira.catena-x.net/secure/CreateIssueDetails!init.jspa?pid=10212&issuetype=10401&components=10401&priority=3&summary=blank%20template%20for%20any%20requirement&description=%0AGitHub%20user%3A%20_your_user_%0Ablank_template)                                                       |
+| 8 |request assistance from Security team            |[Jira template](https://jira.catena-x.net/secure/CreateIssueDetails!init.jspa?pid=10212&issuetype=10401&components=10401&priority=3&summary=Security%20request&description=Please%20specify%20the%20type%20of%20request.%20Exemplary%20requests%20are%3A%20%0A%20%20-%20Veracode%20%28initial%20setup%2C%20github%20integration%2C%20Jira%20integration%29%20%0A%20%20-%20Trivvy%20%0A%20%20-%20Checkov%20%0A%20%20-%20Gitguardian%20%0A%20%20-%20Pentesting%20%0A%20%20-%20Security%20risk%20assessment%20%28RRA%2C%20Threat%20modeling%2C%20Code%20reviews%29%0A&assignee=christian.winnen%40mhp.com)|
+| 9 |**blank** template for any requirement           |[Jira template](https://jira.catena-x.net/secure/CreateIssueDetails!init.jspa?pid=10212&issuetype=10401&components=10401&priority=3&summary=blank%20template%20for%20any%20requirement&description=%0AGitHub%20user%3A%20_your_user_%0Ablank_template)                                                       |
 
 If you need additional help or advice on how to structure your repository after the transition from catenax, just reach
 out to us on
@@ -75,6 +76,17 @@ We will provide azure services soon but only for critical / central services.
 
 Currently SonarCloud is NOT mandatory for Release 1. VeraCode is. If you want to use SonarCloud right now, you can
 request scanning of **public** repositories (**private** are not supported!).
+
+### 8. Request assistance from Security team
+
+The Catena-X Security expert team is happy to provide assistance with all security related topics.
+Exemplary requests are:
+- Security risk assessment (RRA, Threat modeling, Code reviews)
+- Pentesting
+- Veracode (initial setup, GitHub integration, Jira integration)
+- Trivy
+- Checkov
+- Gitguardian
 
 ## General consulting requests
 
