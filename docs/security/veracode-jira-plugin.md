@@ -20,22 +20,22 @@ the plugin you must meet the following requirements:
 
 ### Remarks
 
-1. Don't change the Veracode plugin settings, this will affect other projects.
-2. Only findings that are breaking the Policy (severity high and very high) will be imported.
+1. Don't change the Veracode plugin settings, since this will affect other projects.
+2. Only findings that are breaking our Code Scanning Policy (severity high and very high) will be imported.
 
 ### Steps
 
-1. Contact **mohamed.belkhiria@mhp.com** or **christian.winnen@mhp.com** to request the activation of the automatic
+1. Contact **dl_CoP_IT_Security@catena-x.net** to request the activation of the automatic
    imports of the Veracode findings into your Jira project.
-2. Provide in the Email the **Project Name** in Jira and **optionally a Team member** for the issues assignment (This
-   team member will be automatically assigned to all the findings imported from Veracode).
-3. The Security Team takes care of the plugin settings. The findings will be imported at a prescheduled day and hour.
+2. Please provide the **Project Name** in Jira and **optionally a Team member** for the issues assignment. This
+   team member will be automatically assigned to all imported findings.
+3. The Security Team will then setup the findings import.
 
-## After the Integration
+### Import Schedule
 
-The findings imports are scheduled daily at 17:30.
+The findings are automatically imported from Veracode to Jira **every hour**.
 
-### Finding types
+## Finding types
 
 Different finding types will be imported as different Backlogs:
 
