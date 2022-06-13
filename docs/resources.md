@@ -24,7 +24,7 @@ If you need additional help or advice on how to structure your repository after 
 out to us on
 the [CoP Channel](https://teams.microsoft.com/l/channel/19%3a9a3c4a05a3514d07b973c13e7b468709%40thread.tacv2/CX%2520-%2520CoP%2520DevSecOps?groupId=17b1a2dc-67fb-4a49-a2ed-dd1344321439&tenantId=1ad22c6d-2f08-4f05-a0ba-e17f6ce88380)
 
-### 1. User invitation to the catenax-ng GitHub organization
+## 1. User invitation to the catenax-ng GitHub organization
 
 If you need access to repositories inside the catenax-ng organization or you want to use ArgoCD for deploying an
 application on one of the demonstrator environments, you need to request an invitation to the catenax-ng
@@ -32,7 +32,7 @@ GitHub organization.
 Once you are part of the organization, you can be invited to teams by maintainers of the different product teams.
 If there is no team inside the organization for your product yet, you can request that too.
 
-### 2. GitHub team in catenax-ng
+## 2. GitHub team in catenax-ng
 
 GitHub teams are used to grand multiple user access to the same resources. Teams are also used to grand access
 to projects in ArgoCD and secrets in Vault. Usually each Catena-X product team will have one team in the catenax-ng
@@ -40,7 +40,7 @@ GitHub organization.
 The initially invited people will be granted maintainer access to the team. Every additional team member will then be
 invited by one of the maintainers.
 
-### 3. GitHub repository in catenax-ng
+## 3. GitHub repository in catenax-ng
 
 If you need to collaborate on source-code, you can request a repository in the catenax-ng GitHub organization.
 You can request as many repositories as you need for your team.
@@ -48,13 +48,13 @@ We offer these repositories during the transition phase from the Catena-X organi
 in the eclipse foundation. After moving your repositories to eclipse foundation, you can still use catenax-ng for
 deployment specific configuration of the demonstrator environments.
 
-### 4. Request access to an existing environment/namespace
+## 4. Request access to an existing environment/namespace
 
 If you need access to a specific environment, or a namespace on an environment, check if you are already part of the
 catenax-ng GitHub organization. If not, please request access first, like described
 in [this section](#user-invitation-to-the-catenax-ng-github-organization).
 
-### 5. Request environment
+## 5. Request environment
 
 > **BEWARE:** We do not provide dedicated environments for single teams. We will provide a DEV, INT, and PRE-PROD
 > environment and teams will collectively use these environments together.
@@ -65,22 +65,23 @@ event.
 In such cases, we provide a dedicated environment, that will only persist for this demonstration and will be deleted
 afterwards.
 
-### 6. Request databases and other Azure services
+## 6. Request databases and other Azure services
 
 Currently, we do not offer azure services as we try to provide a cloud agnostic platform stack. Please try to use a helm
 dependency for services you require.
 
 We will provide azure services soon but only for critical / central services.
 
-### 7. Request access / setup SonarCloud
+## 7. Request access / setup SonarCloud
 
 Currently SonarCloud is NOT mandatory for Release 1. VeraCode is. If you want to use SonarCloud right now, you can
 request scanning of **public** repositories (**private** are not supported!).
 
-### 8. Request assistance from Security team
+## 8. Request assistance from Security team
 
 The Catena-X Security expert team is happy to provide assistance with all security related topics.
 Exemplary requests are:
+
 - Security risk assessment (RRA, Threat modeling, Code reviews)
 - Pentesting
 - Veracode (initial setup, GitHub integration, Jira integration)
@@ -92,12 +93,12 @@ Exemplary requests are:
 
 The Catena-X Security expert team is happy to provide assistance with all security related topics. Use [this Jira template](https://jira.catena-x.net/secure/CreateIssueDetails!init.jspa?pid=10212&issuetype=10401&components=10401&priority=3&summary=Security%20request&description=Please%20specify%20the%20type%20of%20request.%20Exemplary%20requests%20are%3A%20%0A%20%20-%20Veracode%20%28initial%20setup%2C%20github%20integration%2C%20Jira%20integration%29%20%0A%20%20-%20Trivvy%20%0A%20%20-%20Checkov%20%0A%20%20-%20Gitguardian%20%0A%20%20-%20Pentesting%20%0A%20%20-%20Security%20risk%20assessment%20%28RRA%2C%20Threat%20modeling%2C%20Code%20reviews%29%0A&assignee=christian.winnen%40mhp.com) for Support from the Security team. Exemplary requests are:
 
-* Security risk assessment (RRA, Threat modeling, Code reviews)
-* Pentesting
-* Veracode (initial setup, github integration, Jira integration)
-* Trivvy
-* Checkov
-* Gitguardian
+- Security risk assessment (RRA, Threat modeling, Code reviews)
+- Pentesting
+- Veracode (initial setup, github integration, Jira integration)
+- Trivvy
+- Checkov
+- Gitguardian
 
 ## General consulting requests
 
