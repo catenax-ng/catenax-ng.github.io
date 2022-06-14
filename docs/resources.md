@@ -8,27 +8,19 @@ We provide a standard set of resources you can request.
 Please create a ticket within our Jira with the following templates and fill it out based on the information from the specific
 resource you want.
 
-|   |Request                                          |Template                                                                                                                                                                                                                                                                                                        |
-|---|-------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1 |user invitation to catenax-ng GitHub organization|[Jira template](https://jira.catena-x.net/secure/CreateIssueDetails!init.jspa?pid=10212&issuetype=10401&components=10401&priority=3&summary=GitHub%3A%20Invite%20member&description=%0AGitHub%20user%3A%20_your_user_%0AVouching%20person%3A%20_your_PO_)                                                       |
-| 2 |new GitHub team in catenax-ng                    |[Jira template](https://jira.catena-x.net/secure/CreateIssueDetails!init.jspa?pid=10212&issuetype=10401&components=10401&priority=3&summary=GitHub%3A%20New%20Team&description=%0AProduct%20team%20name%3A%20_your_product_team_name_%0AGitHub%20users%20to%20invite%3A%20%0A%20%20-%20_github_user_account_)   |
-| 3 |new GitHub repository in catenax-ng              |[Jira template](https://jira.catena-x.net/secure/CreateIssueDetails!init.jspa?pid=10212&issuetype=10401&components=10401&priority=3&summary=GitHub%3A%20New%20repository&description=%0Arepository%20name%3A%20product-_your_product_name_%0AGitHub%20team%20to%20grant%20access%3A%20%0A-%20_github_team_name_)|
-| 4 |access to an existing environment/namespace      |[Jira template](https://jira.catena-x.net/secure/CreateIssueDetails!init.jspa?pid=10212&issuetype=10401&components=10401&priority=3&summary=Environment%3A%20request%20access&description=%0AEnvironment%3A%20_DEV%20%2F%20INT%20%2F%20PRE-PROD_%0Anamespace%3A%20_name_of_namespace_%0AGitHub%20team%3A%20_team_that_should_have_access_%0AGitHub%20users%3A%20%0A-%20_github_user_that_should_have_access)|
-| 5 |new environment (**please see the notes below**) |[Jira template](https://jira.catena-x.net/secure/CreateIssueDetails!init.jspa?pid=10212&issuetype=10401&components=10401&priority=3&summary=NEW%20ENVIRONMENT&description=%0APurpose%3A%20_environment_purpose_%0ARequested%20by%3A%20_person_requesting_the_demonstration_environment_%0AEnd%20date%20of%20demonstration%3A%20_dd.mm.yyyy_%0ATeams%20participating%3A%0A-%20_product_team_name_)|
-| 6 |databases and other Azure services               |see notes below|
-| 7 |access / setup SonarCloud                        |[Jira template](https://jira.catena-x.net/secure/CreateIssueDetails!init.jspa?pid=10212&issuetype=10401&components=10401&priority=3&summary=SonarCloud%20onboarding&description=Public%20repository%20...)|
-| 8 |request assistance from Security team            |[Jira template](https://jira.catena-x.net/secure/CreateIssueDetails!init.jspa?pid=10212&issuetype=10401&components=10401&priority=3&summary=Security%20request&description=Please%20specify%20the%20type%20of%20request.%20Exemplary%20requests%20are%3A%20%0A%20%20-%20Veracode%20%28initial%20setup%2C%20github%20integration%2C%20Jira%20integration%29%20%0A%20%20-%20Trivvy%20%0A%20%20-%20Checkov%20%0A%20%20-%20Gitguardian%20%0A%20%20-%20Pentesting%20%0A%20%20-%20Security%20risk%20assessment%20%28RRA%2C%20Threat%20modeling%2C%20Code%20reviews%29%0A&assignee=christian.winnen%40mhp.com)|
-| 9 |**blank** template for any requirement           |[Jira template](https://jira.catena-x.net/secure/CreateIssueDetails!init.jspa?pid=10212&issuetype=10401&components=10401&priority=3&summary=blank%20template%20for%20any%20requirement&description=%0AGitHub%20user%3A%20_your_user_%0Ablank_template)                                                       |
-
 If you need additional help or advice on how to structure your repository after the transition from catenax, just reach
 out to us on
 the [CoP Channel](https://teams.microsoft.com/l/channel/19%3a9a3c4a05a3514d07b973c13e7b468709%40thread.tacv2/CX%2520-%2520CoP%2520DevSecOps?groupId=17b1a2dc-67fb-4a49-a2ed-dd1344321439&tenantId=1ad22c6d-2f08-4f05-a0ba-e17f6ce88380)
+.
 
 ## 1. User invitation to the catenax-ng GitHub organization
 
 If you need access to repositories inside the catenax-ng organization or you want to use ArgoCD for deploying an
 application on one of the demonstrator environments, you need to request an invitation to the catenax-ng
-GitHub organization.
+GitHub organization
+via [this Jira template](https://jira.catena-x.net/secure/CreateIssueDetails!init.jspa?pid=10212&issuetype=10401&components=10401&priority=3&summary=GitHub%3A%20Invite%20member&description=%0AGitHub%20user%3A%20_your_user_%0AVouching%20person%3A%20_your_PO_)
+.
+
 Once you are part of the organization, you can be invited to teams by maintainers of the different product teams.
 If there is no team inside the organization for your product yet, you can request that too.
 
@@ -37,6 +29,11 @@ If there is no team inside the organization for your product yet, you can reques
 GitHub teams are used to grand multiple user access to the same resources. Teams are also used to grand access
 to projects in ArgoCD and secrets in Vault. Usually each Catena-X product team will have one team in the catenax-ng
 GitHub organization.
+
+You can issue this request via 
+[this Jira template](https://jira.catena-x.net/secure/CreateIssueDetails!init.jspa?pid=10212&issuetype=10401&components=10401&priority=3&summary=GitHub%3A%20New%20Team&description=%0AProduct%20team%20name%3A%20_your_product_team_name_%0AGitHub%20users%20to%20invite%3A%20%0A%20%20-%20_github_user_account_)
+.
+
 The initially invited people will be granted maintainer access to the team. Every additional team member will then be
 invited by one of the maintainers.
 
@@ -48,11 +45,19 @@ We offer these repositories during the transition phase from the Catena-X organi
 in the eclipse foundation. After moving your repositories to eclipse foundation, you can still use catenax-ng for
 deployment specific configuration of the demonstrator environments.
 
+To request a new repository, please use
+[this Jira template](https://jira.catena-x.net/secure/CreateIssueDetails!init.jspa?pid=10212&issuetype=10401&components=10401&priority=3&summary=GitHub%3A%20New%20repository&description=%0Arepository%20name%3A%20product-_your_product_name_%0AGitHub%20team%20to%20grant%20access%3A%20%0A-%20_github_team_name_)
+.
+
 ## 4. Request access to an existing environment/namespace
 
 If you need access to a specific environment, or a namespace on an environment, check if you are already part of the
 catenax-ng GitHub organization. If not, please request access first, like described
 in [this section](#user-invitation-to-the-catenax-ng-github-organization).
+
+If you are already a member of the GitHub organization,
+please use [this Jira template](https://jira.catena-x.net/secure/CreateIssueDetails!init.jspa?pid=10212&issuetype=10401&components=10401&priority=3&summary=Environment%3A%20request%20access&description=%0AEnvironment%3A%20_DEV%20%2F%20INT%20%2F%20PRE-PROD_%0Anamespace%3A%20_name_of_namespace_%0AGitHub%20team%3A%20_team_that_should_have_access_%0AGitHub%20users%3A%20%0A-%20_github_user_that_should_have_access)
+to request access.
 
 ## 5. Request environment
 
@@ -64,6 +69,10 @@ Any environment beside DEV, INT and PRE-PROD should have a very specific use cas
 event.
 In such cases, we provide a dedicated environment, that will only persist for this demonstration and will be deleted
 afterwards.
+
+Please use
+[this Jira template](https://jira.catena-x.net/secure/CreateIssueDetails!init.jspa?pid=10212&issuetype=10401&components=10401&priority=3&summary=NEW%20ENVIRONMENT&description=%0APurpose%3A%20_environment_purpose_%0ARequested%20by%3A%20_person_requesting_the_demonstration_environment_%0AEnd%20date%20of%20demonstration%3A%20_dd.mm.yyyy_%0ATeams%20participating%3A%0A-%20_product_team_name_)
+and fill out the details in the description.
 
 ## 6. Request databases and other Azure services
 
@@ -77,6 +86,9 @@ We will provide azure services soon but only for critical / central services.
 Currently SonarCloud is NOT mandatory for Release 1. VeraCode is. If you want to use SonarCloud right now, you can
 request scanning of **public** repositories (**private** are not supported!).
 
+Use [this Jira template](https://jira.catena-x.net/secure/CreateIssueDetails!init.jspa?pid=10212&issuetype=10401&components=10401&priority=3&summary=SonarCloud%20onboarding&description=Public%20repository%20...)
+for SonarCloud support.
+
 ## 8. Request assistance from Security team
 
 The Catena-X Security expert team is happy to provide assistance with all security related topics.
@@ -89,29 +101,30 @@ Exemplary requests are:
 - Checkov
 - Gitguardian
 
-## Request assistance from Security team
+Please use
+[this Jira template](https://jira.catena-x.net/secure/CreateIssueDetails!init.jspa?pid=10212&issuetype=10401&components=10401&priority=3&summary=Security%20request&description=Please%20specify%20the%20type%20of%20request.%20Exemplary%20requests%20are%3A%20%0A%20%20-%20Veracode%20%28initial%20setup%2C%20github%20integration%2C%20Jira%20integration%29%20%0A%20%20-%20Trivvy%20%0A%20%20-%20Checkov%20%0A%20%20-%20Gitguardian%20%0A%20%20-%20Pentesting%20%0A%20%20-%20Security%20risk%20assessment%20%28RRA%2C%20Threat%20modeling%2C%20Code%20reviews%29%0A&assignee=christian.winnen%40mhp.com)
+.
 
-The Catena-X Security expert team is happy to provide assistance with all security related topics. Use [this Jira template](https://jira.catena-x.net/secure/CreateIssueDetails!init.jspa?pid=10212&issuetype=10401&components=10401&priority=3&summary=Security%20request&description=Please%20specify%20the%20type%20of%20request.%20Exemplary%20requests%20are%3A%20%0A%20%20-%20Veracode%20%28initial%20setup%2C%20github%20integration%2C%20Jira%20integration%29%20%0A%20%20-%20Trivvy%20%0A%20%20-%20Checkov%20%0A%20%20-%20Gitguardian%20%0A%20%20-%20Pentesting%20%0A%20%20-%20Security%20risk%20assessment%20%28RRA%2C%20Threat%20modeling%2C%20Code%20reviews%29%0A&assignee=christian.winnen%40mhp.com) for Support from the Security team. Exemplary requests are:
-
-- Security risk assessment (RRA, Threat modeling, Code reviews)
-- Pentesting
-- Veracode (initial setup, github integration, Jira integration)
-- Trivvy
-- Checkov
-- Gitguardian
+## 9. Template for any requirement
+If none of the topics apply or the
+[CoP Channel](https://teams.microsoft.com/l/channel/19%3a9a3c4a05a3514d07b973c13e7b468709%40thread.tacv2/CX%2520-%2520CoP%2520DevSecOps?groupId=17b1a2dc-67fb-4a49-a2ed-dd1344321439&tenantId=1ad22c6d-2f08-4f05-a0ba-e17f6ce88380)
+does not seem to be the right channel,
+a [JIRA](https://jira.catena-x.net/secure/CreateIssueDetails!init.jspa?pid=10212&issuetype=10401&components=10401&priority=3&summary=blank%20template%20for%20any%20requirement&description=%0AGitHub%20user%3A%20_your_user_%0Ablank_template)
+'blank template' is available.
 
 ## General consulting requests
 
 We are happy to help you out on several topics regarding DevSecOps. The following sections describe some of the most
 common
 cases. In any case, you need help, feel free to get in contact with us through
-the [CoP Channel](https://teams.microsoft.com/l/channel/19%3a9a3c4a05a3514d07b973c13e7b468709%40thread.tacv2/CX%2520-%2520CoP%2520DevSecOps?groupId=17b1a2dc-67fb-4a49-a2ed-dd1344321439&tenantId=1ad22c6d-2f08-4f05-a0ba-e17f6ce88380).
+the [CoP Channel](https://teams.microsoft.com/l/channel/19%3a9a3c4a05a3514d07b973c13e7b468709%40thread.tacv2/CX%2520-%2520CoP%2520DevSecOps?groupId=17b1a2dc-67fb-4a49-a2ed-dd1344321439&tenantId=1ad22c6d-2f08-4f05-a0ba-e17f6ce88380)
+.
 
 ## Onboarding to Catena-X demonstrator environments (ArgoCD, Vault, etc.)
 
 If you are not yet familiar with the setup of our demonstrator environments or the tools running on it, we will guide
-you
-through the onboarding in a hands-on session. Just get in contact with us, and we will schedule this meeting.
+you through the onboarding in a hands-on session. Just get in contact with us, and we will schedule this meeting
+.
 
 ## Setting up helm charts for your application
 
