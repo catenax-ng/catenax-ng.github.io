@@ -30,7 +30,7 @@ GitHub teams are used to grand multiple user access to the same resources. Teams
 to projects in ArgoCD and secrets in Vault. Usually each Catena-X product team will have one team in the catenax-ng
 GitHub organization.
 
-You can issue this request via 
+You can issue this request via
 [this Jira template](https://jira.catena-x.net/secure/CreateIssueDetails!init.jspa?pid=10212&issuetype=10401&components=10401&priority=3&summary=GitHub%3A%20New%20Team&description=%0AProduct%20team%20name%3A%20_your_product_team_name_%0AGitHub%20users%20to%20invite%3A%20%0A%20%20-%20_github_user_account_)
 .
 
@@ -106,6 +106,7 @@ Please use
 .
 
 ## Template for any requirement
+
 If none of the topics apply or the
 [CoP Channel](https://teams.microsoft.com/l/channel/19%3a9a3c4a05a3514d07b973c13e7b468709%40thread.tacv2/CX%2520-%2520CoP%2520DevSecOps?groupId=17b1a2dc-67fb-4a49-a2ed-dd1344321439&tenantId=1ad22c6d-2f08-4f05-a0ba-e17f6ce88380)
 does not seem to be the right channel,
