@@ -2,7 +2,7 @@
 title: How To Monitor CPU And Memory Usage
 ---
 
-To get information about e.g. CPU and memory usage, the Grafana dashboard is provided.
+To get information about e.g. CPU and memory usage, a Grafana dashboard is provided.
 You can get to the dashboard via the landingpage(s)
 
 DEV: [https://home.dev.demo.catena-x.net/](https://home.dev.demo.catena-x.net/)
@@ -31,7 +31,7 @@ the Grafana start page opens without any dashboard
 
 ![grafana_dashboard_empty](assets/grafana-dashboard-empty.jpg)
 
-## Setting up the personal dashboard
+## Setting up a predefined dashboard
 
 Go to Dashboards > Browse
 
