@@ -19,7 +19,7 @@ INT: [https://grafana.int.demo.catena-x.net/](https://grafana.int.demo.catena-x.
 
 ## Login to Grafana
 
-![grafana_welcome](assets/grafana-welcome.jpg)
+![grafana_welcome](assets/grafana-welcome-image.jpg)
 
 Login via GitHub
 
