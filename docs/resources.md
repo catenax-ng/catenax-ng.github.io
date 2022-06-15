@@ -10,16 +10,14 @@ resource you want.
 
 If you need additional help or advice on how to structure your repository after the transition from catenax, just reach
 out to us on
-the [CoP Channel](https://teams.microsoft.com/l/channel/19%3a9a3c4a05a3514d07b973c13e7b468709%40thread.tacv2/CX%2520-%2520CoP%2520DevSecOps?groupId=17b1a2dc-67fb-4a49-a2ed-dd1344321439&tenantId=1ad22c6d-2f08-4f05-a0ba-e17f6ce88380)
-.
+the [CoP Channel](https://teams.microsoft.com/l/channel/19%3a9a3c4a05a3514d07b973c13e7b468709%40thread.tacv2/CX%2520-%2520CoP%2520DevSecOps?groupId=17b1a2dc-67fb-4a49-a2ed-dd1344321439&tenantId=1ad22c6d-2f08-4f05-a0ba-e17f6ce88380).
 
 ## User invitation to the catenax-ng GitHub organization
 
 If you need access to repositories inside the catenax-ng organization or you want to use ArgoCD for deploying an
 application on one of the demonstrator environments, you need to request an invitation to the catenax-ng
 GitHub organization
-via [this Jira template](https://jira.catena-x.net/secure/CreateIssueDetails!init.jspa?pid=10212&issuetype=10401&components=10401&priority=3&summary=GitHub%3A%20Invite%20member&description=%0AGitHub%20user%3A%20_your_user_%0AVouching%20person%3A%20_your_PO_)
-.
+via [this Jira template](https://jira.catena-x.net/secure/CreateIssueDetails!init.jspa?pid=10212&issuetype=10401&components=10401&priority=3&summary=GitHub%3A%20Invite%20member&description=%0AGitHub%20user%3A%20_your_user_%0AVouching%20person%3A%20_your_PO_).
 
 Once you are part of the organization, you can be invited to teams by maintainers of the different product teams.
 If there is no team inside the organization for your product yet, you can request that too.
@@ -31,8 +29,7 @@ to projects in ArgoCD and secrets in Vault. Usually each Catena-X product team w
 GitHub organization.
 
 You can issue this request via
-[this Jira template](https://jira.catena-x.net/secure/CreateIssueDetails!init.jspa?pid=10212&issuetype=10401&components=10401&priority=3&summary=GitHub%3A%20New%20Team&description=%0AProduct%20team%20name%3A%20_your_product_team_name_%0AGitHub%20users%20to%20invite%3A%20%0A%20%20-%20_github_user_account_)
-.
+[this Jira template](https://jira.catena-x.net/secure/CreateIssueDetails!init.jspa?pid=10212&issuetype=10401&components=10401&priority=3&summary=GitHub%3A%20New%20Team&description=%0AProduct%20team%20name%3A%20_your_product_team_name_%0AGitHub%20users%20to%20invite%3A%20%0A%20%20-%20_github_user_account_).
 
 The initially invited people will be granted maintainer access to the team. Every additional team member will then be
 invited by one of the maintainers.
@@ -46,8 +43,7 @@ in the eclipse foundation. After moving your repositories to eclipse foundation,
 deployment specific configuration of the demonstrator environments.
 
 To request a new repository, please use
-[this Jira template](https://jira.catena-x.net/secure/CreateIssueDetails!init.jspa?pid=10212&issuetype=10401&components=10401&priority=3&summary=GitHub%3A%20New%20repository&description=%0Arepository%20name%3A%20product-_your_product_name_%0AGitHub%20team%20to%20grant%20access%3A%20%0A-%20_github_team_name_)
-.
+[this Jira template](https://jira.catena-x.net/secure/CreateIssueDetails!init.jspa?pid=10212&issuetype=10401&components=10401&priority=3&summary=GitHub%3A%20New%20repository&description=%0Arepository%20name%3A%20product-_your_product_name_%0AGitHub%20team%20to%20grant%20access%3A%20%0A-%20_github_team_name_).
 
 ## Request access to an existing environment/namespace
 
@@ -102,8 +98,7 @@ Exemplary requests are:
 - Gitguardian
 
 Please use
-[this Jira template](https://jira.catena-x.net/secure/CreateIssueDetails!init.jspa?pid=10212&issuetype=10401&components=10401&priority=3&summary=Security%20request&description=Please%20specify%20the%20type%20of%20request.%20Exemplary%20requests%20are%3A%20%0A%20%20-%20Veracode%20%28initial%20setup%2C%20github%20integration%2C%20Jira%20integration%29%20%0A%20%20-%20Trivvy%20%0A%20%20-%20Checkov%20%0A%20%20-%20Gitguardian%20%0A%20%20-%20Pentesting%20%0A%20%20-%20Security%20risk%20assessment%20%28RRA%2C%20Threat%20modeling%2C%20Code%20reviews%29%0A&assignee=christian.winnen%40mhp.com)
-.
+[this Jira template](https://jira.catena-x.net/secure/CreateIssueDetails!init.jspa?pid=10212&issuetype=10401&components=10401&priority=3&summary=Security%20request&description=Please%20specify%20the%20type%20of%20request.%20Exemplary%20requests%20are%3A%20%0A%20%20-%20Veracode%20%28initial%20setup%2C%20github%20integration%2C%20Jira%20integration%29%20%0A%20%20-%20Trivvy%20%0A%20%20-%20Checkov%20%0A%20%20-%20Gitguardian%20%0A%20%20-%20Pentesting%20%0A%20%20-%20Security%20risk%20assessment%20%28RRA%2C%20Threat%20modeling%2C%20Code%20reviews%29%0A&assignee=christian.winnen%40mhp.com).
 
 ## Template for any requirement
 
@@ -118,14 +113,12 @@ a [JIRA](https://jira.catena-x.net/secure/CreateIssueDetails!init.jspa?pid=10212
 We are happy to help you out on several topics regarding DevSecOps. The following sections describe some of the most
 common
 cases. In any case, you need help, feel free to get in contact with us through
-the [CoP Channel](https://teams.microsoft.com/l/channel/19%3a9a3c4a05a3514d07b973c13e7b468709%40thread.tacv2/CX%2520-%2520CoP%2520DevSecOps?groupId=17b1a2dc-67fb-4a49-a2ed-dd1344321439&tenantId=1ad22c6d-2f08-4f05-a0ba-e17f6ce88380)
-.
+the [CoP Channel](https://teams.microsoft.com/l/channel/19%3a9a3c4a05a3514d07b973c13e7b468709%40thread.tacv2/CX%2520-%2520CoP%2520DevSecOps?groupId=17b1a2dc-67fb-4a49-a2ed-dd1344321439&tenantId=1ad22c6d-2f08-4f05-a0ba-e17f6ce88380).
 
 ## Onboarding to Catena-X demonstrator environments (ArgoCD, Vault, etc.)
 
 If you are not yet familiar with the setup of our demonstrator environments or the tools running on it, we will guide
-you through the onboarding in a hands-on session. Just get in contact with us, and we will schedule this meeting
-.
+you through the onboarding in a hands-on session. Just get in contact with us, and we will schedule this meeting.
 
 ## Setting up helm charts for your application
 
