@@ -1,5 +1,5 @@
 ---
-title: How to create persistent storage on AKS cluster
+title: How to use persistent storage on AKS cluster
 ---
 
 This is a short guide on how to create persistent storage on AKS cluster. It contains basic information, generic examples, and an actual example from our environment.
@@ -94,5 +94,87 @@ Windows container
 
 # Actual example
 
-[How to configure markdown rules](https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md)
+## BPDM (Argocd app)
 
+### bpdm-int-postgres
+
+pod
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+...
+spec:
+...
+  volumes:
+    - name: data
+      persistentVolumeClaim:
+        claimName: data-bpdm-int-postgres-0
+...
+```
+
+pvc
+```yaml
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  annotations:
+...
+  finalizers:
+    - kubernetes.io/pvc-protection
+  labels:
+    app.kubernetes.io/component: primary
+    app.kubernetes.io/instance: bpdm-int
+    app.kubernetes.io/name: postgres
+  name: data-bpdm-int-postgres-0
+  namespace: product-bpdm
+...
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 8Gi
+  storageClassName: default
+  volumeMode: Filesystem
+  volumeName: pvc-c......c-2..6-4..a-a..d-3.........b
+status:
+  accessModes:
+    - ReadWriteOnce
+  capacity:
+    storage: 8Gi
+  phase: Bound
+```
+
+This configuration will create the following
+
+Persistent volume claim
+
+```
+NAME                       STATUS   VOLUME                                     CAPACITY   ACCESS MODES   STORAGECLASS
+data-bpdm-int-postgres-0   Bound    pvc-c......c-2..6-4..a-a..d-3.........b   8Gi        RWO            default     
+```
+
+Persistent volume
+
+```
+NAME                                       CAPACITY   ACCESS MODES   RECLAIM POLICY   STATUS   CLAIM                                   STORAGECLASS   REASON
+pvc-c......c-2..6-4..a-a..d-3.........b   8Gi        RWO            Delete           Bound    product-bpdm/data-bpdm-int-postgres-0   default              
+
+```
+
+Reminder: the default storageclass
+
+```
+NAME                PROVISIONER          RECLAIMPOLICY   VOLUMEBINDINGMODE      ALLOWVOLUMEEXPANSION
+default (default)   disk.csi.azure.com   Delete          WaitForFirstConsumer   true                
+```
+
+And finally this disk resource in Azure
+
+```
+Name                                       Storage account type   Size (GiB)   Owner            Resource group                   Location
+pvc-c......c-2..6-4..a-a..d-3.........b   Standard SSD LRS       8            aks-...vmss_18   mc_cxtsi-hotel-budapest-rg_...   Germany West Central
+```
+
+![Azure disk](assets/azure-disk.png)
