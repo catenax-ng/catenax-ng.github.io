@@ -173,7 +173,7 @@ default (default)   disk.csi.azure.com   Delete          WaitForFirstConsumer   
 And finally this disk resource in Azure
 
 ```
-Name                                       Storage account type   Size (GiB)   Owner            Resource group                   Location
+Name                                      Storage account type   Size (GiB)   Owner            Resource group                   Location
 pvc-c......c-2..6-4..a-a..d-3.........b   Standard SSD LRS       8            aks-...vmss_18   mc_cxtsi-hotel-budapest-rg_...   Germany West Central
 ```
 
