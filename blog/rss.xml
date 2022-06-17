@@ -4,10 +4,21 @@
         <title>Catena-x - DevSecOps Blog</title>
         <link>https://catena-x.net/blog</link>
         <description>Catena-x - DevSecOps Blog</description>
-        <lastBuildDate>Fri, 10 Jun 2022 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 17 Jun 2022 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[Office Hours 2022-06-17]]></title>
+            <link>https://catena-x.net/blog/Office Hours 2022-06-17</link>
+            <guid>Office Hours 2022-06-17</guid>
+            <pubDate>Fri, 17 Jun 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[In our today's office hours, we discussed the following topics]]></description>
+            <content:encoded><![CDATA[<p>In our today's office hours, we discussed the following topics</p><ol><li>News from the DevSecOps Team<ol><li>We now have now support for login into vault directly by using GitHub (you don't need to create a github token anymore!)</li><li>Grafana is now provided/enabled on all environments (currently dev and int exist): <a href="https://grafana.int.demo.catena-x.net" target="_blank" rel="noopener noreferrer">grafana.int.demo.catena-x.net</a> OR <a href="https://grafana.dev.demo.catena-x.net" target="_blank" rel="noopener noreferrer">grafana.dev.demo.catena-x.net</a>; You want to know how to use it to check your CPU and Memory usage? Go to our <a href="/docs/guides/how-to-monitor">new guide</a> to see how.</li><li>We removed admin permissions from a few repositories: Be aware that we gave out admin permissions by accident. Currently we guardrail repositories so that release mandatory security checks can't be overriden. If you need support on adding a secret for example, make sure to get in contact with us and we will help you.</li></ol></li><li>News from the Security Team<ol><li>No update today</li></ol></li><li>News from the FOSS Team<ol><li>New udpates on the <a href="https://github.com/catenax-ng/foss-example" target="_blank" rel="noopener noreferrer">foss-example</a> repository! There are now basic files you can already add to your catena-x based repository.</li></ol></li><li>Q&amp;A</li><li>Hands-on</li></ol><p>You find the
+recording <a href="https://bcgcatenax.sharepoint.com/:f:/r/sites/CommunitiesofPractises/Shared%20Documents/CX-CoP%20DevSecOps/Office_Hours_Regular_Recordings?csf=1&amp;web=1&amp;e=YezRwb" target="_blank" rel="noopener noreferrer">here</a></p>]]></content:encoded>
+            <category>news</category>
+            <category>officehour</category>
+        </item>
         <item>
             <title><![CDATA[Office Hours 2022-06-10]]></title>
             <link>https://catena-x.net/blog/Office Hours 2022-06-10</link>
