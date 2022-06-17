@@ -6,7 +6,7 @@ This is a short guide on how to create persistent storage on Kubernetes clusters
 
 # Basic information
 
-Your application, and/or one of its dependencies might need to store data in persistent storage. Kubernetes offers a simple to use solution for that.
+Your application, and/or its dependency might need to store data in persistent storage. Kubernetes offers a simple to use solution for that.
 
 One scenario is that your own application uses persistent storage. In this case you need to include the storage definition in the StatefulSet, Deployment or Pod.
 
@@ -116,8 +116,10 @@ For further information on how to define dependencies, please refer to this docu
     dataSource: {}
 ```
 
-Although conditions and values file variables are extensively used in this exaple, the persistent volume claims are defined.
-
 :::tip
-If you feel the need to increase the storage capacity for a dependency of your application, you can do so by supplying the appropriate configuration through helm chart variable(s), or custome values file(s).
+If no storage class is defined, the default on the Kubernetes cluster will be used.
 :::
+
+## Extending storage capacity
+
+If you feel the need to increase the storage capacity for a dependency of your application, you can do so by supplying the appropriate configuration through helm chart variable(s), or custome values file(s).
