@@ -6,7 +6,7 @@ This is a short guide on how to create persistent storage on Kubernetes clusters
 
 ## Basic information
 
-Your application, and/or its dependency might need to store data in persistent storage. Kubernetes offers a simple to use solution for that.
+By default Kubernetes stores data for pods on the storage of the nodes the pods are started on. This presents various potential issues in terms of capacity, data retention, and security. Your application, and/or its dependency might need to store data in a persistent way. Kubernetes offers a simple to use solution for that in the form of persistent volumes.
 
 One scenario is that your own application uses persistent storage. In this case you need to include the storage definition in the StatefulSet, Deployment or Pod.
 
@@ -19,6 +19,83 @@ You can both define persistent storag for your application, and use dependencies
 In both cases, all the rest will be taken care of by the Kubernetes engine and storage driver, creating the necessary resources in the Kubernetes cluster, and on the underlying cloud platform.
 
 ## Examples
+
+### Defining persistent volume claim for deployment
+
+To directly attach persistent storage to your deployment or pod, you will need a persistentVolumeClaim type resource, and add volume(s) to your deployment.
+
+persistentVolumeClaim.yaml: 
+
+:::tip
+This can be omitted if dynamic provisioning is enabled, i.e. no storageClassName is defined.
+If storageClassName is set to "-", storageClassName: "", dynamic provisioning is disabled, 
+in this case you need to define your own persistentVolumeClaim.
+:::
+
+```yaml
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: pvc-persistent-tmp-demo
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 50Mi
+```
+
+deployment.yaml:
+
+```yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+...
+spec:
+...
+  template:
+  ...
+    spec:
+    ...
+      containers:
+      ...
+        - name: ...
+          volumeMounts:
+          ...
+            - name: pv-tmp-demo
+              readOnly: false
+              mountPath: /tmp/demo
+      volumes:
+        ...
+        - name: pv-tmp-demo
+          persistentVolumeClaim:
+            claimName: pvc-persistent-tmp-demo
+...
+```
+
+### Persistent volumes in statfulSet(s)
+
+When an application has multiple replicas, like in case of statefulSets, volumeClaimTemplates should be used instead of persistentVolumeClaims.
+A volumeClaimTemplate will create PVC(s) for each replica.
+
+```yaml
+volumeClaimTemplates:
+- metadata:
+    name: pv-data
+  spec:
+    accessModes: 
+      - ReadWriteOnce
+    resources:
+      requests:
+        storage: 50Mi
+```
+
+:::tip
+See this in action in our demo project, PVC example:
+[persistentVolumeClaim.yaml](https://github.com/catenax-ng/k8s-helm-example/blob/main/charts/k8s-helm-example/templates/persistentVolumeClaim.yaml)
+[deployment.yaml](https://github.com/catenax-ng/k8s-helm-example/blob/main/charts/k8s-helm-example/templates/deployment.yaml)
+:::
 
 ### Defining dependencies that use persistent volume claims
 
@@ -120,6 +197,6 @@ For further information on how to define dependencies, please refer to this docu
 If no storage class is defined, the default on the Kubernetes cluster will be used.
 :::
 
-### Extending storage capacity
+### Configuring storage
 
-If you feel the need to increase the storage capacity for a dependency of your application, you can do so by supplying the appropriate configuration through helm chart variable(s), or custom values file(s).
+The needs of the application can be different per use case, therefore it make sense to check the storage options of the cloud provider in use. For example a high I/O application will benefit from high performance SSD storage, in other cases when large amounts of data will be stored, high capacity HDD. You can customize this, as well as the size of your storage through helm chart variable(s), or custom values file(s).
