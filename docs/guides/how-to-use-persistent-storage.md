@@ -122,4 +122,4 @@ If no storage class is defined, the default on the Kubernetes cluster will be us
 
 ## Extending storage capacity
 
-If you feel the need to increase the storage capacity for a dependency of your application, you can do so by supplying the appropriate configuration through helm chart variable(s), or custome values file(s).
+If you feel the need to increase the storage capacity for a dependency of your application, you can do so by supplying the appropriate configuration through helm chart variable(s), or custom values file(s).
