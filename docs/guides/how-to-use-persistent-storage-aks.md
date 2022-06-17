@@ -4,7 +4,7 @@ title: How to use persistent storage on AKS cluster
 
 This is a short guide on how to create persistent storage on AKS cluster. It contains basic information, generic examples, and an actual example from our environment.
 
-# Persistent volumes
+## Persistent volumes
 
 Volumes defined and created as part of the pod lifecycle only exist until you delete the pod. Pods often expect their storage to remain if a pod is rescheduled on a different host during a maintenance event, especially in StatefulSets. A persistent volume (PV) is a storage resource created and managed by the Kubernetes API that can exist beyond the lifetime of an individual pod.
 You can use Azure Disks or Files to provide the PersistentVolume. The choice of Disks or Files is often determined by the need for concurrent access to the data or the performance tier.
@@ -37,7 +37,7 @@ Unless you specify a StorageClass for a persistent volume, the default StorageCl
 | managed-csi-premium   | disk.csi.azure.com | Delete        | WaitForFirstConsumer | true                 |
 | managed-premium       | disk.csi.azure.com | Delete        | WaitForFirstConsumer | true                 |
 
-# Persistent volume claims
+## Persistent volume claims
 
 A PersistentVolumeClaim requests storage of a particular StorageClass, access mode, and size. The Kubernetes API server can dynamically provision the underlying Azure storage resource if no existing resource can fulfill the claim based on the defined StorageClass. The pod definition includes the volume mount once the volume has been connected to the pod.
 
@@ -45,9 +45,10 @@ A PersistentVolumeClaim requests storage of a particular StorageClass, access mo
 
 Once an available storage resource has been assigned to the pod requesting storage, PersistentVolume is bound to a PersistentVolumeClaim. Persistent volumes are 1:1 mapped to claims.
 
-# Generic example
+## Generic example
 
 Persistent volume claim
+
 ```yaml
 apiVersion: v1
 kind: PersistentVolumeClaim
@@ -63,6 +64,7 @@ spec:
 ```
 
 Pod
+
 ```yaml
 kind: Pod
 apiVersion: v1
@@ -82,6 +84,7 @@ spec:
 ```
 
 Windows container
+
 ```yaml
 ...      
        volumeMounts:
@@ -92,13 +95,14 @@ Windows container
 ...
 ```
 
-# Actual example
+## Actual example
 
-## BPDM (Argocd app)
+### BPDM (Argocd app)
 
-### bpdm-int-postgres
+#### bpdm-int-postgres
 
 pod
+
 ```yaml
 apiVersion: v1
 kind: Pod
@@ -114,6 +118,7 @@ spec:
 ```
 
 pvc
+
 ```yaml
 apiVersion: v1
 kind: PersistentVolumeClaim
@@ -146,16 +151,16 @@ status:
   phase: Bound
 ```
 
-This configuration will create the following
+### This configuration will create the following resources
 
-Persistent volume claim
+#### Persistent volume claim
 
 ```
 NAME                       STATUS   VOLUME                                     CAPACITY   ACCESS MODES   STORAGECLASS
 data-bpdm-int-postgres-0   Bound    pvc-c......c-2..6-4..a-a..d-3.........b   8Gi        RWO            default     
 ```
 
-Persistent volume
+#### Persistent volume
 
 ```
 NAME                                       CAPACITY   ACCESS MODES   RECLAIM POLICY   STATUS   CLAIM                                   STORAGECLASS   REASON
@@ -163,14 +168,14 @@ pvc-c......c-2..6-4..a-a..d-3.........b   8Gi        RWO            Delete      
 
 ```
 
-Reminder: the default storageclass
+#### Reminder: the default storageclass
 
 ```
 NAME                PROVISIONER          RECLAIMPOLICY   VOLUMEBINDINGMODE      ALLOWVOLUMEEXPANSION
 default (default)   disk.csi.azure.com   Delete          WaitForFirstConsumer   true                
 ```
 
-And finally this disk resource in Azure
+#### Azure Disk
 
 ```
 Name                                      Storage account type   Size (GiB)   Owner            Resource group                   Location
