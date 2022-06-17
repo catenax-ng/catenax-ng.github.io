@@ -4,7 +4,7 @@ title: How to use persistent storage
 
 This is a short guide on how to create persistent storage on Kubernetes clusters.
 
-# Basic information
+## Basic information
 
 Your application, and/or its dependency might need to store data in persistent storage. Kubernetes offers a simple to use solution for that.
 
@@ -18,9 +18,9 @@ You can both define persistent storag for your application, and use dependencies
 
 In both cases, all the rest will be taken care of by the Kubernetes engine and storage driver, creating the necessary resources in the Kubernetes cluster, and on the underlying cloud platform.
 
-# Examples
+## Examples
 
-## Defining dependencies that use persistent volume claims
+### Defining dependencies that use persistent volume claims
 
 [Product BPDM](https://github.com/catenax-ng/product-bpdm/blob/develop/helm/bpdm/Chart.yaml)
 
@@ -30,7 +30,7 @@ For further information on how to define dependencies, please refer to this docu
 
 [How to define Helm chart dependencies](https://catenax-ng.github.io/docs/guides/how-to-helm-dependency)
 
-## Defining persistent volume claims
+### Defining persistent volume claims
 
 [StatefulSet in Postgres Helm chart](https://github.com/bitnami/charts/blob/master/bitnami/postgresql/templates/primary/statefulset.yaml)
 
@@ -120,6 +120,6 @@ For further information on how to define dependencies, please refer to this docu
 If no storage class is defined, the default on the Kubernetes cluster will be used.
 :::
 
-## Extending storage capacity
+### Extending storage capacity
 
 If you feel the need to increase the storage capacity for a dependency of your application, you can do so by supplying the appropriate configuration through helm chart variable(s), or custom values file(s).
