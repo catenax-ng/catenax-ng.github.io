@@ -24,12 +24,11 @@ In both cases, all the rest will be taken care of by the Kubernetes engine and s
 
 To directly attach persistent storage to your deployment or pod, you will need a persistentVolumeClaim type resource, and add volume(s) to your deployment.
 
-persistentVolumeClaim.yaml: 
+persistentVolumeClaim.yaml:
 
 :::tip
 This can be omitted if dynamic provisioning is enabled, i.e. no storageClassName is defined.
-If storageClassName is set to "-", storageClassName: "", dynamic provisioning is disabled, 
-in this case you need to define your own persistentVolumeClaim.
+If storageClassName is set to "-", storageClassName: "", dynamic provisioning is disabled, in this case you need to define your own persistentVolumeClaim.
 :::
 
 ```yaml
