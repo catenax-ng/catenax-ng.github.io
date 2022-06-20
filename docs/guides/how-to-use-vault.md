@@ -2,8 +2,7 @@
 title: How To Use HashiCorp Vault
 ---
 
-This guide is a small howto about storing your secrets using HashiCorp Vault. Following prerequisites have to be
-met:
+This guide is a small howto about storing your secrets using HashiCorp Vault. Following prerequisites have to be met:
 
 - your product-team must have been onboarded to Catena-X NG GitHub organization
 
@@ -11,6 +10,48 @@ For guidance of how to use secret with an ArgoCD application, please refer to
 [_How To Use Vault Secrets With ArgoCD_](howto-use-vault-secrets-with-argocd.md).
 
 The Catena-X Vault instance URL is: [https://vault.demo.catena-x.net](https://vault.demo.catena-x.net)
+
+## Login
+
+There are multiple ways to login to Vault. The following sections describe the differences and how to use these methods.
+
+### Login via OIDC (preferred method)
+
+OIDC is the preferred login method for Vault, since you do not need to create additional credentials for our tooling.
+Instead, we configured OIDC to authenticate your user via GitHub login. As advantage over the GitHub token login method,
+you do not need to create a personal access token.
+
+#### Login to web UI
+
+If you want to edit or view secrets via Vaults [web UI](https://vault.demo.catena-x.net), you are not logged in yet and
+want to do that via OIDC, you can select the OIDC login method like shown in the following screenshot.
+
+![Vault login method OIDC](/docs/vault/vault-login-page-oidc.png)
+
+Unfortunately, Vault does not automatically match your GitHub team to your linked policies. Therefore, you need to
+specify your team name (i.e. 'product-team-example') as 'Role', when logging in.
+
+After you hit the 'Sign in' button, a PopUp will appear asking you about access permissions to your GitHub profile
+information, like you know it from different OIDC logins. Accepting that will log you in and redirect you to the
+available secret engines.
+
+#### Login via vault CLI
+
+You can also use OIDC as login method for the [Vault CLI](https://www.vaultproject.io/docs/commands). The login then
+needs a local port on your machine, that it can use for a browser redirect and the role you want to log in as
+parameters. The port you need to use is '8250', since it is the only one configured as allowed redirect port.
+Adapt the following snippet to your needs to log in to Vault via CLI with the OIDC method:
+
+```shell
+export VAULT_ADDR="https://vault.demo.catena-x.net:443"
+vault login -method=oidc port=8250 role=<my-github-team-name>
+```
+
+This will pop up a new browser window, where you need to grant access to your GitHub profile information.
+
+### Login via GitHub
+
+### Login via token
 
 ## Available Vault Login Methods
 
@@ -59,7 +100,7 @@ store personal sensitive data.
 To log in to Vault using your generated GitHub token, go to [Vault](https://vault.demo.catena-x.net), select
 _GitHub_ as Method and enter your token in the field _GitHub token_:
 
-![Vault Login Page](assets/vault-login-page.png)
+![Vault Login Page](/docs/vault/vault-login-page.png)
 
 ### Vault CLI
 
