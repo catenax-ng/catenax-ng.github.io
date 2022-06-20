@@ -37,10 +37,10 @@ available secret engines.
 
 #### Login to vault CLI via OIDC
 
-You can also use OIDC as login method for the [Vault CLI](https://www.vaultproject.io/downloads). The login then
-needs a local port on your machine, that it can use for a browser redirect and the role you want to log in as
-parameters. The port you need to use is '8250', since it is the only one configured as allowed redirect port. Adapt the
-following snippet to your needs to log in to Vault via CLI with the OIDC method:
+You can also use OIDC as login method for the [Vault CLI](https://www.vaultproject.io/downloads). The login then needs a
+local port on your machine, that it can use for a browser redirect and the role you want to log in as parameters. The
+port you need to use is '8250', since it is the only one configured as allowed redirect port. Adapt the following
+snippet to your needs to log in to Vault via CLI with the OIDC method:
 
 ```shell
 export VAULT_ADDR="https://vault.demo.catena-x.net:443"
@@ -48,6 +48,17 @@ vault login -method=oidc port=8250 role=<my-github-team-name>
 ```
 
 This will pop up a new browser window, where you need to grant access to your GitHub profile information.
+
+#### Troubleshooting OIDC login
+
+There are some minor issues, that could prevent you from successfully logging in to Vault via OIDC. Here is a short list
+of things you can try, if nothing happens on the OIDC login page:
+
+- Manually click sign in -> The web UI does not respond to the 'Enter' key
+- You've misspelled your team name -> Vault won't show you an error on the UI if the role you specified does not exist
+
+If you checked the mentioned things and still cannot sign in, feel free to open a support ticket, or contact us via
+CoP channel.
 
 ### Login via GitHub PAT
 
@@ -135,7 +146,7 @@ vault login -method=token token=$VAULT_TOKEN
 
 ## Create A Secret
 
-After you successfully logged into Vault via one of the previously described login methods, you can create and modify 
+After you successfully logged into Vault via one of the previously described login methods, you can create and modify
 secrets in Vault. The following section shows you how to do that.
 
 ### Vault WebUI
