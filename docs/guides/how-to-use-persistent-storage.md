@@ -16,7 +16,7 @@ The other use case is that you define one or more dependencies for your applicat
 You can both define persistent storage for your application, and use dependencies that also define such resource needs, at the same time.
 :::
 
-In both cases, all the rest will be taken care of by the Kubernetes engine and storage driver, creating the necessary resources in the Kubernetes cluster, and on the underlying cloud platform.
+In both cases, all the rest will be taken care of by the Kubernetes engine and storage driver, creating the necessary resources in the Kubernetes cluster, and on the underlying cloud platform, **you only need the define a persistent volume claim in your pod, or deployment, a volume claim template for statefulset**.
 
 ## Examples
 
@@ -27,7 +27,7 @@ To directly attach persistent storage to your deployment or pod, you will need a
 persistentVolumeClaim.yaml:
 
 :::tip
-This can be omitted if dynamic provisioning is enabled, i.e. no storageClassName is defined.
+This can be omitted if **dynamic provisioning** is enabled, i.e. no storageClassName is defined.
 If storageClassName is set to "-", storageClassName: "", dynamic provisioning is disabled, in this case you need to define your own persistentVolumeClaim.
 :::
 
@@ -75,19 +75,45 @@ spec:
 
 ### Persistent volumes in statefulSet(s)
 
-When an application has multiple replicas, like in case of statefulSets, volumeClaimTemplates should be used instead of persistentVolumeClaims.
-A volumeClaimTemplate will create PVC(s) for each replica.
+When an application has multiple replicas, like in case of a statefulSet, volumeClaimTemplates should be used instead of persistentVolumeClaims.
+A volumeClaimTemplate will create PVCs for each replica of the application.
 
 ```yaml
-volumeClaimTemplates:
-- metadata:
-    name: pv-data
-  spec:
-    accessModes: 
-      - ReadWriteOnce
-    resources:
-      requests:
-        storage: 50Mi
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: web
+spec:
+  selector:
+    matchLabels:
+      app: nginx # has to match .spec.template.metadata.labels
+  serviceName: "nginx"
+  replicas: 3 # by default is 1
+  minReadySeconds: 10 # by default is 0
+  template:
+    metadata:
+      labels:
+        app: nginx # has to match .spec.selector.matchLabels
+    spec:
+      terminationGracePeriodSeconds: 10
+      containers:
+      - name: nginx
+        image: k8s.gcr.io/nginx-slim:0.8
+        ports:
+        - containerPort: 80
+          name: web
+        volumeMounts:
+        - name: www
+          mountPath: /usr/share/nginx/html
+  volumeClaimTemplates:
+  - metadata:
+      name: www
+    spec:
+      accessModes: [ "ReadWriteOnce" ]
+      storageClassName: "my-storage-class"
+      resources:
+        requests:
+          storage: 1Gi
 ```
 
 :::tip
@@ -107,6 +133,8 @@ For further information on how to define dependencies, please refer to this docu
 [How to define Helm chart dependencies](https://catenax-ng.github.io/docs/guides/how-to-helm-dependency)
 
 ### Defining persistent volume claims
+
+If you define this PostgreSQL Helm chart as dependency for your application's Helm chart, it will create a PVC, as defined, Kubernetes will create a Persistent Volume (PV) for this PVC and the storage controller will create storage with the configured - or default if not configured - storage class.
 
 [StatefulSet in Postgres Helm chart](https://github.com/bitnami/charts/blob/master/bitnami/postgresql/templates/primary/statefulset.yaml)
 
