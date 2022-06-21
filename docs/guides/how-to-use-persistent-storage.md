@@ -13,7 +13,7 @@ One scenario is that your own application uses persistent storage. In this case 
 The other use case is that you define one or more dependencies for your application, that require persistent storage, in which case the helm chart, that is a dependency, will have the storage defined in a similar way.
 
 :::tip
-You can both define persistent storag for your application, and use dependencies that also define such resource needs, at the same time.
+You can both define persistent storage for your application, and use dependencies that also define such resource needs, at the same time.
 :::
 
 In both cases, all the rest will be taken care of by the Kubernetes engine and storage driver, creating the necessary resources in the Kubernetes cluster, and on the underlying cloud platform.
@@ -73,7 +73,7 @@ spec:
 ...
 ```
 
-### Persistent volumes in statfulSet(s)
+### Persistent volumes in statefulSet(s)
 
 When an application has multiple replicas, like in case of statefulSets, volumeClaimTemplates should be used instead of persistentVolumeClaims.
 A volumeClaimTemplate will create PVC(s) for each replica.
