@@ -16,7 +16,7 @@ The other use case is that you define one or more dependencies for your applicat
 You can both define persistent storage for your application, and use dependencies that also define such resource needs, at the same time.
 :::
 
-In both cases, all the rest will be taken care of by the Kubernetes engine and storage driver, creating the necessary resources in the Kubernetes cluster, and on the underlying cloud platform, **you only need the define a persistent volume claim in your pod, or deployment, a volume claim template for statefulset**.
+In both cases, all the rest will be taken care of by the Kubernetes engine and storage driver, creating the necessary resources in the Kubernetes cluster, and on the underlying cloud platform, **you only need to define a persistent volume claim in your pod, or deployment, a volume claim template for statefulset**.
 
 ## Examples
 
@@ -27,7 +27,7 @@ To directly attach persistent storage to your deployment or pod, you will need a
 persistentVolumeClaim.yaml:
 
 :::tip
-This can be omitted if **dynamic provisioning** is enabled, i.e. no storageClassName is defined.
+The persistentVolumeClaim.yaml can be omitted if **dynamic provisioning** is enabled, i.e. no storageClassName is defined, only the pod or deployment is needed with the storage configuration in its definition.
 If storageClassName is set to "-", storageClassName: "", dynamic provisioning is disabled, in this case you need to define your own persistentVolumeClaim.
 :::
 
