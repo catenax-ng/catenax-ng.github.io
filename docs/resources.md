@@ -24,7 +24,7 @@ If there is no team inside the organization for your product yet, you can reques
 
 ## GitHub team in catenax-ng
 
-GitHub teams are used to grand multiple user access to the same resources. Teams are also used to grand access
+GitHub teams are used to grant multiple user access to the same resources. Teams are also used to grant access
 to projects in ArgoCD and secrets in Vault. Usually each Catena-X product team will have one team in the catenax-ng
 GitHub organization.
 
@@ -44,16 +44,6 @@ deployment specific configuration of the demonstrator environments.
 
 To request a new repository, please use
 [this Jira template](https://jira.catena-x.net/secure/CreateIssueDetails!init.jspa?pid=10212&issuetype=10401&components=10401&priority=3&summary=GitHub%3A%20New%20repository&description=%0Arepository%20name%3A%20product-_your_product_name_%0AGitHub%20team%20to%20grant%20access%3A%20%0A-%20_github_team_name_).
-
-## Request access to an existing environment/namespace
-
-If you need access to a specific environment, or a namespace on an environment, check if you are already part of the
-catenax-ng GitHub organization. If not, please request access first, like described
-in [this section](#user-invitation-to-the-catenax-ng-github-organization).
-
-If you are already a member of the GitHub organization,
-please use [this Jira template](https://jira.catena-x.net/secure/CreateIssueDetails!init.jspa?pid=10212&issuetype=10401&components=10401&priority=3&summary=Environment%3A%20request%20access&description=%0AEnvironment%3A%20_DEV%20%2F%20INT%20%2F%20PRE-PROD_%0Anamespace%3A%20_name_of_namespace_%0AGitHub%20team%3A%20_team_that_should_have_access_%0AGitHub%20users%3A%20%0A-%20_github_user_that_should_have_access)
-to request access.
 
 ## Request environment
 
