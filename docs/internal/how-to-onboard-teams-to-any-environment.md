@@ -121,7 +121,7 @@ set these like this:
 # Requires you to be logged in with az on the cli
 export ARM_ACCESS_KEY=$(az storage account keys list --resource-group cx-devsecops-tfstates --account-name cxdevsecopstfstate --query '[0].value' -o tsv)
 
-# You can get a login token, by logging in to the Vault web UI and using 'copy token' from the top right user menu
+# You can get a login token, by logging into the Vault web UI and using 'copy token' from the top right user menu
 export VAULT_TOKEN=<your-vault-token-or-root-token>
 ```
 
@@ -142,12 +142,12 @@ specified in the map entry, since all of them are used inside the resource defin
 ### Create and apply the terraform plan
 
 Since terraform is not only creating Vault resources for product teams, but also configures OIDC login, you need to
-specify required settings, that are not checked in to version control, since this is sensitive information.
+specify required settings, that are not checked into version control, since this is sensitive information.
 
 The OIDC settings that needs to be specified is the client-id and the client-secret for DEX. You can find this
 information in our devsecops secret engine in vault at path `devsecops/clusters/vault/github-oauth`.
 
-To set this information, you can either copy and paste it, when terraform asks you for it on plan creation, or you 
+To set this information, you can either copy and paste it, when terraform asks you for it on plan creation, or you
 could specify it beforehand as environment variable like this:
 
 ```shell
@@ -158,7 +158,7 @@ export TF_VAR_vault_oidc_client_secret=<client-secret-copied-from-vault>
 Now you can create a terraform plan with this command: `terraform plan -out tf.plan`
 Terraform will print a summary, of what changes it will do to Vault, once you apply the generated plan.
 Check the summary carefully, that it actually matches your expectations. In our case of onboarding a new team,
-the should only be resources getting created and no changes or destruction of existing ones. 
+there should only be new resources getting created and no changes or destruction of existing ones.
 If there are actually changes or destruction listed in the plan summary, double check, if you are at the HEAD revision,
 or you accidentally changed some resource definitions.
 
