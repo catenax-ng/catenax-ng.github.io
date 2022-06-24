@@ -53,7 +53,7 @@ To request a new repository, please use
 
 If you need access to a specific environment, or a namespace on an environment, check if you are already part of the catenax-ng GitHub organization. If not, please request access first, like described in [this section](https://catenax-ng.github.io/docs/resources#user-invitation-to-the-catenax-ng-github-organization).
 
-If you are already a member of the GitHub organization, please use [this Jira template](https://jira.catena-x.net/secure/CreateIssueDetails!init.jspa?pid=10212&issuetype=10401&components=10401&priority=3&summary=Environment%3A%20request%20access&description=%0AEnvironment%3A%20_DEV%20%2F%20INT%20%2F%20PRE-PROD_%0Anamespace%3A%20_name_of_namespace_%0AGitHub%20team%3A%20_team_that_should_have_access_%0AGitHub%20users%3A%20%0A-%20_github_user_that_should_have_access&labels=S) to request access.
+If you are already a member of the GitHub organization, please use [this Jira template](https://jira.catena-x.net/secure/CreateIssueDetails!init.jspa?pid=10212&issuetype=10401&components=10401&priority=3&summary=Environment%3A%20request%20access&description=%0AEnvironment%3A%20_DEV%20%2F%20INT_%0Anamespace%3A%20_name_of_namespace_%0AGitHub%20team%3A%20_team_that_should_have_access_%0AGitHub%20users%3A%20_github_user_that_should_have_access_&labels=S) to request access.
 
 ## Request environment
 
