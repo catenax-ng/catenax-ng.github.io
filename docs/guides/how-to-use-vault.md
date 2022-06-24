@@ -2,8 +2,7 @@
 title: How To Use HashiCorp Vault
 ---
 
-This guide is a small howto about storing your secrets using HashiCorp Vault. Following prerequisites have to be
-met:
+This guide is a small howto about storing your secrets using HashiCorp Vault. Following prerequisites have to be met:
 
 - your product-team must have been onboarded to Catena-X NG GitHub organization
 
@@ -12,29 +11,67 @@ For guidance of how to use secret with an ArgoCD application, please refer to
 
 The Catena-X Vault instance URL is: [https://vault.demo.catena-x.net](https://vault.demo.catena-x.net)
 
-## Available Vault Login Methods
+## Login
 
-As of now, you can access Vault with the following authentication methods:
+There are multiple ways to login to Vault. The following sections describe the differences and how to use these methods.
 
-- GitHub (Token based)
-- AppRole
+### Login via OIDC (preferred method)
 
-GitHub Token is intended for personal login to Vault. The AppRole method is used for machine logins, aka your ArgoCD
-application will use this method to authenticate against Vault. This guide will cover only the login methods for
-personal login methods.
+OIDC is the preferred login method for Vault, since you do not need to create additional credentials for our tooling.
+Instead, we configured OIDC to authenticate your user via GitHub login. As advantage over the GitHub token login method,
+you do not need to create a personal access token.
 
-Planned login/authentication methods:
+#### Login to web UI via OIDC
 
-- OIDC login (using GitHub as SSO, as you know it from ArgoCD UI)
+If you want to edit or view secrets via Vaults [web UI](https://vault.demo.catena-x.net), you are not logged in yet and
+want to do that via OIDC, you can select the OIDC login method like shown in the following screenshot.
 
-## Create GitHub Token
+![Vault login method OIDC](/docs/vault/vault-login-page-oidc.png)
+
+Unfortunately, Vault does not automatically match your GitHub team to your linked policies. Therefore, you need to
+specify your team name (i.e. 'product-team-example') as 'Role', when logging in.
+
+After you hit the 'Sign in' button, a PopUp will appear asking you about access permissions to your GitHub profile
+information, like you know it from different OIDC logins. Accepting that will log you in and redirect you to the
+available secret engines.
+
+#### Login to vault CLI via OIDC
+
+You can also use OIDC as login method for the [Vault CLI](https://www.vaultproject.io/downloads). The login then needs a
+local port on your machine, that it can use for a browser redirect and the role you want to log in as parameters. The
+port you need to use is '8250', since it is the only one configured as allowed redirect port. Adapt the following
+snippet to your needs to log in to Vault via CLI with the OIDC method:
+
+```shell
+export VAULT_ADDR="https://vault.demo.catena-x.net:443"
+vault login -method=oidc port=8250 role=<my-github-team-name>
+```
+
+This will pop up a new browser window, where you need to grant access to your GitHub profile information.
+
+#### Troubleshooting OIDC login
+
+There are some minor issues, that could prevent you from successfully logging in to Vault via OIDC. Here is a short list
+of things you can try, if nothing happens on the OIDC login page:
+
+- Manually click sign in -> The web UI does not respond to the 'Enter' key
+- You've misspelled your team name -> Vault won't show you an error on the UI if the role you specified does not exist
+
+If you checked the mentioned things and still cannot sign in, feel free to open a support ticket, or contact us via
+CoP channel.
+
+### Login via GitHub PAT
+
+This section describes, how you can use a GitHub personal access token (PAT) to log in to Vault.
+
+#### Create GitHub Token
 
 To be able to use GitHub Token as login method with Vault you have to create a personal token with appropriate
 permissions granted. To create a personalized token:
 
-- login to GitHub and go to [Settings / Developer settings / Personal access tokens](https://github.com/settings/tokens)
-  .
-- click on the _Generate new token_ button in the upper right corner
+- navigate to the Developer settings on
+  GitHub [Settings / Developer settings / Personal access tokens](https://github.com/settings/tokens).
+- click on _Generate new token_ in the upper right corner
 - add a _Note_ that fits your needs (this helps you to identify the intent of the token later)
 - select an _Expiration_ date
 - grant [_read:org_](https://www.vaultproject.io/docs/auth/github) permissions to your token
@@ -47,52 +84,74 @@ After these steps GitHub will show you the token.
 GitHub will show the token **only once** after creation. If you miss to safe the token in any kind you'll have to
 generate a new token and revoke the old one for security reasons.
 
-We strongly suggest to use a password manager like [KeePass](https://keepass.info) (or any other password manager) to
+We strongly suggest using a password manager like [KeePass](https://keepass.info) (or any other password manager) to
 store personal sensitive data.
 
 :::
 
-## Using The Token To Login
+#### Login to web UI via GitHub PAT
 
-### Vault WebUI
+If you want to edit or view secrets via Vaults [web UI](https://vault.demo.catena-x.net), you are not logged in yet and
+want to do that via GitHub PAT, you can select the github login method like shown in the following screenshot.
 
-To log in to Vault using your generated GitHub token, go to [Vault](https://vault.demo.catena-x.net), select
-_GitHub_ as Method and enter your token in the field _GitHub token_:
+![Vault login method OIDC](/docs/vault/vault-login-page-github.png)
 
-![Vault Login Page](assets/vault-login-page.png)
+Copy and paste your GitHub PAT from your password manager application and hit sign in. Now you will be redirected to the
+available secret engines.
 
-### Vault CLI
+#### Login with vault CLI via GitHub PAT
 
-You can also use the [Vault Cli](https://www.vaultproject.io/downloads) to manage your secrets. To login in CLI execute
-the following steps:
+You can also use the [Vault CLI](https://www.vaultproject.io/downloads) to manage your secrets. To log in with your CLI
+via GitHub PAT, you'll need to execute the following commands:
 
 ```shell
-$ export GH_TOKEN="YOUR_TOKEN"
-$ export VAULT_ADDR="https://vault.demo.catena-x.net:443"
-$ vault login -method=github token=$GH_TOKEN
-Success! You are now authenticated. The token information displayed below
-is already stored in the token helper. You do NOT need to run "vault login"
-again. Future Vault requests will automatically use this token.
+export VAULT_ADDR="https://vault.demo.catena-x.net:443"
+export GH_TOKEN="YOUR_TOKEN"
+vault login -method=github token=$GH_TOKEN
+```
 
-Key                    Value
----                    -----
-token                  s.Bzfdei921xxx
-token_accessor         snJKHKjhadsxxx
-token_duration         768h
-token_renewable        true
-token_policies         ["your_team_name"]
-identity_policies      []
-policies               ["your_team_name" "default"]
-token_meta_username    YourGHName
-token_meta_org         catenax-ng
-$
+### Login via vault token
+
+Another login method is a token issued by Vault itself. As advantage over the GitHub PAT, the Vault token can only be
+used in Vault and not in GitHub as well (security). Also, the TTL of Vault tokens is short-lived.  
+The following section shows you how to log in via Vault token that.
+
+#### Create a Vault token
+
+To create a token issued by Vault, you first have to be logged in via one of the other login methods. To get your login
+token, click _Copy token_ from the user menu in the top right corner of the Vault web UI, like shown in the following
+screenshot:
+
+![Vault login method OIDC](/docs/vault/vault-create-login-token.png)
+
+#### Login to web UI via Vault token
+
+If you want to edit or view secrets via Vaults [web UI](https://vault.demo.catena-x.net), you are not logged in yet and
+want to do that via token issued by Vault, you can select the token login method like shown in the following screenshot.
+
+![Vault login method OIDC](/docs/vault/vault-login-page-token.png)
+
+Copy and paste your previously collected token and log in. You'll be redirected to your available secret engines.
+
+#### Login with vault CLI via Vault token
+
+You can also use the [Vault CLI](https://www.vaultproject.io/downloads) to manage your secrets. To log in with your CLI
+via token issued by Vault, you'll need to execute the following steps:
+
+```shell
+export VAULT_ADDR="https://vault.demo.catena-x.net:443"
+export VAULT_TOKEN="YOUR_TOKEN"
+vault login -method=token token=$VAULT_TOKEN
 ```
 
 ## Create A Secret
 
+After you successfully logged into Vault via one of the previously described login methods, you can create and modify
+secrets in Vault. The following section shows you how to do that.
+
 ### Vault WebUI
 
-After login to Vault, you'll have access to the Vault secret engine/store created for your product-team.
+After login to Vault, you'll have access to the Vault secret engine(s) created for your product-team.
 
 ![Empty secret store](assets/vault-empty-store.png)
 

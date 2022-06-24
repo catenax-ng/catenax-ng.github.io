@@ -35,7 +35,7 @@ This chapter needs to be rewritten/redefined due to unclear statements in former
 
 Prerequisites:
 
-- GitHub username, Full Name or email address of person to onboard
+- GitHub username, full name or email address of person to onboard
 - GitHub team name to invite someone to (the team must have been created by DevSecOps team)
 
 To invite a person to a specific GitHub team, follow these steps:
@@ -58,8 +58,7 @@ If a team requests for initial onboarding to CatenaX-NG GitHub organization, fol
 GitHub organization:
 
 - In GitHub organization go to [Teams](https://github.com/orgs/catenax-ng/teams) and click button _New team_ in the
-  right
-  upper corner
+  right upper corner
 - Insert _Team name_ with naming schema `product-<productName>`
 - Add optional _Description_
 - Apply defaults for _Parent team_ and _Team visibility_
@@ -94,132 +93,78 @@ If the person gets no email: the person should check the GitHub notifications-bo
 
 ## Vault
 
-To provide a product-team access to our Vault instance, following onboarding steps must be performed:
+To be able to manage secrets in Hashicorp Vault and use them via ArgoCD Vault Plugin (AVP), a team needs the following
+Vault resources set up:
 
-- enable (create) a new _Secrets_ engine
-- create _Policies_
-- create GitHub auth mapping
-- create AppRole
-- store AppRole specifics into DevSecOps Vault secret store
+- A _secret engine_
+- A _read-write policy_ for the secret engine, used to manage secrets via web UI or CLI; Mapped to the GitHub team
+- An _approle_, that is used as AVP credentials
+- A _read-only policy_ for the secret engine, used as AVP credentials; Mapped to the approle
+- Approle credentials (secret-id and role-id) available as _avp-config in the devsecops_ secret engine
 
-### Enable New Secret Engine
+All of these resources are created through terraform scripts. The scripts are part of the
+[k8s_cluster_stack](https://github.com/catenax-ng/k8s-cluster-stack) repository. The following sections will guide you
+through the process of initializing terraform, adding the new team to the list of product teams, creating the terraform
+plan and applying the plan to vault.
 
-To enable/create a new secret engine for a product-team,
+### Initialize terraform
 
-- use Vault WebUI
-- in _Secrets_ section click on _Enable new engine_
-- on Page _Enable a Secrets Engine_ select _KV_ in _Generic_ section and _Next_ on the bottom
-- replace _kv_ in _Path_ field with the product-team name following the naming schema `product-productName` (
-  e.g. `product-edc`)
-- use defaults for _Maximum number of versions, Require Check and Set, Automate secret deletion, Method Options_
-- click on _Enable Engine_
+It is assumed, that you already have installed the terraform CLI. Before you start, make sure you've cloned
+the [k8s_cluster_stack](https://github.com/catenax-ng/k8s-cluster-stack)
+repository and navigated to `/terraform/02_vault` inside that repository on your terminal.
 
-### Create Policies
-
-There will be 2 policies created for each team, following this naming schema:
-
-- _productName-rw_
-- _productName-ro_
-
-The _productName-rw_ policy will be applied to personal auth methods (as of now GitHub Token), the _productName-ro_ policy will be applied to AppRole auth method.
-
-To create the policies, login to Vault and
-
-- click on _Policies_ in the top menu
-- click on _Create ACL policy +_
-- enter the policy name in the _Name_ field
-- enter following to _Policy_ field:
-
-  - for the _productName-rw_ policy
-
-  ```
-  path "productName/*" {
-    capabilities = ["create", "read", "update", "delete", "list"]
-  }
-  ```
-
-  - for the _productName-ro_ policy
-
-  ```
-  path "productName/*" {
-    capabilities = ["read"]
-  }
-  ```
-
-### Create GitHub Auth Mapping
-
-To enable GitHub Token auth for any product-team a GitHub auth mapping has to be created. To create the mapping Vault
-CLI is required.
+To run the terraform scripts later on, you need to set two specific environment variables. One is used to access the
+Azure storage account, that contains the tfstate file and one with a Vault token for authentication on Vault. You can
+set these like this:
 
 ```shell
-vault write auth/github/map/teams/product-team-name value=productName-rw
+# Requires you to be logged in with az on the cli
+export ARM_ACCESS_KEY=$(az storage account keys list --resource-group cx-devsecops-tfstates --account-name cxdevsecopstfstate --query '[0].value' -o tsv)
+
+# You can get a login token, by logging into the Vault web UI and using 'copy token' from the top right user menu
+export VAULT_TOKEN=<your-vault-token-or-root-token>
 ```
 
-:::info
+Before creating a terraform plan, you need to initialize terraform, which will download all the provider plugins needed
+to run the scripts. Therefore, run `terraform init`.
 
-`value=productName-rw` links to the policy _productName-rw_ created in the step before.
+### Add the new team to the list of product teams
 
-To be able to use the Vault CLI please refer to [How to use Vault docu](../guides/how-to-use-vault.md#vault-cli)
+After initializing terraform and preparing the necessary environment variables as described before, you can adjust the
+terraform scripts to onboard the new team. All the product teams are listed in a variable named 'product_teams', that is
+used in a 'for_each' loop in the resource definitions.
 
-:::
+So all you need to do to create all the resources necessary for the team, is to add it to that 'product_teams' map.
+Therefore, open the variables file at `/terraform/02_vault/variables.tf` and append a new map entry to the default value
+of the variable definition. All the properties, that are defined in the variable definition are mandatory to be
+specified in the map entry, since all of them are used inside the resource definitions.
 
-### AppRole
+### Create and apply the terraform plan
 
-Following steps have to be performed as of now manually. It's planned to create a script bases automation for this in
-PI4.
+Since terraform is not only creating Vault resources for product teams, but also configures OIDC login, you need to
+specify required settings, that are not checked into version control, since this is sensitive information.
 
-#### Create AppRole
+The OIDC settings that needs to be specified is the client-id and the client-secret for DEX. You can find this
+information in our devsecops secret engine in vault at path `devsecops/clusters/vault/github-oauth`.
 
-For each team to onboard an AppRole has to be created using the Vault CLI:
+To set this information, you can either copy and paste it, when terraform asks you for it on plan creation, or you
+could specify it beforehand as environment variable like this:
 
 ```shell
-$ vault write auth/approle/role/product-productName \
-    secret_id_ttl=10m \
-    token_num_uses=10 \
-    token_ttl=20m \
-    token_max_ttl=30m \
-    secret_id_num_uses=40
+export TF_VAR_vault_oidc_client_id=<client-id-copied-from-vault>
+export TF_VAR_vault_oidc_client_secret=<client-secret-copied-from-vault>
 ```
 
-After the AppRole has been created for the team, _secret_id_ and _role_id_ have to be issued/read.
+Now you can create a terraform plan with this command: `terraform plan -out tf.plan`
+Terraform will print a summary, of what changes it will do to Vault, once you apply the generated plan.
+Check the summary carefully, that it actually matches your expectations. In our case of onboarding a new team,
+there should only be new resources getting created and no changes or destruction of existing ones.
+If there are actually changes or destruction listed in the plan summary, double check, if you are at the HEAD revision,
+or you accidentally changed some resource definitions.
 
-#### The Secret ID
-
-The _secret_id_ has to be issued by
-
-```shell
-vault write -f auth/approle/role/product-productName/secret-id
-```
-
-The command will output the _secret_id_ for _product-productName_ AppRole. Remember the _secret_id_ for later use.
-
-#### The Role ID
-
-Despite of the _secret_id_ the role Id must not be issued but can be read:
-
-```shell
-vault read auth/approle/role/product-productName/role-id
-```
-
-The command will output the _role_id_ for _product-productName_ AppRole. Remember the _role_id_ for later use.
-
-### Store The Teams role_id And secret_id In Vault
-
-For later usage of team specific AppRole _role_id_ and _secret_id_ we've to store them in our DevSecOps Vault:
-
-- enter _devsecops_ secret engine
-- browse to _avp_config_
-- click on _Create secret+_ in the right upper
-- enter _avp-config/product-productName_ in _Path for this secret_ and create _Secret data_ for
-  - role_id
-  - secret_id
-    ![Create Vault secret for product-team specific AppRole](assets/vault-avp-config.png)
-
-:::info
-
-This secret will be used for later creation of _vault-secret_ to enable the teams to use Vault with ArgoCD.
-
-:::
+If the plan summary matches your expectations, then you can apply the changes with this command:
+`terraform apply "tf.plan"`
+Afterwards, you can manually check Vault, if all the resources actually got created.
 
 ## ArgoCD
 
@@ -379,10 +324,9 @@ here: [How to prepare a private repo](guides/how-to-prepare-a-private-repo).
 ### Enable access to a private package (central pull secret)
 
 - Create a PAT within GitHub user account (machine user)
-  settings - Developer settings - Personal access token.
-  Be sure to give just the needed rights (read:package will be sufficient to deploy)
-- Now do a base64 encoding for the PAT
-  $ echo -n "<username\>:<PAT\>" | base64
+  settings - Developer settings - Personal access token. Be sure to give just the needed rights (read:package will be
+  sufficient to deploy)
+- Now do a base64 encoding for the PAT $ echo -n "<username\>:<PAT\>" | base64
 - Create a file `.dockerconfigjson` containing the base-64 encoded PAT
 
   ```json
