@@ -11,12 +11,6 @@ This guide is only for those who operate the environment
 
 ## Basics
 
-:::caution
-
-This chapter needs to be rewritten/redefined due to unclear statements in former version of this document!
-
-:::
-
 We handle all of our support requests as a Jira task. There are templates present for well-known and recurring tasks.
 There is also a blank template. For handling these support tasks, we follow our internal support workflow.
 
