@@ -9,7 +9,7 @@ This guide is only for those who operate the environment
 
 :::
 
-## Create A Jira Task
+## Basics
 
 :::caution
 
@@ -17,79 +17,89 @@ This chapter needs to be rewritten/redefined due to unclear statements in former
 
 :::
 
-### Team Onboarding
+We handle all of our support requests as a Jira task. There are templates present for well-known and recurring tasks.
+There is also a blank template. For handling these support tasks, we follow our internal support workflow.
 
-1. who wants which access
-2. use ‘labels’ for differentiate tasks e.g. 'onboarding', 'maintainer switched'
-3. add to current sprint
+## GitHub
 
-### Member Onboarding
+The following section describes how to handle users, teams and repositories in our GitHub organisation
 
-1. who wants which access
-2. use ‘labels’ for differentiate tasks e.g. 'onboarding', 'maintainer switched'
-3. add to current sprint
+### Invitation of a single user
 
-## GitHub - Prerequisites
+Interaction with most of our tooling and also access to repositories is granted to members of our GitHub organization
+"catenax-ng". So inviting users to the organization is the starting point for every Catena-X member.
 
-### Invite Someone To The GitHub Organization
+As initial information to onboard a user to the organization, we need:
 
-Prerequisites:
-
-- GitHub username, full name or email address of person to onboard
-- GitHub team name to invite someone to (the team must have been created by DevSecOps team)
-
-To invite a person to a specific GitHub team, follow these steps:
-
-- In GitHub organization go to [People](https://github.com/orgs/catenax-ng/people)
-- Click button _Invite member_ on the right side
-- In the field _Search by username, full name or email address_ enter one of the suggestions and select user
-- Click on _Invite_ to finally invite someone to CatenaX-NG GitHub organization
+- The GitHub username (or email address) of the person to onboard
+- A person (i.e. the product PO) to vouch for the person being onboarded to actually be part of Catena-X
 
 :::info
 
-The person must click/accept the invitation to our GitHub organization before someone can be added to one of our
-organization teams.
+Invitations to the several product teams should be done by the maintainers of the product teams. Only in rare cases,
+like onboarding a new person and a new team in the same step, you should invite people to teams.
 
 :::
 
-### GitHub Team
+### Creating a GitHub team
 
-If a team requests for initial onboarding to CatenaX-NG GitHub organization, follow these steps to create a team inside
-GitHub organization:
+Access to repositories is granted on a GitHub team level instead of individuals. Also RBAC definitions on Vault and
+ArgoCD are based on GitHub team membership.
 
-- In GitHub organization go to [Teams](https://github.com/orgs/catenax-ng/teams) and click button _New team_ in the
-  right upper corner
-- Insert _Team name_ with naming schema `product-<productName>`
-- Add optional _Description_
-- Apply defaults for _Parent team_ and _Team visibility_
-- Click button _Create team_ to finally create the team
+To create GitHub teams, we are using the terraform root module
+[02_team_onboarding](https://github.com/catenax-ng/k8s-cluster-stack/tree/main/terraform/02_team_onboarding). The in the
+same directory, there is a README.md file, describing how to hande terraform specifics. To create a new GitHub team,
+edit `main.tf` in the `02_team_onboarding` directory and locate the variable `github_teams`
+inside `module "github" { ... }`. This variable contains a map of all the teams in our GitHub organization with name and
+description properties.
 
-### Add a Member To A GitHub Team
+All you need to do is to add a new entry to that map with the new team name and an optional description. Make sure, the
+key you use for your new entry is unique. This key will also be used by terraform to create and entry in the state file.
 
-Prerequisites:
+After editing the list of teams, do a `terraform plan -out tf.plan` and `terraform apply "tf.plan"` like described in
+the README of the 02_team_onboarding root module.
 
-- Person must have accepted the invitation to the GitHub organization
-- GitHub username of whom to onboard (person must have been invited _and_ joined our GitHub organization)
-- GitHub team to invite to (the team must have been created by DevSecOps team)
+### Creating a repository
 
-To add a member to a GitHub team, follow these steps:
+Git repositories are also managed by our terraform root module
+[02_team_onboarding](https://github.com/catenax-ng/k8s-cluster-stack/tree/main/terraform/02_team_onboarding). The
+process of creating a new repository is similar to creating a team. You need to edit the `main.tf` file in the
+`02_team_onboarding` directory. Repositories are defined in the
+`github_repositories` variable inside `module "github" { ... }`. This variable is a map containing all the repository
+information. To create a new one, add a new entry to the map.
 
-- In GitHub organization go to [Teams](https://github.com/orgs/catenax-ng/teams)
-- Click on the team name a member should be added to
-- Click on _Members_ in the top menu inside the selected GitHub team
-- Click on the green button _Add a member_ in the upper right
-- Type the GitHub _username, full name, or email addess_ and click _Invite_
+Event though most of the repository settings are configurable, the following should be set in a default case.
 
-After the member has been added to the GitHub team, check the checkbox in front of the new member and change role to _
-Maintainer_:
+- `visibility : "public"`. Exception is only, if the teams did not yet clarify IP related questions
+- `pages : { enabled : false }`. If a team wants to use GitHub pages, you can set this to true. This is needed, if teams
+  want to release artifacts like helm charts.
+- `is_template : false`. We usually do not create new repositories as template
+- `uses_template : false`. Currently, our repositories are set up blank and not based on a template
+- `template : null`. Since we usually do not use a template, we do not specify one. In case we want to use a template,
+  this variable has to be defined as object of form `{ owner : "github-org" repository : "repo-name" }`
 
-![GH Role Maintainer](assets/gh-add-team-member-role.png)
+After editing the list of teams, do a `terraform plan -out tf.plan` and `terraform apply "tf.plan"` like described in
+the README of the 02_team_onboarding root module.
 
-:::tip
+### Assigning a team as contributor to a repository
 
-If the person gets no email: the person should check the GitHub notifications-box or/and email spam folder.
+Contribution access to a repository in our GitHub organization is granted on a team level. We do not
+grant this kind of access to individuals.
+Access is again managed by our terraform root module
+[02_team_onboarding](https://github.com/catenax-ng/k8s-cluster-stack/tree/main/terraform/02_team_onboarding).
 
-:::
+To manage contribution access for a team on a repository, edit the `main.tf` file in the `02_team_onboarding` directory.
+There, add a new map entry to the `github_repositories_teams` variable inside `module "github" { ... }`.
+As convention, we decided to for the map key as a combination of repository and team (`<repository-name-team-name>`).
+This is done, because we have cases of multiple teams contributing to a single repository. This is configured, by
+adding multiple entries to the `github_repositories_teams` map, containing the same repository, but a different team
+each time.
+
+As default, we configure `maintain` access on the product repositories for the teams, since all the administrative
+tasks are handled by the team managing the organization.
+
+After editing the list of teams, do a `terraform plan -out tf.plan` and `terraform apply "tf.plan"` like described in
+the README of the 02_team_onboarding root module.
 
 ## Vault
 
@@ -147,8 +157,8 @@ specify required settings, that are not checked into version control, since this
 The OIDC settings that needs to be specified is the client-id and the client-secret for DEX. You can find this
 information in our devsecops secret engine in vault at path `devsecops/clusters/vault/github-oauth`.
 
-To set this information, you can either copy and paste it, when terraform asks you for it on plan creation, or you
-could specify it beforehand as environment variable like this:
+To set this information, you can either copy and paste it, when terraform asks you for it on plan creation, or you could
+specify it beforehand as environment variable like this:
 
 ```shell
 export TF_VAR_vault_oidc_client_id=<client-id-copied-from-vault>
@@ -156,11 +166,11 @@ export TF_VAR_vault_oidc_client_secret=<client-secret-copied-from-vault>
 ```
 
 Now you can create a terraform plan with this command: `terraform plan -out tf.plan`
-Terraform will print a summary, of what changes it will do to Vault, once you apply the generated plan.
-Check the summary carefully, that it actually matches your expectations. In our case of onboarding a new team,
-there should only be new resources getting created and no changes or destruction of existing ones.
-If there are actually changes or destruction listed in the plan summary, double check, if you are at the HEAD revision,
-or you accidentally changed some resource definitions.
+Terraform will print a summary, of what changes it will do to Vault, once you apply the generated plan. Check the
+summary carefully, that it actually matches your expectations. In our case of onboarding a new team, there should only
+be new resources getting created and no changes or destruction of existing ones. If there are actually changes or
+destruction listed in the plan summary, double check, if you are at the HEAD revision, or you accidentally changed some
+resource definitions.
 
 If the plan summary matches your expectations, then you can apply the changes with this command:
 `terraform apply "tf.plan"`
