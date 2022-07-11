@@ -16,7 +16,7 @@ Following prerequisites have to be met:
 - An ArgoCD project needs to be created by the DevSecOps team for you.
 
 If these prerequisites are met, you can log in to ArgoCD with your GitHub account
-here: [https://argo.demo.catena-x.net/](https://argo.demo.catena-x.net/applications)
+here: [https://argo.int.demo.catena-x.net/](https://argo.int.demo.catena-x.net/applications)
 
 ## Specify application metadata
 
