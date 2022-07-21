@@ -112,7 +112,7 @@ repos:
   - repo : https://github.com/gitguardian/ggshield
     rev: v1.10.7 (latest version)
     hooks:
-      - id: ggshield
+      - id: ggshield-push
         language_version: python3
         stage: [push]
 ```
