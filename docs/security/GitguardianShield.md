@@ -25,7 +25,7 @@ If this doesn't work, try `pip3 install ggshield`.
 ### Login
 
 To use GitGuardianshield you need to be authentified by the GitGuardian Server. For this, execute `ggshield auth login`.
-This automatically generate an access token.
+This automatically generates an access token.
 
 ### Local Scanning
 
