@@ -8,14 +8,14 @@ This how-to will guide you through the deployment and configuration of GitHub Ap
 
 As users don't have admin rights on repositories, they can't trigger actions in other repositories. They could use their PATs, but this is seen as bad practice. But as this got requested more often, we set up GitHub Apps which act like a technical user.
 
-In this document the source repository is referring to the repository from which an action is initiated, whereas the target repository will be the one where the actions will be called. 
+In this document the source repository is referring to the repository from which an action is initiated, whereas the target repository will be the one where the actions will be called.
 
 ## Create GitHub App
 
 To create an app follow the offical guide [here](https://docs.github.com/en/developers/apps/building-github-apps/creating-a-github-app)
 
 - Callback URL needs to be filled out, we just use the standard catena homepage link
-- As we just use a basic setup, options like the webhook URL and device workflow don't need to be configured. 
+- As we just use a basic setup, options like the webhook URL and device workflow don't need to be configured.
 
 The app then needs to be configured within the organization menu:
 
