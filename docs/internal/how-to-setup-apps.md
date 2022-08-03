@@ -6,15 +6,20 @@ This how-to will guide you through the deployment and configuration of GitHub Ap
 
 ## Context
 
-As users don't have admin rights on repositories, they can't trigger actions in other repositories. They could use their PATs, but this is seen as bad practice. But as this got requested more often, we set up GitHub Apps which acts like a technical user.
+As users don't have admin rights on repositories, they can't trigger actions in other repositories. They could use their PATs, but this is seen as bad practice. But as this got requested more often, we set up GitHub Apps which act like a technical user.
+
+In this document the source repository is referring to the repository from which an action is initiated, whereas the target repository will be the one where the actions will be called. 
 
 ## Create GitHub App
 
-The app needs to be configured via the organization menu:
+To create an app follow the offical guide [here](https://docs.github.com/en/developers/apps/building-github-apps/creating-a-github-app)
+
+- Callback URL needs to be filled out, we just use the standard catena homepage link
+- As we just use a basic setup, options like the webhook URL and device workflow don't need to be configured. 
+
+The app then needs to be configured within the organization menu:
 
 ![Administration](assets/app1.png)
-
-The basic setup for the app is configured as described [here](https://docs.github.com/en/developers/apps/building-github-apps/creating-a-github-app)
 
 The individual configuration is described below.
 
@@ -28,17 +33,16 @@ Further below a private key needs to be created (You need to download it):
 
 ![Administration](assets/app3.png)
 
-These settings need to be stored as secrets, as the users will can use them in their actions/workflows:
+These settings (app ID and private key) need to be stored as secrets, as the users will can use them in their actions/workflows:
 
 ![Administration](assets/app4.png)
 
 In this example PORTAL is the product name:
 
-ORG_PORTAL_DISPATCH_APPID -> app ID from above
+- ORG_PORTAL_DISPATCH_APPID -> app ID from above
+- ORG_PORTAL_DISPATCH_KEY -> content of private key file
 
-ORG_PORTAL_DISPATCH_KEY -> content of private key file
-
-When creating the secret, set the scope (=permissions to the calling repository)
+When creating the secret, set the scope (=permissions to the source repository)
 
 ## Permissions & events
 
@@ -50,11 +54,11 @@ Here you need to choose all source and target repositories
 
 ![Administration](assets/app5.png)
 
-## Additions for the calling worklow
+## Additions for the source repository workflow
 
-The products need add the following steps to their calling action
+The products need to add the following steps to their calling action:
 
-```yaml
+```
 steps:
 - name: Get Token
   id: get_workflow_token
@@ -76,9 +80,9 @@ steps:
       --fail
 ```
 
-## Additions for the triggered workflow
+## Additions for the target repository workflow
 
-```yaml
+```
 name: Demo
 on: 
   workflow_dispatch:
