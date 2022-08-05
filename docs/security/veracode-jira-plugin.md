@@ -1,5 +1,6 @@
 ---
 title: How to integrate Veracode to your JIRA project
+sidebar_position: 2
 ---
 
 ## About the Veracode JIRA plugin

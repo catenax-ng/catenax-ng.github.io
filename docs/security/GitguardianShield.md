@@ -1,5 +1,6 @@
 ---
 title: How to use GitguardianShield
+sidebar_position: 4
 ---
 
 ### About GitGuardianShield
@@ -53,7 +54,7 @@ This automatically generates an access token.
 
 - To ignore selected files add to the **gitguardian.yaml File**:
 
-  ``` yaml
+  ```yaml
   paths-ignore:
   '**/file-path'
   ```
@@ -80,7 +81,7 @@ to work with since it catches the error as you made it. An internet connection w
       hooks:
         - id: ggshield
           language_version: python3
-          stage: [ commit ]
+          stage: [commit]
   ```
 
 - Install a githook based on the yaml file with the CLI:  
@@ -102,8 +103,8 @@ amount of scanning but if a secret is detected, you have to rewrite your history
       hooks:
         - id: ggshield-push
           language_version: python3
-          stage: [ push ]
+          stage: [push]
   ```
 
 - Install a githook based on the yaml file with the **CLI**:  
-`pre-commit install --hook-type pre-push`
+  `pre-commit install --hook-type pre-push`
