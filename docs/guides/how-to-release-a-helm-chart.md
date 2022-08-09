@@ -88,3 +88,59 @@ jobs:
         env:
           CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
 ```
+
+## Preparing your helm chart for release
+
+While you can release your helm chart 'as is', there are some things regarding the structure and values of your chart.
+The following section describe some of these details.
+
+### Add 'enabled' flags to optional services and resources
+
+If your application contains optional steps, like an initial data set, that is created via init container, it is best to
+wrap this declaration with an if statement, so that a user of your helm chart can decide to not add this declaration to
+his cluster. The ingress definition(s) is also a good candidate for this.
+
+Such an if statement could look like the following:
+
+```yaml
+# ingress.yaml
+{{- if .Values.ingress.enabled -}}
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+...
+{{- end }}
+```
+
+To enable/disable the ingress definition, you would then define it like the following in your values.yaml
+
+```yaml
+# values.yaml
+...
+ingress:
+  enabled: false # true, if you want to specify ingress definitions
+...
+```
+
+### Do not specify ingress URLs
+
+If your application includes ingress definitions, you should not include any URL/host declarations in your
+`values.yaml`. The default values.yaml file will always be used to configure your deployment. If you release your helm
+chart and someone else is using it to deploy your application, the specific domain you declared in your default
+values.yaml file will be applied on that infrastructure as well. Regardless of a completely different domain setup.
+
+So it is best, to not add any ingress related configuration at all in your default values.yaml. Instead, just define
+what a user of your helm chart can configure with empty values, like in the following example:
+
+```yaml
+# values.yaml
+ingress:
+  enabled: false
+  className: ""
+  annotations: { }
+  hosts: [ ]
+  tls: [ ]
+```
+
+For deployments to your own infrastructure, you can still configure ingress through an environment specific
+`values-<env>.yaml`.
