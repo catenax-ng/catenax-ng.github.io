@@ -15,7 +15,6 @@ We handle all of our support requests as a Jira task. There are [templates](http
 present for well-known and recurring tasks and also a blank template.
 For handling these support tasks, we follow our internal support workflow.
 
-
 Since we setup teams and repositories in our GitHub organization and manage secrets in Hashicorp Vault using only one
 script, at first terraform has to be initialized as described in the README.md file in the directory
 [02_team_onboarding](https://github.com/catenax-ng/k8s-cluster-stack/tree/main/terraform/02_team_onboarding).
