@@ -27,17 +27,17 @@ terraform change or only at the end of all necessary changes is also described i
 
 :::info regarding terraform
 
-creation of a new branch, changes, terraform plan, PR and terraform apply must pass in that oder, otherwise there
-will be problems in the cooperation with other developments regarding the main.tf:
+following steps have to be done in the given order, otherwise there could be problems with other developments done in
+parallel:
 
-1. creation of a new branch
-2. making changes
-3. terraform plan to check the changes if they meet the expectations
+1. create a new branch
+2. make changes
+3. do a terraform plan to check if the changes meet your expectations
 4. create a PR and merge
-5. terraform apply at the end
+5. do a terraform apply
 
-If the sequence is made in an other sorting, the state of terraform could be in an undefined state and any action with
-terraform plan during the PR is not merged, will fail with comments of files to be deleted or destroyed
+only after the merge in Github and the terraform apply have been done, the terraform state is consistent.
+Otherwise changes which are applied in parallel by someone else might be deleted again
 
 :::
 
