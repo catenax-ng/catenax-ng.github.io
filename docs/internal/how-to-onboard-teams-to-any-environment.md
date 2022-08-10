@@ -22,7 +22,24 @@ script, at first terraform has to be initialized as described in the README.md f
 It is assumed, that you already have installed the terraform CLI. Before you start, make sure you've cloned
 the [k8s_cluster_stack](https://github.com/catenax-ng/k8s-cluster-stack)
 repository and navigated to `/terraform/02_team_onboarding` inside that repository on your terminal.
-The check of the changes with 'terraform plan' and creation with 'terraform apply' is also described in the README.md.
+The check of the changes with 'terraform plan' and creation with 'terraform apply' which can be done after every
+terraform change or only at the end of all necessary changes is also described in the README.md.
+
+:::info regarding terraform
+
+creation of a new branch, changes, terraform plan, PR and terraform apply must pass in that oder, otherwise there
+will be problems in the cooperation with other developments regarding the main.tf:
+
+1. creation of a new branch
+2. making changes
+3. terraform plan to check the changes if they meet the expectations
+4. create a PR and merge
+5. terraform apply at the end
+
+If the sequence is made in an other sorting, the state of terraform could be in an undefined state and any action with
+terraform plan during the PR is not merged, will fail with comments of files to be deleted or destroyed
+
+:::
 
 ## GitHub
 
