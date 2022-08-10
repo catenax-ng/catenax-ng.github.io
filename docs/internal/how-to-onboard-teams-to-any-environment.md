@@ -57,7 +57,7 @@ inside `module "github" { ... }`. This variable contains a map of all the teams 
 description properties.
 
 All you need to do is to add a new entry to that map with the new team name and an optional description. Make sure, the
-key you use for your new entry is unique. This key will also be used by terraform to create and entry in the state file.
+key you use for your new entry is unique. This key will also be used by terraform to create an entry in the state file.
 
 ### Creating a repository via terraform
 
