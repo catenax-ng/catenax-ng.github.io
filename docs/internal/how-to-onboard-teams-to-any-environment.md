@@ -11,8 +11,34 @@ This guide is only for those who operate the environment
 
 ## Basics
 
-We handle all of our support requests as a Jira task. There are templates present for well-known and recurring tasks.
-There is also a blank template. For handling these support tasks, we follow our internal support workflow.
+We handle all of our support requests as a Jira task. There are [templates](https://catenax-ng.github.io/docs/resources)
+present for well-known and recurring tasks and also a blank template.
+For handling these support tasks, we follow our internal support workflow.
+
+Since we setup teams and repositories in our GitHub organization and manage secrets in Hashicorp Vault using only one
+script, at first terraform has to be initialized as described in the README.md file in the directory
+[02_team_onboarding](https://github.com/catenax-ng/k8s-cluster-stack/tree/main/terraform/02_team_onboarding).
+It is assumed, that you already have installed the terraform CLI. Before you start, make sure you've cloned
+the [k8s_cluster_stack](https://github.com/catenax-ng/k8s-cluster-stack)
+repository and navigated to `/terraform/02_team_onboarding` inside that repository on your terminal.
+The check of the changes with 'terraform plan' and creation with 'terraform apply' which can be done after every
+terraform change or only at the end of all necessary changes is also described in the README.md.
+
+:::info regarding terraform
+
+following steps have to be done in the given order, otherwise there could be problems with other developments done in
+parallel:
+
+1. create a new branch
+2. make changes
+3. do a terraform plan to check if the changes meet your expectations
+4. create a PR and merge
+5. do a terraform apply
+
+only after the merge in Github and the terraform apply have been done, the terraform state is consistent.
+Otherwise changes which are applied in parallel by someone else might be deleted again
+
+:::
 
 ## GitHub
 
@@ -35,25 +61,21 @@ like onboarding a new person and a new team in the same step, you should invite 
 
 :::
 
-### Creating a GitHub team
+### Creating a GitHub team via terraform
 
 Access to repositories is granted on a GitHub team level instead of individuals. Also RBAC definitions on Vault and
 ArgoCD are based on GitHub team membership.
 
 To create GitHub teams, we are using the terraform root module
-[02_team_onboarding](https://github.com/catenax-ng/k8s-cluster-stack/tree/main/terraform/02_team_onboarding). The in the
-same directory, there is a README.md file, describing how to hande terraform specifics. To create a new GitHub team,
-edit `main.tf` in the `02_team_onboarding` directory and locate the variable `github_teams`
+[02_team_onboarding](https://github.com/catenax-ng/k8s-cluster-stack/tree/main/terraform/02_team_onboarding).
+To create a new GitHub team, edit `main.tf` in the `02_team_onboarding` directory and locate the variable `github_teams`
 inside `module "github" { ... }`. This variable contains a map of all the teams in our GitHub organization with name and
 description properties.
 
 All you need to do is to add a new entry to that map with the new team name and an optional description. Make sure, the
-key you use for your new entry is unique. This key will also be used by terraform to create and entry in the state file.
+key you use for your new entry is unique. This key will also be used by terraform to create an entry in the state file.
 
-After editing the list of teams, do a `terraform plan -out tf.plan` and `terraform apply "tf.plan"` like described in
-the README of the 02_team_onboarding root module.
-
-### Creating a repository
+### Creating a repository via terraform
 
 Git repositories are also managed by our terraform root module
 [02_team_onboarding](https://github.com/catenax-ng/k8s-cluster-stack/tree/main/terraform/02_team_onboarding). The
@@ -72,10 +94,7 @@ Event though most of the repository settings are configurable, the following sho
 - `template : null`. Since we usually do not use a template, we do not specify one. In case we want to use a template,
   this variable has to be defined as object of form `{ owner : "github-org" repository : "repo-name" }`
 
-After editing the list of teams, do a `terraform plan -out tf.plan` and `terraform apply "tf.plan"` like described in
-the README of the 02_team_onboarding root module.
-
-### Assigning a team as contributor to a repository
+### Assigning a team as contributor to a repository via terraform
 
 Contribution access to a repository in our GitHub organization is granted on a team level. We do not
 grant this kind of access to individuals.
@@ -92,10 +111,7 @@ each time.
 As default, we configure `maintain` access on the product repositories for the teams, since all the administrative
 tasks are handled by the team managing the organization.
 
-After editing the list of teams, do a `terraform plan -out tf.plan` and `terraform apply "tf.plan"` like described in
-the README of the 02_team_onboarding root module.
-
-## Vault
+## Vault via terraform
 
 To be able to manage secrets in Hashicorp Vault and use them via ArgoCD Vault Plugin (AVP), a team needs the following
 Vault resources set up:
@@ -107,68 +123,15 @@ Vault resources set up:
 - Approle credentials (secret-id and role-id) available as _avp-config in the devsecops_ secret engine
 
 All of these resources are created through terraform scripts. The scripts are part of the
-[k8s_cluster_stack](https://github.com/catenax-ng/k8s-cluster-stack) repository. The following sections will guide you
-through the process of initializing terraform, adding the new team to the list of product teams, creating the terraform
-plan and applying the plan to vault.
-
-### Initialize terraform
-
-It is assumed, that you already have installed the terraform CLI. Before you start, make sure you've cloned
-the [k8s_cluster_stack](https://github.com/catenax-ng/k8s-cluster-stack)
-repository and navigated to `/terraform/02_vault` inside that repository on your terminal.
-
-To run the terraform scripts later on, you need to set two specific environment variables. One is used to access the
-Azure storage account, that contains the tfstate file and one with a Vault token for authentication on Vault. You can
-set these like this:
-
-```shell
-# Requires you to be logged in with az on the cli
-export ARM_ACCESS_KEY=$(az storage account keys list --resource-group cx-devsecops-tfstates --account-name cxdevsecopstfstate --query '[0].value' -o tsv)
-
-# You can get a login token, by logging into the Vault web UI and using 'copy token' from the top right user menu
-export VAULT_TOKEN=<your-vault-token-or-root-token>
-```
-
-Before creating a terraform plan, you need to initialize terraform, which will download all the provider plugins needed
-to run the scripts. Therefore, run `terraform init`.
+[k8s_cluster_stack](https://github.com/catenax-ng/k8s-cluster-stack) repository.
 
 ### Add the new team to the list of product teams
 
-After initializing terraform and preparing the necessary environment variables as described before, you can adjust the
-terraform scripts to onboard the new team. All the product teams are listed in a variable named 'product_teams', that is
-used in a 'for_each' loop in the resource definitions.
-
-So all you need to do to create all the resources necessary for the team, is to add it to that 'product_teams' map.
-Therefore, open the variables file at `/terraform/02_vault/variables.tf` and append a new map entry to the default value
-of the variable definition. All the properties, that are defined in the variable definition are mandatory to be
-specified in the map entry, since all of them are used inside the resource definitions.
-
-### Create and apply the terraform plan
-
-Since terraform is not only creating Vault resources for product teams, but also configures OIDC login, you need to
-specify required settings, that are not checked into version control, since this is sensitive information.
-
-The OIDC settings that needs to be specified is the client-id and the client-secret for DEX. You can find this
-information in our devsecops secret engine in vault at path `devsecops/clusters/vault/github-oauth`.
-
-To set this information, you can either copy and paste it, when terraform asks you for it on plan creation, or you could
-specify it beforehand as environment variable like this:
-
-```shell
-export TF_VAR_vault_oidc_client_id=<client-id-copied-from-vault>
-export TF_VAR_vault_oidc_client_secret=<client-secret-copied-from-vault>
-```
-
-Now you can create a terraform plan with this command: `terraform plan -out tf.plan`
-Terraform will print a summary, of what changes it will do to Vault, once you apply the generated plan. Check the
-summary carefully, that it actually matches your expectations. In our case of onboarding a new team, there should only
-be new resources getting created and no changes or destruction of existing ones. If there are actually changes or
-destruction listed in the plan summary, double check, if you are at the HEAD revision, or you accidentally changed some
-resource definitions.
-
-If the plan summary matches your expectations, then you can apply the changes with this command:
-`terraform apply "tf.plan"`
-Afterwards, you can manually check Vault, if all the resources actually got created.
+Onboarding a new team is also managed by our terraform root module
+[02_team_onboarding](https://github.com/catenax-ng/k8s-cluster-stack/tree/main/terraform/02_team_onboarding).
+You need to edit `main.tf` in the `02_team_onboarding` directory and locate the variable `product_teams`
+inside `module "vault" { ... }`. This variable contains a map of all the product teams. To create a new one, add a
+new entry to the map.
 
 ## ArgoCD
 

@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# Veracode
+# How to integrate Veracode
 
 We perform **static application security testing**, **FOSS license scanning**, and **software composition analysis** with Veracode.
 

@@ -1,8 +1,8 @@
 ---
-title: How to integrate Veracode to your JIRA project
+sidebar_position: 2
 ---
 
-## About the Veracode JIRA plugin
+# How to integrate Veracode to your JIRA project
 
 Veracode provides a [plugin](https://docs.veracode.com/r/4ULk2mjyYUeYb8xd_2nDVw/yoWnZ5~NZchnoLXNqtavrQ) for JIRA, which
 automatically creates a JIRA ticket for security flaws which Veracode identifies in your application.

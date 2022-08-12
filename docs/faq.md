@@ -1,13 +1,14 @@
 ---
 sidebar_position: 3
-title: "Frequently asked questions (FAQ)"
 ---
+
+# Frequently asked questions (FAQ)
 
 ## Can I have 'admin' privileges on my catenax-ng repository?
 
 __Short answer:__ No! Administrative tasks will be performed by the team managing the GitHub organization.
 
-__Long answer:__ The GitHub organizatoin is managed by a dedicated team. This team also works closely together with the
+__Long answer:__ The GitHub organization is managed by a dedicated team. This team also works closely together with the
 security expert group and the release manager. Together we need to ensure, that product teams and repositories are best
 prepared for going open-source in the eclipse foundation. We also need to ensure, that mandatory quality gates are
 checked
