@@ -30,7 +30,8 @@ then be used by anyone, who wants to deploy and host Catena-X applications.
 
 ## How can you release your helm chart?
 
-There are several options to release your chart. The one option we propose is using the `chart-releaser-action` in a
+There are several options to release your chart. The one option we propose is using the
+[chart-releaser-action](https://github.com/helm/chart-releaser-action) in a
 GitHub workflow. For `chart-releaser-action` to work, there need to be some requirements met.
 
 ### Prerequisites
