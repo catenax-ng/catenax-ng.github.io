@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkcatenax_ng=self.webpackChunkcatenax_ng||[]).push([[8710],{2776:function(a){a.exports=JSON.parse('{"name":"@easyops-cn/docusaurus-search-local","id":"default"}')}}]);
