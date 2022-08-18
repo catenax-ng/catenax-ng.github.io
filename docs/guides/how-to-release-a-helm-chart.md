@@ -42,6 +42,7 @@ if you want to use the default configuration.
 1. Your helm charts need to be in the `/charts/<chart-name` directory of your repository
 2. GitHub pages need to be activated for your repository and point to a 'gh-pages' branch. Your GitHub organization
    admins can activate that for you
+3. The gh-pages branch needs to exist on the remote repository on GitHub
 
 ### Adding the chart release GitHub workflow
 
@@ -89,6 +90,32 @@ jobs:
         env:
           CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
 ```
+
+### How to run the release action
+
+If you are using the chart release workflow 'as-is' from above, you have two options for running it.
+The first one is a manual dispatch that you can trigger on the GitHub UI. This is usually not necessary but anyway an
+option.
+
+The second and better option is to tag your source code in git and push that tag to the remote repository on GitHub.
+This can be done as follows:
+
+```shell
+# After after finishing your features and merging it to main branch, tag it with your desired version number
+
+# get the latest version of your main branch
+git checkout main && git pull
+
+# define a tag for the current version in main (here version 1.0.0 as example)
+git tag v1.0.0
+# publish this tag to the remote repository on GitHub
+git push origin --tags
+```
+
+This will automatically trigger the above defined workflow. The chart-releaser-action will then check your chart for
+changes (changed values, changed templates, changed dependencies, etc.) and if there are changes, package the chart
+into an compressed archive. Additionally, it will update an index.yaml file in the 'gh-pages' branch. This index.yaml
+file is needed, for enabling your GitHub pages to function as repository for the released helm chart.
 
 ## Preparing your helm chart for release
 
