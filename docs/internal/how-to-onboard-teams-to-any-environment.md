@@ -179,10 +179,11 @@ spec:
     - group: ""
       kind: NetworkPolicy
   roles:
+    # A role which provides access to all applications in the project
     - name: team-admin
       description: All access to applications inside project-bpdm. Read only on project itself
       policies:
-        - p, proj:product-productName:team-admin, applications, *, product-productName/*, allow
+        - p, proj:project-productName:team-admin, applications, *, project-productName/*, allow
       groups:
         - catenax-ng:product-productName
 ```
@@ -253,7 +254,7 @@ cluster).
 
 ### Enable access to a private repository via deploy key
 
-:::note
+:::info note
 
 The project/product has to follow the steps which can be found
 here: [How to prepare a private repo](guides/how-to-prepare-a-private-repo).
@@ -261,7 +262,7 @@ here: [How to prepare a private repo](guides/how-to-prepare-a-private-repo).
 :::
 
 - Go to `catenax-ng\k8s-cluster-stack\environments\hotel-budapest\argo-repos`
-- Add a file named `<productName>-repo.yaml`, e.g. for _product-semantics_ (`product-semantics-repo.yaml`):
+- Add a file named `product-<productName>-repo.yaml`, e.g. for _product-semantics_ (`product-semantics-repo.yaml`):
 
   ```yaml
   apiVersion: v1
