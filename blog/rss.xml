@@ -4,10 +4,20 @@
         <title>Catena-x - DevSecOps Blog</title>
         <link>https://catena-x.net/blog</link>
         <description>Catena-x - DevSecOps Blog</description>
-        <lastBuildDate>Fri, 17 Jun 2022 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 26 Aug 2022 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[Office Hours 2022-8-26]]></title>
+            <link>https://catena-x.net/blog/Office Hours 2022-8-26</link>
+            <guid>Office Hours 2022-8-26</guid>
+            <pubDate>Fri, 26 Aug 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[Reminders]]></description>
+            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="reminders">Reminders<a class="hash-link" href="#reminders" title="Direct link to heading">​</a></h2><p><strong>DevSecOps:</strong></p><ul><li>Please do not use the old catena-x GitHub organization anymore. Tooling like sonarcloud and security checks will only be provided for catenax-ng</li></ul><p><strong>Security:</strong></p><ul><li>Get in contact with the security experts for a timeline regarding DAST. This is <strong>MANDATORY</strong> for a proper release 2.0</li><li>There are still open PRs to exchange checkov with KICS. KICS is <strong>MANDATORY</strong> for security checks regarding release 2.0</li></ul><p><strong>FOSS:</strong></p><ul><li>Get in contact with angelika regarding the initial contribution to the eclipse foundation. This is <strong>MANDATORY</strong> to be part of Release 2.0</li></ul><h2 class="anchor anchorWithStickyNavbar_LWe7" id="general-updates">General updates<a class="hash-link" href="#general-updates" title="Direct link to heading">​</a></h2><p>The following updates were presented:</p><ul><li>The cosign (signing docker images) step in k8s-helm-example was outdated. New version published and further investigations will follow</li><li>In the following days, we will provide examples on how you can test and lint your helm charts in a GitHub workflow</li></ul><h2 class="anchor anchorWithStickyNavbar_LWe7" id="open-discussions">Open discussions<a class="hash-link" href="#open-discussions" title="Direct link to heading">​</a></h2><p>The following topics where discussed in the open session:</p><ul><li>Is there already guidance on day-to-day working model, once our code passed the initial contribution check to the eclipse foundation?<ul><li>No official and complete guidance yet</li><li>Start with the initial contribution process as soon as possible</li><li>During the e2e test phase for release two, we will most likely have repositories exist in catenax-ng and eclipse-tractusx in parallel</li><li>Once the initial contribution is done, the DevSecOps team will work on integrating the checks from catenax-ng (i.e. VeraCode) to eclipse-tractusx aswell</li><li>After that, you can use the eclipse-tractusx repository as leading one and only catenax-ng for consoritia environment specific deployment configuration</li></ul></li><li>Are there additional best-practices for Helm releases?<ul><li>External dependencies that are copied to your own repo -&gt; Discouraged due to FOSS licensing concerns. Get in touch, if you need further details and guidance</li><li>Versioning<ul><li>Try to keep your git tags, docker image tags and helm chart version tag in sync</li><li>Release your chart together with your application to make that easier</li><li>Changes in your application should also lead to changes in your helm chart. At least the image tag in the values.yaml as default config should change</li></ul></li></ul></li></ul>]]></content:encoded>
+            <category>news</category>
+            <category>officehour</category>
+        </item>
         <item>
             <title><![CDATA[Office Hours 2022-06-17]]></title>
             <link>https://catena-x.net/blog/Office Hours 2022-06-17</link>
