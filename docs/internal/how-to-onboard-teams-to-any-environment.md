@@ -16,13 +16,15 @@ present for well-known and recurring tasks and also a blank template.
 For handling these support tasks, we follow our internal support workflow.
 
 Since we setup teams and repositories in our GitHub organization and manage secrets in Hashicorp Vault using only one
-script, at first terraform has to be initialized as described in the README.md file in the directory
-[02_team_onboarding](https://github.com/catenax-ng/k8s-cluster-stack/tree/main/terraform/02_team_onboarding).
+script, at first **terraform has to be initialized** as described in the
+[README.md](https://github.com/catenax-ng/k8s-cluster-stack/blob/main/terraform/100_team_onboarding/README.md) file in the directory
+[100_team_onboarding](https://github.com/catenax-ng/k8s-cluster-stack/tree/main/terraform/100_team_onboarding).
 It is assumed, that you already have installed the terraform CLI. Before you start, make sure you've cloned
 the [k8s_cluster_stack](https://github.com/catenax-ng/k8s-cluster-stack)
-repository and navigated to `/terraform/02_team_onboarding` inside that repository on your terminal.
+repository and navigated to `/terraform/100_team_onboarding` inside that repository on your terminal.
 The check of the changes with 'terraform plan' and creation with 'terraform apply' which can be done after every
-terraform change or only at the end of all necessary changes is also described in the README.md.
+terraform change or only at the end of all necessary changes is also described in the
+[README.md](https://github.com/catenax-ng/k8s-cluster-stack/blob/main/terraform/100_team_onboarding/README.md).
 
 :::info regarding terraform
 
@@ -67,8 +69,8 @@ Access to repositories is granted on a GitHub team level instead of individuals.
 ArgoCD are based on GitHub team membership.
 
 To create GitHub teams, we are using the terraform root module
-[02_team_onboarding](https://github.com/catenax-ng/k8s-cluster-stack/tree/main/terraform/02_team_onboarding).
-To create a new GitHub team, edit `main.tf` in the `02_team_onboarding` directory and locate the variable `github_teams`
+[100_team_onboarding](https://github.com/catenax-ng/k8s-cluster-stack/tree/main/terraform/100_team_onboarding).
+To create a new GitHub team, edit `main.tf` in the `100_team_onboarding` directory and locate the variable `github_teams`
 inside `module "github" { ... }`. This variable contains a map of all the teams in our GitHub organization with name and
 description properties.
 
@@ -78,9 +80,9 @@ key you use for your new entry is unique. This key will also be used by terrafor
 ### Creating a repository via terraform
 
 Git repositories are also managed by our terraform root module
-[02_team_onboarding](https://github.com/catenax-ng/k8s-cluster-stack/tree/main/terraform/02_team_onboarding). The
+[100_team_onboarding](https://github.com/catenax-ng/k8s-cluster-stack/tree/main/terraform/100_team_onboarding). The
 process of creating a new repository is similar to creating a team. You need to edit the `main.tf` file in the
-`02_team_onboarding` directory. Repositories are defined in the
+`100_team_onboarding` directory. Repositories are defined in the
 `github_repositories` variable inside `module "github" { ... }`. This variable is a map containing all the repository
 information. To create a new one, add a new entry to the map.
 
@@ -99,9 +101,9 @@ Event though most of the repository settings are configurable, the following sho
 Contribution access to a repository in our GitHub organization is granted on a team level. We do not
 grant this kind of access to individuals.
 Access is again managed by our terraform root module
-[02_team_onboarding](https://github.com/catenax-ng/k8s-cluster-stack/tree/main/terraform/02_team_onboarding).
+[100_team_onboarding](https://github.com/catenax-ng/k8s-cluster-stack/tree/main/terraform/100_team_onboarding).
 
-To manage contribution access for a team on a repository, edit the `main.tf` file in the `02_team_onboarding` directory.
+To manage contribution access for a team on a repository, edit the `main.tf` file in the `100_team_onboarding` directory.
 There, add a new map entry to the `github_repositories_teams` variable inside `module "github" { ... }`.
 As convention, we decided to for the map key as a combination of repository and team (`<repository-name-team-name>`).
 This is done, because we have cases of multiple teams contributing to a single repository. This is configured, by
@@ -128,8 +130,8 @@ All of these resources are created through terraform scripts. The scripts are pa
 ### Add the new team to the list of product teams
 
 Onboarding a new team is also managed by our terraform root module
-[02_team_onboarding](https://github.com/catenax-ng/k8s-cluster-stack/tree/main/terraform/02_team_onboarding).
-You need to edit `main.tf` in the `02_team_onboarding` directory and locate the variable `product_teams`
+[100_team_onboarding](https://github.com/catenax-ng/k8s-cluster-stack/tree/main/terraform/100_team_onboarding).
+You need to edit `main.tf` in the `100_team_onboarding` directory and locate the variable `product_teams`
 inside `module "vault" { ... }`. This variable contains a map of all the product teams. To create a new one, add a
 new entry to the map.
 
@@ -189,7 +191,8 @@ spec:
 ```
 
 Store this manifest in [k8s-cluster-stack](https://github.com/catenax-ng/k8s-cluster-stack) repo in
-path `environments/hotel-budapest/argo-projects/`.
+path `environments/hotel-budapest/argo-projects/` and in every environment you need it. Default is
+dev and int (Hotel-Budapest).
 
 ### Create AVP Secret
 
@@ -213,7 +216,8 @@ stringData:
 ```
 
 Store this manifest in [k8s-cluster-stack](https://github.com/catenax-ng/k8s-cluster-stack) repo in
-path `environments/hotel-budapest/avp-secrets/`.
+path `environments/hotel-budapest/avp-secrets/` and in every environment you need it. Default is
+dev and int (Hotel-Budapest).
 
 The secret will be called _vault-secret_ and stored in k8s namespace related to product-team.
 
@@ -283,7 +287,8 @@ here: [How to prepare a private repo](guides/how-to-prepare-a-private-repo).
       <semantics-deploy-key>
   ```
 
-- Add following line to `environments/hotel-budapest/kustomization.yaml`
+- Add following line to `environments/hotel-budapest/kustomization.yaml` and for every environment you need it.
+Default is dev and int (Hotel-Budapest).
 
   ```yaml
   - argo-repos/product-semantics-repo.yaml
