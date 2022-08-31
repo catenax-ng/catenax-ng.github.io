@@ -46,8 +46,10 @@ request as many repositories as you need for your team. We offer these repositor
 Catena-X organization to proper open-source repositories in the eclipse foundation. After moving your repositories to
 eclipse foundation, you can still use catenax-ng for deployment specific configuration of the demonstrator environments.
 
+There is an option to use the [k8s-helm-example](https://github.com/catenax-ng/k8s-helm-example) repository to use as a **template for the new repository**. It serves as a jumpstart with a basic **helm chart** setup, enabled **github pages** and **github action to release helm charts** to github pages. This option can be requested in the Jira template.
+
 To request a new repository, please use
-[this Jira template](https://jira.catena-x.net/secure/CreateIssueDetails!init.jspa?pid=10212&issuetype=10401&components=10401&priority=3&summary=GitHub%3A%20New%20repository&description=%0Arepository%20name%3A%20product-_your_product_name_%0AGitHub%20team%20to%20grant%20access%3A%20%0A-%20_github_team_name_&labels=XS).
+[this Jira template](https://jira.catena-x.net/secure/CreateIssueDetails!init.jspa?pid=10212&issuetype=10401&components=10401&priority=3&summary=GitHub%3A%20New%20repository&description=%0Arepository%20name%3A%20product-_your_product_name_%0A%0Ause%20https%3A%2F%2Fgithub.com%2Fcatenax-ng%2Fk8s-helm-example%C2%A0repo%20as%20template%20and%20setup%20github%20pages%20for%20helm%20publishing%3A%20_yes%2Fno_%0A%0A%0AGitHub%20team%20to%20grant%20access%3A%0A%0A_github_team_name_&labels=XS).
 
 :::info
 

@@ -24,9 +24,21 @@ repository and navigated to `/terraform/02_team_onboarding` inside that reposito
 The check of the changes with 'terraform plan' and creation with 'terraform apply' which can be done after every
 terraform change or only at the end of all necessary changes is also described in the README.md.
 
+For 'terraform apply' and 'terraform plan' command the following command line variables has to be set:
+```shell
+# You can get a login token, by logging into the Vault web UI and using 'copy token' from the top right user menu
+export VAULT_TOKEN=<your-vault-token-or-root-token>
+# The OIDC settings that needs to be specified is the client-id and the client-secret for DEX. You can find this
+information in our devsecops secret engine in vault at path `devsecops/clusters/vault/github-oauth`.
+export TF_VAR_vault_oidc_client_id=<client-id-copied-from-vault>
+export TF_VAR_vault_oidc_client_secret=<client-secret-copied-from-vault>
+# A Github personal access token has to be created.
+export TF_VAR_github_token=<github-pat>
+```
+
 :::info regarding terraform
 
-following steps have to be done in the given order, otherwise there could be problems with other developments done in
+Following steps have to be done in the given order, otherwise there could be problems with other developments done in
 parallel:
 
 1. create a new branch
@@ -35,7 +47,7 @@ parallel:
 4. create a PR and merge
 5. do a terraform apply
 
-only after the merge in Github and the terraform apply have been done, the terraform state is consistent.
+Only after the merge in Github and the terraform apply have been done, the terraform state is consistent.
 Otherwise changes which are applied in parallel by someone else might be deleted again
 
 :::
@@ -93,6 +105,16 @@ Event though most of the repository settings are configurable, the following sho
 - `uses_template : false`. Currently, our repositories are set up blank and not based on a template
 - `template : null`. Since we usually do not use a template, we do not specify one. In case we want to use a template,
   this variable has to be defined as object of form `{ owner : "github-org" repository : "repo-name" }`
+
+:::caution
+
+If the team requested k8s-helm-example repository to be used as a template, the following settings needs to be changed:
+- `uses_template : true`
+- `template : { owner : "catenax-ng" repository : "k8s-helm-example" }`
+
+The newly created repository will be populated with files from the template, github pages will be enabled and github action for releasing helm charts to pages will be added.
+
+:::
 
 ### Assigning a team as contributor to a repository via terraform
 
