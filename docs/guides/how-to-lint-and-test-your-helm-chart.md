@@ -67,7 +67,7 @@ jobs:
         run: ct install --charts charts/k8s-helm-example --config charts/chart-testing-config.yaml
 ```
 
-You can use this workflow 'as-is'. THe only thiing you need to adapt is the list of charts to test in the final
+You can use this workflow 'as-is'. The only thing you need to adapt is the list of charts to test in the final
 `ct install` step.
 
 As you might have noticed, the `ct lint` and `ct install` steps are also using a configuration file specified by a
