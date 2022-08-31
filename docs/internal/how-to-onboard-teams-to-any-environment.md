@@ -27,6 +27,7 @@ terraform change or only at the end of all necessary changes is also described i
 [README.md](https://github.com/catenax-ng/k8s-cluster-stack/blob/main/terraform/100_team_onboarding/README.md).
 
 For 'terraform apply' and 'terraform plan' command the following command line variables has to be set:
+
 ```shell
 # You can get a login token, by logging into the Vault web UI and using 'copy token' from the top right user menu
 export VAULT_TOKEN=<your-vault-token-or-root-token>
@@ -111,6 +112,7 @@ Event though most of the repository settings are configurable, the following sho
 :::caution
 
 If the team requested k8s-helm-example repository to be used as a template, the following settings needs to be changed:
+
 - `uses_template : true`
 - `template : { owner : "catenax-ng" repository : "k8s-helm-example" }`
 
