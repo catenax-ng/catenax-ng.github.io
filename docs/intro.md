@@ -11,3 +11,4 @@ We are here to provide the Catena-X CAT Stack as a base for your componets to ru
 You can find all necessary documentation on how to get your component running in our documentation.
 
 Feel free to contribute to our documentation through a Pull Request, all contributions are welcome!
+
