@@ -1,12 +1,9 @@
 ---
-title: How lint and test your helm chart
+title: How to lint and test your helm chart
 ---
 
 This how-to will show you some options, how you can improve the quality of your helm chart by linting and testing
 it in a GitHub workflow.
-
-There is also guidance on how you can run the checks on your local machine, so that you are able to lint and test your
-chart, before pushing it the remote repository.
 
 ## GitHub workflow
 
@@ -79,3 +76,38 @@ This can be achieved with the following setting in the configuration file:
 # charts/chart-testing-config.yaml
 validate-maintainers: false
 ```
+
+## What is helm test
+
+The above described workflow described, how you can lint your helm chart and how to run `helm test` in a GitHub workflow.
+This section will focus on `helm test` itself and how you can use it to validate your Helm chart installation process.
+You can also consult the [official documentation](https://helm.sh/docs/topics/chart_tests/) on this topic.
+
+The following listing shows an example helm test from our
+[k8s-helm-example](https://github.com/catenax-ng/k8s-helm-example/blob/main/charts/k8s-helm-example) chart.
+
+```yaml
+# https://github.com/catenax-ng/k8s-helm-example/blob/main/charts/k8s-helm-example/templates/tests/test-service-connection.yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: "{{ include "k8s-helm-example.fullname" . }}-test-connection"
+  labels:
+    {{- include "k8s-helm-example.labels" . | nindent 4 }}
+  annotations:
+    "helm.sh/hook": test
+spec:
+  containers:
+    - name: wget
+      image: busybox
+      command: ['wget']
+      args: ['{{ include "k8s-helm-example.fullname" . }}:{{ .Values.service.port }}']
+  restartPolicy: Never
+```
+
+As you can see, a helm tests is a regular kubernetes resource definition. The important part in this definition
+is the annotation `"helm.sh/hook": test`. This specifies, that the pod will be executed, when using the helm test
+command.
+
+The example above will run a basic wget call to the kubernetes service and will succeed, if the service is reachable
+and fail, if it isn't.
