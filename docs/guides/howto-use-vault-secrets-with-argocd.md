@@ -72,7 +72,7 @@ error message about _secret not found_ or similar.
 :::
 
 :::tip
-As this project will be released with an open source scope, it is recommended to use placeholders with the inline path definition (as shown in example #1 above). When users want to install your stuff, it's not guaranteed that they're using ArgoCD with Vault plugin as we do (thus keeping it the most generic way possible). 
+As this project will be released with an open source scope, it is recommended to use placeholders with the inline path definition (as shown in example #1 above). When users want to install your stuff, it's not guaranteed that they're using ArgoCD with Vault plugin as we do (thus keeping it the most generic way possible).
 
 :::
 
