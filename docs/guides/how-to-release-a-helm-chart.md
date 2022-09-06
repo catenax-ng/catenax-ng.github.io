@@ -5,6 +5,8 @@ title: How to release a helm chart
 This guide will describe, why you should release your helm charts and how you can achieve that. We will also describe
 some common pitfalls and how to handle them.
 
+If the team has requested the new repository with [k8s-helm-example](https://github.com/catenax-ng/k8s-helm-example) repositry set as template, the [chart releaser action](#adding-the-chart-release-github-workflow) will already be present. The file can be modified/personalized to unique needs.
+
 ## Why should you release your helm chart?
 
 There are two main reasons, why we want to release helm charts in the Catena-X context.
