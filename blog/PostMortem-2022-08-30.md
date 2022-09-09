@@ -2,7 +2,7 @@
 slug: Post Mortem 2022-08-30
 title: Post Mortem 2022-08-30
 authors: DevSecOps
-tags: [news, postmortem]
+tags: [news, post-mortem]
 ---
 
 ## Azure AKS - Unable to pull images

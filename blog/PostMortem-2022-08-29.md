@@ -2,7 +2,7 @@
 slug: Post Mortem 2022-08-29
 title: Post Mortem 2022-08-29
 authors: DevSecOps
-tags: [news, postmortem]
+tags: [news, post-mortem]
 ---
 
 ## DEV Environment Inaccessible
@@ -55,26 +55,13 @@ ingress-nginx:
         service.beta.kubernetes.io/azure-load-balancer-health-probe-request-path: "/healthz"
 ````
 
-[//]: # (TODO: carslen, 09.09.22 Do we need following, or do we want them?)
-
 ## Action Items
 
 - Adherence to internal policies (-> system team)
 - Implement better testing upfront of maintenance tasks
+- Do not upgrade to latest available AKS version
 
 ## Lessons Learned
 
 - No careless execution of maintenance work
 - Better maintenance planning upfront
-
-### What went well
-
--
-
-### What went wrong
-
-### Where we got lucky
-
-## Timeline
-
-## Supporting information
