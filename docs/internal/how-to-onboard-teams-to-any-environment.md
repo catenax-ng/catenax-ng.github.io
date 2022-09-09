@@ -16,17 +16,32 @@ present for well-known and recurring tasks and also a blank template.
 For handling these support tasks, we follow our internal support workflow.
 
 Since we setup teams and repositories in our GitHub organization and manage secrets in Hashicorp Vault using only one
-script, at first terraform has to be initialized as described in the README.md file in the directory
-[02_team_onboarding](https://github.com/catenax-ng/k8s-cluster-stack/tree/main/terraform/02_team_onboarding).
+script, at first **terraform has to be initialized** as described in the
+[README.md](https://github.com/catenax-ng/k8s-cluster-stack/blob/main/terraform/100_team_onboarding/README.md) file in the directory
+[100_team_onboarding](https://github.com/catenax-ng/k8s-cluster-stack/tree/main/terraform/100_team_onboarding).
 It is assumed, that you already have installed the terraform CLI. Before you start, make sure you've cloned
 the [k8s_cluster_stack](https://github.com/catenax-ng/k8s-cluster-stack)
-repository and navigated to `/terraform/02_team_onboarding` inside that repository on your terminal.
+repository and navigated to `/terraform/100_team_onboarding` inside that repository on your terminal.
 The check of the changes with 'terraform plan' and creation with 'terraform apply' which can be done after every
-terraform change or only at the end of all necessary changes is also described in the README.md.
+terraform change or only at the end of all necessary changes is also described in the
+[README.md](https://github.com/catenax-ng/k8s-cluster-stack/blob/main/terraform/100_team_onboarding/README.md).
+
+For 'terraform apply' and 'terraform plan' command the following command line variables has to be set:
+
+```shell
+# You can get a login token, by logging into the Vault web UI and using 'copy token' from the top right user menu
+export VAULT_TOKEN=<your-vault-token-or-root-token>
+# The OIDC settings that needs to be specified is the client-id and the client-secret for DEX. You can find this
+information in our devsecops secret engine in vault at path `devsecops/clusters/vault/github-oauth`.
+export TF_VAR_vault_oidc_client_id=<client-id-copied-from-vault>
+export TF_VAR_vault_oidc_client_secret=<client-secret-copied-from-vault>
+# A Github personal access token has to be created.
+export TF_VAR_github_token=<github-pat>
+```
 
 :::info regarding terraform
 
-following steps have to be done in the given order, otherwise there could be problems with other developments done in
+Following steps have to be done in the given order, otherwise there could be problems with other developments done in
 parallel:
 
 1. create a new branch
@@ -35,7 +50,7 @@ parallel:
 4. create a PR and merge
 5. do a terraform apply
 
-only after the merge in Github and the terraform apply have been done, the terraform state is consistent.
+Only after the merge in Github and the terraform apply have been done, the terraform state is consistent.
 Otherwise changes which are applied in parallel by someone else might be deleted again
 
 :::
@@ -67,8 +82,8 @@ Access to repositories is granted on a GitHub team level instead of individuals.
 ArgoCD are based on GitHub team membership.
 
 To create GitHub teams, we are using the terraform root module
-[02_team_onboarding](https://github.com/catenax-ng/k8s-cluster-stack/tree/main/terraform/02_team_onboarding).
-To create a new GitHub team, edit `main.tf` in the `02_team_onboarding` directory and locate the variable `github_teams`
+[100_team_onboarding](https://github.com/catenax-ng/k8s-cluster-stack/tree/main/terraform/100_team_onboarding).
+To create a new GitHub team, edit `main.tf` in the `100_team_onboarding` directory and locate the variable `github_teams`
 inside `module "github" { ... }`. This variable contains a map of all the teams in our GitHub organization with name and
 description properties.
 
@@ -78,9 +93,9 @@ key you use for your new entry is unique. This key will also be used by terrafor
 ### Creating a repository via terraform
 
 Git repositories are also managed by our terraform root module
-[02_team_onboarding](https://github.com/catenax-ng/k8s-cluster-stack/tree/main/terraform/02_team_onboarding). The
+[100_team_onboarding](https://github.com/catenax-ng/k8s-cluster-stack/tree/main/terraform/100_team_onboarding). The
 process of creating a new repository is similar to creating a team. You need to edit the `main.tf` file in the
-`02_team_onboarding` directory. Repositories are defined in the
+`100_team_onboarding` directory. Repositories are defined in the
 `github_repositories` variable inside `module "github" { ... }`. This variable is a map containing all the repository
 information. To create a new one, add a new entry to the map.
 
@@ -94,14 +109,25 @@ Event though most of the repository settings are configurable, the following sho
 - `template : null`. Since we usually do not use a template, we do not specify one. In case we want to use a template,
   this variable has to be defined as object of form `{ owner : "github-org" repository : "repo-name" }`
 
+:::caution
+
+If the team requested k8s-helm-example repository to be used as a template, the following settings needs to be changed:
+
+- `uses_template : true`
+- `template : { owner : "catenax-ng" repository : "k8s-helm-example" }`
+
+The newly created repository will be populated with files from the template, github pages will be enabled and github action for releasing helm charts to pages will be added.
+
+:::
+
 ### Assigning a team as contributor to a repository via terraform
 
 Contribution access to a repository in our GitHub organization is granted on a team level. We do not
 grant this kind of access to individuals.
 Access is again managed by our terraform root module
-[02_team_onboarding](https://github.com/catenax-ng/k8s-cluster-stack/tree/main/terraform/02_team_onboarding).
+[100_team_onboarding](https://github.com/catenax-ng/k8s-cluster-stack/tree/main/terraform/100_team_onboarding).
 
-To manage contribution access for a team on a repository, edit the `main.tf` file in the `02_team_onboarding` directory.
+To manage contribution access for a team on a repository, edit the `main.tf` file in the `100_team_onboarding` directory.
 There, add a new map entry to the `github_repositories_teams` variable inside `module "github" { ... }`.
 As convention, we decided to for the map key as a combination of repository and team (`<repository-name-team-name>`).
 This is done, because we have cases of multiple teams contributing to a single repository. This is configured, by
@@ -128,8 +154,8 @@ All of these resources are created through terraform scripts. The scripts are pa
 ### Add the new team to the list of product teams
 
 Onboarding a new team is also managed by our terraform root module
-[02_team_onboarding](https://github.com/catenax-ng/k8s-cluster-stack/tree/main/terraform/02_team_onboarding).
-You need to edit `main.tf` in the `02_team_onboarding` directory and locate the variable `product_teams`
+[100_team_onboarding](https://github.com/catenax-ng/k8s-cluster-stack/tree/main/terraform/100_team_onboarding).
+You need to edit `main.tf` in the `100_team_onboarding` directory and locate the variable `product_teams`
 inside `module "vault" { ... }`. This variable contains a map of all the product teams. To create a new one, add a
 new entry to the map.
 
@@ -179,16 +205,18 @@ spec:
     - group: ""
       kind: NetworkPolicy
   roles:
+    # A role which provides access to all applications in the project
     - name: team-admin
       description: All access to applications inside project-bpdm. Read only on project itself
       policies:
-        - p, proj:product-productName:team-admin, applications, *, product-productName/*, allow
+        - p, proj:project-productName:team-admin, applications, *, project-productName/*, allow
       groups:
         - catenax-ng:product-productName
 ```
 
 Store this manifest in [k8s-cluster-stack](https://github.com/catenax-ng/k8s-cluster-stack) repo in
-path `environments/hotel-budapest/argo-projects/`.
+path `environments/hotel-budapest/argo-projects/` and in every environment you need it. Default is
+dev and int (Hotel-Budapest).
 
 ### Create AVP Secret
 
@@ -212,7 +240,8 @@ stringData:
 ```
 
 Store this manifest in [k8s-cluster-stack](https://github.com/catenax-ng/k8s-cluster-stack) repo in
-path `environments/hotel-budapest/avp-secrets/`.
+path `environments/hotel-budapest/avp-secrets/` and in every environment you need it. Default is
+dev and int (Hotel-Budapest).
 
 The secret will be called _vault-secret_ and stored in k8s namespace related to product-team.
 
@@ -253,7 +282,7 @@ cluster).
 
 ### Enable access to a private repository via deploy key
 
-:::note
+:::info note
 
 The project/product has to follow the steps which can be found
 here: [How to prepare a private repo](guides/how-to-prepare-a-private-repo).
@@ -261,7 +290,7 @@ here: [How to prepare a private repo](guides/how-to-prepare-a-private-repo).
 :::
 
 - Go to `catenax-ng\k8s-cluster-stack\environments\hotel-budapest\argo-repos`
-- Add a file named `<productName>-repo.yaml`, e.g. for _product-semantics_ (`product-semantics-repo.yaml`):
+- Add a file named `product-<productName>-repo.yaml`, e.g. for _product-semantics_ (`product-semantics-repo.yaml`):
 
   ```yaml
   apiVersion: v1
@@ -282,7 +311,8 @@ here: [How to prepare a private repo](guides/how-to-prepare-a-private-repo).
       <semantics-deploy-key>
   ```
 
-- Add following line to `environments/hotel-budapest/kustomization.yaml`
+- Add following line to `environments/hotel-budapest/kustomization.yaml` and for every environment you need it.
+Default is dev and int (Hotel-Budapest).
 
   ```yaml
   - argo-repos/product-semantics-repo.yaml
