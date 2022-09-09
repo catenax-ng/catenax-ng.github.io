@@ -23,12 +23,12 @@ Solved
 
 ### Summary
 
-Outgoing internet traffic on Azure AKS clusters where blocked. As a result, pulling images in our environments did not
+Outgoing internet traffic on Azure AKS clusters was blocked. As a result, pulling images in our environments did not
 work.
 
 ### Impact
 
-All Catena-X AKS clusters where affected by this issue.
+All Catena-X AKS clusters were affected by this issue.
 
 ### Root Causes
 
