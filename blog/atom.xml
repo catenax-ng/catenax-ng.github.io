@@ -2,11 +2,48 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://catena-x.net/blog</id>
     <title>Catena-x - DevSecOps Blog</title>
-    <updated>2022-08-26T00:00:00.000Z</updated>
+    <updated>2022-08-30T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://catena-x.net/blog"/>
     <subtitle>Catena-x - DevSecOps Blog</subtitle>
     <icon>https://catena-x.net/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[Post Mortem 2022-08-30]]></title>
+        <id>Post Mortem 2022-08-30</id>
+        <link href="https://catena-x.net/blog/Post Mortem 2022-08-30"/>
+        <updated>2022-08-30T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Azure AKS - Unable to pull images]]></summary>
+        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="azure-aks---unable-to-pull-images">Azure AKS - Unable to pull images<a class="hash-link" href="#azure-aks---unable-to-pull-images" title="Direct link to heading">​</a></h2><h3 class="anchor anchorWithStickyNavbar_LWe7" id="date">Date<a class="hash-link" href="#date" title="Direct link to heading">​</a></h3><table><thead><tr><th>Start</th><th>End</th></tr></thead><tbody><tr><td>August 30th 2022, 8:00 CEST</td><td>31.08.2022, 11:42 CEST</td></tr></tbody></table><h3 class="anchor anchorWithStickyNavbar_LWe7" id="authors">Authors<a class="hash-link" href="#authors" title="Direct link to heading">​</a></h3><p>Carsten Lenz, Mercedes-Benz Tech Innovation GmbH</p><h3 class="anchor anchorWithStickyNavbar_LWe7" id="status">Status<a class="hash-link" href="#status" title="Direct link to heading">​</a></h3><p>Solved</p><h3 class="anchor anchorWithStickyNavbar_LWe7" id="summary">Summary<a class="hash-link" href="#summary" title="Direct link to heading">​</a></h3><p>Outgoing internet traffic on Azure AKS clusters was blocked. As a result, pulling images in our environments did not
+work.</p><h3 class="anchor anchorWithStickyNavbar_LWe7" id="impact">Impact<a class="hash-link" href="#impact" title="Direct link to heading">​</a></h3><p>All Catena-X AKS clusters were affected by this issue.</p><h3 class="anchor anchorWithStickyNavbar_LWe7" id="root-causes">Root Causes<a class="hash-link" href="#root-causes" title="Direct link to heading">​</a></h3><p>Microsoft deployed a defective systemd version to AKS clusters, which blocked outgoing internet traffic.</p><p>Sources:</p><ul><li><a href="https://bugs.launchpad.net/ubuntu/+source/systemd/+bug/1988119" target="_blank" rel="noopener noreferrer">Canonical launchpad with bug report</a></li><li><a href="https://www.heise.de/news/Azure-Ubuntu-VMs-durch-systemd-Update-lahmlegt-Kubernetes-Services-gestoert-7249521.html" target="_blank" rel="noopener noreferrer">heise.de Azure: Ubuntu-VMs durch systemd-Update lahmlegt, Kubernetes-Services gestört (german)</a></li></ul><h3 class="anchor anchorWithStickyNavbar_LWe7" id="resolution">Resolution<a class="hash-link" href="#resolution" title="Direct link to heading">​</a></h3><p>We have been in contact with MS Azure support starting 30.08.2022. During 31.08.2022 we received a temporary solution
+from MS support, which was applied to all our AKS clusters. Afterwards our clusters recovered and image pulling was
+possible again.</p><h2 class="anchor anchorWithStickyNavbar_LWe7" id="action-items">Action Items<a class="hash-link" href="#action-items" title="Direct link to heading">​</a></h2><p>None, as this was a global MS Azure AKS related incident.</p>]]></content>
+        <author>
+            <name>DevSecOps Team</name>
+            <uri>https://github.com/catenax-ng</uri>
+        </author>
+        <category label="news" term="news"/>
+        <category label="post-mortem" term="post-mortem"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Post Mortem 2022-08-29]]></title>
+        <id>Post Mortem 2022-08-29</id>
+        <link href="https://catena-x.net/blog/Post Mortem 2022-08-29"/>
+        <updated>2022-08-29T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[DEV Environment Inaccessible]]></summary>
+        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="dev-environment-inaccessible">DEV Environment Inaccessible<a class="hash-link" href="#dev-environment-inaccessible" title="Direct link to heading">​</a></h2><h3 class="anchor anchorWithStickyNavbar_LWe7" id="date">Date<a class="hash-link" href="#date" title="Direct link to heading">​</a></h3><table><thead><tr><th>Start</th><th>End</th></tr></thead><tbody><tr><td>August 29th 2022, 8:10 CEST</td><td>29.08.2022, 14:15 CEST</td></tr></tbody></table><h3 class="anchor anchorWithStickyNavbar_LWe7" id="authors">Authors<a class="hash-link" href="#authors" title="Direct link to heading">​</a></h3><p>Carsten Lenz, Mercedes-Benz Tech Innovation GmbH</p><h3 class="anchor anchorWithStickyNavbar_LWe7" id="status">Status<a class="hash-link" href="#status" title="Direct link to heading">​</a></h3><p>Solved</p><h3 class="anchor anchorWithStickyNavbar_LWe7" id="summary">Summary<a class="hash-link" href="#summary" title="Direct link to heading">​</a></h3><p>Due to maintenance work the kubernetes ingress controller stopped working. As a result DEV environment seemed to be
+down.</p><h3 class="anchor anchorWithStickyNavbar_LWe7" id="impact">Impact<a class="hash-link" href="#impact" title="Direct link to heading">​</a></h3><p>All product teams as well as system team where unable to access the Catena-X
+DEV <a href="https://argo.dev.demo.catena-x.net" target="_blank" rel="noopener noreferrer">ArgoCD instance</a></p><h3 class="anchor anchorWithStickyNavbar_LWe7" id="root-causes">Root Causes<a class="hash-link" href="#root-causes" title="Direct link to heading">​</a></h3><p>Upgrading Azure AKS Kubernetes Cluster to 1.24 introduced a breaking change regarding ingress controller configuration.
+Due to broken Ingress DEV environment was inaccessible.</p><p>Microsoft has changed protocol for health probing from TCP to HTTP/HTTPS which blocked all HTTP/S traffic as health
+probing had higher priority over ordinary traffic reaching the cluster.</p><p>In the end the outage was caused by a missing AKS related annotation for ingress controller, which Microsoft only added
+to the AKS documentation after there were many issues reported to AKS. At time of DEV outage the MS documentation was
+lacking this information.</p><h3 class="anchor anchorWithStickyNavbar_LWe7" id="resolution">Resolution<a class="hash-link" href="#resolution" title="Direct link to heading">​</a></h3><p>Adding missing annotation to ingress controller:</p><div class="language-yaml codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-yaml codeBlock_bY9V thin-scrollbar"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token key atrule" style="color:#00a4db">ingress-nginx</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token key atrule" style="color:#00a4db">controller</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token key atrule" style="color:#00a4db">service</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      </span><span class="token key atrule" style="color:#00a4db">annotations</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        </span><span class="token key atrule" style="color:#00a4db">service.beta.kubernetes.io/azure-load-balancer-health-probe-request-path</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"/healthz"</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg class="copyButtonIcon_y97N" viewBox="0 0 24 24"><path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg class="copyButtonSuccessIcon_LjdS" viewBox="0 0 24 24"><path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div><h2 class="anchor anchorWithStickyNavbar_LWe7" id="action-items">Action Items<a class="hash-link" href="#action-items" title="Direct link to heading">​</a></h2><ul><li>Adherence to internal policies (-&gt; system team)</li><li>Implement better testing upfront of maintenance tasks</li><li>Do not upgrade to latest available AKS version</li></ul><h2 class="anchor anchorWithStickyNavbar_LWe7" id="lessons-learned">Lessons Learned<a class="hash-link" href="#lessons-learned" title="Direct link to heading">​</a></h2><ul><li>No careless execution of maintenance work</li><li>Better maintenance planning upfront</li></ul>]]></content>
+        <author>
+            <name>DevSecOps Team</name>
+            <uri>https://github.com/catenax-ng</uri>
+        </author>
+        <category label="news" term="news"/>
+        <category label="post-mortem" term="post-mortem"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Office Hours 2022-8-26]]></title>
         <id>Office Hours 2022-8-26</id>

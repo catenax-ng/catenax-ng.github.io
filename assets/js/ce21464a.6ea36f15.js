@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkcatenax_ng=self.webpackChunkcatenax_ng||[]).push([[3175],{279:a=>{a.exports=JSON.parse('{"label":"post-mortem","permalink":"/blog/tags/post-mortem","allTagsPath":"/blog/tags","count":2}')}}]);
