@@ -2,6 +2,10 @@
 title: TRP 1.02 - Repo permissions
 ---
 
+| Author               | Status | Created      | Post-History |
+|----------------------|--------|--------------|--------------|
+| Catena-X System Team | Draft  | 13-Sept-2022 | n/a          |
+
 ## Description
 
 No admin privileges will be granted to GitHub teams for repositories.

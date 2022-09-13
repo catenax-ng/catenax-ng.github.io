@@ -4,9 +4,9 @@ title: TRP 0 - Index
 
 ## Index of Tractus-X Release Proposals (TRPs)
 
-| Author               | Status          | Created      |
-|----------------------|-----------------|--------------|
-| Catena-X System Team | Active          | 13-Sept-2022 |
+| Author               | Status | Created      |
+|----------------------|--------|--------------|
+| Catena-X System Team | Draft  | 13-Sept-2022 |
 
 ## Introduction
 

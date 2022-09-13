@@ -2,9 +2,9 @@
 title: TRP 1.02 - INSTALL.md
 ---
 
-| Author                | Status   | Created              | Post-History |
-|-----------------------|----------|----------------------|--------------|
-| Catena-X System Team  | Active   | 13-Sept-2022         | n/a          |
+| Author               | Status | Created      | Post-History |
+|----------------------|--------|--------------|--------------|
+| Catena-X System Team | Draft  | 13-Sept-2022 | n/a          |
 
 ## Description
 

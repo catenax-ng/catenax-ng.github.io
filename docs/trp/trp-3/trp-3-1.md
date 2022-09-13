@@ -1,10 +1,10 @@
 ---
-title: TRP 3.01 - Supported Kubernetes Versions
+title: TRP 3.01 - Supported Versions
 ---
 
-| Author                | Status   | Created              | Post-History |
-|-----------------------|----------|----------------------|--------------|
-| Catena-X System Team  | Active   | 13-Sept-2022         | n/a          |
+| Author               | Status | Created      | Post-History |
+|----------------------|--------|--------------|--------------|
+| Catena-X System Team | Draft  | 13-Sept-2022 | n/a          |
 
 ## Description
 
