@@ -18,16 +18,33 @@ record. The TRPs are indexed by topic for specialist subjects.
 
 ### TRP 1: Documentation
 
-- [ ] [TRP 1.1](trp-1/trp-1-1.md) README.md
-- [ ] [TRP 1.2](trp-1/trp-1-2.md) INSTALL.md
-- [ ] [TRP 1.3](trp-1/trp-1-3.md) CHANGELOG.md
+| TRP Number                   | Status | Title        |
+|------------------------------|--------|--------------|
+| [TRP 1.01](trp-1/trp-1-1.md) | Draft  | README.md    |
+| [TRP 1.02](trp-1/trp-1-2.md) | Draft  | INSTALL.md   |
+| [TRP 1.03](trp-1/trp-1-3.md) | Draft  | CHANGELOG.md |
 
 ### TRP 2: GIT
 
-- [ ] [TRP-2-1](trp-2/trp-2-1) - Default Branch name must be _main_
-- [ ] [TRP-2-2](trp-2/trp-2-2) - No admin permissions for repositories available
-- [German IT new page](https://www.heise.de)
+| TRP Number                   | Status | Title               |
+|------------------------------|--------|---------------------|
+| [TRP 2.01](trp-2/trp-2-1.md) | Draft  | Default Branch name |
+| [TRP 2.02](trp-2/trp-2-2.md) | Draft  | Repo permissions    |
 
 ### TRP 3: Kubernetes
 
-- [ ] [TRP-3-1](trp-3/trp-3-1) - Supported Kubernetes Versions
+| TRP Number                  | Status | Title              |
+|-----------------------------|--------|--------------------|
+| [TRP 3.01](trp-3/trp-3-1)   | Draft  | Supported Versions |
+
+## TRP 4: Container
+
+| TRP Number                | Status | Title         |
+|---------------------------|--------|---------------|
+| [TRP 4.01](trp-4/trp-4-1) | Draft  | Example Title |
+
+## TRP 5: HELM
+
+| TRP Number                | Status | Title         |
+|---------------------------|--------|---------------|
+| [TRP 5.01](trp-5/trp-5-1) | Draft  | Example Title |
