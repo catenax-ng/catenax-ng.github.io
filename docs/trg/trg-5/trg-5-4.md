@@ -8,9 +8,12 @@ title: TRG 5.03 - Resource Management
 
 ## Description
 
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt.
+Proper resource management in HELM chart required.
 
-## Why
+## CPU
 
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
-magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo.
+Verify that memory request and limit are set equal
+
+## Memory
+
+Verify CPU is set to sane value and limit is 2-3 times higher (critical is that cpu request is not equal to limit).

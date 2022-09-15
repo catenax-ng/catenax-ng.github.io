@@ -53,5 +53,6 @@ record. The TRGs are indexed by topic for specialist subjects.
 | TRG Number                | Status | Title                   |
 |---------------------------|--------|-------------------------|
 | [TRG 5.01](trg-5/trg-5-1) | Draft  | HELM chart requirements |
-| [TRG 5.02](trg-5/trg-5-2) | Draft  | Chart structure         |
-| [TRG 5.03](trg-5/trg-5-3) | Draft  | Resource Management     |
+| [TRG 5.02](trg-5/trg-5-2) | Draft  | Chart Structure         |
+| [TRG 5.03](trg-5/trg-5-3) | Draft  | Versioning Strategy     |
+| [TRG 5.04](trg-5/trg-5-4) | Draft  | Resource Management     |

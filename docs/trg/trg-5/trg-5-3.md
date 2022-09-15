@@ -8,7 +8,7 @@ title: TRG 5.03 - Version strategy
 
 ## Description
 
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt.
+HELM chart version vs. app version vs. image version.
 
 ## Why
 
