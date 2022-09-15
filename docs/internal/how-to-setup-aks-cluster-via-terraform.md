@@ -12,91 +12,58 @@ After completing these steps the following resources will be created:
 
 ## Prerequisites
 
-Terraform is run by CLI on your local machine. We are not using any Pipelines for that. Therefore you need to install the
-terraform CLI for your operating system either by package manager for your OS, or by downloadable installer
-from [https://www.terraform.io/downloads](https://www.terraform.io/downloads). You can verify your installation by
-running a command like `terraform --version` from your terminal.
+Set up terraform as described **[here](https://github.com/catenax-ng/k8s-cluster-stack/blob/doc/main/terraform/README.md)**.
 
 To set up the AKS cluster, we need an **Azure Service Principal Account**, currently we're using the
-SP `DevSecOpsAutomation` (stored in Vault path: `devsecops/azure/demo.catena-x.net/service-principals/automation`)
+SP `DevSecOpsAutomation` (stored in Hashicorp Vault path: `devsecops/azure/demo.catena-x.net/service-principals/automation`).
 
-> Service principal creation was made with the following commands:
+Login with Azure account: `az login --tenant catenax.onmicrosoft.com`
+
+> Example Service principal creation if not present:
 >
-> ```shell
-> # Login in with Azure account
-> az login --tenant catenax.onmicrosoft.com
-> # Creating a service principal, without assigning it to any resources/roles yet.
-> az ad sp create-for-rbac --skip-assignment
-> # You'll need the 'client id' and 'secret id' values later on
+> ```
+>az ad sp create-for-rbac --skip-assignment
+># You'll need the 'client id' and 'secret id' values later on
 > ```
 
-## Terraform state
+## Configure the new AKS cluster
 
-Terraform uses ['state'](https://www.terraform.io/language/state) to track status and differences of your real world
-resources and your configuration. We manage it in the `providers.tf`
-for every environment in path `k8s-cluster-stack/terraform/<environment>`
+### Create subfolder
 
-## Creating the AKS cluster
+You should then create a folder with the name of the new cluster
+in path `/terraform/` containing (only) the content of e.g. `01_core_cluster`:
 
-The following steps show you how to...
-
-- initialize terraform
-- create a terrform plan
-- apply that plan to your Azure subscription
-
-It is assumed, that before running any terraform commands, you cloned
-the [k8s-cluster-stack](https://github.com/catenax-ng/k8s-cluster-stack)
-repository. You should then create a folder with the name of the new cluster
-in path `/terraform/` containing (only) the following files with the content of e.g. `01_core_cluster`:
-
-`main.tf`
-`providers.tf`
-`terraform.tfvars`
+`main.tf`,
+`providers.tf`,
+`terraform.tfvars`,
 `variables.tf`
 
-You should then open a terminal session and navigate to the repository path.
+#### Adjust the state placement
 
-### Removing existing terraform config
+Change in `providers.tf` the key value e.g.
 
-We always run the AKS cluster creation from a clean working directory. So in case you did run any terraform commands
-before, there are some files, that could disturb the clean run. To get rid of these files remove state files, plans and
-the .terraform directory
-
-```shell
-rm *.tfstate*
-rm *.tfplan
-rm -rf .terraform
+```
+backend "azurerm" {
+    resource_group_name  = "cx-devsecops-tfstates"
+    storage_account_name = "cxdevsecopstfstate"
+    container_name       = "vault-tfstate"
+    key                  = "dev-cluster-terraform.tfstate"
+}
 ```
 
-### Initialize terraform
+#### Adjust the variables
 
-Before you can create or apply a terraform plan, you have to [initialize](https://www.terraform.io/cli/commands/init)
-the terraform working directory by running `terraform init`.
-This will initialize the necessary modules and download plugins for the used providers.
+Change the environment variables as desired in the `terraform.tfvars`
 
-### Creating and applying the terraform plan
-
-A terraform [plan](https://www.terraform.io/cli/commands/plan) is an execution plan that will give you a preview about
-the changes to your infrastructure. As input for the plan, you'll need to specify a set of variable values.
-
-An example tfvars file could look like the following:
-
-```hcl
-# Example terraform AKS environment variable specification
-# /terraform/01_core_cluster/terraform.tfvars
-environment_name="core"
-k8s_vm_size="Standard_D8s_v4"
-k8s_version = "1.24.3"
-k8s_cluster_node_count = 3
-```
+## Set additional variables for CLI and execute plan
 
 Beside these variables, that you can safely commit to the repository, you also need to specify the
-client id, client secret and azure tenant id of the service principal
-(which is stored in Vault path: `devsecops/azure/demo.catena-x.net/service-principals/automation`),
-that should be assigned to the cluster. Additionally you need the azure subscription id and azure dns subscription id.
-For this kind of variables, terraform provides a way to set specific environment variables,
+client id, client secret and azure tenant id of the service principal,
+that should be assigned to the cluster (stored in Hashicorp Vault: `devsecops/azure/demo.catena-x.net/service-principals/automation`).
+Additionally you need the azure subscription id and azure dns subscription id.
+For all these kind of variables, terraform provides a way to set specific environment variables,
 that have to be of the form
-`TF_VAR_<variable-name>`. You can set the service principal config like follows:
+`TF_VAR_<variable-name>`:
 
 ```shell
 export TF_VAR_azure_tenant_id=<tenantID of SP automation> # Login with Azure account
@@ -106,16 +73,10 @@ export TF_VAR_azure_subscription_id=<subscription id> # Catena-X Dev/Int
 export TF_VAR_azure_dns_subscription_id=<subscription id> # Catena-X Demo/Beta-Test
 ```
 
-With the variables specified in your tfvars and the service principal config set via environment variable, you can
-create the plan and apply it to Azure with the following command:
+With the variables specified in your tfvars and the service principal config set via environment variable,
+create a terraform plan and apply
 
-```shell
-# replace <environment> with the actual name of the new created folder (cluster-name)
-terraform plan -var-file=<environment>/terraform.tfvars -out <any name>.plan
-terraform apply <any name>.plan
-```
-
-## Verifying the AKS resources are created
+## Verify that the AKS resources are created
 
 If you successfully applied the terraform plan, you will find a resource group with the naming pattern `cx-<envname>-rg`
 in your subscription in the [Azure portal](https://portal.azure.com/). Part of that resource group will be your newly
@@ -124,11 +85,21 @@ created AKS cluster.
 You will also find a public IP with the naming pattern `cx-<envname>-public-ip` in a slightly different resource group,
 that Azure created automatically for the kubernetes nodes pool.
 
-## Install Core ArgoCD Cluster
+## Install ArgoCD Cluster
+
+> Note: following steps need to be executed manually
+
+### Core cluster
+
+:::info
+
+is only needed for creating core ArgoCD
+
+:::
 
 To install the initial ArgoCD instance you have to connect ```kubectl``` to the previously created AKS instance.
 Therefore open the AKS resource in [Azure portal](https://portal.azure.com/) and follow the _connect_ instructions.
-To verify if you are on the right AKS instance: `az account show`
+To verify if you are on the right AKS instance: `az account show`.
 
 Once you are connected via ```kubectl```, you can use _kustomize_ to apply the necessary kubernetes resources.
 From the top level directory of this repository run:
@@ -137,7 +108,7 @@ From the top level directory of this repository run:
 
 > Note: You may have to execute this twice, since we are using ArgoCD CRDs, which are not recognized on the first run.
 
-## Configure GitHub OAuth app for login
+### Configure GitHub OAuth app for login
 
 We enable users of ArgoCD to log in with their GitHub account. To get that working, we need to create an OAuth App
 inside
@@ -202,11 +173,39 @@ created
 GitHub OAuth app and save the changes.
 Afterwards verify, if you can log in to ArgoCD via GitHub.
 
-## Environment provisioning via Core ArgoCD
+### Set up child cluster
+
+#### Environment provisioning via Core ArgoCD
 
 To deploy applications via the Core ArgoCD to remote clusters, you need to introduce the remote cluster to the
 Core ArgoCD instance. Afterwards, you can configure the cluster as destination in the needed ArgoCD ApplicationSets.
 
-### Introducing a new remote cluster
+**in k8s-cluster-stack/apps/argocd/overlays:**  
+copy an existing environment folder and rename and make the following modifications
+in `configmap/argo-cm.yaml`: change `annotations path` and `url`
+in `ingress/ingress-argocd.yaml`: change `rules/host` and `tls/hosts`
+regarding the new created cluster.
 
-### Adding remote clusters to an ApplicationSet
+**in k8s-cluster-stack/apps/ingress-nginx:**  
+copy an existing values.yaml, rename and insert actual loadbalancer-IP (public IP in Azure)
+
+**in k8s-cluster-stack/apps/kube-prometheus-stack:**  
+copy an existing values.yaml, rename and adjust all places where the environment-name
+is mentioned (`root_url`, `client_secret`, `domain`, `cluster`)
+and insert `client_id` from GitHub oAuth `grafana-<environment>`
+
+**in k8s-cluster-stack/apps/tls:**  
+copy an existing 'values-tls.yaml', rename and change `cluster-name` and `certificate/dnsZone`
+
+**in k8s-cluster-stack/environments**  
+copy folder example and adjust
+> argo-projects: content is the `product-<product-name>.yaml` which are on ArgoCD
+> argo-repos: `product-<product-name>-repo.yaml` which is the secret for private repos
+> avp-secrets: content is the `<product-name>-team-vault-secret.yaml`, team-secret engine
+> pull-secret: machineuser-pull-secret-ro where to find in Vault
+
+adapt kustomization.yaml regarding the used resources
+
+after changes push to main
+
+#### Adding remote clusters to an ApplicationSet
