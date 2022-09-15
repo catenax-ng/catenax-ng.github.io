@@ -8,7 +8,7 @@ After completing these steps the following resources will be created:
 
 - an [AKS](https://azure.microsoft.com/en-gb/services/kubernetes-service/#overview) cluster
 - [ArgoCD](https://argoproj.github.io/cd/) that is accessible via configured domain
-- a [default stack](./apps) of applications to support your DevOps activities
+- a [default stack](https://github.com/catenax-ng/k8s-cluster-stack/tree/main/apps) of applications to support your DevOps activities
 
 ## Prerequisites
 
