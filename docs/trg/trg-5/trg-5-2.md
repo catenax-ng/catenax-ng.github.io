@@ -8,7 +8,7 @@ title: TRG 5.02 - Chart structure
 
 ## Description
 
-All Catena-X/ Tractus-X components must align to a common HELM Chart structure for standardization reasons.
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt.
 
 ## Why
 

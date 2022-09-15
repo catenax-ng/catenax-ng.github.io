@@ -1,5 +1,5 @@
 ---
-title: TRG 5.03 - Version strategy
+title: TRG 5.03 - Resource Management
 ---
 
 | Author               | Status | Created      | Post-History |
