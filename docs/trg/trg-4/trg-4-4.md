@@ -1,10 +1,10 @@
 ---
-title: TRG 4.01 - Image signing
+title: TRG 4.04 - Image tagging
 ---
 
 | Author               | Status | Created      | Post-History |
 |----------------------|--------|--------------|--------------|
-| Catena-X System Team | Draft  | 13-Sept-2022 | n/a          |
+| Catena-X System Team | Draft  | 14-Sept-2022 | n/a          |
 
 ## Description
 

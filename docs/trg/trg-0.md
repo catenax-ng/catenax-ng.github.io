@@ -28,7 +28,7 @@ record. The TRGs are indexed by topic for specialist subjects.
 
 | TRG Number                   | Status | Title                   |
 |------------------------------|--------|-------------------------|
-| [TRG 2.01](trg-2/trg-2-1.md) | Draft  | Default Branch name     |
+| [TRG 2.01](trg-2/trg-2-1.md) | Draft  | Default branch name     |
 | [TRG 2.02](trg-2/trg-2-2.md) | Draft  | Repo permissions        |
 | [TRG 2.03](trg-2/trg-2-3.md) | Draft  | Conventional committing |
 
@@ -36,7 +36,7 @@ record. The TRGs are indexed by topic for specialist subjects.
 
 | TRG Number                  | Status | Title              |
 |-----------------------------|--------|--------------------|
-| [TRG 3.01](trg-3/trg-3-1)   | Draft  | Supported Versions |
+| [TRG 3.01](trg-3/trg-3-1)   | Draft  | Supported versions |
 
 ### TRG 4: Container
 
@@ -44,13 +44,13 @@ record. The TRGs are indexed by topic for specialist subjects.
 |---------------------------|--------|----------------------|
 | [TRG 4.01](trg-4/trg-4-1) | Draft  | Image signing        |
 | [TRG 4.02](trg-4/trg-4-2) | Draft  | Base images          |
-| [TRG 4.03](trg-4/trg-4-3) | Draft  | Security             |
-| [TRG 4.04](trg-4/trg-4-4) | Draft  | Tagging              |
-| [TRG 4.05](trg-4/trg-4-5) | Draft  | Container Registries |
+| [TRG 4.03](trg-4/trg-4-3) | Draft  | Non-root container   |
+| [TRG 4.04](trg-4/trg-4-4) | Draft  | Image tagging        |
+| [TRG 4.05](trg-4/trg-4-5) | Draft  | Container registries |
 
 ### TRG 5: HELM
 
 | TRG Number                | Status | Title                   |
 |---------------------------|--------|-------------------------|
-| [TRG 5.01](trg-5/trg-5-1) | Draft  | HELM Chart requirements |
+| [TRG 5.01](trg-5/trg-5-1) | Draft  | HELM chart requirements |
 | [TRG 5.02](trg-5/trg-5-2) | Draft  | Chart structure         |
