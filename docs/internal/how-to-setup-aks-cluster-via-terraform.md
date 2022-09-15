@@ -26,7 +26,7 @@ Login with Azure account: `az login --tenant catenax.onmicrosoft.com`
 ># You'll need the 'client id' and 'secret id' values later on
 > ```
 
-## Configure the new AKS cluster
+## Configure The New AKS Cluster
 
 ### Create subfolder
 
@@ -55,7 +55,7 @@ backend "azurerm" {
 
 Change the environment variables as desired in the `terraform.tfvars`
 
-## Set additional variables for CLI and execute plan
+## Set Additional Variables For CLI And Execute Plan
 
 Beside these variables, that you can safely commit to the repository, you also need to specify the
 client id, client secret and azure tenant id of the service principal,
@@ -76,7 +76,7 @@ export TF_VAR_azure_dns_subscription_id=<subscription id> # Catena-X Demo/Beta-T
 With the variables specified in your tfvars and the service principal config set via environment variable,
 create a terraform plan and apply
 
-## Verify that the AKS resources are created
+## Verify That The AKS Resources Are Created
 
 If you successfully applied the terraform plan, you will find a resource group with the naming pattern `cx-<envname>-rg`
 in your subscription in the [Azure portal](https://portal.azure.com/). Part of that resource group will be your newly
