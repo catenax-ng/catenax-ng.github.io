@@ -1,11 +1,5 @@
 {
   "label": "Tractus-X Release Guidelines",
   "collapsible": true,
-  "collapsed": false,
-  "link": {
-    "type": "generated-index",
-    "title": "Tractus-X Release Guidelines",
-    "description":
-          "This section is still a DRAFT and WIP. Content might change!"
-  }
+  "collapsed": false
 }
