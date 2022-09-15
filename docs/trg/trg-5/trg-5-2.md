@@ -1,14 +1,14 @@
 ---
-title: TRP 3.01 - Supported Versions
+title: TRG 5.02 - Chart structure
 ---
 
 | Author               | Status | Created      | Post-History |
 |----------------------|--------|--------------|--------------|
-| Catena-X System Team | Draft  | 13-Sept-2022 | n/a          |
+| Catena-X System Team | Draft  | 14-Sept-2022 | n/a          |
 
 ## Description
 
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore.
+All Catena-X/ Tractus-X components must align to a common HELM Chart structure for standardization reasons.
 
 ## Why
 

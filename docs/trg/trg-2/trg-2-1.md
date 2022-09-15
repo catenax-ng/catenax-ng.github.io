@@ -1,5 +1,5 @@
 ---
-title: TRP 2.01 - Default Branch
+title: TRG 2.01 - Default Branch
 ---
 
 | Author               | Status | Created      | Post-History |
@@ -8,7 +8,7 @@ title: TRP 2.01 - Default Branch
 
 ## Description
 
-Change of default branch is prohibited.
+Default branch is _main_. Change of default branch is prohibited.
 
 ## Why
 

@@ -1,5 +1,5 @@
 ---
-title: TRP 1.03 - CHANGELOG.md
+title: TRG 2.02 - Repo permissions
 ---
 
 | Author               | Status | Created      | Post-History |
@@ -12,10 +12,9 @@ No admin privileges will be granted to GitHub teams for repositories.
 
 ## Why
 
-The GitHub organization is managed by a dedicated team. This team also works closely together with the
-security expert group and the release manager. Together we need to ensure, that product teams and repositories are best
-prepared for going open-source in the eclipse foundation. We also need to ensure, that mandatory quality gates are
-checked
+The GitHub organization is managed by a dedicated team. This team also works closely together with the security expert
+group and the release manager. Together we need to ensure, that product teams and repositories are best prepared for
+going open-source in the eclipse foundation. We also need to ensure, that mandatory quality gates are checked.
 
 __In case you want to change configuration that needs administrative privileges__:  
 Get in touch with System Team and explain what you need to change and why. You can create
