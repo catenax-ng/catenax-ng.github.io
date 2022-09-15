@@ -16,17 +16,10 @@ present for well-known and recurring tasks and also a blank template.
 For handling these support tasks, we follow our internal support workflow.
 
 Since we setup teams and repositories in our GitHub organization and manage secrets in Hashicorp Vault using only one
-script, at first **terraform has to be initialized** as described in the
-[README.md](https://github.com/catenax-ng/k8s-cluster-stack/blob/main/terraform/100_team_onboarding/README.md) file in the directory
-[100_team_onboarding](https://github.com/catenax-ng/k8s-cluster-stack/tree/main/terraform/100_team_onboarding).
-It is assumed, that you already have installed the terraform CLI. Before you start, make sure you've cloned
-the [k8s_cluster_stack](https://github.com/catenax-ng/k8s-cluster-stack)
-repository and navigated to `/terraform/100_team_onboarding` inside that repository on your terminal.
-The check of the changes with 'terraform plan' and creation with 'terraform apply' which can be done after every
-terraform change or only at the end of all necessary changes is also described in the
-[README.md](https://github.com/catenax-ng/k8s-cluster-stack/blob/main/terraform/100_team_onboarding/README.md).
+script, at first **terraform has to be initialized** as described in the central
+[README.md](https://github.com/catenax-ng/k8s-cluster-stack/blob/main/terraform/README.md)
 
-For 'terraform apply' and 'terraform plan' command the following command line variables has to be set:
+## Set Additional Variables For CLI And Execute Plan
 
 ```shell
 # You can get a login token, by logging into the Vault web UI and using 'copy token' from the top right user menu
@@ -116,7 +109,8 @@ If the team requested k8s-helm-example repository to be used as a template, the 
 - `uses_template : true`
 - `template : { owner : "catenax-ng" repository : "k8s-helm-example" }`
 
-The newly created repository will be populated with files from the template, github pages will be enabled and github action for releasing helm charts to pages will be added.
+The newly created repository will be populated with files from the template, github pages will be enabled and github
+action for releasing helm charts to pages will be added.
 
 :::
 
@@ -129,7 +123,7 @@ Access is again managed by our terraform root module
 
 To manage contribution access for a team on a repository, edit the `main.tf` file in the `100_team_onboarding` directory.
 There, add a new map entry to the `github_repositories_teams` variable inside `module "github" { ... }`.
-As convention, we decided to for the map key as a combination of repository and team (`<repository-name-team-name>`).
+As convention, we have decided to use the map key as a combination of repository and team (`<repository-name-team-name>`).
 This is done, because we have cases of multiple teams contributing to a single repository. This is configured, by
 adding multiple entries to the `github_repositories_teams` map, containing the same repository, but a different team
 each time.
@@ -137,7 +131,7 @@ each time.
 As default, we configure `maintain` access on the product repositories for the teams, since all the administrative
 tasks are handled by the team managing the organization.
 
-## Vault via terraform
+## Vault Via Terraform
 
 To be able to manage secrets in Hashicorp Vault and use them via ArgoCD Vault Plugin (AVP), a team needs the following
 Vault resources set up:
