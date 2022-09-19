@@ -4,10 +4,28 @@
         <title>Catena-x - DevSecOps Blog</title>
         <link>https://catena-x.net/blog</link>
         <description>Catena-x - DevSecOps Blog</description>
-        <lastBuildDate>Tue, 30 Aug 2022 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 16 Sep 2022 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[Office Hours 2022-09-16]]></title>
+            <link>https://catena-x.net/blog/Office Hours 2022-09-16</link>
+            <guid>Office Hours 2022-09-16</guid>
+            <pubDate>Fri, 16 Sep 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[Reminders]]></description>
+            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="reminders">Reminders<a class="hash-link" href="#reminders" title="Direct link to heading">​</a></h2><p><strong>DevSecOps:</strong></p><ul><li>ArgoCD creating Apps using HELM<br>Creating ArgoCD App the HELM way when HELM Chart contains dependencies failed. We've found a solution for that
+adjusting the AVP configuration.</li><li>ArgoCD Version upgrade<br>We will upgrade our environments (DEV/INT/BETA/Pre-PROD) to ArgoCD v2.3.7 as there were security fix. This will be
+available as of monday, 19th sept. 2022.</li></ul><p><strong>Security:</strong></p><ul><li>In near future pen-testing will be offered though a third party company. Security team will announce details later.</li><li>Invicti has been purchased and security team is currently setting up scans.</li><li>Security team renewed call for delete unused Veracode applications due to running short on
+licenses. <a href="https://teams.microsoft.com/l/message/19:9a3c4a05a3514d07b973c13e7b468709@thread.tacv2/1662714418275?tenantId=1ad22c6d-2f08-4f05-a0ba-e17f6ce88380&amp;groupId=17b1a2dc-67fb-4a49-a2ed-dd1344321439&amp;parentMessageId=1662714418275&amp;teamName=Communities%20of%20Practices&amp;channelName=CX%20-%20CoP%20DevSecOps&amp;createdTime=1662714418275&amp;allowXTenantAccess=false" target="_blank" rel="noopener noreferrer">See Sec teams announcement</a>
+in DevSecOps CoP channel.</li></ul><p><strong>FOSS:</strong></p><ul><li>Short overview about open issues in eclipse board</li><li>Regarding moving to Eclipse foundation some product teams already have committer role in Eclipse. These teams will
+support product teams which don't have a committer yet.</li></ul><h2 class="anchor anchorWithStickyNavbar_LWe7" id="general-updates">General updates<a class="hash-link" href="#general-updates" title="Direct link to heading">​</a></h2><p>The following updates were presented:</p><ul><li>ArgoCD will be upgraded to v2.3.7 as of monday. There are currently no plans to upgrade to v2.4.x as ArgoCD introduced
+braking changes which have to be checked by system team.</li></ul><h2 class="anchor anchorWithStickyNavbar_LWe7" id="open-discussions">Open discussions<a class="hash-link" href="#open-discussions" title="Direct link to heading">​</a></h2><p>The following topics where discussed in the open session:</p><ul><li>ArgoCD - permission problems inside POD/Container</li><li>Veracode - Vulnerability in a dependency package, but already using the latest version for this dep (keycloak).
+Problem solved, as in the meantime a new version has been released fixing this.</li><li>Eclipse - General questions about license scan. Former scans were green, but now scan complains.</li></ul><h2 class="anchor anchorWithStickyNavbar_LWe7" id="session-recording">Session recording<a class="hash-link" href="#session-recording" title="Direct link to heading">​</a></h2><p>You find the
+recording <a href="https://bcgcatenax.sharepoint.com/sites/CommunitiesofPractises/Shared%20Documents/Forms/AllItems.aspx?sortField=Modified&amp;isAscending=false&amp;id=%2Fsites%2FCommunitiesofPractises%2FShared%20Documents%2FCX%2DCoP%20DevSecOps%2FOffice%5FHours%5FRegular%5FRecordings%2F20220916%5FDevSecOps%20Business%20Hours%2DRecording%2Emp4&amp;viewid=a90239a2%2D4eb1%2D446e%2D9246%2Daedc18ebdc75&amp;parent=%2Fsites%2FCommunitiesofPractises%2FShared%20Documents%2FCX%2DCoP%20DevSecOps%2FOffice%5FHours%5FRegular%5FRecordings" target="_blank" rel="noopener noreferrer">here</a>.</p>]]></content:encoded>
+            <category>news</category>
+            <category>officehour</category>
+        </item>
         <item>
             <title><![CDATA[Post Mortem 2022-08-30]]></title>
             <link>https://catena-x.net/blog/Post Mortem 2022-08-30</link>
