@@ -1,6 +1,6 @@
 ---
-slug: Office Hours 2022-9-16
-title: Office Hours 2022-9-16
+slug: Office Hours 2022-09-16
+title: Office Hours 2022-09-16
 authors: DevSecOps
 tags: [news, officehour]
 ---
