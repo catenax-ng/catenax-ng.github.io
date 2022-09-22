@@ -67,9 +67,11 @@ Step ___Update helm dependencies for chartX___ needs to be included for every ch
 ```
 
 Explanation:
+
 - cd charts/chartX : Change the working directory to the directory where the Chart.yaml is located
 - helm repo add : add the external repository for every dependency that is in the Chart.yaml file
 - helm dependency update : can run as it is
+
 :::
 
 ```yaml
