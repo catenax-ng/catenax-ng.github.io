@@ -7,7 +7,7 @@ This guide describes how a product team can be part of the Release Umbrella Helm
 
 ## General information
 
-- There is a [Github repository](https://github.com/catenax-ng/catena-x-release) that is containing a single umbrella Helm Chart 
+- There is a [Github repository](https://github.com/catenax-ng/catena-x-release) that is containing a single umbrella Helm Chart
 - The repository is responsible for collecting the Helm Charts of each product team that are part of the release as a dependency
 - This way the deployment of the whole stack can be done with a single ___helm install___ command or a single ArgoCD app
 - One unified ___values.yaml___ contains the whole configuration of the software stack
@@ -18,7 +18,7 @@ This guide describes how a product team can be part of the Release Umbrella Helm
 For a team to be able to be part of the umbrella helm chart, they already need to have their product published to a helm chart. It can be done for example with the [helm-chart-releaser Github Action](how-to-release-a-helm-chart.md) that turnes the repository into a public Helm Chart.
 :::
 
-If a product team wants to include their application within the umbrella helm chart, they can do it by as the following: 
+If a product team wants to include their application within the umbrella helm chart, they can do it by as the following:
 
 1. Clone [catena-x-release](https://github.com/catenax-ng/catena-x-release) repository
 2. Create new branch from main
@@ -72,10 +72,12 @@ If a team edits this file, they need to add a new block inside dependencies:
 
 :::tip
 How to set values:
+
 - name: the name of the chart
 - version: the chart version of the application, that can be found in the Chart.yaml file's version variable in the application's helm chart
 - condition: product-name.enabled --> This is required, so the application deployment can be skipped optionally when the umbrella chart is deployed
-- repository: The url, where the index.yaml of the Helm chart can be found. If the [helm-chart-releaser Github Action](how-to-release-a-helm-chart.md) was used, then it looks the following: https://catenax-ng.github.io/product-repo-name/
+- repository: The url, where the index.yaml of the Helm chart can be found.
+
 :::
 
 ## Update application chart version
