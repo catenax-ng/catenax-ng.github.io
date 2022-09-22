@@ -20,7 +20,7 @@ For a team to be able to be part of the umbrella helm chart, they already need t
 
 If a product team wants to include their application within the umbrella helm chart, they can do it by as the following: 
 
-1. Clone catena-x-release repository
+1. Clone [catena-x-release](https://github.com/catenax-ng/catena-x-release) repository
 2. Create new branch from main
 3. Edit the Chart.yalm file, add the application's helm chart as a dependency [based on this guide](#add-application-as-a-dependency)
 4. Add a condition, so it's deployment can be optional
@@ -83,7 +83,7 @@ How to set values:
 If a product team has released a new chart version in their repository, the change should be reflected in the umbrella helm chart as well. To do so, the process is the following:
 
 1. New chart version is released in the product's repository
-2. Clone catena-x-release repository
+2. Clone [catena-x-release](https://github.com/catenax-ng/catena-x-release) repository
 3. Create new branch from main
 4. Edit the Chart.yalm file, change the version of the application dependency to the released chart version
 5. Commit & push changes
