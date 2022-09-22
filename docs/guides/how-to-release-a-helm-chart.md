@@ -55,6 +55,23 @@ repository without changes.
 This workflow can then be triggered manually via GitHub action UI or will automatically be triggered, once you push a
 new git tag to your repository.
 
+:::caution
+Step ___Update helm dependencies for chartX___ needs to be included for every chart in the repositry that has dependencies in their Chart.yalm file!
+
+```yaml
+      - name: Update helm dependencies for chartX
+        run: |
+          cd charts/chartX
+          helm repo add bitnami https://charts.bitnami.com/bitnami
+          helm dependency update
+```
+
+Explanation:
+- cd charts/chartX : Change the working directory to the directory where the Chart.yaml is located
+- helm repo add : add the external repository for every dependency that is in the Chart.yaml file
+- helm dependency update : can run as it is
+:::
+
 ```yaml
 name: Release core Chart
 
@@ -86,6 +103,20 @@ jobs:
         uses: azure/setup-helm@v1
         with:
           version: v3.9.1
+
+      # OPTIONAL, SEE NOTE ABOVE!!
+      - name: Update helm dependencies for chart1
+        run: |
+          cd charts/chart1
+          helm repo add bitnami https://charts.bitnami.com/bitnami
+          helm dependency update
+
+      # OPTIONAL, SEE NOTE ABOVE!!
+      - name: Update helm dependencies for chart2
+        run: |
+          cd charts/chart2
+          helm repo add azure-marketplace https://marketplace.azurecr.io/helm/v1/repo
+          helm dependency update
 
       - name: Run chart-releaser
         uses: helm/chart-releaser-action@v1.4.0
