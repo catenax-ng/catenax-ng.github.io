@@ -1,47 +1,49 @@
 ---
-title: How to release a helm chart
+title: How to release a Helm chart
 ---
 
-This guide will describe, why you should release your helm charts and how you can achieve that. We will also describe
+This guide will describe, why you should release your Helm charts and how you can achieve that. We will also describe
 some common pitfalls and how to handle them.
 
-If the team has requested the new repository with [k8s-helm-example](https://github.com/catenax-ng/k8s-helm-example) repositry set as template, the [chart releaser action](#adding-the-chart-release-github-workflow) will already be present. The file can be modified/personalized to unique needs.
+If the team has requested the new repository with [k8s-helm-example](https://github.com/catenax-ng/k8s-Helm-example)
+repository set as template, the [chart releaser action](#adding-the-chart-release-github-workflow) will already be
+present. The file can be modified/personalized to unique needs.
 
-## Why should you release your helm chart?
+## Why should you release your Helm chart?
 
-There are two main reasons, why we want to release helm charts in the Catena-X context.
+There are two main reasons, why we want to release Helm charts in the Catena-X context.
 
 1. Testing
 2. Releasing
 
-There are two aspects, why we need a released helm chart for testing purposes. Your own application might have a
+There are two aspects, why we need a released Helm chart for testing purposes. Your own application might have a
 dependency (i.e. via API call). If you want to test the integration between your app and the app you are depending on,
 you need that app running. Best case, you can do that on your own. This is a very easy task if the app you are depending
-on is available as released helm chart. This way you can easily add it as dependency to your own deployment.
+on is available as released Helm chart. This way you can easily add it as dependency to your own deployment.
 
-The second aspect is the overall integration and end-to-end test for Catena-X. A reliable e2e test of Catena-X
+The second aspect is the overall integration and end-to-end test for Catena-X. A reliable end-to-end test of Catena-X
 components needs a reproducible set of applications in specific versions, with known configuration and test data. We
-achieve that, by specifying all necessary components for a test run as dependency in an umbrella helm chart.
-Prerequisite for adding a product application as dependency, the corresponding helm chart needs to be released and
+achieve that, by specifying all necessary components for a test run as dependency in an umbrella Helm chart.
+Prerequisite for adding a product application as dependency, the corresponding Helm chart needs to be released and
 publicly available.
 
 After passing the end-to-end testing, a specific set of applications in their tested versions can be released. That
 means, we provide some kind of installer, that is capable of installing all the previously tested applications after
-they have been quality assured. As this kind of installer, we are again using an umbrella helm chart. This chart can
+they have been quality assured. As this kind of installer, we are again using an umbrella Helm chart. This chart can
 then be used by anyone, who wants to deploy and host Catena-X applications.
 
-## How can you release your helm chart?
+## How can you release your Helm chart?
 
 There are several options to release your chart. The one option we propose is using the
-[chart-releaser-action](https://github.com/helm/chart-releaser-action) in a
-GitHub workflow. For `chart-releaser-action` to work, there need to be some requirements met.
+[chart-releaser-action](https://github.com/helm/chart-releaser-action) in a GitHub workflow. For `chart-releaser-action`
+to work, there need to be some requirements met.
 
 ### Prerequisites
 
 We recommend using `chart-releaser-action` in its default configuration. There are two requirements that have to be met,
 if you want to use the default configuration.
 
-1. Your helm charts need to be in the `/charts/<chart-name` directory of your repository
+1. Your Helm charts need to be in the `/charts/<chart-name` directory of your repository
 2. GitHub pages need to be activated for your repository and point to a 'gh-pages' branch. Your GitHub organization
    admins can activate that for you
 3. The gh-pages branch needs to exist on the remote repository on GitHub
@@ -56,10 +58,11 @@ This workflow can then be triggered manually via GitHub action UI or will automa
 new git tag to your repository.
 
 :::caution
-Step ___Update helm dependencies for chartX___ needs to be included for every chart in the repositry that has dependencies in their Chart.yalm file!
+Step ___Update Helm dependencies for chartX___ needs to be included for every chart in the repository that has
+dependencies in their _Chart.yaml_ file!
 
 ```yaml
-      - name: Update helm dependencies for chartX
+      - name: Update Helm dependencies for chartX
         run: |
           cd charts/chartX
           helm repo add bitnami https://charts.bitnami.com/bitnami
@@ -68,9 +71,9 @@ Step ___Update helm dependencies for chartX___ needs to be included for every ch
 
 Explanation:
 
-- cd charts/chartX : Change the working directory to the directory where the Chart.yaml is located
-- helm repo add : add the external repository for every dependency that is in the Chart.yaml file
-- helm dependency update : can run as it is
+- `cd charts/chartX` : Change the working directory to the directory where the _Chart.yaml_ is located
+- `helm repo add` : add the external repository for every dependency that is in the _Chart.yaml_ file
+- `helm dependency update` : can run as it is
 
 :::
 
@@ -150,29 +153,29 @@ git push origin --tags
 This will automatically trigger the above defined workflow. The chart-releaser-action will then check your chart for
 changes (changed values, changed templates, changed dependencies, etc.) and if there are changes, package the chart
 into an compressed archive. Additionally, it will update an index.yaml file in the 'gh-pages' branch. This index.yaml
-file is needed, for enabling your GitHub pages to function as repository for the released helm chart.
+file is needed, for enabling your GitHub pages to function as repository for the released Helm chart.
 
-## Preparing your helm chart for release
+## Preparing your Helm chart for release
 
-While you can release your helm chart 'as is', there are some things regarding the structure and values of your chart.
+While you can release your Helm chart 'as is', there are some things regarding the structure and values of your chart.
 The following section describe some of these details.
 
 ### Add 'enabled' flags to optional services and resources
 
 If your application contains optional steps, like an initial data set, that is created via init container, it is best to
-wrap this declaration with an if statement, so that a user of your helm chart can decide to not add this declaration to
+wrap this declaration with an if statement, so that a user of your Helm chart can decide to not add this declaration to
 his cluster. The ingress definition(s) is also a good candidate for this.
 
 Such an if statement could look like the following:
 
 ```yaml
 # ingress.yaml
-{{- if .Values.ingress.enabled -}}
+{ { - if .Values.ingress.enabled - } }
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
 ...
-{{- end }}
+  { { - end } }
 ```
 
 To enable/disable the ingress definition, you would then define it like the following in your values.yaml
@@ -188,12 +191,12 @@ ingress:
 ### Do not specify ingress URLs
 
 If your application includes ingress definitions, you should not include any URL/host declarations in your
-`values.yaml`. The default values.yaml file will always be used to configure your deployment. If you release your helm
+`values.yaml`. The default values.yaml file will always be used to configure your deployment. If you release your Helm
 chart and someone else is using it to deploy your application, the specific domain you declared in your default
 values.yaml file will be applied on that infrastructure as well. Regardless of a completely different domain setup.
 
 So it is best, to not add any ingress related configuration at all in your default values.yaml. Instead, just define
-what a user of your helm chart can configure with empty values, like in the following example:
+what a user of your Helm chart can configure with empty values, like in the following example:
 
 ```yaml
 # values.yaml
