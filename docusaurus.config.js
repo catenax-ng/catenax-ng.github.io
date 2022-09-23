@@ -6,7 +6,7 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "Catena-x - DevSecOps",
+  title: "Catena-X - DevSecOps",
   tagline: "Providing Catena-X platform stack (to Catena-X members only)",
   url: "https://catena-x.net/",
   baseUrl: "/",
