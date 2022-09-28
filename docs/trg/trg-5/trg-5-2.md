@@ -18,6 +18,7 @@ Helm charts should be put in separate directories inside the /charts folder in t
 :::tip
 
 For example:
+
 - /charts/chart-1/
 - /charts/chart-2/
 
