@@ -5,15 +5,18 @@ title: TRG 5.01 - HELM Chart requirements
 | Author               | Status | Created      | Post-History |
 |----------------------|--------|--------------|--------------|
 | Catena-X System Team | Draft  | 14-Sept-2022 | n/a          |
+| Catena-X System Team | Draft  | 28-Sept-2022 | n/a          |
 
 ## Description
 
 All Catena-X/ Tractus-X components must be installable via HELM and meet following requirements:
 
 - HELM Chart must be released
-- tbc
+- The _index.yaml_ that contains the Helm Chart must be publicly available
+- A _values.yaml_ file with default values (no environment specific) should be present in the Chart
+- The Chart should be installable via _helm install_ command without providing any value override
+- The _Chart.yaml_ should contain proper versioning, _version_ and _appVersion_ variables need to be set according to the official [documentation](https://helm.sh/docs/topics/charts/#charts-and-versioning)
 
 ## Why
 
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
-magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo.
+It is crucial to have a properly working Helm Chart for every product. The applications has to be installable without providing any overriding values, so they can be tested, deployed, included in ci/cd workflows, etc. All charts have to follow versioning rules, so everyone can have an easy understanding what chart version and application version (container tag) is being deployed.
