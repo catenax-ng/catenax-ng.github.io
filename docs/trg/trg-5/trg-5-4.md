@@ -1,5 +1,5 @@
 ---
-title: TRG 5.03 - Resource Management
+title: TRG 5.04 - Resource Management
 ---
 
 | Author               | Status | Created      | Post-History |
