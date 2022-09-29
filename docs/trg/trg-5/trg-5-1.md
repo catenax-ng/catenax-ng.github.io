@@ -2,9 +2,9 @@
 title: TRG 5.01 - HELM Chart requirements
 ---
 
-| Author               | Status | Created      | Post-History |
-|----------------------|--------|--------------|--------------|
-| Catena-X System Team | Draft  | 28-Sept-2022 | n/a          |
+| Author                | Status | Created      | Post-History |
+|-----------------------|--------|--------------|--------------|
+| Catena-X System Team  | Active | 29-Sept-2022 | n/a          |
 
 ## Description
 
