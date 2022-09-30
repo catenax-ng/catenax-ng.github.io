@@ -14,14 +14,14 @@ __DevSecOps:__
 
 __Security:__
 
-- Penetration testing offering is in progress - Probably available in October
-- We recommend to do the invicti scans right now
-  - Invicti is not a replacement for penetration tests - it's an extension
+- Penetration testing offering is in progress - Probably available in October
+- We recommend to do the invicti scans right now
+  - Invicti is not a replacement for penetration tests - it's an extension
 
 __FOSS:__
 
 - waiting for commit approval from Eclipse Foundation
-- [https://arc42.org/overview](arc42): no clearance process for documentation (yet)
+- [arc42](https://arc42.org/overview): no clearance process for documentation (yet)
 - currently only product specific documentation - nothing overarching until now
 
 ## General updates
