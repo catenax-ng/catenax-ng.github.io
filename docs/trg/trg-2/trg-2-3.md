@@ -1,5 +1,5 @@
 ---
-title: TRG 2.02 - Repo structure
+title: TRG 2.03 - Repo structure
 ---
 
 | Author               | Status | Created      | Post-History |
