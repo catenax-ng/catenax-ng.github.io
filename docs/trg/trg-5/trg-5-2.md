@@ -145,10 +145,6 @@ file with all possibilities of templating.
 The `.helmignore` file should contain as a minimal set the following entries:
 
 ```
-### Helm ###
-# Chart dependencies
-**/charts/*.tgz
-
 # Accept only values.yaml
 values*.yaml
 values*.yml
