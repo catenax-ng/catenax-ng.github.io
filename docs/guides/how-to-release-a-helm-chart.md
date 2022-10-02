@@ -81,10 +81,9 @@ Explanation:
 name: Release core Chart
 
 on:
-  workflow_dispatch:
   push:
-    tags:
-      - '*'
+    branches:
+      - main
 
 jobs:
   release:
