@@ -95,7 +95,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           fetch-depth: 0
 
@@ -105,9 +105,9 @@ jobs:
           git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
 
       - name: Install Helm
-        uses: azure/setup-helm@v1
+        uses: azure/setup-helm@v3
         with:
-          version: v3.9.1
+          version: v3.10.0
 
       # OPTIONAL, SEE NOTE ABOVE!!
       - name: Update helm dependencies for chart1
@@ -124,7 +124,7 @@ jobs:
           helm dependency update
 
       - name: Run chart-releaser
-        uses: helm/chart-releaser-action@v1.4.0
+        uses: helm/chart-releaser-action@v1.4.1
         env:
           CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
 ```
