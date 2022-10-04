@@ -2,11 +2,26 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://catena-x.net/blog</id>
     <title>Catena-X - DevSecOps Blog</title>
-    <updated>2022-09-23T00:00:00.000Z</updated>
+    <updated>2022-09-30T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://catena-x.net/blog"/>
     <subtitle>Catena-X - DevSecOps Blog</subtitle>
     <icon>https://catena-x.net/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[Office Hours 2022-09-30]]></title>
+        <id>Office Hours 2022-09-30</id>
+        <link href="https://catena-x.net/blog/Office Hours 2022-09-30"/>
+        <updated>2022-09-30T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Agenda]]></summary>
+        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="agenda">Agenda<a class="hash-link" href="#agenda" title="Direct link to heading">​</a></h2><p><strong>DevSecOps:</strong></p><ul><li>Central Mailbox for contacing System Team: <a href="mailto:devsecops@catena-x.net" target="_blank" rel="noopener noreferrer">devsecops@catena-x.net</a></li><li>Please have a look at our new <a href="https://catenax-ng.github.io/docs/trg/trg-0" target="_blank" rel="noopener noreferrer">Tractus-X Release Guidelines</a> (TRGs)</li></ul><p><strong>Security:</strong></p><ul><li>Penetration testing offering is in progress - Probably available in October</li><li>We recommend to do the invicti scans right now
+&nbsp; - Invicti is not a replacement for penetration tests - it's an extension</li></ul><p><strong>FOSS:</strong></p><ul><li>waiting for commit approval from Eclipse Foundation</li><li><a href="https://arc42.org/overview" target="_blank" rel="noopener noreferrer">arc42</a>: no clearance process for documentation (yet)</li><li>currently only product specific documentation - nothing overarching until now</li></ul><h2 class="anchor anchorWithStickyNavbar_LWe7" id="general-updates">General updates<a class="hash-link" href="#general-updates" title="Direct link to heading">​</a></h2><p>n/a</p><h2 class="anchor anchorWithStickyNavbar_LWe7" id="open-discussions">Open discussions<a class="hash-link" href="#open-discussions" title="Direct link to heading">​</a></h2><p>The following topics where discussed in the open session:</p><ul><li>requirements for pen-testing<ul><li>your deployed&nbsp;product&nbsp;in&nbsp;the&nbsp;"<!-- -->&lt;<!-- -->your&nbsp;name<!-- -->&gt;<!-- -->-pen"&nbsp;namespace (there is no dedicated pen-testing environment)</li><li>API definitions provided to security team</li><li>login credentials provided to security team</li></ul></li><li>central login gateway<ul><li>System Team currently does not provide any central keycloak, etc.<ul><li>please check if Portal's keycloaks can be used for this use case</li></ul></li></ul></li></ul><h2 class="anchor anchorWithStickyNavbar_LWe7" id="session-recording">Session recording<a class="hash-link" href="#session-recording" title="Direct link to heading">​</a></h2><p>You can find the recording <a href="https://bcgcatenax.sharepoint.com/:v:/r/sites/CommunitiesofPractises/Shared%20Documents/CX-CoP%20DevSecOps/Office_Hours_Regular_Recordings/20220930_DevSecOps%20Business%20Hours-Recording.mp4?csf=1&amp;web=1&amp;e=4C7Fvd" target="_blank" rel="noopener noreferrer">here</a>.</p>]]></content>
+        <author>
+            <name>DevSecOps Team</name>
+            <uri>https://github.com/catenax-ng</uri>
+        </author>
+        <category label="news" term="news"/>
+        <category label="officehour" term="officehour"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Office Hours 2022-09-23]]></title>
         <id>Office Hours 2022-09-23</id>
