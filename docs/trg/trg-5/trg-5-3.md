@@ -20,11 +20,11 @@ Version numbers can be separated to two categories:
 
 It is located in the _Chart.yaml_ under the _version_ property.
 It follows semantic versioning.
-The version should bumped every time the _Chart.yaml_ file or any file in the _templates/_ directory is changed.
+The version should be bumped every time the _Chart.yaml_ file or any file in the _templates_ directory is changed.
 
 ### App version
 
-The default app version value is located in the _Chart.yalm_ file under the _appVersion_ property.
+The default app version value is located in the _Chart.yaml_ file under the _appVersion_ property.
 The format does not have to follow semantic versioning but it is recommended.
 The _appVersion_ should be used in the templates as the default image tag for the deployment/pod.
 The image tag should be overridable through values files.
