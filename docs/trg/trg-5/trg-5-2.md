@@ -23,7 +23,7 @@ similar structure for every Helm chart enables easy implementation of testing an
 
 ### Chart Location
 
-Helm charts **must** be located for standardisation reasons inside the `/charts` directory of the Git repository.
+Helm charts **must** be located for standardization reasons inside the `/charts` directory of the Git repository.
 
 ```
 charts/
@@ -58,7 +58,7 @@ For Tractus-X Helm charts we expect the following charts structure as a minimal 
 
 ```
 chartName/
-  Charts.yaml          # mandatory
+  Chart.yaml           # mandatory
   LICENCE              # mandatory
   README.md            # mandatory
   values.yaml          # mandatory
@@ -92,7 +92,7 @@ maintainers: # Optional, could become mandatory in Eclipse repositories
     url: A URL for the maintainer, optional
 ```
 
-For further details about the `Charts.yaml` file please refer to [_Helm
+For further details about the `Chart.yaml` file please refer to [_Helm
 documentation_](https://helm.sh/docs/topics/charts/#the-chartyaml-file).
 
 #### The `LICENCE` File
@@ -101,7 +101,7 @@ The file **must** contain the [_Apache 2.0 Licence_](https://github.com/catenax-
 
 #### The `README.md` File
 
-The `README.md file **must** contain:
+The README.md file **must** contain:
 
 - a brief explanation of what the Helm chart will install
 - documentation of default values for this Helm chart ([_helm-docs_](https://github.com/norwoodj/helm-docs#helm-docs)
@@ -119,7 +119,7 @@ documentation_](https://helm.sh/docs/chart_template_guide/values_files/).
 
 All default values **must** be introduced with `values.yaml` file to successfully install the Helm chart.
 
-There **must** no additional `values-xyz.yaml` files, e.g. to specify environment specific values. Only `values.yaml` file
+There **must** be no additional `values-xyz.yaml` files, e.g. to specify environment specific values. Only `values.yaml` file
 is allowed!
 :::
 
@@ -130,14 +130,14 @@ If the Helm chart installs custom resource definitions, this directory is the pl
 For further details, refer to [_Helm
 documentation_](https://helm.sh/docs/topics/charts/#custom-resource-definitions-crds).
 
-#### The `templates/` Directory
+#### The `templates` Directory
 
 The `templates` directory contains manifest files, which will be deployed during Helm chart installation. For further
 details, refer to [_Helm documentation_](https://helm.sh/docs/topics/charts/#template-files).
 
 #### The `templates/NOTES.txt` File
 
-The content of `templates/NOTES.txt` will be printed after Helm chart installation. The file is evaluates as a template
+The content of `templates/NOTES.txt` will be printed after Helm chart installation. The file is evaluated as a template
 file with all possibilities of templating.
 
 #### `.helmignore`
