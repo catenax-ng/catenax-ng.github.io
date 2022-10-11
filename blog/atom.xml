@@ -2,11 +2,29 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://catena-x.net/blog</id>
     <title>Catena-X - DevSecOps Blog</title>
-    <updated>2022-09-30T00:00:00.000Z</updated>
+    <updated>2022-10-07T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://catena-x.net/blog"/>
     <subtitle>Catena-X - DevSecOps Blog</subtitle>
     <icon>https://catena-x.net/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[Office Hours 2022-10-07]]></title>
+        <id>Office Hours 2022-10-07</id>
+        <link href="https://catena-x.net/blog/Office Hours 2022-10-07"/>
+        <updated>2022-10-07T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[General updates / information]]></summary>
+        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="general-updates--information">General updates / information<a class="hash-link" href="#general-updates--information" title="Direct link to heading">​</a></h2><p><strong>DevSecOps:</strong></p><ul><li>Chart release workflow simplified<ul><li>Using branches instead of tags</li><li><a href="https://catenax-ng.github.io/docs/guides/how-to-release-a-helm-chart#adding-the-chart-release-github-workflow" target="_blank" rel="noopener noreferrer">Udated docs</a></li></ul></li><li>Future updates on tool stack etc.,  will also be shared via <a href="https://accounts.eclipse.org/mailing-list/tractusx-dev" target="_blank" rel="noopener noreferrer">Tractus-X Dev Mailing List</a></li></ul><p><strong>Security:</strong></p><ul><li>There is an offer for an <a href="https://confluence.catena-x.net/display/cxsecurity/Security+Assessments" target="_blank" rel="noopener noreferrer">Security Assessment</a>.
+Contact the Security team, in case you are interested</li></ul><p><strong>FOSS:</strong></p><ul><li>Please subscribe to the <a href="https://accounts.eclipse.org/mailing-list/tractusx-dev" target="_blank" rel="noopener noreferrer">Tractus-X Dev Mailing List</a>.
+This is also mandatory for all committers, since for example committer election votes will be done via this mailing list.</li><li>When moving to Tractus-X, carefully name things (check if you are allowed to use certain names/trademarks)
+Further guidance can be found in the <a href="https://www.eclipse.org/projects/handbook/#trademarks-website" target="_blank" rel="noopener noreferrer">Eclipse Handbook</a></li></ul><h2 class="anchor anchorWithStickyNavbar_LWe7" id="open-discussions">Open discussions<a class="hash-link" href="#open-discussions" title="Direct link to heading">​</a></h2><p>The following topics where discussed in the open session:</p><ul><li>Log Aggregation: Question came up, if there is some alternative log view to the Argo CD Pod logs -&gt; We'll follow up on this</li><li>Status of Dependabot:<ul><li>Teams where seeing dependabot PRs. This could be duplicated to the other security tooling that does dependency analysis</li><li>Unclear if it's run automatically, and if so, if every repository has dependabot configured</li><li>Security Team will follow up on this</li></ul></li><li>Migration to Tractus-X<ul><li>General discussion on git history and technical approach, when moving from catenax-ng to eclipse-traxtusx</li><li>See discussion in session recording</li></ul></li></ul><h2 class="anchor anchorWithStickyNavbar_LWe7" id="session-recording">Session recording<a class="hash-link" href="#session-recording" title="Direct link to heading">​</a></h2><p>This time the recording is split up in two parts. You can find the first part <a href="https://bcgcatenax.sharepoint.com/sites/CommunitiesofPractises/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FCommunitiesofPractises%2FShared%20Documents%2FCX%2DCoP%20DevSecOps%2FOffice%5FHours%5FRegular%5FRecordings%2F%5BCX%5DDevSecOps%20Office%20Hours%2D20221007%5F120149%2DMeeting%20Recording%2Emp4&amp;viewid=a90239a2%2D4eb1%2D446e%2D9246%2Daedc18ebdc75&amp;parent=%2Fsites%2FCommunitiesofPractises%2FShared%20Documents%2FCX%2DCoP%20DevSecOps%2FOffice%5FHours%5FRegular%5FRecordings" target="_blank" rel="noopener noreferrer">here</a>,
+and the second part <a href="https://bcgcatenax.sharepoint.com/sites/CommunitiesofPractises/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FCommunitiesofPractises%2FShared%20Documents%2FCX%2DCoP%20DevSecOps%2FOffice%5FHours%5FRegular%5FRecordings%2F%5BCX%5DDevSecOps%20Office%20Hours%2D20221007%5F140228%2DBesprechungsaufzeichnung%2Emp4&amp;viewid=a90239a2%2D4eb1%2D446e%2D9246%2Daedc18ebdc75&amp;parent=%2Fsites%2FCommunitiesofPractises%2FShared%20Documents%2FCX%2DCoP%20DevSecOps%2FOffice%5FHours%5FRegular%5FRecordings" target="_blank" rel="noopener noreferrer">here</a>.</p>]]></content>
+        <author>
+            <name>DevSecOps Team</name>
+            <uri>https://github.com/catenax-ng</uri>
+        </author>
+        <category label="news" term="news"/>
+        <category label="officehour" term="officehour"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Office Hours 2022-09-30]]></title>
         <id>Office Hours 2022-09-30</id>
