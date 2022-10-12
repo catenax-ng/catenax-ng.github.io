@@ -7,7 +7,7 @@ it in a GitHub workflow.
 
 ## GitHub workflow
 
-The GitHub workflow in this section is a good option to run checks on pull requests.
+The GitHub workflow in this section is a good option to run checks on pull requests when there are modifications in the __charts__ directory.
 It will lint your Helm chart and execute helm test to validate your installation on a kind cluster, that will be
 created on demand on the GitHub runner.
 
