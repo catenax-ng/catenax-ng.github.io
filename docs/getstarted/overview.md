@@ -2,7 +2,7 @@
 sidebar_position: 2
 ---
 
-# Get Started
+# Overview
 
 This page gives you a short overview over all critical things you need to know to get started. Pls be aware that all
 other documentation is here for your to browse & share.
@@ -10,7 +10,7 @@ other documentation is here for your to browse & share.
 ## Who are we
 
 We are the DevSecOps Tooling team inside Catena-X. You find our Team page
-in [Confluence](https://confluence.catena-x.net/display/ARTI/Product%3A+DevSecOps+Tooling).
+in [Confluence](https://confluence.catena-x.net/display/ARTI/Product%3A+System+Team).
 
 ## What do we provide
 

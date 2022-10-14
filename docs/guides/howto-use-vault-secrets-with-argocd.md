@@ -131,7 +131,7 @@ spec:
     repoURL: https://github.com/catenax-ng/someRepo/
     targetRevision: HEAD
     path: path/to/app
-    // highlight-start
+    // highlight-getstarted
     plugin:
       name: argocd-vault-plugin
     // highlight-end
@@ -200,7 +200,7 @@ The App manifest should contain:
     //highlight-next-line
     name: argocd-vault-plugin-helm-args
     env:
-      //highlight-start
+      //highlight-getstarted
       - name: helm_args
         value: '-f values.yaml -f values-env.yaml'
       //highlight-end
