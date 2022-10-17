@@ -1,4 +1,6 @@
 {
   "label": "Security Guides",
-  "position": 9
+  "position": 5,
+  "collapsible": true,
+  "collapsed": true
 }

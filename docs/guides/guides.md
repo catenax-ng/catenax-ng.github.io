@@ -1,5 +1,0 @@
----
-slug: /guides
----
-
-# Base Guides

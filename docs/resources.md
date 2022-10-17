@@ -139,7 +139,7 @@ application to the demonstrator environments and will also help other teams, tha
 integrate against your app.
 
 We can help you to create the helm chart, but before you get in contact with us, also check out the existing
-guide [here](kubernetes-basics/helm.md).
+guide [here](guides/helm.md).
 
 ## Graphical Support Workflow
 
