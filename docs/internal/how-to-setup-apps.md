@@ -2,6 +2,12 @@
 title: How to setup GitHub apps
 ---
 
+:::info
+
+This guide is only for those who operate the environment
+
+:::
+
 This how-to will guide you through the deployment and configuration of GitHub Apps
 
 ## Context

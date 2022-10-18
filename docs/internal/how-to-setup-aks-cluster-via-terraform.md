@@ -2,6 +2,12 @@
 title: How to setup and AKS cluster via terraform
 ---
 
+:::info
+
+This guide is only for those who operate the environment
+
+:::
+
 This how-to will guide you through the setup of a new AKS cluster via terraform. It is based on the terraform scripts in
 our [k8s-cluster-stack](https://github.com/catenax-ng/k8s-cluster-stack) repository.
 

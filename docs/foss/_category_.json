@@ -1,4 +1,6 @@
 {
   "label": "FOSS Guides (Work in progress)",
-  "position": 8
+  "position": 6,
+  "collapsible": true,
+  "collapsed": true
 }

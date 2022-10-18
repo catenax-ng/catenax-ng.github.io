@@ -1,6 +1,13 @@
 ---
 title: Naming Convention
 ---
+
+:::info
+
+This guide is only for those who operate the environment
+
+:::
+
 :::info
 
 This is a first proposal what topics will be handled by this naming convention.

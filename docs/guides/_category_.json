@@ -1,4 +1,6 @@
 {
   "label": "Base Guides",
-  "position": 7
+  "position": 4,
+  "collapsible": true,
+  "collapsed": true
 }

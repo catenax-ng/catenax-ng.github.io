@@ -7,10 +7,14 @@ sidebar_position: 2
 This page gives you a short overview over all critical things you need to know to get started. Pls be aware that all
 other documentation is here for your to browse & share.
 
-## Who are we
+## Who we are
 
 We are the DevSecOps Tooling team inside Catena-X. You find our Team page
 in [Confluence](https://confluence.catena-x.net/display/ARTI/Product%3A+System+Team).
+
+Here is a short overview about our goals:
+
+![Overview_Responsibilities](../assets/Architecture.svg)
 
 ## What do we provide
 

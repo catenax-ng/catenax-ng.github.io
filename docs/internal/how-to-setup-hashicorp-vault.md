@@ -2,6 +2,12 @@
 title: How to setup Hashicorp Vault
 ---
 
+:::info
+
+This guide is only for those who operate the environment
+
+:::
+
 This how-to will guide you through the deployment and configuration of Hashicorp Vault
 
 ## Create an AKS cluster for vault

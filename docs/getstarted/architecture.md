@@ -1,3 +1,7 @@
+---
+sidebar_position: 3
+---
+
 # Architecture
 
 You find all relevant architecture diagrams/views.
