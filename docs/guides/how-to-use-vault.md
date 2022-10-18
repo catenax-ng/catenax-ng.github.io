@@ -29,7 +29,7 @@ want to do that via OIDC, you can select the OIDC login method like shown in the
 ![Vault login method OIDC](/docs/vault/vault-login-page-oidc.png)
 
 Unfortunately, Vault does not automatically match your GitHub team to your linked policies. Therefore, you need to
-specify your team name (i.e. 'product-team-example') as 'Role', when logging in.
+specify your team name (i.e. 'product-team-example') as 'Role', when logging in. Instead of `catenax-ng:argocdadmins` use [`devsecops-admins`](https://github.com/catenax-ng/k8s-cluster-stack/blob/main/terraform/modules/vault/main.tf#L84).
 
 After you hit the 'Sign in' button, a PopUp will appear asking you about access permissions to your GitHub profile
 information, like you know it from different OIDC logins. Accepting that will log you in and redirect you to the
