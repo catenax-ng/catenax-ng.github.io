@@ -62,7 +62,7 @@ The following section describes how to handle users, teams and repositories in o
 ### Invitation of a single user
 
 Interaction with most of our tooling and also access to repositories is granted to members of our GitHub organization
-"catenax-ng". So inviting users to the organization is the starting point for every Catena-X member.
+"catenax-ng". So [inviting](https://github.com/orgs/catenax-ng/people) users to the organization is the starting point for every Catena-X member.
 
 As initial information to onboard a user to the organization, we need:
 
@@ -71,8 +71,8 @@ As initial information to onboard a user to the organization, we need:
 
 :::info
 
-Invitations to the several product teams should be done by the maintainers of the product teams. Only in rare cases,
-like onboarding a new person and a new team in the same step, you should invite people to teams.
+Assigning a GitHub user to the several GitHub product teams should be done by the maintainers of the GitHub product teams. Only in rare cases,
+like onboarding a new person and a new team in the same step, DevSecOps team should assign github users to github teams.
 
 :::
 
