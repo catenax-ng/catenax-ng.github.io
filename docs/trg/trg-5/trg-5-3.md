@@ -28,7 +28,7 @@ The version should be bumped every time the _Chart.yaml_ file or any file in the
 ### App version
 
 The default app version value is located in the _Chart.yaml_ file under the _appVersion_ property.
-The format does should follow semantic versioning as well, because the appVersion and the image tag of your
+The format should follow semantic versioning as well, because the appVersion and the image tag of your
 docker images should be aligned. This means, the _appVersion_ should be used in the templates as the default image tag
 for the deployment/pod.
 Every time the _appVersion_ property is upgraded the chart _version_ number should be bumped as well.
