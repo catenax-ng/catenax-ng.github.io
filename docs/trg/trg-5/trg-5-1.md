@@ -22,8 +22,8 @@ All Catena-X/Tractus-X components **must** be installable via Helm and meet foll
 
 Tractus-X components can only be used and bundled with other components of Tractus-X if there is a version of the
 component with reliable content. This can only be achieved by creating a release of your Helm chart. Please refer to [_
-How to release a Helm Chart_](../../guides/how-to-release-a-helm-chart.md) and [_How to be part of the Release Umbrella
-Helm Chart_](../../guides/how-to-be-part-of-release-umbrella-helm.md).
+How to release a Helm Chart_](../../guides/Helm/how-to-release-a-helm-chart) and [_How to be part of the Release Umbrella
+Helm Chart_](../../guides/Helm/how-to-be-part-of-release-umbrella-helm).
 
 ### Versioning
 

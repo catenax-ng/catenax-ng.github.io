@@ -88,15 +88,23 @@ const config = {
             items: [
               {
                 label: "Get Started",
-                to: "/docs/getstarted",
+                to: "/docs/getstarted/intro",
               },
               {
-                label: "Architecture",
-                to: "/docs/architecture",
+                label: "ArgoCD Guides",
+                to: "/docs/guides/ArgoCD/ArgoCDbasics",
               },
               {
-                label: "Guides",
-                to: "/docs/guides",
+                label: "Helm Chart Guides",
+                to: "/docs/guides/Helm/helmchart",
+              },
+              {
+                label: "Security",
+                to: "/docs/security/contact",
+              },
+              {
+                label: "FOSS",
+                to: "/docs/foss",
               },
             ],
           },

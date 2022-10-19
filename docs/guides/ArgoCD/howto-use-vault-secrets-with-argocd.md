@@ -13,7 +13,7 @@ To use vault secrets with your ArgoCD app, you have to
 - configure your ArgoCD application to use an ArgoCD Vault Plugin (AVP) using the _vault-secret_
 
 For guidance of how to use Vault and store a secret inside Vault, please refer to
-[How To Use Vault](how-to-use-vault.md).
+[How To Use Vault](../how-to-use-vault.md).
 
 :::
 
@@ -140,16 +140,16 @@ spec:
 To configure your ArgoCD application to use an AVP plugin using the ArgoCD Web UI after the _Destination_ section you
 have to select _Plugin_ from the dropdown selector, select the appropriate AVP plugin and enter the secret information:
 
-![Select Plugin](assets/avp_plugin_webui1.png "Select Plugin")
+![Select Plugin](../assets/avp_plugin_webui1.png "Select Plugin")
 
-![AVP configuration](assets/avp_plugin_webui2.png "AVP configuration")
+![AVP configuration](../assets/avp_plugin_webui2.png "AVP configuration")
 
 ### Use multiple helm values file when using AVP
 
 Please read here if your application is using helm chart. If you use not only default `values.yaml`, but also provide an
 additional value file. The priority will be given to the last (right-most) file specified. (see: [Helm Documentation](https://helm.sh/docs/helm/helm_install/)) Please use vault plugin `argocd-vault-plugin-helm-args` and configure it like the example:
 
-![Multiple Helm values](assets/vault-multiple-helm-values.png "AVP configuration")
+![Multiple Helm values](../assets/vault-multiple-helm-values.png "AVP configuration")
 
 To configure multiple `values.yaml` in App manifest, please refer
 to [argocd-vault-plugin-helm-args](#argocd-vault-plugin-helm-args).

@@ -18,7 +18,7 @@ const FeatureList = [
     Svg: require('@site/static/img/rocket-svgrepo-com.svg').default,
     description: (
       <>
-          We ask you to make yourself familiar with our Documentation first by starting with our <a href="/docs/intro">Getting Started</a> document.
+          We ask you to make yourself familiar with our Documentation first by starting with our <a href="/docs/getstarted/intro">Getting Started</a> document.
       </>
     ),
   },

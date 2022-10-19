@@ -7,7 +7,7 @@ This guide is a small howto about storing your secrets using HashiCorp Vault. Fo
 - your product-team must have been onboarded to Catena-X NG GitHub organization
 
 For guidance of how to use secret with an ArgoCD application, please refer to
-[_How To Use Vault Secrets With ArgoCD_](howto-use-vault-secrets-with-argocd.md).
+[_How To Use Vault Secrets With ArgoCD_](ArgoCD/howto-use-vault-secrets-with-argocd.md).
 
 The Catena-X Vault instance URL is: [https://vault.demo.catena-x.net](https://vault.demo.catena-x.net)
 

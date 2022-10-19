@@ -29,7 +29,7 @@ only one that your user has privileges for to create applications. The following
 an
 application looks like:
 
-![Add application metadata](assets/new_application_metadata.png)
+![Add application metadata](../assets/new_application_metadata.png)
 
 Beside application name and project, the attribute _sync policy_ is interesting to choose carefully. There are two
 options
@@ -52,7 +52,7 @@ where you want to provide other teams with specific stable versions of your app.
 > and we will
 > configure repository access for ArgoCD
 
-![Specify application source](assets/new_application_source.png)
+![Specify application source](../assets/new_application_source.png)
 
 We highly encourage you, to specify your application deployments as a helm chart. Thereby the repository and path
 combination
@@ -78,7 +78,7 @@ is usually `product-<team-name>`.
 > Projects
 > page. There you will find your project and the associated namespaces.
 
-![Specify destination namespace](assets/new_application_destination.png)
+![Specify destination namespace](../assets/new_application_destination.png)
 
 ## Specify helm values for your deployment
 
@@ -87,7 +87,7 @@ directory
 containing a helm chart (as we encourage you to), you will be able to specify the values.yaml file to use,
 or even in-place values, like in the following screenshot.
 
-![Specify helm values](assets/new_application_helm_values.png)
+![Specify helm values](../assets/new_application_helm_values.png)
 
 Typically, you would want a specific values.yaml file named like `values-<env-name>.yaml` that overwrites just the
 environment specifics and select both, the `values.yaml` and the `values-<env-name>.yaml` files as values files
@@ -101,7 +101,7 @@ app dialog.
 After app creation, you'll find your application with a yellow bar and the status 'OutOfSync' on ArgoCDs application
 overview.
 
-![Unsynced app](assets/new_application_unsynced_app.png)
+![Unsynced app](../assets/new_application_unsynced_app.png)
 
 By clicking the 'Sync' button, you can tell ArgoCD to create all the kubernetes resources defined in your GitHub
 repository.

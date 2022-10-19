@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# ArgoCD
+# Basics
 
 We use [ArgoCD](https://argo-cd.readthedocs.io/en/stable/).
 
@@ -36,7 +36,7 @@ In ArgoCD overwrite this value:
 image.tag = $ARGOCD_APP_REVISION
 ```
 
-![argocd_override.png](assets/argocd_override.png)
+![argocd_override.png](../assets/argocd_override.png)
 
 ## How to use auto sync mechnism
 
@@ -45,11 +45,11 @@ enable auto sync:
 
 - On the left top corner you see the "App Details":
 
-  ![argocd_appdetails.png](assets/argocd_appdetails.png)
+  ![argocd_appdetails.png](../assets/argocd_appdetails.png)
 
 - Enable Auto Sync
 
-  ![argocd_syncpolicy.png](assets/argocd_syncpolicy.png)
+  ![argocd_syncpolicy.png](../assets/argocd_syncpolicy.png)
 
 - Enable "Self Heal" if you always want ArgoCD to keep your state in sync. Without this, ArgoCD will stop syncing as
   soon as your project is not green as it will not overwrite potential manual changes you made.
