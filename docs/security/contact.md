@@ -1,9 +1,8 @@
 ---
-title: Contact
 sidebar_position: 1
 ---
 
-# Security
+# Contact
 
 Let's secure Catena-X!
 

@@ -10,7 +10,7 @@ You find all relevant architecture diagrams/views.
 
 There is a [recording](https://confluence.catena-x.net/display/ARTI/Architectur+Overview#ArchitecturOverview-KnowledgeHandover-ArchitectureOverview-Sigi220328) where we walk through all relevant architecture views and discuss them in more detail.
 
-# Platform components
+## Platform components
 
 Overview of the planned platform components:
 
