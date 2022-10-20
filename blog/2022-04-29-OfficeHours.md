@@ -9,7 +9,7 @@ In our today's office hours, we discussed the following topics
 
 1. News from the DevSecOps Team
    1. We changed the DNS setup (the Hotel Budapest means the INT, that is now reflected in the URL), but the old Domain ist redirected
-   1. The Vault is available (see also [link](docs/guides/how-to-use-vault))
+   1. The Vault is available (see also [link](../../docs/guides/how-to-use-vault))
    1. The Dev environment is available
 1. News from the Security Team
    1. Some Veracode tips and tricks

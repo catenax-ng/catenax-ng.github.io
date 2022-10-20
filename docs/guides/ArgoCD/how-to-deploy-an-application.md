@@ -12,7 +12,7 @@ Following prerequisites have to be met:
   - or on _cxtsiacr.azurecr.io_ -> not recommended, since no scans can be done on these images
   - or as private [package on GitHub](https://github.com/orgs/catenax-ng/packages) -> [How to Access a Private Repo and a Private Package/Image](how-to-prepare-a-private-repo)
 - If your GitHub repository is set to private, you first have to process the steps documented
-  here: [prepare for private repos](how-to-prepare-a-private-repo)
+  here: [prepare for private repos](../how-to-prepare-a-private-repo)
 - An ArgoCD project needs to be created by the DevSecOps team for you.
 
 If these prerequisites are met, you can log in to ArgoCD with your GitHub account

@@ -11,7 +11,7 @@ In our today's office hours, we discussed the following topics
     1. Last reminder of the upcoming 2FA enablement on 20th of May!
     1. Slower support due to upcoming Kubecon and holidays
 1. News from the Security Team
-    1. New [security guides](/docs/security/) for VeraCode, Trivy and Checkov
+    1. New [security guides](/docs/security/contact) for VeraCode, Trivy and Checkov
 1. Q&A
 1. Hands-on
 
