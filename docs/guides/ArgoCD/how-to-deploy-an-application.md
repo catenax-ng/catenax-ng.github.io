@@ -10,7 +10,7 @@ Following prerequisites have to be met:
 - Your application's docker images need to be accessible
   - as public [package on GitHub](https://github.com/orgs/catenax-ng/packages) ...
   - or on _cxtsiacr.azurecr.io_ -> not recommended, since no scans can be done on these images
-  - or as private [package on GitHub](https://github.com/orgs/catenax-ng/packages) -> [How to Access a Private Repo and a Private Package/Image](how-to-prepare-a-private-repo)
+  - or as private [package on GitHub](https://github.com/orgs/catenax-ng/packages) -> [How to Access a Private Repo and a Private Package/Image](../how-to-prepare-a-private-repo)
 - If your GitHub repository is set to private, you first have to process the steps documented
   here: [prepare for private repos](../how-to-prepare-a-private-repo)
 - An ArgoCD project needs to be created by the DevSecOps team for you.
