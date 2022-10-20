@@ -7,7 +7,7 @@ it in a GitHub workflow.
 
 ## GitHub workflow
 
-The GitHub workflow in this section is a good option to run checks on pull requests.
+The GitHub workflow in this section is a good option to run checks on pull requests when there are modifications in the __charts__ directory.
 It will lint your Helm chart and execute helm test to validate your installation on a kind cluster, that will be
 created on demand on the GitHub runner.
 
@@ -17,7 +17,10 @@ You can use the following workflow definition as a starting point:
 name: Lint and Test Charts
 
 # Run chart linting and tests on each pull request
-on: pull_request
+on: 
+  pull_request:
+    paths:
+      - 'charts/**'
 
 jobs:
   lint-test:
@@ -39,7 +42,7 @@ jobs:
           python-version: 3.7
 
       - name: Set up chart-testing
-        uses: helm/chart-testing-action@v2.2.1
+        uses: helm/chart-testing-action@v2.3.1
 
       - name: Run chart-testing (list-changed)
         id: list-changed
@@ -48,24 +51,51 @@ jobs:
           if [[ -n "$changed" ]]; then
             echo "::set-output name=changed::true"
           fi
-
       # run chart linting 
       - name: Run chart-testing (lint)
         run: ct lint --target-branch ${{ github.event.repository.default_branch }} --config charts/chart-testing-config.yaml
 
       # Preparing a kind cluster to install and test charts on
       - name: Create kind cluster
-        uses: helm/kind-action@v1.2.0
+        uses: helm/kind-action@v1.4.0
         if: steps.list-changed.outputs.changed == 'true'
 
       # install the chart to the kind cluster and run helm test
       # define charts to test with the --charts parameter
       - name: Run chart-testing (install)
-        run: ct install --charts charts/k8s-helm-example --config charts/chart-testing-config.yaml
+        run: ct install --charts charts/cxcore --config charts/chart-testing-config.yaml
+        if: steps.list-changed.outputs.changed == 'true'
+
 ```
 
-You can use this workflow 'as-is'. The only thing you need to adapt is the list of charts to test in the final
-`ct install` step.
+:::caution
+Step ___Run chart-testing (lint)___ and ___Run chart-testing (install)___ uses a config file that needs to be modified for every dependency repository url that is specified in the _Chart.yaml_ file! A  ___chart-repos___ section has to be added to the config. Example:
+
+- In Chart.yaml there are bitnami and runix dependecies specified:
+
+```yaml
+dependencies:
+  - condition: postgresql.enabled
+    name: postgresql
+    repository: https://charts.bitnami.com/bitnami
+    version: 11.x.x
+  - condition: pgadmin4.enabled
+    name: pgadmin4
+    repository: https://helm.runix.net
+    version: 1.11.x
+```
+
+- Then the __chart-testing-config.yaml__ file needs a section for bitnami and runix repo urls:
+
+```yaml
+chart-repos:
+  - bitnami=https://charts.bitnami.com/bitnami
+  - runix=https://helm.runix.net
+```
+
+:::
+
+You also need to adapt is the list of charts to test in the final `ct install` step.
 
 As you might have noticed, the `ct lint` and `ct install` steps are also using a configuration file specified by a
 `--config` parameter. Currently, we recommend using the chart-testing defaults. The only settings you might want to
