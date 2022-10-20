@@ -131,7 +131,7 @@ each time.
 As default, we configure `maintain` access on the product repositories for the teams, since all the administrative
 tasks are handled by the team managing the organization.
 
-## Vault Via Terraform
+## Vault via Terraform
 
 To be able to manage secrets in Hashicorp Vault and use them via ArgoCD Vault Plugin (AVP), a team needs the following
 Vault resources set up:
