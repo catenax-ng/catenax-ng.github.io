@@ -14,8 +14,8 @@ After completing these steps the following resources will be created:
 
 Set up terraform as described **[here](https://github.com/catenax-ng/k8s-cluster-stack/blob/doc/main/terraform/README.md)**.
 
-To set up the AKS cluster, we need an **Azure Service Principal Account**, currently we're using the
-SP `DevSecOpsAutomation` (stored in Hashicorp Vault path: `devsecops/azure/demo.catena-x.net/service-principals/automation`).
+To set up the AKS cluster, we need an **Azure Service Principal Account**
+(stored in Hashicorp Vault path: `devsecops/azure/demo.catena-x.net/service-principals/automation`).
 
 Login with Azure account: `az login --tenant catenax.onmicrosoft.com`
 
@@ -26,7 +26,7 @@ Login with Azure account: `az login --tenant catenax.onmicrosoft.com`
 ># You'll need the 'client id' and 'secret id' values later on
 > ```
 
-## Configure The New AKS Cluster
+## Configure the new AKS Cluster
 
 ### Create subfolder
 
@@ -40,7 +40,7 @@ in path `/terraform/` containing (only) the content of e.g. `01_core_cluster`:
 
 #### Adjust the state placement
 
-Change in `providers.tf` the key value e.g.
+Change in `providers.tf` the values of `container_name` and `key`
 
 ```
 backend "azurerm" {
@@ -53,9 +53,9 @@ backend "azurerm" {
 
 #### Adjust the variables
 
-Change the environment variables as desired in the `terraform.tfvars`
+Change the configuration properties as desired in the `terraform.tfvars`
 
-## Set Additional Variables For CLI And Execute Plan
+## Set additional variables for CLI and execute plan
 
 Beside these variables, that you can safely commit to the repository, you also need to specify the
 client id, client secret and azure tenant id of the service principal,
@@ -76,7 +76,7 @@ export TF_VAR_azure_dns_subscription_id=<subscription id> # Catena-X Demo/Beta-T
 With the variables specified in your tfvars and the service principal config set via environment variable,
 create a terraform plan and apply
 
-## Verify That The AKS Resources Are Created
+## Verify that the AKS Resources are created
 
 If you successfully applied the terraform plan, you will find a resource group with the naming pattern `cx-<envname>-rg`
 in your subscription in the [Azure portal](https://portal.azure.com/). Part of that resource group will be your newly
@@ -173,7 +173,7 @@ created
 GitHub OAuth app and save the changes.
 Afterwards verify, if you can log in to ArgoCD via GitHub.
 
-### Set up child cluster
+### Set up remote cluster
 
 #### Environment provisioning via Core ArgoCD
 
@@ -187,15 +187,17 @@ in `ingress/ingress-argocd.yaml`: change `rules/host` and `tls/hosts`
 regarding the new created cluster.
 
 **in k8s-cluster-stack/apps/ingress-nginx:**  
-copy an existing values.yaml, rename and insert actual loadbalancer-IP (public IP in Azure)
+copy an existing values.yaml, rename it to `values-<environment>.yaml` and insert
+actual loadbalancer-IP (public IP in Azure).
 
 **in k8s-cluster-stack/apps/kube-prometheus-stack:**  
-copy an existing values.yaml, rename and adjust all places where the environment-name
+copy an existing values.yaml, rename it to `values-<environment>.yaml` and adjust all places where the environment-name
 is mentioned (`root_url`, `client_secret`, `domain`, `cluster`)
-and insert `client_id` from GitHub oAuth `grafana-<environment>`
+and insert `client_id` from GitHub oAuth `grafana-<environment>`.
 
 **in k8s-cluster-stack/apps/tls:**  
-copy an existing 'values-tls.yaml', rename and change `cluster-name` and `certificate/dnsZone`
+copy an existing values-tls.yaml, rename it to `values-tls-<environment>.yaml` and change its
+`cluster-name` and `certificate/dnsZone`.
 
 **in k8s-cluster-stack/environments**  
 copy folder example and adjust
@@ -207,5 +209,3 @@ copy folder example and adjust
 adapt kustomization.yaml regarding the used resources
 
 after changes push to main
-
-#### Adding remote clusters to an ApplicationSet
