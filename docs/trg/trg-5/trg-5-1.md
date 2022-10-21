@@ -1,5 +1,5 @@
 ---
-title: TRG 5.01 - HELM Chart requirements
+title: TRG 5.01 - Helm Chart requirements
 ---
 
 | Author                | Status | Created      | Post-History |

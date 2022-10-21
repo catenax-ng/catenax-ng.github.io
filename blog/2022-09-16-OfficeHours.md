@@ -9,8 +9,8 @@ tags: [news, officehour]
 
 __DevSecOps:__
 
-- ArgoCD creating Apps using HELM  
-  Creating ArgoCD App the HELM way when HELM Chart contains dependencies failed. We've found a solution for that
+- ArgoCD creating Apps using Helm  
+  Creating ArgoCD App the Helm way when Helm Chart contains dependencies failed. We've found a solution for that
   adjusting the AVP configuration.
 - ArgoCD Version upgrade  
   We will upgrade our environments (DEV/INT/BETA/Pre-PROD) to ArgoCD v2.3.7 as there were security fix. This will be

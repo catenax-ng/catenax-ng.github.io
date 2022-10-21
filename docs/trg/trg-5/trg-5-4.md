@@ -8,7 +8,7 @@ title: TRG 5.04 - Resource Management
 
 ## Description
 
-Proper resource management in HELM chart required.
+Proper resource management in Helm chart required.
 
 ## CPU
 
