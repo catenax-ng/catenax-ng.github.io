@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  k8s-helm-example:
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2022-10-26T15:38:28.307809531Z"
+    description: A Helm chart for Kubernetes for Catena-X
+    digest: 20ca62fc5a073e41ba9d06b7b09a50cdcd4935b6034fc36adbf2d3d9164a1fea
+    name: k8s-helm-example
+    type: application
+    urls:
+    - ks-helm-example/k8s-helm-example-0.1.2.tgz
+    version: 0.1.2
+generated: "2022-10-26T15:38:28.307012957Z"
