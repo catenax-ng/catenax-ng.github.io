@@ -27,17 +27,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           fetch-depth: 0
 
       - name: Set up Helm
-        uses: azure/setup-helm@v1
+        uses: azure/setup-helm@v3
         with:
           version: v3.9.3
 
       # Setup python as a prerequisite for chart linting 
-      - uses: actions/setup-python@v2
+      - uses: actions/setup-python@v4
         with:
           python-version: 3.7
 
@@ -49,8 +49,9 @@ jobs:
         run: |
           changed=$(ct list-changed --target-branch ${{ github.event.repository.default_branch }})
           if [[ -n "$changed" ]]; then
-            echo "::set-output name=changed::true"
+            echo "CHART_CHANGED=true" >> $GITHUB_ENV
           fi
+
       # run chart linting 
       - name: Run chart-testing (lint)
         run: ct lint --target-branch ${{ github.event.repository.default_branch }} --config charts/chart-testing-config.yaml
@@ -58,13 +59,13 @@ jobs:
       # Preparing a kind cluster to install and test charts on
       - name: Create kind cluster
         uses: helm/kind-action@v1.4.0
-        if: steps.list-changed.outputs.changed == 'true'
+        if: ${{ env.CHART_CHANGED == 'true' }}
 
       # install the chart to the kind cluster and run helm test
       # define charts to test with the --charts parameter
       - name: Run chart-testing (install)
         run: ct install --charts charts/cxcore --config charts/chart-testing-config.yaml
-        if: steps.list-changed.outputs.changed == 'true'
+        if: ${{ env.CHART_CHANGED == 'true' }}
 
 ```
 
