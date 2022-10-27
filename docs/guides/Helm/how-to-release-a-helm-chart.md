@@ -59,7 +59,7 @@ Explanation:
 :::
 
 ```yaml
-name: Release core Chart
+name: Release Charts
 
 on:
   push:
