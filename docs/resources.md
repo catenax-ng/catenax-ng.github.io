@@ -59,6 +59,14 @@ questions regarding this, feel free to reach out in the CoP channel.
 
 :::
 
+# Fork of eclipse-tracutsx repo to catenax-ng
+
+If your leading product repository is already in the [eclipse-tractusx](https://github.com/eclipse-tractusx) GitHub 
+organization, but you want to contribute via PR, you could request a fork in our 
+[catenax-ng](https://github.com/catenax-ng). You can use 
+[this Jira template](https://jira.catena-x.net/secure/CreateIssueDetails!init.jspa?pid=10212&issuetype=10401&components=10401&priority=3&summary=GitHub%3A%20New%20tractus-x%20fork&description=%0Atractus-repository%20name%3A%20_repo_name_%0A%0Acatenax-ng%20repo%20name%3A%20tx-_repo_name_%0A%0AGitHub%20team%20to%20grant%20access%3A_github_team_name_) 
+to provide us with the necessary information, so we'll create that fork for you.
+
 ## Request access to an existing environment/namespace
 
 If you need access to a specific environment, or a namespace on an environment, check if you are already part of the
