@@ -2,8 +2,10 @@ name: Test deployment
 
 on:
   pull_request:
-    branches:
-      - main
+    types:
+      - opend
+      - reopened
+      - synchronize
 
 jobs:
   test-deploy:
