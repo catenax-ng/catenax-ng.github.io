@@ -4,10 +4,20 @@
         <title>Catena-X - DevSecOps Blog</title>
         <link>https://catena-x.net/blog</link>
         <description>Catena-X - DevSecOps Blog</description>
-        <lastBuildDate>Fri, 14 Oct 2022 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 21 Oct 2022 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[Office Hours 2022-10-21]]></title>
+            <link>https://catena-x.net/blog/Office Hours 2022-10-21</link>
+            <guid>Office Hours 2022-10-21</guid>
+            <pubDate>Fri, 21 Oct 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[General updates / information]]></description>
+            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="general-updates--information">General updates / information<a class="hash-link" href="#general-updates--information" title="Direct link to heading">​</a></h2><p><strong>DevSecOps:</strong></p><ul><li>Docker image handling in Tractus-X - currently not possible -&gt; put images into Catena-X (ng) for the time being.</li><li>Sonarcloud analysis of pull requests to Tractus-X repositories - no solution yet</li></ul><p><strong>Security:</strong></p><ul><li>Invicti testing - please provide the following information when ordering:<ul><li>for APIs: open API file</li><li>for applications: application URL + credentials</li></ul></li><li>Gitguardian - Emails are sent on findings to respective repository owners (Catena-X ng repositories only)</li></ul><p><strong>FOSS:</strong></p><ul><li>Migration to Tractus-X well on track</li><li>Intellectual Property - Björn Roy will support on open issues</li><li>Please subscribe to the <a href="https://accounts.eclipse.org/mailing-list/tractusx-dev" target="_blank" rel="noopener noreferrer">Tractus-X Dev Mailing List</a>.</li><li>Please prefix your helpdesk tickets at the Eclipse Foundation with "tractus-x".</li></ul><h2 class="anchor anchorWithStickyNavbar_LWe7" id="open-discussions">Open discussions<a class="hash-link" href="#open-discussions" title="Direct link to heading">​</a></h2><p>The following topics where discussed in the open session:</p><ul><li>Portal team: the if statements in the <a href="https://github.com/catenax-ng/tractus-x-release/blob/main/.github/workflows/helm-lint-test.yaml#L66" target="_blank" rel="noopener noreferrer">helm-lint-test.yaml</a> caused missing and superfluous runs of the action -&gt; we will investigate.</li></ul><h2 class="anchor anchorWithStickyNavbar_LWe7" id="session-recording">Session recording<a class="hash-link" href="#session-recording" title="Direct link to heading">​</a></h2><p>You can find the recording <a href="https://bcgcatenax.sharepoint.com/:v:/r/sites/CommunitiesofPractises/Shared%20Documents/CX-CoP%20DevSecOps/Office_Hours_Regular_Recordings/20221021_DevSecOps%20Business%20Hours-Recording.mp4?csf=1&amp;web=1&amp;e=5nfe1e" target="_blank" rel="noopener noreferrer">here</a>.</p>]]></content:encoded>
+            <category>news</category>
+            <category>officehour</category>
+        </item>
         <item>
             <title><![CDATA[Office Hours 2022-10-14]]></title>
             <link>https://catena-x.net/blog/Office Hours 2022-10-14</link>
