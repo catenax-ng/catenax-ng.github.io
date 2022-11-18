@@ -56,8 +56,8 @@ jobs:
           createprofile: false
           # Specify path to upload
           filepath: "<REPLACEME Path to file>"
-          vid: "${{ secrets.ORG_VERACODE_API_ID }}"
-          vkey: "${{ secrets.ORG_VERACODE_API_KEY }}"
+          vid: "${{ secrets.VERACODE_API_ID }}"
+          vkey: "${{ secrets.VERACODE_API_KEY }}"
 ```
 
 ## Pipeline
@@ -118,7 +118,7 @@ jobs:
         run: unzip -o pipeline-scan-LATEST.zip
       - name: Run Pipeline Scanner
         # Specify path to your files
-        run: java -Dpipeline.debug=true -jar pipeline-scan.jar --veracode_api_id "${{secrets.ORG_VERACODE_API_ID}}" --veracode_api_key "${{secrets.ORG_VERACODE_API_KEY}}" --file "<REPLACEME Path to file>" --fail_on_severity="Very High, High" -jo true
+        run: java -Dpipeline.debug=true -jar pipeline-scan.jar --veracode_api_id "${{secrets.VERACODE_API_ID}}" --veracode_api_key "${{secrets.VERACODE_API_KEY}}" --file "<REPLACEME Path to file>" --fail_on_severity="Very High, High" -jo true
 
       - name: Convert pipeline scan output to SARIF format
         if: always()
