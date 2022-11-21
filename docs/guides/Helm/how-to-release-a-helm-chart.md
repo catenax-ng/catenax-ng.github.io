@@ -55,10 +55,7 @@ As mentioned before, releasing the chart can be done via GitHub workflow. Below,
 uses the `chart-releaser-action` to package and publish your charts. You can use this example in your own repository
 without changes.
 
-The workflow will:
-
-- release your Helm chart in your repository (creating a GitHub release)
-- add the new release to the [Catenax-NG Helm repository](https://catenax-ng.github.io/charts/dev/index.yaml)
+The workflow will release your Helm chart in your repository (creating a GitHub release).
 
 This workflow can be triggered manually via GitHub action UI or will automatically be triggered on pushing into the main
 branch of your repository.
@@ -116,7 +113,7 @@ jobs:
       - name: Install Helm
         uses: azure/setup-helm@v3
         with:
-          version: v3.10.0
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       # OPTIONAL, SEE NOTE ABOVE!!
       - name: Update helm dependencies for chart1
@@ -137,29 +134,6 @@ jobs:
         env:
           CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
 
-  dispatch_helm_repo_update:
-    needs: release
-    runs-on: ubuntu-latest
-    steps:
-      - name: Get token
-        id: get_workflow_token
-        uses: peter-murray/workflow-application-token-action@v2
-        with:
-          application_id: ${{ secrets.ORG_REPO_DISPATCH_APPID }}
-          application_private_key: ${{ secrets.ORG_REPO_DISPATCH_KEY }}
-
-      - name: Trigger workflow
-        id: call_action
-        env:
-          TOKEN: ${{ steps.get_workflow_token.outputs.token }}
-        run: |
-          curl -v \
-            --request POST \
-            --url https://api.github.com/repos/catenax-ng/catenax-ng.github.io/actions/workflows/helm-build-repo-index.yaml/dispatches \
-            --header "authorization: Bearer $TOKEN" \
-            --header "Accept: application/vnd.github.v3+json" \
-            --data '{"ref":"main", "inputs": { "github_repo":"${{ github.repository }}" }}' \
-            --fail
 ```
 
 ### How to run the release action
@@ -168,8 +142,8 @@ If you are using the chart release workflow 'as-is' from above, it will be trigg
 contains changes in the `charts` directory.
 
 The chart-releaser-action will check your charts directory for the following changes (changed values, changed templates,
-changed dependencies, etc.) and if there are changes, package the chart into an compressed archive. Additionally, it
-will update the index.yaml file in the 'gh-pages' branch. This index.yaml file is needed, for enabling your GitHub pages
+changed dependencies, etc.) and if there are changes, package the chart into a compressed archive. Additionally, it will
+update the `index.yaml` file in the 'gh-pages' branch. This index.yaml file is needed, for enabling your GitHub pages
 to function as repository for the released Helm chart.
 
 ## Preparing your Helm chart for release
@@ -185,14 +159,14 @@ his cluster. The ingress definition(s) is also a good candidate for this.
 
 Such an if statement could look like the following:
 
-```yaml
+```gotemplate
 # ingress.yaml
-  { { - if .Values.ingress.enabled - } }
+{{ if .Values.ingress.enabled }}
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
 ...
-  { { - end } }
+{{ end }}
 ```
 
 To enable/disable the ingress definition, you can define it in this way in your values.yaml
