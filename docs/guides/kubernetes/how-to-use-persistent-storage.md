@@ -25,7 +25,7 @@ spec:
 :::caution Reclaim policy Delete vs Retain
 By default AKS clusters have storage classes with reclaim policy Delete
 This means if the PVC is deleted, the underlying PersistentVolume (PV) will also be deleted
-To prevent this from happening, on ___dev and int clusters___ use storageclass ___default-retain___
+To prevent this from happening, on **dev and int clusters** use storageclass **default-retain**
 
 ```yaml
 kind: PersistentVolumeClaim
@@ -42,6 +42,8 @@ spec:
       storage: 8Gi
 ```
 :::
+
+A basic example in [k8s-helm-example](https://github.com/catenax-ng/k8s-helm-example/tree/main/charts/k8s-helm-example/templates/persistentVolumeClaim.yaml)
 
 # Templating PVC
 
