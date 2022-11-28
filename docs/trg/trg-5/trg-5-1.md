@@ -46,8 +46,3 @@ change outside the Helm chart, e.g. container image tags (→ don't use containe
 
 The `values.yaml` file is essential for Helm charts. The file **must** contain all values the chart is expecting and there
 **must** be no other values files except of `values.yaml` file. Released Helm charts **must** contain only `values.yaml` file.
-
-### Dependencies
-
-If a Helm chart has dependencies to other Helm charts, e.g. PostgreSQL, these dependencies **must** be specified in
-the `Chart.yaml` file. Do not use outdated `requirements.yaml`.
