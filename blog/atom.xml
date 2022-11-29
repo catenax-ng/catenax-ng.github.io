@@ -2,11 +2,25 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://catena-x.net/blog</id>
     <title>Catena-X - DevSecOps Blog</title>
-    <updated>2022-11-11T00:00:00.000Z</updated>
+    <updated>2022-11-18T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://catena-x.net/blog"/>
     <subtitle>Catena-X - DevSecOps Blog</subtitle>
     <icon>https://catena-x.net/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[Office Hours 2022-11-18]]></title>
+        <id>Office Hours 2022-11-18</id>
+        <link href="https://catena-x.net/blog/Office Hours 2022-11-18"/>
+        <updated>2022-11-18T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[General updates / information]]></summary>
+        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="general-updates--information">General updates / information<a class="hash-link" href="#general-updates--information" title="Direct link to heading">​</a></h2><p><strong>DevSecOps:</strong></p><ul><li>The use case of <a href="https://gh-org-checks.core.demo.catena-x.net/" target="_blank" rel="noopener noreferrer">GitHub Check Results page</a> needs to be clarified.<ul><li>The tool is <strong>not used</strong> to display the current product versions deployed to different clusters!</li><li>Rather it is helping teams <strong>check basic repository structure</strong></li><li>Identify issues / missing files that need to be fixed</li><li>Comply with <strong>Security Team / FOSS Team / Eclipse / System Team</strong> defined requirements</li><li>The tool will be reworked / extended in the future to be more useful for the product teams and Release Management</li></ul></li><li><strong>ArgoCD v2.4 upgrade</strong> is imminent. After the upgrade, the web terminal will be available for teams to access pods and run commands within</li></ul><p><strong>Security:</strong></p><ul><li>No updates</li></ul><p><strong>FOSS:</strong></p><ul><li>The FOSS team is offering <strong>pre-screening of Commiter nominations</strong>. High quality nominations help everyone decide whether they elect the person to be Eclipse Commiter</li><li><a href="https://confluence.catena-x.net/pages/viewpage.action?spaceKey=CF&amp;title=Committer+Infos+@+Eclipse+TractusX" target="_blank" rel="noopener noreferrer">Commiter Infos</a> page helps see a person's different contact / account info (Confluence, Eclipse, GitHub, Product names)</li></ul><h2 class="anchor anchorWithStickyNavbar_LWe7" id="open-discussions">Open discussions<a class="hash-link" href="#open-discussions" title="Direct link to heading">​</a></h2><ul><li>For penetration testing the <strong>dev</strong> cluster should be used. Teams who started deploying their application on int environment for testing, please migrate to dev cluster</li><li>In the Eclipse Tractus-X Github org, the <strong>Veracode secrets</strong> are called <code>VERACODE_API_ID</code> and <code>VERACODE_API_KEY</code>. In the catena-X (ng) GitHub Org, the names <code>ORG_VERACODE_API_ID</code> and <code>ORG_VERACODE_API_KEY</code> can also be used as Veracode secrets</li><li>Getting <strong>product DAPS</strong> to Eclipse requires a license / IP check as it contains external dependency / software</li></ul><h2 class="anchor anchorWithStickyNavbar_LWe7" id="session-recording">Session recording<a class="hash-link" href="#session-recording" title="Direct link to heading">​</a></h2><p>You can find the recording <a href="https://bcgcatenax.sharepoint.com/sites/CommunitiesofPractises/_layouts/15/stream.aspx?id=%2Fsites%2FCommunitiesofPractises%2FShared%20Documents%2FCX%2DCoP%20DevSecOps%2FOffice%5FHours%5FRegular%5FRecordings%2F20221118%5FDevSecOps%20Business%20Hours%2DRecording%2Emp4&amp;referrer=Teams%2ETEAMS%2DELECTRON&amp;referrerScenario=p2p%5Fns%2Dbim" target="_blank" rel="noopener noreferrer">here</a></p>]]></content>
+        <author>
+            <name>DevSecOps Team</name>
+            <uri>https://github.com/catenax-ng</uri>
+        </author>
+        <category label="news" term="news"/>
+        <category label="officehour" term="officehour"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Office Hours 2022-11-11]]></title>
         <id>Office Hours 2022-11-11</id>
