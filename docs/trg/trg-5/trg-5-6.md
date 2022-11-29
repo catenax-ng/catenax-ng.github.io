@@ -8,11 +8,11 @@ title: TRG 5.06 - Chart Dependencies
 
 ## Description
 
-Helm chart dependecies are defined in the `chart.yaml` file. They are used to provide additional software to the application that is required for running. The intent of this section is to align the versions of specific widely used dependencies so all product teams will use the same. This can lead to better parity and will grant the opportunity to probably use a single instane of these dependencies that can be shared among all products in the future.
+Helm chart dependecies are defined in the `Chart.yaml` file. They are used to provide additional software to the application that is required for running. The intent of this section is to align the versions of specific widely used dependencies so all product teams will use the same. This can lead to better parity and will grant the opportunity to probably use a single instane of these dependencies that can be shared among all products in the future.
 
 ## Helm dependency example
 
-An example dependency definition in the `chart.yaml` file:
+An example dependency definition in the `Chart.yaml` file:
 
 ```yaml
 dependencies:
