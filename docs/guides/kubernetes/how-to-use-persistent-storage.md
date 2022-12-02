@@ -4,11 +4,11 @@ title: How to use persistent storage
 
 This is a short guide on how to create persistent storage on Kubernetes clusters.
 
-# A very basic PersistentVolumeClaim (PVC) definition
+## A very basic PersistentVolumeClaim (PVC) definition
 
 PVC without storage class, using default
 
-```yaml 
+```yaml
 kind: PersistentVolumeClaim
 apiVersion: v1
 metadata:
@@ -41,13 +41,14 @@ spec:
     requests:
       storage: 8Gi
 ```
+
 :::
 
 A basic example in [k8s-helm-example](https://github.com/catenax-ng/k8s-helm-example/tree/main/charts/k8s-helm-example/templates/persistentVolumeClaim.yaml)
 
-# Templating PVC
+## Templating PVC
 
-## Create a template in the templates directory of the helm chart
+### Create a template in the templates directory of the helm chart
 
 ```yaml templates/PVC.yaml
 {{- if .Values.persistence.enabled }}
@@ -70,7 +71,7 @@ spec:
 {{- end }}
 ```
 
-## Specify values for PVC in values.yaml
+### Specify values for PVC in values.yaml
 
 ```yaml values.yaml
 persistence:
@@ -97,6 +98,7 @@ volumeClaimTemplates:
     resources:
       requests:
         storage: 8Gi
-```
-:::
 
+```
+
+:::
