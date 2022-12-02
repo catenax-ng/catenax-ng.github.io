@@ -2,14 +2,16 @@
 title: TRG 2.03 - Repo structure
 ---
 
-| Author               | Status | Created      | Post-History |
-|----------------------|--------|--------------|--------------|
-| Catena-X System Team | Draft  | 30-Sept-2022 | n/a          |
+| Author               | Status | Created      | Post-History  |
+|----------------------|--------|--------------|---------------|
+| Catena-X System Team | Draft  | 30-Sept-2022 | n/a           |
+| Catena-X System Team | Moved  | 02-Dec-2022  | content moved |
 
-## Description
+## Content has moved
 
-tbd
+:::info
 
-## Why
+This TRG has moved and is content is now available
+here: [**https://eclipse-tractusx.github.io/docs/release/trg-2/trg-2-3**](https://eclipse-tractusx.github.io/docs/release/trg-2/trg-2-3)
 
-tbd
+:::

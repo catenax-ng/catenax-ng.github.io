@@ -2,44 +2,16 @@
 title: TRG 5.05 - Chart Values
 ---
 
-| Author               | Status | Created      | Post-History |
-|----------------------|--------|--------------|--------------|
-| Catena-X System Team | Draft  | 14-Sept-2022 | n/a          |
+| Author               | Status | Created      | Post-History   |
+|----------------------|--------|--------------|----------------|
+| Catena-X System Team | Draft  | 14-Sept-2022 | n/a            |
+| Catena-X System Team | Moved  | 02-Dec-2022  | content moved  |
 
-## Description
+## Content has moved
 
-Best practices for Helm chart `values.yaml` file.
+:::info
 
-## Container images
-
-A proper section for Container images should look like this:
-
-```yaml
-image:
-  registry: docker.io
-  repository: bitnami/postgresql
-  tag: 14.5.0-debian-11-r19
-  digest: ""
-  ## Specify a imagePullPolicy
-  ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
-  ## ref: https://kubernetes.io/docs/user-guide/images/#pre-pulling-images
-  ##
-  pullPolicy: IfNotPresent
-  ## Optionally specify an array of imagePullSecrets.
-  ## Secrets must be manually created in the namespace.
-  ## ref: https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/
-  ## Example:
-  ## pullSecrets:
-  ##   - myRegistryKeySecretName
-  ##
-  pullSecrets: [ ]
-  ## Set to true if you would like to see extra information on logs
-  ##
-```
-
-:::caution do not use `latest` as image tag!
-
-This might cause unexpected effects, as the Helm release could change without bumping the chart version! Also due to
-security reasons you shall not use `latest` tag.
+This TRG has moved and is content is now available
+here: [**https://eclipse-tractusx.github.io/docs/release/trg-5/trg-5-5**](https://eclipse-tractusx.github.io/docs/release/trg-5/trg-5-5)
 
 :::
