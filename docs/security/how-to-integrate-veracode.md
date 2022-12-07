@@ -131,7 +131,7 @@ jobs:
           finding-rule-level: "3:1:0"
 
       - name: Upload Veracode sarif file to repository
-        uses: github/codeql-action/upload-sarif@v1
+        uses: github/codeql-action/upload-sarif@v2
         if: always()
         with:
           sarif_file: veracode-results.sarif
