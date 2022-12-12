@@ -58,7 +58,7 @@ __FOSS:__
 - Discussion about Helm Chart Releaser action when there are several Helm charts present and that it is released as GH
   release. A released Helm Chart also includes the repositories source code
 - General question about getting things done in Eclipse-Tractux when missing a Committer
-- General questiong about working with forks in Catenax-NG GH org
+- General question about working with forks in Catenax-NG GH org
 
 ## Session recording
 
