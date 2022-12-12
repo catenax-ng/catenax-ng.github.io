@@ -2,11 +2,49 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://catena-x.net/blog</id>
     <title>Catena-X - DevSecOps Blog</title>
-    <updated>2022-12-02T00:00:00.000Z</updated>
+    <updated>2022-12-09T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://catena-x.net/blog"/>
     <subtitle>Catena-X - DevSecOps Blog</subtitle>
     <icon>https://catena-x.net/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[Office Hours 2022-12-09]]></title>
+        <id>Office Hours 2022-12-09</id>
+        <link href="https://catena-x.net/blog/Office Hours 2022-12-09"/>
+        <updated>2022-12-09T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[General updates / information]]></summary>
+        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="general-updates--information">General updates / information<a class="hash-link" href="#general-updates--information" title="Direct link to heading">​</a></h2><p><strong>DevSecOps:</strong></p><ul><li>System-Team is in focus of supporting Catena-X Rel2/ Wave-B deployments to Pre-Prod</li><li>If a product-team is missing an Eclipse Committer in its team yet, System-Team offers to help
+out. <a href="https://projects.eclipse.org/content/sebastian-bezold-committer-eclipse-tractus-x" target="_blank" rel="noopener noreferrer">Sebastian Bezold</a> (available
+again 09 Jan
+2023), <a href="https://projects.eclipse.org/content/siegfried-kiermayer-committer-eclipse-tractus-x" target="_blank" rel="noopener noreferrer">Sigfried Kiermayer</a>
+and <a href="https://projects.eclipse.org/content/carsten-lenz-committer-eclipse-tractus-x" target="_blank" rel="noopener noreferrer">Carsten Lenz</a> from System-Team are
+Committers in Eclipse-Tractusx. Feel free to contact one of them in case of support (approving/merging PullRequests
+etc.).</li><li>If you need support for merging a Pull Request etc., please contact one of the committers to get your task done</li><li>Repetition: <a href="https://gh-org-checks.core.demo.catena-x.net/" target="_blank" rel="noopener noreferrer">GH-Org-Checks</a>: Column <em>ReleaseCheck</em> may potentially
+report wrong status/result ("<em>Not Semantic versioned!</em>"). This is a known issue/bug. For now, please ignore the
+result.</li><li>GH-Org-Checks tool will be refactored and enhanced soon (start Jan 2023)</li></ul><p><strong>Security:</strong></p><ul><li>Veracode Dropin Session every 2
+Weeks, <a href="https://confluence.catena-x.net/display/cxsecurity/Veracode" target="_blank" rel="noopener noreferrer">Confluence Page</a> (Questions and Support Session).
+If you have questions or problems with Veracode join this session to get help.</li><li>Reminder: Veracode should be used on a regular basis, not only once in a while.</li><li>Pen-testing has been started with an external company. Currently, there is no strategy for pen-testing in 2023, but
+pen-testing
+will be continued. <a href="https://confluence.catena-x.net/display/cxsecurity/External+Penetration+Testing" target="_blank" rel="noopener noreferrer">Confluence page</a>
+regarding pen-testing.</li></ul><p><strong>FOSS:</strong></p><ul><li>Status overview Eclipse team onboarding. Is on a good way.</li><li>New product <em>PURIS</em>. Team has not yet an Eclipse Committer. SLDT has granted to support new team in regard of
+Committer
+actions, if required.</li><li>New: Eclipse Office Hours. The first office hour took place yesterday. The office hour is currently scheduled on a
+monthly basis, next office hour: January 13, 2023 14:00h (GMT). There is also
+a <a href="https://www.eclipse.org/projects/calendar/" target="_blank" rel="noopener noreferrer">calendar with upcoming dates</a> available.</li><li>News from Committer Office Hour:<ul><li>IPZilla will be archived by the end of the year</li><li>As of now, <a href="https://confluence.catena-x.net/display/CF/Eclipse+TractusX+-+Code+Contribution" target="_blank" rel="noopener noreferrer">code contributions</a>
+will be done
+using <a href="https://gitlab.eclipse.org/eclipsefdn/emo-team/iplab/-/issues/new?issuable_template=vet-project" target="_blank" rel="noopener noreferrer">GitLab/IPLab issues</a></li><li>You can also use
+the <a href="https://github.com/eclipse/dash-licenses#automatic-ip-team-review-requests" target="_blank" rel="noopener noreferrer">DASH license check tool</a> to
+automatically open IP issues (<a href="https://gitlab.eclipse.org/-/profile/personal_access_tokens" target="_blank" rel="noopener noreferrer">authentication token</a>
+with scope <code>api</code> required)</li></ul></li></ul><h2 class="anchor anchorWithStickyNavbar_LWe7" id="open-discussions">Open discussions<a class="hash-link" href="#open-discussions" title="Direct link to heading">​</a></h2><ul><li>Discussion about Helm Chart Releaser action when there are several Helm charts present and that it is released as GH
+release. A released Helm Chart also includes the repositories source code</li><li>General question about getting things done in Eclipse-Tractux when missing a Committer</li><li>General question about working with forks in Catenax-NG GH org</li></ul><h2 class="anchor anchorWithStickyNavbar_LWe7" id="session-recording">Session recording<a class="hash-link" href="#session-recording" title="Direct link to heading">​</a></h2><p>You can find the
+recording <a href="https://bcgcatenax.sharepoint.com/:v:/r/sites/CommunitiesofPractises/Shared%20Documents/CX-CoP%20DevSecOps/Office_Hours_Regular_Recordings/%5BCX%5DDevSecOps%20Office%20Hours-20221209_132100-Meeting%20Recording.mp4?csf=1&amp;web=1&amp;e=2OOj0G" target="_blank" rel="noopener noreferrer">here</a>.</p>]]></content>
+        <author>
+            <name>DevSecOps Team</name>
+            <uri>https://github.com/catenax-ng</uri>
+        </author>
+        <category label="news" term="news"/>
+        <category label="officehour" term="officehour"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Office Hours 2022-12-02]]></title>
         <id>Office Hours 2022-12-02</id>
