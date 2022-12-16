@@ -2,11 +2,26 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://catena-x.net/blog</id>
     <title>Catena-X - DevSecOps Blog</title>
-    <updated>2022-12-09T00:00:00.000Z</updated>
+    <updated>2022-12-16T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://catena-x.net/blog"/>
     <subtitle>Catena-X - DevSecOps Blog</subtitle>
     <icon>https://catena-x.net/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[Office Hours 2022-12-16]]></title>
+        <id>Office Hours 2022-12-16</id>
+        <link href="https://catena-x.net/blog/Office Hours 2022-12-16"/>
+        <updated>2022-12-16T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[General updates / information]]></summary>
+        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="general-updates--information">General updates / information<a class="hash-link" href="#general-updates--information" title="Direct link to heading">​</a></h2><p><strong>DevSecOps:</strong></p><ul><li>Wave B is released</li><li>Please observe the release guidelines with special attention to TRG <a href="https://eclipse-tractusx.github.io/docs/release/trg-4/trg-4-1/" target="_blank" rel="noopener noreferrer">4.01</a> and <a href="https://eclipse-tractusx.github.io/docs/release/trg-6/trg-6-1" target="_blank" rel="noopener noreferrer">6.01</a></li><li>Secret management: use <a href="https://catenax-ng.github.io/docs/guides/how-to-use-vault" target="_blank" rel="noopener noreferrer">vault</a> and <a href="https://catenax-ng.github.io/docs/guides/ArgoCD/howto-use-vault-secrets-with-argocd" target="_blank" rel="noopener noreferrer">argocd vault plugin</a></li><li>Use meaningful commits (not just 'Update file xyz') example: <a href="https://github.com/conventional-changelog/commitlint" target="_blank" rel="noopener noreferrer">conventional commit messages</a></li><li>Contribute to eclipse repositories instead of catenax-ng (i.e. pull requests in forked repositories)</li><li>In case of questions use COP channel and/or open support request</li><li>Hint: PostgreSQL version 14.6 is available, consider updating dependencies</li></ul><p><strong>Security:</strong></p><p>no news</p><p><strong>FOSS:</strong></p><ul><li>Next Eclipse Committer Office Hour on 13.01.2023 1PM (UTC) <a href="https://calendar.google.com/calendar/u/0/r/month/2023/1/13?ctz=Etc/GMT" target="_blank" rel="noopener noreferrer">Google Calendar</a></li><li>EclipseCON Video available <a href="https://www.youtube.com/playlist?list=PLy7t4z5SYNaRoQ4o40i6zfD0ZuoenX7ph" target="_blank" rel="noopener noreferrer">here</a></li></ul><h2 class="anchor anchorWithStickyNavbar_LWe7" id="open-discussions">Open discussions<a class="hash-link" href="#open-discussions" title="Direct link to heading">​</a></h2><ul><li>Detailed information about security checks</li><li>Repository creation in Eclipse-Tractux: create an issue for Eclipse Helpdesk, <a href="https://gitlab.eclipse.org/eclipsefdn/helpdesk/-/issues/2263" target="_blank" rel="noopener noreferrer">example</a></li><li>Working with <a href="https://catenax-ng.github.io/docs/resources#fork-of-eclipse-tracutsx-repo-to-catenax-ng" target="_blank" rel="noopener noreferrer">forks in Catenax-NG GH org</a></li></ul><h2 class="anchor anchorWithStickyNavbar_LWe7" id="session-recording">Session recording<a class="hash-link" href="#session-recording" title="Direct link to heading">​</a></h2><p>You can find the
+recording <a href="https://bcgcatenax.sharepoint.com/:v:/r/sites/CommunitiesofPractises/Shared%20Documents/CX-CoP%20DevSecOps/Office_Hours_Regular_Recordings/%5BCX%5DDevSecOps%20Office%20Hours-20221209_132100-Meeting%20Recording.mp4?csf=1&amp;web=1&amp;e=ElIECS" target="_blank" rel="noopener noreferrer">here</a>.</p>]]></content>
+        <author>
+            <name>DevSecOps Team</name>
+            <uri>https://github.com/catenax-ng</uri>
+        </author>
+        <category label="news" term="news"/>
+        <category label="officehour" term="officehour"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Office Hours 2022-12-09]]></title>
         <id>Office Hours 2022-12-09</id>
