@@ -5,12 +5,13 @@ title: TRG 4.03 - Non-root container
 | Author               | Status | Created      | Post-History |
 |----------------------|--------|--------------|--------------|
 | Catena-X System Team | Draft  | 14-Sept-2022 | n/a          |
+| Catena-X System Team | Moved  | 29-Dec-2022 | content moved   |
 
-## Description
+## Content has moved
 
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore.
+:::info
 
-## Why
+This TRG has moved and is content is now available
+here: [**https://eclipse-tractusx.github.io/docs/release/trg-4/trg-4-3**](https://eclipse-tractusx.github.io/docs/release/trg-4/trg-4-3)
 
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
-magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo.
+:::
