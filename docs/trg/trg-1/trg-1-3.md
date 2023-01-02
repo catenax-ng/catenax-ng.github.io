@@ -2,18 +2,16 @@
 title: TRG 1.03 - CHANGELOG.md
 ---
 
-| Author               | Status | Created      | Post-History |
-|----------------------|--------|--------------|--------------|
-| Catena-X System Team | Draft  | 14-Sept-2022 | n/a          |
+| Author               | Status | Created      | Post-History  |
+|----------------------|--------|--------------|---------------|
+| Catena-X System Team | Draft  | 14-Sept-2022 | n/a           |
+| Catena-X System Team | Moved  | 02-Jan-2023  | content moved |
 
-## Description
+## Content has moved
 
-Repositories must contain a appropriate `CHANGELOG.md` file.
+:::info
 
-## Why
+This TRG has moved and is content is now available
+here: [**https://eclipse-tractusx.github.io/docs/release/trg-1/trg-1-3**](https://eclipse-tractusx.github.io/docs/release/trg-1/trg-1-3)
 
-To track changes of releases a `CHANGELOG.md` must be added to repositories. The versioning itself
-follows [semantic versioning](https://semver.org/). For easy changelog
-creation [conventional committing](https://www.conventionalcommits.org/en/v1.0.0/#summary) is strongly recommended.
-
-Recommendations for changelog format will follow.
+:::
