@@ -34,7 +34,7 @@ jobs:
       - name: Set up Helm
         uses: azure/setup-helm@v3
         with:
-          version: v3.9.3
+          version: v3.10.3
 
       # Setup python as a prerequisite for chart linting 
       - uses: actions/setup-python@v4
