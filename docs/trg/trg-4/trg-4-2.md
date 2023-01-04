@@ -7,6 +7,8 @@ title: TRG 4.02 - Base images
 | Catena-X System Team | Draft  | 14-Sept-2022 | n/a           |
 | Catena-X System Team | Moved  | 25-Nov-2022  | content moved |
 
+## Content has moved
+
 :::info
 
 This TRG has moved and is content is now available
