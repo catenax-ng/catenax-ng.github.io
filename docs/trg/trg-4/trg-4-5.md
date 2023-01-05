@@ -1,5 +1,5 @@
 ---
-title: TRG 4.04 - Container registries
+title: TRG 4.05 - Container registries
 ---
 
 | Author               | Status | Created      | Post-History |
