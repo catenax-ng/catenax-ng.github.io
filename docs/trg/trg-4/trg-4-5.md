@@ -12,6 +12,6 @@ title: TRG 4.05 - Container registries
 :::info
 
 This TRG has moved and is content is now available
-here: [**https://eclipse-tractusx.github.io/docs/release/trg-4/trg-4-4**](https://eclipse-tractusx.github.io/docs/release/trg-4/trg-4-5)
+here: [**https://eclipse-tractusx.github.io/docs/release/trg-4/trg-4-5**](https://eclipse-tractusx.github.io/docs/release/trg-4/trg-4-5)
 
 :::
