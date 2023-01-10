@@ -1,5 +1,5 @@
 ---
-title: TRG 5.06 - Chart Dependencies
+title: TRG 5.06 - Application Configuration
 ---
 
 | Author               | Status | Created      | Post-History |
@@ -12,6 +12,6 @@ title: TRG 5.06 - Chart Dependencies
 :::info
 
 This TRG has moved and is content is now available
-here: [**https://eclipse-tractusx.github.io/docs/release/trg-5/trg-5-7**](https://eclipse-tractusx.github.io/docs/release/trg-5/trg-5-7)
+here: [**https://eclipse-tractusx.github.io/docs/release/trg-5/trg-5-6**](https://eclipse-tractusx.github.io/docs/release/trg-5/trg-5-6)
 
 :::
