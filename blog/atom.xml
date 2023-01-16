@@ -2,11 +2,38 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://catena-x.net/blog</id>
     <title>Catena-X - DevSecOps Blog</title>
-    <updated>2022-12-23T00:00:00.000Z</updated>
+    <updated>2023-01-13T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://catena-x.net/blog"/>
     <subtitle>Catena-X - DevSecOps Blog</subtitle>
     <icon>https://catena-x.net/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[Office Hours 2023-01-13]]></title>
+        <id>Office Hours 2023-01-13</id>
+        <link href="https://catena-x.net/blog/Office Hours 2023-01-13"/>
+        <updated>2023-01-13T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[General updates / information]]></summary>
+        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="general-updates--information">General updates / information<a class="hash-link" href="#general-updates--information" title="Direct link to heading">​</a></h2><h3 class="anchor anchorWithStickyNavbar_LWe7" id="devsecops">DevSecOps<a class="hash-link" href="#devsecops" title="Direct link to heading">​</a></h3><ul><li><p>Stack Updates</p><ul><li>All environments, except of INT and BETA, have been updated to Kubernetes 1.24.6. BETA and INT haven't been
+updated
+due to technical reasons but will be updated soon too.</li><li>ArgoCD has been updated on all environments
+to <a href="https://github.com/argoproj/argo-cd/releases/tag/v2.4.18" target="_blank" rel="noopener noreferrer">v2.4.18</a>.</li></ul></li><li><p>Documentation Updates</p><ul><li>TRG 5.02 has been updated. In section <em>README.md</em> <em>Prerequisites</em> and <em>TL;DR</em> has been added.</li><li>TRGs has moved on <a href="https://eclipse-tractusx.github.io/" target="_blank" rel="noopener noreferrer">https://eclipse-tractusx.github.io/</a> from Documentation to Developer Hub in the top navigation.</li></ul></li><li><p>Deprecate old Repositories<br>
+<!-- -->If you have forked your Eclipse-Tractusx product repository our Catenax-NG GitHub organization, we strongly recommend
+to mark the former product repository in the Catenax-NG GitHub organization as DEPRECATED in the description. Also
+open a ticket to System-Team and ask to set GH Team permission to read-only. This is just to avoid confusion in which
+repository to work.</p></li><li><p>Call for Account Housekeeping: Please check your team for team members that might have been left Catena-X and
+cleanup (e.g. GH Teams).</p></li></ul><h3 class="anchor anchorWithStickyNavbar_LWe7" id="security">Security<a class="hash-link" href="#security" title="Direct link to heading">​</a></h3><ul><li>GitGuadian enterprise license ready until end of 2023</li><li>External Pen-Testing by Prevenity is available</li><li>Overview external
+Pen-Testing: <a href="https://confluence.catena-x.net/display/cxsecurity/External+Penetration+Testing" target="_blank" rel="noopener noreferrer">Cantena-x Confluence</a></li><li>Account Housekeeping: Let Security Team know if a team member has left. Then Security Team will remove these former
+members from security tools. This is also security relevant.</li></ul><h3 class="anchor anchorWithStickyNavbar_LWe7" id="foss">FOSS<a class="hash-link" href="#foss" title="Direct link to heading">​</a></h3><ul><li>Overview about products IP status</li><li>Eclipse Committer Office Our today 2pm (CET). Check <a href="https://www.eclipse.org/projects/calendar/" target="_blank" rel="noopener noreferrer">calendar</a> for
+upcoming office hours. Keep in mind, that time in calendar is UTC/GMT!</li><li>Basic information about Committer election process and how PMC (project management committee) manages committer
+elections.</li></ul><h2 class="anchor anchorWithStickyNavbar_LWe7" id="open-discussions">Open discussions<a class="hash-link" href="#open-discussions" title="Direct link to heading">​</a></h2><ul><li>Exchange about getting onboarded to Catenax-NG, Eclipse-Tractusx and the experience with pitfalls.</li><li>Kubernetes version compatibility (TRG 3.01)</li></ul><h2 class="anchor anchorWithStickyNavbar_LWe7" id="session-recording">Session recording<a class="hash-link" href="#session-recording" title="Direct link to heading">​</a></h2><p>You can find the
+recording <a href="https://bcgcatenax.sharepoint.com/sites/CommunitiesofPractises/Shared%20Documents/Forms/AllItems.aspx?sortField=Modified&amp;isAscending=false&amp;id=%2Fsites%2FCommunitiesofPractises%2FShared%20Documents%2FCX%2DCoP%20DevSecOps%2FOffice%5FHours%5FRegular%5FRecordings%2F%5BCX%5DDevSecOps%20Office%20Hours%2D20230113%5F131115%2DMeeting%20Recording%2Emp4&amp;viewid=a90239a2%2D4eb1%2D446e%2D9246%2Daedc18ebdc75&amp;parent=%2Fsites%2FCommunitiesofPractises%2FShared%20Documents%2FCX%2DCoP%20DevSecOps%2FOffice%5FHours%5FRegular%5FRecordings" target="_blank" rel="noopener noreferrer">here</a>.</p>]]></content>
+        <author>
+            <name>DevSecOps Team</name>
+            <uri>https://github.com/catenax-ng</uri>
+        </author>
+        <category label="news" term="news"/>
+        <category label="officehour" term="officehour"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Office Hours 2022-12-23]]></title>
         <id>Office Hours 2022-12-23</id>
