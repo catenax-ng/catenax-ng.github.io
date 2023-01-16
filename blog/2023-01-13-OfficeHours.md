@@ -53,7 +53,5 @@ tags: [news, officehour]
 
 ## Session recording
 
-TBA
-
 You can find the
-recording [here](https://bcgcatenax.sharepoint.com/:v:/r/sites/CommunitiesofPractises/Shared%20Documents/CX-CoP%20DevSecOps/Office_Hours_Regular_Recordings/%5BCX%5DDevSecOps%20Office%20Hours-20221209_132100-Meeting%20Recording.mp4?csf=1&web=1&e=2OOj0G).
+recording [here](https://bcgcatenax.sharepoint.com/sites/CommunitiesofPractises/Shared%20Documents/Forms/AllItems.aspx?sortField=Modified&isAscending=false&id=%2Fsites%2FCommunitiesofPractises%2FShared%20Documents%2FCX%2DCoP%20DevSecOps%2FOffice%5FHours%5FRegular%5FRecordings%2F%5BCX%5DDevSecOps%20Office%20Hours%2D20230113%5F131115%2DMeeting%20Recording%2Emp4&viewid=a90239a2%2D4eb1%2D446e%2D9246%2Daedc18ebdc75&parent=%2Fsites%2FCommunitiesofPractises%2FShared%20Documents%2FCX%2DCoP%20DevSecOps%2FOffice%5FHours%5FRegular%5FRecordings).
