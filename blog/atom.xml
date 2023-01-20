@@ -2,11 +2,29 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://catena-x.net/blog</id>
     <title>Catena-X - DevSecOps Blog</title>
-    <updated>2023-01-13T00:00:00.000Z</updated>
+    <updated>2023-01-20T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://catena-x.net/blog"/>
     <subtitle>Catena-X - DevSecOps Blog</subtitle>
     <icon>https://catena-x.net/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[Office Hours 2023-01-20]]></title>
+        <id>Office Hours 2023-01-20</id>
+        <link href="https://catena-x.net/blog/Office Hours 2023-01-20"/>
+        <updated>2023-01-20T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[General updates / information]]></summary>
+        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="general-updates--information">General updates / information<a class="hash-link" href="#general-updates--information" title="Direct link to heading">​</a></h2><h3 class="anchor anchorWithStickyNavbar_LWe7" id="devsecops">DevSecOps<a class="hash-link" href="#devsecops" title="Direct link to heading">​</a></h3><ul><li>Stack Updates<ul><li>On Monday 23 of january, there will be maintenance on all kubernetes cluster. No outage expected</li></ul></li><li>Documentation Updates<ul><li>TRGs are now all on <a href="https://eclipse-tractusx.github.io/" target="_blank" rel="noopener noreferrer">https://eclipse-tractusx.github.io/</a>.
+TRGs have been removed from <a href="https://catenax-ng.github.io/" target="_blank" rel="noopener noreferrer">https://catenax-ng.github.io/</a> and link to tractus-x.</li></ul></li></ul><h3 class="anchor anchorWithStickyNavbar_LWe7" id="security">Security<a class="hash-link" href="#security" title="Direct link to heading">​</a></h3><ul><li>GitGuardian colleagues will join the office hour on 03 February</li><li>If you encounter VeraCode issues regarding transitive 3rd party dependencies and you need deeper insight,
+try out the software composition analysis feature. For questions, reach out to the Sec team.</li></ul><h3 class="anchor anchorWithStickyNavbar_LWe7" id="foss">FOSS<a class="hash-link" href="#foss" title="Direct link to heading">​</a></h3><ul><li>General Eclipse Tractus-X status updates</li></ul><h2 class="anchor anchorWithStickyNavbar_LWe7" id="open-discussions">Open discussions<a class="hash-link" href="#open-discussions" title="Direct link to heading">​</a></h2><ul><li>Volunteers wanted: How can planning and issue tracking be done in open source (i.e. GitHub issues).
+Would include:<ul><li>Trying out GitHub issues and GitHub projects. Compare to what is currently done in Jira.</li><li>Evaluating a strategy for test management (Jira Xray)</li></ul></li></ul><h2 class="anchor anchorWithStickyNavbar_LWe7" id="session-recording">Session recording<a class="hash-link" href="#session-recording" title="Direct link to heading">​</a></h2><p>You can find the
+recording <a href="https://bcgcatenax.sharepoint.com/sites/CommunitiesofPractises/Shared%20Documents/Forms/AllItems.aspx?sortField=Modified&amp;isAscending=false&amp;id=%2Fsites%2FCommunitiesofPractises%2FShared%20Documents%2FCX%2DCoP%20DevSecOps%2FOffice%5FHours%5FRegular%5FRecordings%2F%5BCX%5DDevSecOps%20Office%20Hours%2D20230120%5F130115%2DMeeting%20Recording%2Emp4&amp;viewid=a90239a2%2D4eb1%2D446e%2D9246%2Daedc18ebdc75&amp;parent=%2Fsites%2FCommunitiesofPractises%2FShared%20Documents%2FCX%2DCoP%20DevSecOps%2FOffice%5FHours%5FRegular%5FRecordings" target="_blank" rel="noopener noreferrer">here</a>.</p>]]></content>
+        <author>
+            <name>DevSecOps Team</name>
+            <uri>https://github.com/catenax-ng</uri>
+        </author>
+        <category label="news" term="news"/>
+        <category label="officehour" term="officehour"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Office Hours 2023-01-13]]></title>
         <id>Office Hours 2023-01-13</id>
