@@ -2,11 +2,40 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://catena-x.net/blog</id>
     <title>Catena-X - DevSecOps Blog</title>
-    <updated>2023-01-27T00:00:00.000Z</updated>
+    <updated>2023-02-03T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://catena-x.net/blog"/>
     <subtitle>Catena-X - DevSecOps Blog</subtitle>
     <icon>https://catena-x.net/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[Office Hours 2023-02-03]]></title>
+        <id>https://catena-x.net/blog/Office Hours 2023-02-03</id>
+        <link href="https://catena-x.net/blog/Office Hours 2023-02-03"/>
+        <updated>2023-02-03T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[General updates / information]]></summary>
+        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="general-updates--information">General updates / information<a href="#general-updates--information" class="hash-link" aria-label="Direct link to General updates / information" title="Direct link to General updates / information">​</a></h2><h3 class="anchor anchorWithStickyNavbar_LWe7" id="devsecops">DevSecOps<a href="#devsecops" class="hash-link" aria-label="Direct link to DevSecOps" title="Direct link to DevSecOps">​</a></h3><ul><li><p>Stack Updates:</p><ul><li><p>ArgoCD has been updated to v2.4.22</p></li><li><p>ArgoCD Vault Plugin (AVP) has been updated to v1.13.1</p><p>If you experience any issues using the AVP, please get in contact with system team. Most likely the problem is
+related to a missing <code>vault-secret</code> in your project related namespace and can be fixed easily.</p></li></ul></li><li><p>Loki is available in our environments.
+There has been a Grafana Dashboard deployed to all environments called <em>Logging</em>.
+Grafana can be accessed per Environment using one of these URLs (use <em>Sign in with GitHub</em> for login):</p><ul><li><a href="https://grafana.dev.demo.catena-x.net" target="_blank" rel="noopener noreferrer">https://grafana.dev.demo.catena-x.net</a></li><li><a href="https://grafana.int.demo.catena-x.net" target="_blank" rel="noopener noreferrer">https://grafana.int.demo.catena-x.net</a></li><li><a href="https://grafana.beta.demo.catena-x.net" target="_blank" rel="noopener noreferrer">https://grafana.beta.demo.catena-x.net</a></li><li><a href="https://grafana.pre-prod.demo.catena-x.net" target="_blank" rel="noopener noreferrer">https://grafana.pre-prod.demo.catena-x.net</a></li></ul></li><li><p>Upcoming Release 3:</p><ul><li>We are involved in QG4 and QG5 and accompany product teams to get their products ready for release 3.</li><li>Pre-Prod environment has been cleaned up. All products deployed for Release 2/2.1 in October/December 2022 where
+removed from PRE-PROD environment.</li></ul></li></ul><h3 class="anchor anchorWithStickyNavbar_LWe7" id="security">Security<a href="#security" class="hash-link" aria-label="Direct link to Security" title="Direct link to Security">​</a></h3><ul><li>External PenTest has been started for IRS</li><li>Veracode:
+If you encounter no SCA findings in Veracode, please get in contact
+with <a href="https://confluence.catena-x.net/display/cxsecurity/Who-is-Who+Security" target="_blank" rel="noopener noreferrer">Security Team</a>. Having no SCA findings
+is not expected and should be clarified with Security Team.</li><li>GitGuardian gave a brief overview about its product in a 10-minute presentation.</li></ul><h3 class="anchor anchorWithStickyNavbar_LWe7" id="foss">FOSS<a href="#foss" class="hash-link" aria-label="Direct link to FOSS" title="Direct link to FOSS">​</a></h3><ul><li><p>General <a href="https://confluence.catena-x.net/display/CF/Status+Prep+and+Migration+to+Eclipse+Foundation" target="_blank" rel="noopener noreferrer">Eclipse Tractus-X status</a>
+update</p></li><li><p>Welcome our new committer: Gabor Almádi</p></li></ul><h2 class="anchor anchorWithStickyNavbar_LWe7" id="open-discussion">Open discussion<a href="#open-discussion" class="hash-link" aria-label="Direct link to Open discussion" title="Direct link to Open discussion">​</a></h2><p>Community discussion about best practices for</p><ul><li>Image tagging and which image should be tagged with latest (latest released image vs. latest build image (
+currently tagged only tagged with <em>main</em>). Discussed different approaches, from developer sight and OPs sight.</li><li>Off-boarding Eclipse<br>Is there an off-boarding process if a developer (in this Eclipse Committer) leaves the Catena-X/Eclipse-Tractus-X
+project?<ul><li>In general, Eclipse Tractus-X Project Leads (Daniel Miehle/ Björn Roy) can easily revoke Committer permissions.</li><li>This shall never happen without knowledge to the Committer.</li><li>For off-boarding, get in contact with the Committer and one of the project leads to clarify revoking the committer
+rights.</li><li>It would be also very polite to announce this to our dev mailing list to let the other committers know.</li></ul></li><li>Is there a default for projects repos structure (having a mono repo vs. split up to several repos (frontend, backend,
+charts, ...))<ul><li>Currently, there is no recommendation, and it's up to the developers how to organize their repo(s).</li><li>Our TRGs tries to follow for what you have decided. If there is more than one repo, than we expect a so-called
+leading repository, which points out to all repos associated to the product.</li><li>Anglika: The barrier should be as low as possible to get an idea if there is only one, or more repos.</li></ul></li><li>How to contribute to <a href="https://eclipse-tractusx.github.io" target="_blank" rel="noopener noreferrer">eclipse-tractusx.github.io</a>?<ul><li>There are discussion in background about organizing the website.</li><li>Best approach is to work on a branch, or, if your are not a committer, fork the repo, and contribute to upstream
+providing pull requests.</li></ul></li></ul><h2 class="anchor anchorWithStickyNavbar_LWe7" id="session-recording">Session recording<a href="#session-recording" class="hash-link" aria-label="Direct link to Session recording" title="Direct link to Session recording">​</a></h2><p>You can find the
+recording <a href="https://bcgcatenax.sharepoint.com/:v:/r/sites/CommunitiesofPractises/Shared%20Documents/CX-CoP%20DevSecOps/Office_Hours_Regular_Recordings/20230203_DevSecOPs%20Business%20Hours-Recording.mp4?csf=1&amp;web=1&amp;e=IJnVb8" target="_blank" rel="noopener noreferrer">here</a>.</p>]]></content>
+        <author>
+            <name>DevSecOps Team</name>
+            <uri>https://github.com/catenax-ng</uri>
+        </author>
+        <category label="news" term="news"/>
+        <category label="officehour" term="officehour"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Office Hours 2023-01-27]]></title>
         <id>https://catena-x.net/blog/Office Hours 2023-01-27</id>
