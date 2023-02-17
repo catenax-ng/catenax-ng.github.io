@@ -11,7 +11,7 @@ tags: [news, officehour]
 
 - We are working on a new process to introduce new and updating existing release guidelines
   - We'll have a dedicated 'draft' section
-  - Should encourage discussions in the tractus-x community (if topic is discussable and not defined by law, etx.)
+  - Should encourage discussions in the tractus-x community (if topic is discussable and not defined by law, etc.)
   - New drafts will be announced via usual channels (Office Hours, dev mailing list, ...)
 - __Clarification__: For Release 3, there are no plans to create an overall umbrella chart. So no action required from
   your side, as long as you fulfilled the regular release guidelines
