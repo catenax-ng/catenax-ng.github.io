@@ -2,11 +2,25 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://catena-x.net/blog</id>
     <title>Catena-X - DevSecOps Blog</title>
-    <updated>2023-02-24T00:00:00.000Z</updated>
+    <updated>2023-03-03T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://catena-x.net/blog"/>
     <subtitle>Catena-X - DevSecOps Blog</subtitle>
     <icon>https://catena-x.net/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[Office Hours 2023-03-03]]></title>
+        <id>https://catena-x.net/blog/Office Hours 2023-03-03</id>
+        <link href="https://catena-x.net/blog/Office Hours 2023-03-03"/>
+        <updated>2023-03-03T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[General updates / information]]></summary>
+        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="general-updates--information">General updates / information<a href="#general-updates--information" class="hash-link" aria-label="Direct link to General updates / information" title="Direct link to General updates / information">​</a></h2><h3 class="anchor anchorWithStickyNavbar_LWe7" id="devsecops">DevSecOps<a href="#devsecops" class="hash-link" aria-label="Direct link to DevSecOps" title="Direct link to DevSecOps">​</a></h3><ul><li>Today (03.03) was the deadline for Quality Gate 5. The System Team have collaborated with the paticipating teams to solve all remaining issues and most of them have already passed the gate.</li><li>New <a href="https://eclipse-tractusx.github.io/docs/release/trg-0/" target="_blank" rel="noopener noreferrer">Draft TRGs</a> are available. These have a proposed mandatory that, so everyone can prepare to meet the new requirements.<ul><li>Kubernetes versions: each product need to support 3 versions of Kubernetes that can be checked and covered with <code>helm test</code> at a future date.</li><li>Upgradeability: each product need to succeessfully perform an <code>helm upgrade</code> command on an already deployed chart</li><li>Helm test: each product need to run <code>helm test</code> github actions on different occasions. This spins up a kind kubernetes cluster, deploys the helm chart and runs predefined tests on it.</li></ul></li></ul><h3 class="anchor anchorWithStickyNavbar_LWe7" id="security">Security<a href="#security" class="hash-link" aria-label="Direct link to Security" title="Direct link to Security">​</a></h3><ul><li>New vulnerabilities can appear on applications without any code changes, that is a normal behaviour. Keep an eye on the problems and update your dependency packages accordingly.</li><li>GitGuardian is available on eclipse-tractusx repositories. If a secret is detected, the Security Teams sends an email to the team. In some cases the found secret is just a dummy value it can be flagged so the scan will ignore it, but be cautious not to ignore any secrets that can expose vulnerabilities!</li></ul><h3 class="anchor anchorWithStickyNavbar_LWe7" id="foss">FOSS<a href="#foss" class="hash-link" aria-label="Direct link to FOSS" title="Direct link to FOSS">​</a></h3><ul><li>Keep an eye on the Developer Hub's <a href="https://eclipse-tractusx.github.io/docs/category/open-source-development" target="_blank" rel="noopener noreferrer">Open Source Development</a> section as new articles are available.</li><li>Eclipse Office Hour calendar is available <a href="https://www.eclipse.org/projects/calendar/" target="_blank" rel="noopener noreferrer">here</a></li></ul><h2 class="anchor anchorWithStickyNavbar_LWe7" id="open-discussions">Open discussions<a href="#open-discussions" class="hash-link" aria-label="Direct link to Open discussions" title="Direct link to Open discussions">​</a></h2><ul><li>If a product has a dependency helm chart that is currently not working, it can be configured with the default values.yaml file to specific needs. Mocks can also be created.</li><li>The application needs to start up without crashing using the default values.yaml file.</li><li>A common API documentation is being prepared to be available on the <a href="https://eclipse-tractusx.github.io/" target="_blank" rel="noopener noreferrer">Eclipse TractusX website</a>. Each team will be able to share their API docs here. In the meantime it can be published on the repository's GitHub pages as well.</li></ul><h2 class="anchor anchorWithStickyNavbar_LWe7" id="session-recording">Session recording<a href="#session-recording" class="hash-link" aria-label="Direct link to Session recording" title="Direct link to Session recording">​</a></h2><p>You can find the recording <a href="https://bcgcatenax.sharepoint.com/:v:/r/sites/CommunitiesofPractises/Shared%20Documents/CX-CoP%20DevSecOps/Office_Hours_Regular_Recordings/20230303_DevSecOps%20Business%20Hours-Recording.mp4?csf=1&amp;web=1" target="_blank" rel="noopener noreferrer">here</a>.</p>]]></content>
+        <author>
+            <name>DevSecOps Team</name>
+            <uri>https://github.com/catenax-ng</uri>
+        </author>
+        <category label="news" term="news"/>
+        <category label="officehour" term="officehour"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Office Hours 2023-02-24]]></title>
         <id>https://catena-x.net/blog/Office Hours 2023-02-24</id>
