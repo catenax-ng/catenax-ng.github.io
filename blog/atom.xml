@@ -2,11 +2,25 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://catena-x.net/blog</id>
     <title>Catena-X - DevSecOps Blog</title>
-    <updated>2023-03-31T00:00:00.000Z</updated>
+    <updated>2023-04-14T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://catena-x.net/blog"/>
     <subtitle>Catena-X - DevSecOps Blog</subtitle>
     <icon>https://catena-x.net/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[Office Hours 2023-04-14]]></title>
+        <id>https://catena-x.net/blog/Office Hours 2023-04-14</id>
+        <link href="https://catena-x.net/blog/Office Hours 2023-04-14"/>
+        <updated>2023-04-14T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[General updates / information]]></summary>
+        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="general-updates--information">General updates / information<a href="#general-updates--information" class="hash-link" aria-label="Direct link to General updates / information" title="Direct link to General updates / information">​</a></h2><h3 class="anchor anchorWithStickyNavbar_LWe7" id="devsecops">DevSecOps<a href="#devsecops" class="hash-link" aria-label="Direct link to DevSecOps" title="Direct link to DevSecOps">​</a></h3><ul><li>no update</li></ul><h3 class="anchor anchorWithStickyNavbar_LWe7" id="security">Security<a href="#security" class="hash-link" aria-label="Direct link to Security" title="Direct link to Security">​</a></h3><ul><li>no update</li></ul><h3 class="anchor anchorWithStickyNavbar_LWe7" id="foss">FOSS<a href="#foss" class="hash-link" aria-label="Direct link to FOSS" title="Direct link to FOSS">​</a></h3><ul><li>Overview of upcoming FOSS TRGs:<ul><li>TRG 7.07 Legal information for cryptography</li><li>TRG 7.08 Recurring activities (like updating licence headers to the current year)</li></ul></li><li>Reminder of TRG 7.02 <a href="https://eclipse-tractusx.github.io/docs/release/trg-0/trg-7-02" target="_blank" rel="noopener noreferrer">License and Copyright header</a> as there were multiple PRs with incomplete licence information<ul><li>Use proper templating for licence headers to prevent this in future</li><li>Ensure a proper SPDX licence identifier to enable automatic scanning</li><li>if there are multiple contributors do not squash the commits to preserve the git history</li><li>proposal for a licence header checker as github action<ul><li>or even a general checker (action) to include features like automatic dependency file check (courtesy of IRS team)</li><li>input/contributions from all product teams are welcome</li></ul></li></ul></li></ul><h2 class="anchor anchorWithStickyNavbar_LWe7" id="open-discussions">Open discussions<a href="#open-discussions" class="hash-link" aria-label="Direct link to Open discussions" title="Direct link to Open discussions">​</a></h2><ul><li>Helm upgrade (without vault) will generate secrets even if they exist already, e.g. db passwords. - Evelyn Gurschler is preparing a fix and will announce it in the CoP Channel</li><li>(digital twin) registry is now publicly available in Tractus-X as <a href="https://github.com/eclipse-tractusx/sldt-digital-twin-registry" target="_blank" rel="noopener noreferrer">sldt-digital-twin-registry</a></li><li>deprecated <a href="https://github.com/catenax-ng/catenax-at-home/pkgs/container/catenax-at-home%2Fprovider-backend-service" target="_blank" rel="noopener noreferrer">provider-backend-service</a> is still used by multiple teams. - Max Wesener will contact EDC team and give an update next office hours</li><li>Current security issue in Springboot. All teams should upgrade to v3.0.5</li><li>Network policies are available and can be used. Siegfried Kiermeyer offered help to review them</li><li>the Veracode secret in Tractus-X has been duplicated with the "ORG_" prefix to align it with Catena-X NG</li><li>There are no Veracode/Sonarcloud checks for external forks (workflow has no access to the organization secrets here)<ul><li>workflows should exclude these runs to avoid failed runs or switch in these cases to FOSS tools like Trivy</li><li>Security team will discuss this in their next meeting</li></ul></li><li>A new section for small code snippets will be added to the homepage</li></ul><h2 class="anchor anchorWithStickyNavbar_LWe7" id="session-recording">Session recording<a href="#session-recording" class="hash-link" aria-label="Direct link to Session recording" title="Direct link to Session recording">​</a></h2><p>You can find the recording <a href="https://bcgcatenax.sharepoint.com/:v:/r/sites/CommunitiesofPractises/Shared%20Documents/CX-CoP%20DevSecOps/Office_Hours_Regular_Recordings/20230407_DevSecOps%20Business%20Hours-Recording.mp4?csf=1&amp;web=1&amp;e=axvUmG" target="_blank" rel="noopener noreferrer">here</a>.</p>]]></content>
+        <author>
+            <name>DevSecOps Team</name>
+            <uri>https://github.com/catenax-ng</uri>
+        </author>
+        <category label="news" term="news"/>
+        <category label="officehour" term="officehour"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Office Hours 2023-03-31]]></title>
         <id>https://catena-x.net/blog/Office Hours 2023-03-31</id>
