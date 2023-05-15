@@ -2,11 +2,25 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://catena-x.net/blog</id>
     <title>Catena-X - DevSecOps Blog</title>
-    <updated>2023-05-05T00:00:00.000Z</updated>
+    <updated>2023-05-12T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://catena-x.net/blog"/>
     <subtitle>Catena-X - DevSecOps Blog</subtitle>
     <icon>https://catena-x.net/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[Office Hours 2023-05-12]]></title>
+        <id>https://catena-x.net/blog/Office Hours 2023-05-12</id>
+        <link href="https://catena-x.net/blog/Office Hours 2023-05-12"/>
+        <updated>2023-05-12T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[General updates / information]]></summary>
+        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="general-updates--information">General updates / information<a href="#general-updates--information" class="hash-link" aria-label="Direct link to General updates / information" title="Direct link to General updates / information">​</a></h2><h3 class="anchor anchorWithStickyNavbar_LWe7" id="devsecops">DevSecOps<a href="#devsecops" class="hash-link" aria-label="Direct link to DevSecOps" title="Direct link to DevSecOps">​</a></h3><ul><li>Our Support process is moving to <a href="https://github.com/eclipse-tractusx/sig-infra/issues/new/choose" target="_blank" rel="noopener noreferrer">GitHub issues</a></li><li>Example for fixing bugs, after baseline for release is set (after e2e tests)<ul><li>DAPS registration service 2.0.2 has been cleared in e2e tests</li><li>new bugfix release after e2e tests <a href="https://github.com/eclipse-tractusx/daps-registration-service/releases/tag/v2.0.7" target="_blank" rel="noopener noreferrer">v2.0.7</a> with QG fixes created</li><li>v2.0.2 will be added to the <a href="https://github.com/eclipse-tractusx/tractus-x-release/blob/main/CHANGELOG.md" target="_blank" rel="noopener noreferrer">overarching release notes</a></li></ul></li></ul><h3 class="anchor anchorWithStickyNavbar_LWe7" id="security">Security<a href="#security" class="hash-link" aria-label="Direct link to Security" title="Direct link to Security">​</a></h3><ul><li>Still budget left for external penetration tests</li><li>Idea: maybe use it to test a whole network setup instead of standalone apps</li></ul><h3 class="anchor anchorWithStickyNavbar_LWe7" id="foss">FOSS<a href="#foss" class="hash-link" aria-label="Direct link to FOSS" title="Direct link to FOSS">​</a></h3><ul><li>Reminder and shoutout to become an official Eclipse Tractus-X contributor<ul><li>Every committer can grant you this role</li><li>Will grant triage permissions on GitHub</li><li>What you can do with it: ask for review (assign), approve reviews or request changes, edit labels on issues</li></ul></li><li>Reminder: Try to avoid 2 EF accounts. If you created a second one by accident, contact EMO to delete the unnecessary one<ul><li>Reminder: open PRs frequently and early to avoid IP issue pileup at the EF. Especially shortly before our Release. This could risk our release</li></ul></li></ul><h2 class="anchor anchorWithStickyNavbar_LWe7" id="open-discussions">Open discussions<a href="#open-discussions" class="hash-link" aria-label="Direct link to Open discussions" title="Direct link to Open discussions">​</a></h2><ul><li>Shoutout to <a href="https://github.com/nektos/act" target="_blank" rel="noopener noreferrer">nektos/act</a> -&gt; Test your GitHub actions locally. Avoids push + test; push + test ping-pong</li><li>Discussed GitHub Notification configuration -&gt; Auto-watch setting could be a good candidate to disable.</li></ul><h2 class="anchor anchorWithStickyNavbar_LWe7" id="session-recording">Session recording<a href="#session-recording" class="hash-link" aria-label="Direct link to Session recording" title="Direct link to Session recording">​</a></h2><p>You can find the recording <a href="https://bcgcatenax.sharepoint.com/sites/CommunitiesofPractises/_layouts/15/stream.aspx?id=%2Fsites%2FCommunitiesofPractises%2FShared+Documents%2FCX-CoP+DevSecOps%2FOffice_Hours_Regular_Recordings%2F20230512_DevSecOps+Business+Hours-Recording.mp4&amp;referrer=Teams.TEAMS-WEB&amp;referrerScenario=teamsSdk-openFilePreview&amp;referrer=Teams.TEAMS-WEB&amp;referrerScenario=p2p_ns-bim&amp;web=1" target="_blank" rel="noopener noreferrer">here</a>.</p>]]></content>
+        <author>
+            <name>DevSecOps Team</name>
+            <uri>https://github.com/catenax-ng</uri>
+        </author>
+        <category label="news" term="news"/>
+        <category label="officehour" term="officehour"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Office Hours 2023-05-05]]></title>
         <id>https://catena-x.net/blog/Office Hours 2023-05-05</id>
