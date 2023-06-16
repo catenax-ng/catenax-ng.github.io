@@ -10,7 +10,7 @@ tags: [ news, officehour ]
 ### DevSecOps
 
 - All Azure AKS Kubernetes clusters have been upgraded to version 1.25.6
-- For support/questions on how to use GitHub Project, boards please open a new discussion [here](https://github.com/eclipse-tractusx/sig-infra/discussions/new/choose)
+- For support/questions on how to use GitHub Project, boards please see [this discussion](https://github.com/eclipse-tractusx/sig-infra/discussions/78)
 
 ### Security
 
