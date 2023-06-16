@@ -2,11 +2,26 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://catena-x.net/blog</id>
     <title>Catena-X - DevSecOps Blog</title>
-    <updated>2023-06-02T00:00:00.000Z</updated>
+    <updated>2023-06-09T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://catena-x.net/blog"/>
     <subtitle>Catena-X - DevSecOps Blog</subtitle>
     <icon>https://catena-x.net/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[Office Hours 2023-06-09]]></title>
+        <id>https://catena-x.net/blog/Office Hours 2023-06-09</id>
+        <link href="https://catena-x.net/blog/Office Hours 2023-06-09"/>
+        <updated>2023-06-09T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[General updates / information]]></summary>
+        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="general-updates--information">General updates / information<a href="#general-updates--information" class="hash-link" aria-label="Direct link to General updates / information" title="Direct link to General updates / information">​</a></h2><h3 class="anchor anchorWithStickyNavbar_LWe7" id="devsecops">DevSecOps<a href="#devsecops" class="hash-link" aria-label="Direct link to DevSecOps" title="Direct link to DevSecOps">​</a></h3><ul><li>All Azure AKS Kubernetes clusters have been upgraded to version 1.25.6</li><li>For support/questions on how to use GitHub Project, boards please see <a href="https://github.com/eclipse-tractusx/sig-infra/discussions/78" target="_blank" rel="noopener noreferrer">this discussion</a></li></ul><h3 class="anchor anchorWithStickyNavbar_LWe7" id="security">Security<a href="#security" class="hash-link" aria-label="Direct link to Security" title="Direct link to Security">​</a></h3><ul><li>Assessments are done for SSI and Digital Twin products for next release 3.2</li><li>There were discussons with Eclipse on which security tools are being used and how to use them</li></ul><h3 class="anchor anchorWithStickyNavbar_LWe7" id="foss">FOSS<a href="#foss" class="hash-link" aria-label="Direct link to FOSS" title="Direct link to FOSS">​</a></h3><ul><li>For frontend components there is a need to have an About tab with legal information. Descriptions are available for reusable components from Portal team <a href="https://eclipse-tractusx.github.io/docs/release/trg-7/trg-7-06#description" target="_blank" rel="noopener noreferrer">here</a></li><li>There are some dependency issues open as eslint changed their license for one of the new versions</li><li>GitHub Copilot currently can't be used to contribute to the Eclipse Foundation as people have signed the Eclipse Contributor Agreement. This topic will be revisited in the future</li></ul><h2 class="anchor anchorWithStickyNavbar_LWe7" id="open-discussions">Open discussions<a href="#open-discussions" class="hash-link" aria-label="Direct link to Open discussions" title="Direct link to Open discussions">​</a></h2><ul><li>Some info can be found <a href="https://github.com/eclipse-tractusx/.github/pull/5/files" target="_blank" rel="noopener noreferrer">here</a> and <a href="https://github.com/eclipse-tractusx/.github/blob/main/.github/ISSUE_TEMPLATE/system-team-qg-checklist.md" target="_blank" rel="noopener noreferrer">here</a> about what to check when someone opens a PR in Eclipse Tractus-X</li></ul><h2 class="anchor anchorWithStickyNavbar_LWe7" id="session-recording">Session recording<a href="#session-recording" class="hash-link" aria-label="Direct link to Session recording" title="Direct link to Session recording">​</a></h2><p>You can find the
+recording <a href="https://bcgcatenax.sharepoint.com/sites/CommunitiesofPractises/Shared%20Documents/Forms/AllItems.aspx?FolderCTID=0x01200075F4DD2D705FA349B372CD3378FD1093&amp;id=%2Fsites%2FCommunitiesofPractises%2FShared%20Documents%2FCX%2DCoP%20DevSecOps%2FOffice%5FHours%5FRegular%5FRecordings%2F20230609%5FDevSecOps%20Business%20Hours%2DRecording%2Emp4&amp;parent=%2Fsites%2FCommunitiesofPractises%2FShared%20Documents%2FCX%2DCoP%20DevSecOps%2FOffice%5FHours%5FRegular%5FRecordings" target="_blank" rel="noopener noreferrer">here</a>.</p>]]></content>
+        <author>
+            <name>DevSecOps Team</name>
+            <uri>https://github.com/catenax-ng</uri>
+        </author>
+        <category label="news" term="news"/>
+        <category label="officehour" term="officehour"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Office Hours 2023-06-02]]></title>
         <id>https://catena-x.net/blog/Office Hours 2023-06-02</id>
