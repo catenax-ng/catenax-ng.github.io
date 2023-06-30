@@ -2,11 +2,28 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://catena-x.net/blog</id>
     <title>Catena-X - DevSecOps Blog</title>
-    <updated>2023-06-16T00:00:00.000Z</updated>
+    <updated>2023-06-30T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://catena-x.net/blog"/>
     <subtitle>Catena-X - DevSecOps Blog</subtitle>
     <icon>https://catena-x.net/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[Office Hours 2023-06-30]]></title>
+        <id>https://catena-x.net/blog/Office Hours 2023-06-30</id>
+        <link href="https://catena-x.net/blog/Office Hours 2023-06-30"/>
+        <updated>2023-06-30T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[General updates / information]]></summary>
+        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="general-updates--information">General updates / information<a href="#general-updates--information" class="hash-link" aria-label="Direct link to General updates / information" title="Direct link to General updates / information">​</a></h2><h3 class="anchor anchorWithStickyNavbar_LWe7" id="devsecops">DevSecOps<a href="#devsecops" class="hash-link" aria-label="Direct link to DevSecOps" title="Direct link to DevSecOps">​</a></h3><ul><li>Currently working on automated release guideline checks</li><li>Goal is to create reusable workflows and actions</li><li>Potentially coming with this is automated GitHub release creation workflows</li><li>Kind request: In case you face issues or have questions about EF processes, like the ECA check, or you do not know how to fix issues with the ECA check,
+consider opening a support issue on <a href="https://github.com/eclipse-tractusx/sig-infra" target="_blank" rel="noopener noreferrer">sig-infra</a>.
+These are issues, that we most likely already faced and solved. It can also help to reduce the workload on the EF.</li></ul><h3 class="anchor anchorWithStickyNavbar_LWe7" id="security">Security<a href="#security" class="hash-link" aria-label="Direct link to Security" title="Direct link to Security">​</a></h3><ul><li>New <a href="https://eclipse-tractusx.github.io/docs/release/trg-7/trg-7-01/#security-file" target="_blank" rel="noopener noreferrer">SECURITY.md</a> file, that emphasizes GitHub security advisories</li><li>Announcement: Next week, Veracode will showcase their new product "Veracode Fix" in the office hour</li></ul><h3 class="anchor anchorWithStickyNavbar_LWe7" id="foss">FOSS<a href="#foss" class="hash-link" aria-label="Direct link to FOSS" title="Direct link to FOSS">​</a></h3><ul><li>Reminder: There is a Mail on the tractus-x-dev mailing list, asking for anyone feeling responsible for currently uninitialized repositories (10 repos currently)</li><li>Please make sure, that you initialize repositories at least with the legal documentation, after you requested them from the EF</li><li>Kind request: Please share improvements, that you achieved together with the EF, since they might be relevant for others as well. Thanks, Paul for doing this with the "public to maven central" workflow!</li></ul><h2 class="anchor anchorWithStickyNavbar_LWe7" id="open-discussions">Open discussions<a href="#open-discussions" class="hash-link" aria-label="Direct link to Open discussions" title="Direct link to Open discussions">​</a></h2><ul><li>Question regarding <a href="https://eclipse-tractusx.github.io/docs/release/trg-7/trg-7-07" target="_blank" rel="noopener noreferrer">TRG 7.07</a>; CC-BY-4.0 vs, Apache-2.0 license<ul><li>There are parts in the consortial contract, that are dedicated to a use of CC-BY-4.0 for documentation</li><li>It is not clearly defined, what kind of documentation this is refering to</li><li>The decision might have to be made on a product and maybe even on a document basis</li><li>Stay tuned for potential updates. We are working on clarification.</li></ul></li><li>Specific support, in case you want to look into the recording<ul><li>Issue configuring environment specific values for a Chart in Argo CD</li><li>Dashboards in Grafana instances</li></ul></li></ul><h2 class="anchor anchorWithStickyNavbar_LWe7" id="session-recording">Session recording<a href="#session-recording" class="hash-link" aria-label="Direct link to Session recording" title="Direct link to Session recording">​</a></h2><p>You can find the
+recording <a href="https://bcgcatenax.sharepoint.com/sites/CommunitiesofPractises/_layouts/15/stream.aspx?id=%2Fsites%2FCommunitiesofPractises%2FShared%20Documents%2FCX%2DCoP%20DevSecOps%2FOffice%5FHours%5FRegular%5FRecordings%2FCXDevSecOps%20Office%20Hours%2D20230630%5F120755%2DMeeting%20Recording%2Emp4" target="_blank" rel="noopener noreferrer">here</a>.</p>]]></content>
+        <author>
+            <name>DevSecOps Team</name>
+            <uri>https://github.com/catenax-ng</uri>
+        </author>
+        <category label="news" term="news"/>
+        <category label="officehour" term="officehour"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Office Hours 2023-06-16]]></title>
         <id>https://catena-x.net/blog/Office Hours 2023-06-16</id>
