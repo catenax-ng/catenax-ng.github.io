@@ -4,10 +4,33 @@
         <title>Catena-X - DevSecOps Blog</title>
         <link>https://catena-x.net/blog</link>
         <description>Catena-X - DevSecOps Blog</description>
-        <lastBuildDate>Fri, 04 Aug 2023 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 25 Aug 2023 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[Office Hours 2023-08-25]]></title>
+            <link>https://catena-x.net/blog/Office Hours 2023-08-25</link>
+            <guid>https://catena-x.net/blog/Office Hours 2023-08-25</guid>
+            <pubDate>Fri, 25 Aug 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[General updates / information]]></description>
+            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="general-updates--information">General updates / information<a href="#general-updates--information" class="hash-link" aria-label="Direct link to General updates / information" title="Direct link to General updates / information">​</a></h2><h3 class="anchor anchorWithStickyNavbar_LWe7" id="devsecops">DevSecOps<a href="#devsecops" class="hash-link" aria-label="Direct link to DevSecOps" title="Direct link to DevSecOps">​</a></h3><ul><li>ArgoCD update 2.6 → 2.7 in preparation. If your interested in what's
+new: <a href="https://www.youtube.com/watch?v=00KxYdJKrSo" target="_blank" rel="noopener noreferrer">https://www.youtube.com/watch?v=00KxYdJKrSo</a></li><li>Repetition and pointing to<ul><li><a href="https://eclipse-tractusx.github.io/sig-release/" target="_blank" rel="noopener noreferrer">Release Guideline Checks Dashboard</a></li><li><a href="https://eclipse-tractusx.github.io/docs/release/trg-5/trg-5-11" target="_blank" rel="noopener noreferrer">TRG 5.11 - Upgradeability</a> (Prerelease state)</li><li>Contribute to <a href="https://github.com/eclipse-tractusx/e2e-testing" target="_blank" rel="noopener noreferrer">e2e Helm Chart</a></li></ul></li></ul><h3 class="anchor anchorWithStickyNavbar_LWe7" id="security">Security<a href="#security" class="hash-link" aria-label="Direct link to Security" title="Direct link to Security">​</a></h3><ul><li>License for Invicty. Please contact Security Team (Lokesh Gujre or Piotr Stys) in case of new apps needs to be
+scanned.</li></ul><h3 class="anchor anchorWithStickyNavbar_LWe7" id="foss">FOSS<a href="#foss" class="hash-link" aria-label="Direct link to FOSS" title="Direct link to FOSS">​</a></h3><p>During the QG Checks a couple of things popped up:</p><ul><li>Commit messages/PR Description<br>Please do not reference closed systems like Catena-X Consortia Jira Tickets. The content is no public accessible but
+only for consortia members. Please be descriptive in your Commit messages and Pull Request descriptions.</li><li>Do not invent new legal documentation (e.g. <code>COPYRIGHT.md</code>), please
+follow <a href="https://eclipse-tractusx.github.io/docs/release/trg-7/trg-7-01" target="_blank" rel="noopener noreferrer">TRG 7.01 - Legal Documentation</a></li><li>Documentation and licensing<br>Be careful with licensing your documentation (e.g. content of <code>/docs</code> folder in product repositories). There is no
+requirement to change the licensing of documentation to e.g. Creative Commons, there has been some confusion about in
+the
+past. <a href="https://eclipse-tractusx.github.io/docs/release/trg-7/trg-7-06/" target="_blank" rel="noopener noreferrer">TRG 7-06 - Legal notice for end user content</a>
+contains an example how to add a notice section.</li><li>HasiCorp moved from Mozilla Public License v2.0 (MPL 2.0) to the Business Source License (BSL, or BUSL) v1.1 for
+future releases of all products and several libraries. Please
+use <a href="https://github.com/eclipse-tractusx/sig-infra/discussions/233" target="_blank" rel="noopener noreferrer">this GH Discussion</a> to give feedback if your
+product has dependencies to HashiCorp products or not.</li></ul><h2 class="anchor anchorWithStickyNavbar_LWe7" id="open-discussions">Open discussions<a href="#open-discussions" class="hash-link" aria-label="Direct link to Open discussions" title="Direct link to Open discussions">​</a></h2><ul><li>Test automation on environments: Consortia vs Helm test + kind</li><li>Upgradability of Postgresql Helm Charts as the Bitnami Chart do not offer an applicable way to upgrade between major
+PostgreSQL versions.</li><li>How to get support</li></ul><h2 class="anchor anchorWithStickyNavbar_LWe7" id="session-recording">Session recording<a href="#session-recording" class="hash-link" aria-label="Direct link to Session recording" title="Direct link to Session recording">​</a></h2><ul><li>You can find the
+recording <a href="https://bcgcatenax.sharepoint.com/:v:/r/sites/CommunitiesofPractises/Shared%20Documents/CX-CoP%20DevSecOps/Office_Hours_Regular_Recordings/20230824_DevSecOps-Office-Hour.mp4?csf=1&amp;web=1&amp;e=eFWQxO" target="_blank" rel="noopener noreferrer">here</a>.</li></ul>]]></content:encoded>
+            <category>news</category>
+            <category>officehour</category>
+        </item>
         <item>
             <title><![CDATA[Office Hours 2023-08-04]]></title>
             <link>https://catena-x.net/blog/Office Hours 2023-08-04</link>
