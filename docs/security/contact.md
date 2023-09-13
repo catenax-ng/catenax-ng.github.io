@@ -21,11 +21,8 @@ We support the GitHub organizations: [Eclipse Tractus-X](https://github.com/ecli
 We group repositories into:
 
 - Forks: Copies of Eclipse Tractus-X repos.
-
 - Playgrounds: Places where it is allowed to play, templates and documentation.
-
 - Products: Repos in  Eclipse Tractus-X which are subject to quality gates and releases.
-
 - Archived repos: No longer actively maintained repos (~plus entirely quality-less and insecure repos).
 
 **Product repos must use our entire arsenal of security tools.**
