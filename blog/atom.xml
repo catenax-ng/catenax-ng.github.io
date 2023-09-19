@@ -23,6 +23,20 @@ recording <a href="https://bcgcatenax.sharepoint.com/sites/CommunitiesofPractise
         <category label="officehour" term="officehour"/>
     </entry>
     <entry>
+        <title type="html"><![CDATA[Office Hours 2023-09-01]]></title>
+        <id>https://catena-x.net/blog/Office Hours 2023-09-01</id>
+        <link href="https://catena-x.net/blog/Office Hours 2023-09-01"/>
+        <updated>2023-09-01T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[General updates / information]]></summary>
+        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="general-updates--information">General updates / information<a href="#general-updates--information" class="hash-link" aria-label="Direct link to General updates / information" title="Direct link to General updates / information">​</a></h2><h3 class="anchor anchorWithStickyNavbar_LWe7" id="devsecops">DevSecOps<a href="#devsecops" class="hash-link" aria-label="Direct link to DevSecOps" title="Direct link to DevSecOps">​</a></h3><ul><li>QG 4 Checks are ongoing</li><li>Remark to the QG Checks and a friendly reminder to always keep your Dependency file up to date on your release branch too (if available) and check them regularly see <a href="https://eclipse-tractusx.github.io/docs/release/trg-7/trg-7-01#dependency-file" target="_blank" rel="noopener noreferrer">TRG</a></li></ul><h3 class="anchor anchorWithStickyNavbar_LWe7" id="security">Security<a href="#security" class="hash-link" aria-label="Direct link to Security" title="Direct link to Security">​</a></h3><ul><li>no security member was available</li></ul><h3 class="anchor anchorWithStickyNavbar_LWe7" id="foss">FOSS<a href="#foss" class="hash-link" aria-label="Direct link to FOSS" title="Direct link to FOSS">​</a></h3><ul><li>If you have some addition to the FAQ or LINKS you want to add, please create a PR</li><li>Open Committer Election within the next weeks, please double-check your Junk Mail Folder if you didn't get the mail for the voting</li><li>Link to Committer Election: <a href="https://projects.eclipse.org/projects/automotive.tractusx/elections/election-sahil-aggarwal-committer-eclipse-tractus-x" target="_blank" rel="noopener noreferrer">Sahil Aggarwal</a></li><li>For the committers: "Please vote for the new committers"</li></ul><h2 class="anchor anchorWithStickyNavbar_LWe7" id="open-discussions">Open discussions<a href="#open-discussions" class="hash-link" aria-label="Direct link to Open discussions" title="Direct link to Open discussions">​</a></h2><ul><li>Discussion on vault image as base image related to the Hashicorp license switch to <a href="https://www.hashicorp.com/bsl" target="_blank" rel="noopener noreferrer">BSL</a></li><li>Link to the <a href="https://github.com/eclipse-tractusx/sig-infra/discussions/233" target="_blank" rel="noopener noreferrer">discussion</a> of licence switch from HashiCorp and issue link that was raised <a href="https://github.com/eclipse-tractusx/sig-infra/issues/247" target="_blank" rel="noopener noreferrer">issue</a></li></ul><h2 class="anchor anchorWithStickyNavbar_LWe7" id="session-recording">Session recording<a href="#session-recording" class="hash-link" aria-label="Direct link to Session recording" title="Direct link to Session recording">​</a></h2><ul><li>You can find the recording <a href="https://bcgcatenax.sharepoint.com/:v:/r/sites/CommunitiesofPractises/Shared%20Documents/CX-CoP%20DevSecOps/Office_Hours_Regular_Recordings/20230901_DevSecOps%20Business%20Hours-Recording.mp4?csf=1&amp;web=1&amp;e=aTWGKo" target="_blank" rel="noopener noreferrer">here</a>.</li></ul>]]></content>
+        <author>
+            <name>DevSecOps Team</name>
+            <uri>https://github.com/catenax-ng</uri>
+        </author>
+        <category label="news" term="news"/>
+        <category label="officehour" term="officehour"/>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[Office Hours 2023-08-25]]></title>
         <id>https://catena-x.net/blog/Office Hours 2023-08-25</id>
         <link href="https://catena-x.net/blog/Office Hours 2023-08-25"/>
