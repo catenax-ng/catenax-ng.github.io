@@ -2,11 +2,34 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://catena-x.net/blog</id>
     <title>Catena-X - DevSecOps Blog</title>
-    <updated>2023-09-15T00:00:00.000Z</updated>
+    <updated>2023-09-22T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://catena-x.net/blog"/>
     <subtitle>Catena-X - DevSecOps Blog</subtitle>
     <icon>https://catena-x.net/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[Office Hours 2023-09-22]]></title>
+        <id>https://catena-x.net/blog/Office Hours 2023-09-22</id>
+        <link href="https://catena-x.net/blog/Office Hours 2023-09-22"/>
+        <updated>2023-09-22T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[General updates / information]]></summary>
+        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="general-updates--information">General updates / information<a href="#general-updates--information" class="hash-link" aria-label="Direct link to General updates / information" title="Direct link to General updates / information">​</a></h2><h3 class="anchor anchorWithStickyNavbar_LWe7" id="devsecops--system-team">DevSecOps / System-Team<a href="#devsecops--system-team" class="hash-link" aria-label="Direct link to DevSecOps / System-Team" title="Direct link to DevSecOps / System-Team">​</a></h3><ul><li><strong>Kubernetes Stack Updates</strong><ul><li>ArgoCD has been updated from 2.6 to 2.7 on all environments</li><li>Kube Prometheus Stack (Grafana, Prometheus) has been updated to v51.02 on all environments</li></ul></li><li><strong>Stable deployment</strong><br>If you face issues deploying your Applications to the STABLE environment please refer
+to <a href="https://teams.microsoft.com/l/message/19:9a3c4a05a3514d07b973c13e7b468709@thread.tacv2/1694764464843?tenantId=1ad22c6d-2f08-4f05-a0ba-e17f6ce88380&amp;groupId=17b1a2dc-67fb-4a49-a2ed-dd1344321439&amp;parentMessageId=1694764464843&amp;teamName=Communities%20of%20Practices&amp;channelName=CX%20-%20CoP%20DevSecOps&amp;createdTime=1694764464843&amp;allowXTenantAccess=false" target="_blank" rel="noopener noreferrer">this Thread in our DevSecOps CoP Channel</a>
+for known issues. In case of additional questions feel free to contact System Team.<br>Please don't forget to document any additional configuration steps in
+the <a href="https://teams.microsoft.com/l/channel/19%3awLi7FH4X8ruG89sVauZfx67lp2GsrMOZep5jA_b85lQ1%40thread.tacv2/General?groupId=bd3cce6a-8c62-47de-a4e7-4dc996ddf365&amp;tenantId=1ad22c6d-2f08-4f05-a0ba-e17f6ce88380" target="_blank" rel="noopener noreferrer">Stable 3.2 - Playbook General MS Teams channel</a>.
+In case you can not access the channel, please get in contact with Markus Billich.</li><li><strong>TRG proposal: TRG 1.04 Diagrams as Code</strong><br>Call for participation for this TRG:<ul><li><a href="https://github.com/eclipse-tractusx/sig-infra/discussions/19" target="_blank" rel="noopener noreferrer">Discussion</a></li><li><a href="https://github.com/eclipse-tractusx/eclipse-tractusx.github.io/pull/401" target="_blank" rel="noopener noreferrer">PullRequest</a></li></ul></li></ul><h3 class="anchor anchorWithStickyNavbar_LWe7" id="security">Security<a href="#security" class="hash-link" aria-label="Direct link to Security" title="Direct link to Security">​</a></h3><ul><li>CVE Version moved from 2 to 3. Please check your applications in Veracode, they might have changed from green to red.</li></ul><h3 class="anchor anchorWithStickyNavbar_LWe7" id="foss">FOSS<a href="#foss" class="hash-link" aria-label="Direct link to FOSS" title="Direct link to FOSS">​</a></h3><ul><li><strong>Failing ECA Checks</strong><br>In case of failing ECA checks when opening PRs to Eclipse-Tractusx, please check
+our <a href="https://eclipse-tractusx.github.io/docs/dev_faq/#the-eca-check-is-failing-while-merging-a-pr-what-to-do" target="_blank" rel="noopener noreferrer">FAQ</a>,
+especially point 3.</li><li><strong>Committer Elections</strong><br>Currently there are 2 elections ongoing for Tomazs Barwicki and Christoph Jung. Please get in contact with FOSS in
+case you want to propose a committer and start an election. This is an offer to you to provide good content in the
+proposal.</li><li><strong>Save the dates</strong><ul><li>EclipseCon 2023, 16. - 19. Oct. 2023, Ludwigsburg (Germany)</li><li>Eclipse-TractusX Community Days, 7. - 8. Dec. 2023, Munich (Germany)</li></ul></li></ul><h2 class="anchor anchorWithStickyNavbar_LWe7" id="open-discussions">Open discussions<a href="#open-discussions" class="hash-link" aria-label="Direct link to Open discussions" title="Direct link to Open discussions">​</a></h2><ul><li>Discussion about how to improve Kubernetes Pod readiness probes</li><li>Eclipse Dash License Tool used as maven plugin facing certificate issues</li><li>EDC implementation questions</li></ul><h2 class="anchor anchorWithStickyNavbar_LWe7" id="session-recording">Session recording<a href="#session-recording" class="hash-link" aria-label="Direct link to Session recording" title="Direct link to Session recording">​</a></h2><ul><li>You can find the
+recording <a href="https://bcgcatenax.sharepoint.com/:v:/r/sites/CommunitiesofPractises/Shared%20Documents/CX-CoP%20DevSecOps/Office_Hours_Regular_Recordings/Office%20Hour%2022.09.23.mp4?csf=1&amp;web=1&amp;e=jjOU4f&amp;nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZyIsInJlZmVycmFsQXBwUGxhdGZvcm0iOiJXZWIiLCJyZWZlcnJhbE1vZGUiOiJ2aWV3In19" target="_blank" rel="noopener noreferrer">here</a></li></ul>]]></content>
+        <author>
+            <name>DevSecOps Team</name>
+            <uri>https://github.com/catenax-ng</uri>
+        </author>
+        <category label="news" term="news"/>
+        <category label="officehour" term="officehour"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Office Hours 2023-09-15]]></title>
         <id>https://catena-x.net/blog/Office Hours 2023-09-15</id>
