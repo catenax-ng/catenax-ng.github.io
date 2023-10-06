@@ -18,7 +18,7 @@ tags: [ news, officehour ]
 
 ### FOSS
 
-- Tomasz Barwicki got elected as committer. The participation rate on the voting was really high and the committers are reminded that it is their duty to vote and be active.
+- [Tomasz Barwicki](https://github.com/tomaszbarwicki) got elected as committer. The participation rate on the voting was really high and the committers are reminded that it is their duty to vote and be active.
 - First Eclipse Tractus-X Community Days will be in Stuttgart on 7-8 December 2023. It will be organized by Catena-X association and the Eclipse Foundation. The timetable can be found [here](https://eclipse-tractusx.github.io/blog/community-days#what-awaits-you). Registration link is already open.
 - [EclipseCon](https://www.eclipsecon.org/2023) will be in Ludwigsburg on 16-19 October 2023. Registration is still open and Eclipse members like committers get a discount. There will be talks from some members of the Tractus-X community.
 
