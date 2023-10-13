@@ -14,7 +14,7 @@ tags: [ news, officehour ]
   - Repositories are now sorted in alphabetical order.
   - The team is aware of some issues (like base image detection) and are investigating a solution.
   - Please give us feedback if you find any issues or have some ideas on how to improve!
-- A [Release Planning board](https://github.com/orgs/eclipse-tractusx/projects/26/views/9)is available now on GitHub.
+- A [Release Planning board](https://github.com/orgs/eclipse-tractusx/projects/26/views/9) is available now on GitHub.
   - POs and PMs are being onboarded to have access to this new approach.
   - Issues are moved over to this new board from Jira.
   - You can read more about the working model [here](https://github.com/eclipse-tractusx/sig-release#sig-release).
