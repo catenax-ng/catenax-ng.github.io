@@ -4,10 +4,20 @@
         <title>Catena-X - DevSecOps Blog</title>
         <link>https://catena-x.net/blog</link>
         <description>Catena-X - DevSecOps Blog</description>
-        <lastBuildDate>Fri, 20 Oct 2023 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 27 Oct 2023 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[Office Hours 2023-10-27]]></title>
+            <link>https://catena-x.net/blog/Office Hours 2023-10-27</link>
+            <guid>https://catena-x.net/blog/Office Hours 2023-10-27</guid>
+            <pubDate>Fri, 27 Oct 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[General updates / information]]></description>
+            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="general-updates--information">General updates / information<a href="#general-updates--information" class="hash-link" aria-label="Direct link to General updates / information" title="Direct link to General updates / information">​</a></h2><h3 class="anchor anchorWithStickyNavbar_LWe7" id="devsecops--system-team">DevSecOps / System-Team<a href="#devsecops--system-team" class="hash-link" aria-label="Direct link to DevSecOps / System-Team" title="Direct link to DevSecOps / System-Team">​</a></h3><ul><li>Docker base image alignment<ul><li>Potentially, we won't publish all of our Docker images to DockerHub</li><li>We are working on docs for it</li><li>We will introduce "ignore" options for our automated TRG checks</li></ul></li><li>New support request template "Add me as Tractus-X project contributor"</li><li>Matrix Chat room icons<ul><li>Poll concluded with mostly "don't care" responses</li><li>If no one cares, we should maybe stick with the current icons. Least effort, IP already clear</li></ul></li></ul><h3 class="anchor anchorWithStickyNavbar_LWe7" id="security">Security<a href="#security" class="hash-link" aria-label="Direct link to Security" title="Direct link to Security">​</a></h3><ul><li>GitGuardian License prolonged</li><li>Working on a Snyk License for Tractus-X together with Eclipse Foundation</li><li>Security assessments will be migrated from Confluence to GitHub</li><li>Working on a bug bounty program</li></ul><h3 class="anchor anchorWithStickyNavbar_LWe7" id="foss">FOSS<a href="#foss" class="hash-link" aria-label="Direct link to FOSS" title="Direct link to FOSS">​</a></h3><ul><li>Ongoing and new committer elections: Please vote and spread the word</li><li>Reminder: Tractus-X Community Days 07. + 08. Dec</li></ul><h2 class="anchor anchorWithStickyNavbar_LWe7" id="open-discussions">Open discussions<a href="#open-discussions" class="hash-link" aria-label="Direct link to Open discussions" title="Direct link to Open discussions">​</a></h2><ul><li>Does "compiled" documentation also need legal docs? -&gt; Yes, but might be interesting to discuss the specific cases</li><li>Should we migrate existing GitHub Wiki documentation to Markdown -&gt; Yes<ul><li>Wikis can only be edited by committers</li><li>No PRs possible</li><li>An additional source of docs, that makes it hard to find</li></ul></li><li>General discussion about planning and linking issues/sub-tasks/stories<ul><li>Planning should all be done in eclipse-tractusx</li><li>Linking issues can be done in comments, so no contributor or committer privileges necessary</li><li>"sub-tasks" of any sorts can/should be created on component repo, where changes are done</li></ul></li></ul><h2 class="anchor anchorWithStickyNavbar_LWe7" id="session-recording">Session recording<a href="#session-recording" class="hash-link" aria-label="Direct link to Session recording" title="Direct link to Session recording">​</a></h2><ul><li>to come</li></ul>]]></content:encoded>
+            <category>news</category>
+            <category>officehour</category>
+        </item>
         <item>
             <title><![CDATA[Office Hours 2023-10-20]]></title>
             <link>https://catena-x.net/blog/Office Hours 2023-10-20</link>
