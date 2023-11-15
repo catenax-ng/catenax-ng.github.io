@@ -323,7 +323,7 @@ Default is dev and int (Hotel-Budapest).
 - Create a PAT within GitHub user account (machine user)
   settings - Developer settings - Personal access token. Be sure to give just the needed rights (read:package will be
   sufficient to deploy)
-- Now do a base64 encoding for the PAT $ echo -n "<username\>:<PAT\>" | base64
+- Now do a base64 encoding for the PAT $ echo -n "[USERNAME]:[PAT]" | base64
 - Create a file `.dockerconfigjson` containing the base-64 encoded PAT
 
   ```json
