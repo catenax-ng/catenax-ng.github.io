@@ -22,7 +22,7 @@ If your GitHub repo is set to private, you have to do following to be able to on
 - Click your Secrets Engine
 - Click "*Create secret +*"
 - In field "Path for this secret" type "deploy-key"
-- Under "Secret data" name the key "<product-name\>-deploy-key"
+- Under "Secret data" name the key "[PRODUCT_NAME]-deploy-key"
 - Paste your sshPrivateKey to the value field
 - Save
 - Provide this information to DevSecOps team with your ArgoCD project request
