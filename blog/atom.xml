@@ -2,11 +2,59 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://catena-x.net/blog</id>
     <title>Catena-X - DevSecOps Blog</title>
-    <updated>2023-11-03T00:00:00.000Z</updated>
+    <updated>2023-11-10T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://catena-x.net/blog"/>
     <subtitle>Catena-X - DevSecOps Blog</subtitle>
     <icon>https://catena-x.net/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[Office Hours 2023-11-10]]></title>
+        <id>https://catena-x.net/blog/Office Hours 2023-11-10</id>
+        <link href="https://catena-x.net/blog/Office Hours 2023-11-10"/>
+        <updated>2023-11-10T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[General updates / information]]></summary>
+        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="general-updates--information">General updates / information<a href="https://catena-x.net/blog/Office%20Hours%202023-11-10#general-updates--information" class="hash-link" aria-label="Direct link to General updates / information" title="Direct link to General updates / information">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="devsecops--system-team">DevSecOps / System-Team<a href="https://catena-x.net/blog/Office%20Hours%202023-11-10#devsecops--system-team" class="hash-link" aria-label="Direct link to DevSecOps / System-Team" title="Direct link to DevSecOps / System-Team">​</a></h3>
+<ul>
+<li>AKS cluster updates began to follow Azure supported versions. Currently dev and int environment
+are upgraded to 1.27.3. Stable is still on 1.25.3 and will be upgraded at a future date before
+Tractus-X 23.12 release will be deployed.</li>
+<li>Please reply on this <a href="https://github.com/eclipse-tractusx/sig-infra/discussions/308" target="_blank" rel="noopener noreferrer">GH Discussion</a>
+so we can learn more about how different products leverage Postgresql.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="security">Security<a href="https://catena-x.net/blog/Office%20Hours%202023-11-10#security" class="hash-link" aria-label="Direct link to Security" title="Direct link to Security">​</a></h3>
+<ul>
+<li>Veracode reports red findings for a couple of products that needs to be addressed.</li>
+<li>Some hard coded tokens were found for EDC in catenax-ng repos. These are being investigated an addressed
+as soon as possible.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="foss">FOSS<a href="https://catena-x.net/blog/Office%20Hours%202023-11-10#foss" class="hash-link" aria-label="Direct link to FOSS" title="Direct link to FOSS">​</a></h3>
+<ul>
+<li><a href="https://github.com/ndr-brt" target="_blank" rel="noopener noreferrer">Andrea Bertagnolli</a> has been elected as a committer in the Eclipse Foundation
+and will join the Tractus-X project.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="open-discussions">Open discussions<a href="https://catena-x.net/blog/Office%20Hours%202023-11-10#open-discussions" class="hash-link" aria-label="Direct link to Open discussions" title="Direct link to Open discussions">​</a></h2>
+<ul>
+<li>The reason to move from Postgresql version 14 to 15 is to align each team and potentially prepare for
+a production environment where there might be a single instance of external database. Upgrading from
+version 14 to 15 using the Bitnami helm chart is possible and the process is being refined and documented
+and will be made available by the System Team at a later date.</li>
+<li>Catena-X does not have it's own CA to use for SSL. At the moment <a href="https://letsencrypt.org/" target="_blank" rel="noopener noreferrer">Let't Encrypt</a>
+is used to sign certificates for browser applications.</li>
+<li>You can read more about how to become a contributor and a committer <a href="https://eclipse-tractusx.github.io/docs/oss/getting-started" target="_blank" rel="noopener noreferrer">here</a> and <a href="https://eclipse-tractusx.github.io/docs/dev_faq#how-can-i-become-an-official-tractus-x-contributor-with-triage-role" target="_blank" rel="noopener noreferrer">here</a>. You can also open a support <a href="https://github.com/eclipse-tractusx/sig-infra/issues/new?assignees=&amp;labels=support&amp;projects=&amp;template=support-add-project-contributor.md&amp;title=New+Tractus-X+project+contributor" target="_blank" rel="noopener noreferrer">issue ticket</a> about becoming a contributor.</li>
+<li>A demo will be shown on how to generate PDF file from markdown using <a href="https://pandoc.org/" target="_blank" rel="noopener noreferrer">pandoc</a> soon.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="session-recording">Session recording<a href="https://catena-x.net/blog/Office%20Hours%202023-11-10#session-recording" class="hash-link" aria-label="Direct link to Session recording" title="Direct link to Session recording">​</a></h2>
+<ul>
+<li>You can find the recording <a href="https://bcgcatenax.sharepoint.com/sites/CommunitiesofPractises/_layouts/15/stream.aspx?id=%2Fsites%2FCommunitiesofPractises%2FShared%20Documents%2FCX%2DCoP%20DevSecOps%2FOffice%5FHours%5FRegular%5FRecordings%2FCXDevSecOps%20Office%20Hours%2D20231110%2Emp4&amp;referrer=StreamWebApp%2EWeb&amp;referrerScenario=AddressBarCopied%2Eview" target="_blank" rel="noopener noreferrer">HERE</a></li>
+</ul>]]></content>
+        <author>
+            <name>DevSecOps Team</name>
+            <uri>https://github.com/catenax-ng</uri>
+        </author>
+        <category label="news" term="news"/>
+        <category label="officehour" term="officehour"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Office Hours 2023-11-03]]></title>
         <id>https://catena-x.net/blog/Office Hours 2023-11-03</id>
@@ -1022,56 +1070,6 @@ These are issues, that we most likely already faced and solved. It can also help
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="session-recording">Session recording<a href="https://catena-x.net/blog/Office%20Hours%202023-06-30#session-recording" class="hash-link" aria-label="Direct link to Session recording" title="Direct link to Session recording">​</a></h2>
 <p>You can find the
 recording <a href="https://bcgcatenax.sharepoint.com/sites/CommunitiesofPractises/_layouts/15/stream.aspx?id=%2Fsites%2FCommunitiesofPractises%2FShared%20Documents%2FCX%2DCoP%20DevSecOps%2FOffice%5FHours%5FRegular%5FRecordings%2FCXDevSecOps%20Office%20Hours%2D20230630%5F120755%2DMeeting%20Recording%2Emp4" target="_blank" rel="noopener noreferrer">here</a>.</p>]]></content>
-        <author>
-            <name>DevSecOps Team</name>
-            <uri>https://github.com/catenax-ng</uri>
-        </author>
-        <category label="news" term="news"/>
-        <category label="officehour" term="officehour"/>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Office Hours 2023-06-23]]></title>
-        <id>https://catena-x.net/blog/Office Hours 2023-06-23</id>
-        <link href="https://catena-x.net/blog/Office Hours 2023-06-23"/>
-        <updated>2023-06-23T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[General updates / information]]></summary>
-        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="general-updates--information">General updates / information<a href="https://catena-x.net/blog/Office%20Hours%202023-06-23#general-updates--information" class="hash-link" aria-label="Direct link to General updates / information" title="Direct link to General updates / information">​</a></h2>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="devsecops">DevSecOps<a href="https://catena-x.net/blog/Office%20Hours%202023-06-23#devsecops" class="hash-link" aria-label="Direct link to DevSecOps" title="Direct link to DevSecOps">​</a></h3>
-<ul>
-<li>ArgoCD updated on all environments to version <a href="https://github.com/argoproj/argo-cd/releases/tag/v2.6.10" target="_blank" rel="noopener noreferrer">2.6.10</a>.</li>
-<li>Kube-Prometheus-Stack updated on all environments
-to <a href="https://github.com/prometheus-community/helm-charts/releases/tag/kube-prometheus-stack-47.0.0" target="_blank" rel="noopener noreferrer">47.0.0</a>.</li>
-</ul>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="security">Security<a href="https://catena-x.net/blog/Office%20Hours%202023-06-23#security" class="hash-link" aria-label="Direct link to Security" title="Direct link to Security">​</a></h3>
-<ul>
-<li>Ongoing security assessments (MIW, SSI).</li>
-<li>Please check your Veracode for findings and vulnerabilities as there has been some finding.</li>
-<li>Penetration test for Portal will start in july.</li>
-</ul>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="foss">FOSS<a href="https://catena-x.net/blog/Office%20Hours%202023-06-23#foss" class="hash-link" aria-label="Direct link to FOSS" title="Direct link to FOSS">​</a></h3>
-<ul>
-<li>Committer election for Phil and Enrico. Both introduced themselves and Angelika encouraged all Committers to vote.</li>
-<li>As we're expecting new Committers,
-the <a href="https://eclipse-tractusx.github.io/docs/developer" target="_blank" rel="noopener noreferrer">Eclipse-Tractus-X Developer Hub</a> was mentioned and the
-importance of our <a href="https://eclipse-tractusx.github.io/docs/release" target="_blank" rel="noopener noreferrer">TRGs</a>.</li>
-<li>Use the <a href="https://chat.eclipse.org/" target="_blank" rel="noopener noreferrer">Eclipse Matrix chat</a> to communicate and to ask questions, e.g. related
-to <a href="https://matrix.to/#/#eclipsefdn.ip-license-compliance:matrix.eclipse.org" target="_blank" rel="noopener noreferrer">IP issues</a>. There is also
-a <a href="https://matrix.to/#/#tools.tractus-x:matrix.eclipse.org" target="_blank" rel="noopener noreferrer">room for Eclipse-Tractus-X</a>.</li>
-<li>Next Catena-X will hit holiday season in August. Keep in mind, that resources at Eclipse Foundation (IP-Team),
-System-Team and Security-Team will have only limited resources available during holiday season.</li>
-<li>Repositories in Eclipse-Tractus-X should not stay for a long time in an uninitialized state, or without reasonable
-content. Take care of your repositories.</li>
-</ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="open-discussions">Open discussions<a href="https://catena-x.net/blog/Office%20Hours%202023-06-23#open-discussions" class="hash-link" aria-label="Direct link to Open discussions" title="Direct link to Open discussions">​</a></h2>
-<ul>
-<li>Problems with ECA checks and issues to rewrite the Git history with the correct email-address. Issue will be clarified
-in a dedicated session.</li>
-<li>Questions/discussions about how to use GitHub Projects and working with milestones. This is an ongoing task. In case
-of additional questions feel free to get in touch with Fabian from System-Team, who is in the lead with this topic.</li>
-</ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="session-recording">Session recording<a href="https://catena-x.net/blog/Office%20Hours%202023-06-23#session-recording" class="hash-link" aria-label="Direct link to Session recording" title="Direct link to Session recording">​</a></h2>
-<p>You can find the
-recording <a href="https://bcgcatenax.sharepoint.com/:v:/r/sites/CommunitiesofPractises/Shared%20Documents/CX-CoP%20DevSecOps/Office_Hours_Regular_Recordings/Office%20Hour%2023_06_23.mp4?csf=1&amp;web=1&amp;e=1dZWfO" target="_blank" rel="noopener noreferrer">here</a>.</p>]]></content>
         <author>
             <name>DevSecOps Team</name>
             <uri>https://github.com/catenax-ng</uri>
