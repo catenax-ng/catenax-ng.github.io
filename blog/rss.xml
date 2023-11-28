@@ -4,10 +4,69 @@
         <title>Catena-X - DevSecOps Blog</title>
         <link>https://catena-x.net/blog</link>
         <description>Catena-X - DevSecOps Blog</description>
-        <lastBuildDate>Fri, 10 Nov 2023 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 17 Nov 2023 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[Office Hours 2023-11-17]]></title>
+            <link>https://catena-x.net/blog/Office Hours 2023-11-17</link>
+            <guid>https://catena-x.net/blog/Office Hours 2023-11-17</guid>
+            <pubDate>Fri, 17 Nov 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[General updates / information]]></description>
+            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="general-updates--information">General updates / information<a href="https://catena-x.net/blog/Office%20Hours%202023-11-17#general-updates--information" class="hash-link" aria-label="Direct link to General updates / information" title="Direct link to General updates / information">​</a></h2>
+<ul>
+<li>Idea that System Team Office Hour will become more open - Please follow upcoming mailing list infos and <a href="https://chat.eclipse.org/#/room/#tractusx:matrix.eclipse.org" target="_blank" rel="noopener noreferrer">Eclipse Matrix Chat</a> discussions</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="devsecops--system-team">DevSecOps / System-Team<a href="https://catena-x.net/blog/Office%20Hours%202023-11-17#devsecops--system-team" class="hash-link" aria-label="Direct link to DevSecOps / System-Team" title="Direct link to DevSecOps / System-Team">​</a></h3>
+<ul>
+<li><em>Info</em>: Quality Gate  (QG) issues from System Team will come soon</li>
+<li><em>Info</em>: We are going to deploy <a href="https://kyverno.io/" target="_blank" rel="noopener noreferrer">Kyverno</a> to our clusters. Goal: Verify Release Guidelines at deploy time; Warnings at first; might be enforced in future</li>
+<li><em>Info</em>: sig-infra Support issue template "<a href="https://github.com/eclipse-tractusx/sig-infra/issues/new?assignees=&amp;labels=support&amp;projects=&amp;template=support-add-project-contributor.md&amp;title=New+Tractus-X+project+contributor" target="_blank" rel="noopener noreferrer">Add me as Tractus-X project contributor</a>" onboard a new user to our Eclipse Foundation can be handled by <strong>any</strong> committer depending on who was mentioned</li>
+<li>PostgresSQL Alignment required feedback - Please join the <a href="https://github.com/eclipse-tractusx/sig-infra/discussions/308" target="_blank" rel="noopener noreferrer">discussion</a></li>
+<li>Package manager upgrades in Dockerfiles are a "no-go" see <a href="https://eclipse-tractusx.github.io/docs/release/trg-4/trg-4-02" target="_blank" rel="noopener noreferrer">TRG 4.2</a></li>
+<li>Trivy workflow failing on HIGH findings see <a href="https://teams.microsoft.com/dl/launcher/launcher.html?url=%2F_%23%2Fl%2Fmessage%2F19%3Ameeting_NTQxZjkzNTQtYTc4MC00NzQ3LWE2N2YtMzQ5YzMyM2E1MzMw%40thread.v2%2F1700223757067%3Fcontext%3D%257B%2522contextType%2522%253A%2522chat%2522%257D&amp;type=message&amp;deeplinkId=216bcb26-39f8-480d-9952-bee5e7cdf145&amp;directDl=true&amp;msLaunch=true&amp;enableMobilePage=true&amp;suppressPrompt=true" target="_blank" rel="noopener noreferrer">here</a></li>
+<li>HashiCorp Vault tokens for EDC deployments --&gt; Please use the Argo CD Vault plugin mechanism.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="security">Security<a href="https://catena-x.net/blog/Office%20Hours%202023-11-17#security" class="hash-link" aria-label="Direct link to Security" title="Direct link to Security">​</a></h3>
+<ul>
+<li>Alternative to Invicti dynamic scanning with <a href="https://www.zaproxy.org/" target="_blank" rel="noopener noreferrer">OWASP ZAP</a> in elaboration</li>
+<li>GitGuardian secret scanning was done and security team get aware of HashiCorp Vault tokens problematic<!-- -->
+<ul>
+<li>will be a meeting in place on January 2024 and technique will be presented</li>
+</ul>
+</li>
+<li>QG Process is ongoing</li>
+<li>Token discussions are supported by the Security Team. If there are any questions, please contact them under <a href="https://github.com/eclipse-tractusx/sig-security/issues/new/choose" target="_blank" rel="noopener noreferrer">sig-security repo</a></li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="foss">FOSS<a href="https://catena-x.net/blog/Office%20Hours%202023-11-17#foss" class="hash-link" aria-label="Direct link to FOSS" title="Direct link to FOSS">​</a></h3>
+<ul>
+<li>Congrats to <a href="https://github.com/ndr-brt" target="_blank" rel="noopener noreferrer">Andrea Bertagnolli</a>. He was successfully elected to be a committer in the <a href="https://projects.eclipse.org/projects/automotive.tractusx" target="_blank" rel="noopener noreferrer">Eclipse Tractus-X project</a></li>
+<li>YouTube Videos from <a href="https://www.youtube.com/@EclipseFdn" target="_blank" rel="noopener noreferrer">EclipseCon</a> are available<!-- -->
+<ul>
+<li>🌟 <a href="https://github.com/SebastianBezold" target="_blank" rel="noopener noreferrer">Sebastian</a> from our System Team - <a href="https://www.youtube.com/watch?v=eMK1qU-VFWM" target="_blank" rel="noopener noreferrer">Whale Care 101 – How We Organize A 200+ Devs Project</a></li>
+<li>🌟 <a href="https://github.com/evegufy" target="_blank" rel="noopener noreferrer">Evelyn</a> from our Portal Team <a href="https://www.youtube.com/watch?v=76maum1I2aw" target="_blank" rel="noopener noreferrer">Charting new data spaces with Catena-X</a></li>
+<li>🌟 <a href="https://github.com/AngelikaWittek" target="_blank" rel="noopener noreferrer">Angelika</a> and her college Lina - <a href="https://youtu.be/EVg9aP_toG4?si=a6GBgfQT7Ak4Nhrm" target="_blank" rel="noopener noreferrer">Open Source distributions in a cloud-native world from a technical to a legal point of view</a></li>
+</ul>
+</li>
+<li>Tractus-X Community Days tickets are sold out - Please put yourself on <a href="https://www.eventbrite.com/e/first-eclipse-tractus-x-community-days-tickets-721974885317?aff=oddtdtcreator" target="_blank" rel="noopener noreferrer">waiting list</a></li>
+<li>List of Committers &amp; Contributors in <a href="https://confluence.catena-x.net/pages/viewpage.action?pageId=69406871" target="_blank" rel="noopener noreferrer">confluence</a> (only available for consortia members)- Please fill out your information if you want to be listed public</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="open-discussions">Open discussions<a href="https://catena-x.net/blog/Office%20Hours%202023-11-17#open-discussions" class="hash-link" aria-label="Direct link to Open discussions" title="Direct link to Open discussions">​</a></h2>
+<ul>
+<li>little <a href="https://github.com/eclipse-tractusx/SSI-agent-lib/tree/main/docs" target="_blank" rel="noopener noreferrer">pandoc</a> intro from <a href="https://github.com/borisrizov-zf" target="_blank" rel="noopener noreferrer">Boris</a> to generate <code>pdf</code> files</li>
+<li>question from <a href="https://github.com/matbmoser" target="_blank" rel="noopener noreferrer">Mathias</a> what if Trivy Workflow fails --&gt; raise a support issue against the <a href="https://github.com/eclipse-tractusx/sig-security/issues/new/choose" target="_blank" rel="noopener noreferrer">sig-security repo</a></li>
+<li>question from <a href="https://github.com/matbmoser" target="_blank" rel="noopener noreferrer">Mathias</a> does someone have also MIW 403 Errors in their EDCs in INT --&gt; checkout our <a href="https://chat.eclipse.org/#/room/#tractusx:matrix.eclipse.org" target="_blank" rel="noopener noreferrer">Eclipse Matrix Chat</a></li>
+<li>question from <a href="https://github.com/tom-rm-meyer-ISST" target="_blank" rel="noopener noreferrer">Tom</a> to <a href="https://eclipse-tractusx.github.io/docs/release/trg-7/trg-7-05" target="_blank" rel="noopener noreferrer">TRG 7.05 - Legal information</a> --&gt; put the Licence file on root level of your repository</li>
+<li>question from <a href="https://github.com/tom-rm-meyer-ISST" target="_blank" rel="noopener noreferrer">Tom</a> licence information and how to storage for your application --&gt; check out <a href="https://eclipse-tractusx.github.io/docs/release/trg-7/trg-7-07/" target="_blank" rel="noopener noreferrer">TRG 7.07</a> and <a href="https://eclipse-tractusx.github.io/docs/release/trg-7/trg-7-08/" target="_blank" rel="noopener noreferrer">TRG 7.08</a></li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="session-recording">Session recording<a href="https://catena-x.net/blog/Office%20Hours%202023-11-17#session-recording" class="hash-link" aria-label="Direct link to Session recording" title="Direct link to Session recording">​</a></h2>
+<ul>
+<li>You can find the recording <a href="https://bcgcatenax.sharepoint.com/sites/CommunitiesofPractises/_layouts/15/stream.aspx?sw=bypass&amp;bypassReason=abandoned&amp;id=%2Fsites%2FCommunitiesofPractises%2FShared%20Documents%2FCX%2DCoP%20DevSecOps%2FOffice%5FHours%5FRegular%5FRecordings%2FOffice%20Hour%2017%2E11%2E2023%2Emp4&amp;referrer=StreamWebApp%2EWeb&amp;referrerScenario=AddressBarCopied%2Eview" target="_blank" rel="noopener noreferrer">HERE</a></li>
+</ul>]]></content:encoded>
+            <category>news</category>
+            <category>officehour</category>
+        </item>
         <item>
             <title><![CDATA[Office Hours 2023-11-10]]></title>
             <link>https://catena-x.net/blog/Office Hours 2023-11-10</link>
@@ -945,56 +1004,6 @@ unit for CPU fragments are the so called millicores, which means 1000m = 1 full 
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="session-recording">Session recording<a href="https://catena-x.net/blog/Office%20Hours%202023-07-07#session-recording" class="hash-link" aria-label="Direct link to Session recording" title="Direct link to Session recording">​</a></h2>
 <p>You can find the
 recording <a href="https://bcgcatenax.sharepoint.com/:v:/r/sites/CommunitiesofPractises/Shared%20Documents/CX-CoP%20DevSecOps/Office_Hours_Regular_Recordings/CXDevSecOps%20Office%20Hours-20230707_120342-Meeting%20Recording.mp4?csf=1&amp;web=1&amp;e=AkaDMH" target="_blank" rel="noopener noreferrer">here</a>.</p>]]></content:encoded>
-            <category>news</category>
-            <category>officehour</category>
-        </item>
-        <item>
-            <title><![CDATA[Office Hours 2023-06-30]]></title>
-            <link>https://catena-x.net/blog/Office Hours 2023-06-30</link>
-            <guid>https://catena-x.net/blog/Office Hours 2023-06-30</guid>
-            <pubDate>Fri, 30 Jun 2023 00:00:00 GMT</pubDate>
-            <description><![CDATA[General updates / information]]></description>
-            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="general-updates--information">General updates / information<a href="https://catena-x.net/blog/Office%20Hours%202023-06-30#general-updates--information" class="hash-link" aria-label="Direct link to General updates / information" title="Direct link to General updates / information">​</a></h2>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="devsecops">DevSecOps<a href="https://catena-x.net/blog/Office%20Hours%202023-06-30#devsecops" class="hash-link" aria-label="Direct link to DevSecOps" title="Direct link to DevSecOps">​</a></h3>
-<ul>
-<li>Currently working on automated release guideline checks</li>
-<li>Goal is to create reusable workflows and actions</li>
-<li>Potentially coming with this is automated GitHub release creation workflows</li>
-<li>Kind request: In case you face issues or have questions about EF processes, like the ECA check, or you do not know how to fix issues with the ECA check,
-consider opening a support issue on <a href="https://github.com/eclipse-tractusx/sig-infra" target="_blank" rel="noopener noreferrer">sig-infra</a>.
-These are issues, that we most likely already faced and solved. It can also help to reduce the workload on the EF.</li>
-</ul>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="security">Security<a href="https://catena-x.net/blog/Office%20Hours%202023-06-30#security" class="hash-link" aria-label="Direct link to Security" title="Direct link to Security">​</a></h3>
-<ul>
-<li>New <a href="https://eclipse-tractusx.github.io/docs/release/trg-7/trg-7-01/#security-file" target="_blank" rel="noopener noreferrer">SECURITY.md</a> file, that emphasizes GitHub security advisories</li>
-<li>Announcement: Next week, Veracode will showcase their new product "Veracode Fix" in the office hour</li>
-</ul>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="foss">FOSS<a href="https://catena-x.net/blog/Office%20Hours%202023-06-30#foss" class="hash-link" aria-label="Direct link to FOSS" title="Direct link to FOSS">​</a></h3>
-<ul>
-<li>Reminder: There is a Mail on the tractus-x-dev mailing list, asking for anyone feeling responsible for currently uninitialized repositories (10 repos currently)</li>
-<li>Please make sure, that you initialize repositories at least with the legal documentation, after you requested them from the EF</li>
-<li>Kind request: Please share improvements, that you achieved together with the EF, since they might be relevant for others as well. Thanks, Paul for doing this with the "public to maven central" workflow!</li>
-</ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="open-discussions">Open discussions<a href="https://catena-x.net/blog/Office%20Hours%202023-06-30#open-discussions" class="hash-link" aria-label="Direct link to Open discussions" title="Direct link to Open discussions">​</a></h2>
-<ul>
-<li>Question regarding <a href="https://eclipse-tractusx.github.io/docs/release/trg-7/trg-7-07" target="_blank" rel="noopener noreferrer">TRG 7.07</a>; CC-BY-4.0 vs, Apache-2.0 license<!-- -->
-<ul>
-<li>There are parts in the consortial contract, that are dedicated to a use of CC-BY-4.0 for documentation</li>
-<li>It is not clearly defined, what kind of documentation this is refering to</li>
-<li>The decision might have to be made on a product and maybe even on a document basis</li>
-<li>Stay tuned for potential updates. We are working on clarification.</li>
-</ul>
-</li>
-<li>Specific support, in case you want to look into the recording<!-- -->
-<ul>
-<li>Issue configuring environment specific values for a Chart in Argo CD</li>
-<li>Dashboards in Grafana instances</li>
-</ul>
-</li>
-</ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="session-recording">Session recording<a href="https://catena-x.net/blog/Office%20Hours%202023-06-30#session-recording" class="hash-link" aria-label="Direct link to Session recording" title="Direct link to Session recording">​</a></h2>
-<p>You can find the
-recording <a href="https://bcgcatenax.sharepoint.com/sites/CommunitiesofPractises/_layouts/15/stream.aspx?id=%2Fsites%2FCommunitiesofPractises%2FShared%20Documents%2FCX%2DCoP%20DevSecOps%2FOffice%5FHours%5FRegular%5FRecordings%2FCXDevSecOps%20Office%20Hours%2D20230630%5F120755%2DMeeting%20Recording%2Emp4" target="_blank" rel="noopener noreferrer">here</a>.</p>]]></content:encoded>
             <category>news</category>
             <category>officehour</category>
         </item>

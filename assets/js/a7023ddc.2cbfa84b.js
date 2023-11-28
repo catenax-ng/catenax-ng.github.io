@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkcatenax_ng=self.webpackChunkcatenax_ng||[]).push([[1713],{3457:e=>{e.exports=JSON.parse('[{"label":"news","permalink":"/blog/tags/news","count":72},{"label":"officehour","permalink":"/blog/tags/officehour","count":70},{"label":"post-mortem","permalink":"/blog/tags/post-mortem","count":2}]')}}]);
