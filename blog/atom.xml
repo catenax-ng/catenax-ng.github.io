@@ -2,11 +2,67 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://catena-x.net/blog</id>
     <title>Catena-X - DevSecOps Blog</title>
-    <updated>2023-11-17T00:00:00.000Z</updated>
+    <updated>2023-12-01T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://catena-x.net/blog"/>
     <subtitle>Catena-X - DevSecOps Blog</subtitle>
     <icon>https://catena-x.net/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[Office Hours 2023-12-01]]></title>
+        <id>https://catena-x.net/blog/Office Hours 2023-12-01</id>
+        <link href="https://catena-x.net/blog/Office Hours 2023-12-01"/>
+        <updated>2023-12-01T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[General updates / information]]></summary>
+        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="general-updates--information">General updates / information<a href="https://catena-x.net/blog/Office%20Hours%202023-12-01#general-updates--information" class="hash-link" aria-label="Direct link to General updates / information" title="Direct link to General updates / information">​</a></h2>
+<ul>
+<li>Idea that System Team Office Hour will become more open - Please follow upcoming mailing list infos and <a href="https://chat.eclipse.org/#/room/#tractusx:matrix.eclipse.org" target="_blank" rel="noopener noreferrer">Eclipse Matrix Chat</a> discussions</li>
+<li>New Slot in our static agenda: Open Planning - Name tbd. General Updates regarding planning + management</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="devsecops--system-team">DevSecOps / System-Team<a href="https://catena-x.net/blog/Office%20Hours%202023-12-01#devsecops--system-team" class="hash-link" aria-label="Direct link to DevSecOps / System-Team" title="Direct link to DevSecOps / System-Team">​</a></h3>
+<ul>
+<li>PR + Discussion about branch protection and required review count on <a href="https://github.com/eclipse-tractusx/.eclipsefdn/pull/43" target="_blank" rel="noopener noreferrer">website repo</a></li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="security">Security<a href="https://catena-x.net/blog/Office%20Hours%202023-12-01#security" class="hash-link" aria-label="Direct link to Security" title="Direct link to Security">​</a></h3>
+<ul>
+<li>Please do not publish vulnerability reports openly (like screenshot from closed security tools)</li>
+<li>Please do not publish sensitive personal data without consent of the person, the data belongs to (i.e. Email addresses)</li>
+<li>Discussion: Should we maybe be more open with found security vulnerabilities (full disclosure)</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="foss">FOSS<a href="https://catena-x.net/blog/Office%20Hours%202023-12-01#foss" class="hash-link" aria-label="Direct link to FOSS" title="Direct link to FOSS">​</a></h3>
+<ul>
+<li>Open committer election <a href="https://projects.eclipse.org/projects/automotive.tractusx/elections/election-sujit-karne-committer-eclipse-tractus-x" target="_blank" rel="noopener noreferrer">Sujit Karne</a></li>
+<li>Open committer election <a href="https://projects.eclipse.org/projects/automotive.tractusx/elections/election-martin-maul-committer-eclipse-tractus-x" target="_blank" rel="noopener noreferrer">Martin Maul</a></li>
+<li>Reminder: Please use the Project contributor <a href="https://github.com/eclipse-tractusx/sig-infra/issues/new?assignees=&amp;labels=support&amp;projects=&amp;template=support-add-project-contributor.md&amp;title=New+Tractus-X+project+contributor" target="_blank" rel="noopener noreferrer">issue template</a> instead of mailing directly</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="open-planning--community">Open Planning / Community<a href="https://catena-x.net/blog/Office%20Hours%202023-12-01#open-planning--community" class="hash-link" aria-label="Direct link to Open Planning / Community" title="Direct link to Open Planning / Community">​</a></h3>
+<ul>
+<li>Miro Board for this meeting can still be used post consortia</li>
+<li>Follow Mailing List for updates on meetings: TX Guardrails 13.12.2023; Open Refinement 19.12.2023; Open Refinement 10.01.2024; Open Planning 17.01.2024</li>
+<li>new tutorial is online <a href="https://eclipse-tractusx.github.io/docs/tutorials/e2e/" target="_blank" rel="noopener noreferrer">https://eclipse-tractusx.github.io/docs/tutorials/e2e/</a></li>
+<li>MXD (the tutorial is based on it) is a good start, but more teams are working on similar solutions. We need to work on a joint solution here. To provide a "playground" and "test bed"</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="open-discussions">Open discussions<a href="https://catena-x.net/blog/Office%20Hours%202023-12-01#open-discussions" class="hash-link" aria-label="Direct link to Open discussions" title="Direct link to Open discussions">​</a></h2>
+<ul>
+<li>Announcement Release Management: More Release Guidelines, that are still defined in closed systems will be prepared as draft TRGs</li>
+<li>Showcase of <a href="https://github.com/google-github-actions/release-please-action" target="_blank" rel="noopener noreferrer">release-please-action</a>
+<ul>
+<li><a href="https://github.com/catenax-ng/release-automation-playground" target="_blank" rel="noopener noreferrer">catenax-ng/release-automation-playground</a></li>
+<li>Invitation to all consortia teams: If you want to play with it. Ask system team for write access to repo, to test your commit/merge/release workflows</li>
+<li>Dedicated Email will follow to start discussion about potential adoption in Tractus-X</li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="session-recording">Session recording<a href="https://catena-x.net/blog/Office%20Hours%202023-12-01#session-recording" class="hash-link" aria-label="Direct link to Session recording" title="Direct link to Session recording">​</a></h2>
+<ul>
+<li>to come</li>
+</ul>]]></content>
+        <author>
+            <name>DevSecOps Team</name>
+            <uri>https://github.com/catenax-ng</uri>
+        </author>
+        <category label="news" term="news"/>
+        <category label="officehour" term="officehour"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Office Hours 2023-11-17]]></title>
         <id>https://catena-x.net/blog/Office Hours 2023-11-17</id>
@@ -1026,59 +1082,6 @@ unit for CPU fragments are the so called millicores, which means 1000m = 1 full 
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="session-recording">Session recording<a href="https://catena-x.net/blog/Office%20Hours%202023-07-14#session-recording" class="hash-link" aria-label="Direct link to Session recording" title="Direct link to Session recording">​</a></h2>
 <p>You can find the
 recording <a href="https://bcgcatenax.sharepoint.com/:v:/r/sites/CommunitiesofPractises/Shared%20Documents/CX-CoP%20DevSecOps/Office_Hours_Regular_Recordings/20230714_DevSecOps%20Business%20Hours-Recording.mp4?csf=1&amp;web=1&amp;e=yuBcCw" target="_blank" rel="noopener noreferrer">here</a>.</p>]]></content>
-        <author>
-            <name>DevSecOps Team</name>
-            <uri>https://github.com/catenax-ng</uri>
-        </author>
-        <category label="news" term="news"/>
-        <category label="officehour" term="officehour"/>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Office Hours 2023-07-07]]></title>
-        <id>https://catena-x.net/blog/Office Hours 2023-07-07</id>
-        <link href="https://catena-x.net/blog/Office Hours 2023-07-07"/>
-        <updated>2023-07-07T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[General updates / information]]></summary>
-        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="general-updates--information">General updates / information<a href="https://catena-x.net/blog/Office%20Hours%202023-07-07#general-updates--information" class="hash-link" aria-label="Direct link to General updates / information" title="Direct link to General updates / information">​</a></h2>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="devsecops">DevSecOps<a href="https://catena-x.net/blog/Office%20Hours%202023-07-07#devsecops" class="hash-link" aria-label="Direct link to DevSecOps" title="Direct link to DevSecOps">​</a></h3>
-<ul>
-<li>first <a href="https://github.com/eclipse-tractusx/sig-infra" target="_blank" rel="noopener noreferrer">reusable workflows</a> are available (for the time being only for TRG quality checks)
-add revision "@main" to use always the latest version automatically</li>
-<li>Reminder to set <a href="https://eclipse-tractusx.github.io/docs/release/trg-5/trg-5-04/" target="_blank" rel="noopener noreferrer">proper</a> CPU limits on the clusters (especially DEV). See the <a href="https://grafana.dev.demo.catena-x.net/d/efa86fd1d0c121a26444b636a3f509a8/kubernetes-compute-resources-cluster?orgId=1&amp;refresh=10s&amp;from=now-7d&amp;to=now&amp;viewPanel=8" target="_blank" rel="noopener noreferrer">CPU Quota Panel</a> which is part of this general <a href="https://grafana.dev.demo.catena-x.net/d/efa86fd1d0c121a26444b636a3f509a8/kubernetes-compute-resources-cluster?orgId=1&amp;refresh=10s&amp;from=now-7d&amp;to=now" target="_blank" rel="noopener noreferrer">dashboard</a> as reference
-unit for CPU fragments are the so called millicores, which means 1000m = 1 full CPU</li>
-</ul>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="security">Security<a href="https://catena-x.net/blog/Office%20Hours%202023-07-07#security" class="hash-link" aria-label="Direct link to Security" title="Direct link to Security">​</a></h3>
-<ul>
-<li>Veracode checks are mostly green currently - congratulations to the teams</li>
-<li>creating new applications via GitHub Actions is no longer supported. Please contact Security team, if you need a new application</li>
-<li>please delete old/orphaned applications in veracode to keep the overview manageable</li>
-</ul>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="foss">FOSS<a href="https://catena-x.net/blog/Office%20Hours%202023-07-07#foss" class="hash-link" aria-label="Direct link to FOSS" title="Direct link to FOSS">​</a></h3>
-<ul>
-<li>Tractus-X Release 3.1 successful, with minor remarks only<!-- -->
-<ul>
-<li>unfortunately some DEPENDENCIES files were not completely up-to-date - please automate/take care of it more careful</li>
-</ul>
-</li>
-<li>There are still some uninitialized repositories in Tractus-X. Please make sure to add at least the mandatory legal documentation</li>
-<li><a href="https://eclipse-tractusx.github.io/docs/release/trg-7/trg-7-07" target="_blank" rel="noopener noreferrer">TRG 7.07</a> will be improved soon to clarify if which parts of documentation have to use either CC-BY-4.0 or Apache-2.0 license</li>
-<li>Registration for <a href="https://www.eclipsecon.org/2023/registration" target="_blank" rel="noopener noreferrer">EclipseCon 2023</a> is now open.</li>
-</ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="open-discussions">Open discussions<a href="https://catena-x.net/blog/Office%20Hours%202023-07-07#open-discussions" class="hash-link" aria-label="Direct link to Open discussions" title="Direct link to Open discussions">​</a></h2>
-<ul>
-<li>Backup solution: currently there is no solution; Mathias will try the suggested solution using a init container for pgdump</li>
-<li>Distributed Tracing: System team is going to evaluate <a href="https://grafana.com/oss/tempo/" target="_blank" rel="noopener noreferrer">Grafana Tempo</a></li>
-<li>Access to Maven packages on GitHub: Don't use your PAT in GitHub workflows.<!-- -->
-<ul>
-<li>consider using the EF's <a href="https://repo.eclipse.org/" target="_blank" rel="noopener noreferrer">Sonatype Nexus</a> to publish these packages. Please refer to <a href="https://github.com/eclipse-tractusx/tractusx-edc/blob/main/.github/workflows/publish-maven.yaml" target="_blank" rel="noopener noreferrer">EDC's worksflow</a> how to sign and publish a file there.</li>
-<li>Do not forget to add the legal information/attributions to all published packages</li>
-<li>Alternatively it is possible to set up a GitHub App that allows to trigger one workflow from another. (only within an organization)</li>
-</ul>
-</li>
-</ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="session-recording">Session recording<a href="https://catena-x.net/blog/Office%20Hours%202023-07-07#session-recording" class="hash-link" aria-label="Direct link to Session recording" title="Direct link to Session recording">​</a></h2>
-<p>You can find the
-recording <a href="https://bcgcatenax.sharepoint.com/:v:/r/sites/CommunitiesofPractises/Shared%20Documents/CX-CoP%20DevSecOps/Office_Hours_Regular_Recordings/CXDevSecOps%20Office%20Hours-20230707_120342-Meeting%20Recording.mp4?csf=1&amp;web=1&amp;e=AkaDMH" target="_blank" rel="noopener noreferrer">here</a>.</p>]]></content>
         <author>
             <name>DevSecOps Team</name>
             <uri>https://github.com/catenax-ng</uri>
