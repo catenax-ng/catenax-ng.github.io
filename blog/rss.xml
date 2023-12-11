@@ -4,10 +4,53 @@
         <title>Catena-X - DevSecOps Blog</title>
         <link>https://catena-x.net/blog</link>
         <description>Catena-X - DevSecOps Blog</description>
-        <lastBuildDate>Fri, 01 Dec 2023 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 08 Dec 2023 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[Office Hours 2023-12-08]]></title>
+            <link>https://catena-x.net/blog/Office Hours 2023-12-08</link>
+            <guid>https://catena-x.net/blog/Office Hours 2023-12-08</guid>
+            <pubDate>Fri, 08 Dec 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[General updates / information]]></description>
+            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="general-updates--information">General updates / information<a href="https://catena-x.net/blog/Office%20Hours%202023-12-08#general-updates--information" class="hash-link" aria-label="Direct link to General updates / information" title="Direct link to General updates / information">​</a></h2>
+<ul>
+<li>version 23.12 is going to be released today</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="devsecops--system-team">DevSecOps / System-Team<a href="https://catena-x.net/blog/Office%20Hours%202023-12-08#devsecops--system-team" class="hash-link" aria-label="Direct link to DevSecOps / System-Team" title="Direct link to DevSecOps / System-Team">​</a></h3>
+<ul>
+<li>Quality gate checks have been finished successfully</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="security">Security<a href="https://catena-x.net/blog/Office%20Hours%202023-12-08#security" class="hash-link" aria-label="Direct link to Security" title="Direct link to Security">​</a></h3>
+<ul>
+<li>no update</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="foss">FOSS<a href="https://catena-x.net/blog/Office%20Hours%202023-12-08#foss" class="hash-link" aria-label="Direct link to FOSS" title="Direct link to FOSS">​</a></h3>
+<ul>
+<li>The committer elections of <a href="https://projects.eclipse.org/projects/automotive.tractusx/elections/election-sujit-karne-committer-eclipse-tractus-x" target="_blank" rel="noopener noreferrer">Sujit Karne</a> and <a href="https://projects.eclipse.org/projects/automotive.tractusx/elections/election-martin-maul-committer-eclipse-tractus-x" target="_blank" rel="noopener noreferrer">Martin Maul</a> both concluded successfully - congratulations!</li>
+<li>The dash tool has been extended by a new option called "-repo". This adds a link to the repository in question into the opened IP issue tickets simplifying reference/tracking.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="open-planning--community">Open Planning / Community<a href="https://catena-x.net/blog/Office%20Hours%202023-12-08#open-planning--community" class="hash-link" aria-label="Direct link to Open Planning / Community" title="Direct link to Open Planning / Community">​</a></h3>
+<ul>
+<li>no update</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="open-discussions">Open discussions<a href="https://catena-x.net/blog/Office%20Hours%202023-12-08#open-discussions" class="hash-link" aria-label="Direct link to Open discussions" title="Direct link to Open discussions">​</a></h2>
+<ul>
+<li>Question on which platform (helm) integration test will take place after the consortia phase:<!-- -->
+<ul>
+<li>regarding helm pointed to our <a href="https://eclipse-tractusx.github.io/docs/release/trg-5/trg-5-09" target="_blank" rel="noopener noreferrer">TRG 5.09</a></li>
+<li>regarding general integration tests <a href="https://github.com/eclipse-tractusx/sig-release/issues/378" target="_blank" rel="noopener noreferrer">an issue</a> has been raised at project management. Please vote it up if you think this should be prioritized.</li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="session-recording">Session recording<a href="https://catena-x.net/blog/Office%20Hours%202023-12-08#session-recording" class="hash-link" aria-label="Direct link to Session recording" title="Direct link to Session recording">​</a></h2>
+<ul>
+<li>You can find the recording <a href="https://bcgcatenax.sharepoint.com/sites/CommunitiesofPractises/_layouts/15/stream.aspx?id=%2Fsites%2FCommunitiesofPractises%2FShared%20Documents%2FCX%2DCoP%20DevSecOps%2FOffice%5FHours%5FRegular%5FRecordings%2F20231208%5FDevSecOps%2DBusiness%20Hours%2DRecording%2Emp4&amp;referrer=StreamWebApp%2EWeb&amp;referrerScenario=AddressBarCopied%2Eview" target="_blank" rel="noopener noreferrer">HERE</a></li>
+</ul>]]></content:encoded>
+            <category>news</category>
+            <category>officehour</category>
+        </item>
         <item>
             <title><![CDATA[Office Hours 2023-12-01]]></title>
             <link>https://catena-x.net/blog/Office Hours 2023-12-01</link>
@@ -953,60 +996,6 @@ recording <a href="https://bcgcatenax.sharepoint.com/sites/CommunitiesofPractise
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="session-recording">Session recording<a href="https://catena-x.net/blog/Office%20Hours%202023-07-21#session-recording" class="hash-link" aria-label="Direct link to Session recording" title="Direct link to Session recording">​</a></h2>
 <p>You can find the
 recording <a href="https://bcgcatenax.sharepoint.com/sites/CommunitiesofPractises/Shared%20Documents/Forms/AllItems.aspx?OR=Teams%2DHL&amp;CT=1689595535113&amp;clickparams=eyJBcHBOYW1lIjoiVGVhbXMtRGVza3RvcCIsIkFwcFZlcnNpb24iOiIxNDE1LzIzMDYwNDAxMTc3IiwiSGFzRmVkZXJhdGVkVXNlciI6ZmFsc2V9&amp;isAscending=false&amp;sortField=Modified&amp;id=%2Fsites%2FCommunitiesofPractises%2FShared%20Documents%2FCX%2DCoP%20DevSecOps%2FOffice%5FHours%5FRegular%5FRecordings%2F20230721%5FDevSecOps%20Business%20Hours%2DRecording%2Emp4&amp;viewid=a90239a2%2D4eb1%2D446e%2D9246%2Daedc18ebdc75&amp;parent=%2Fsites%2FCommunitiesofPractises%2FShared%20Documents%2FCX%2DCoP%20DevSecOps%2FOffice%5FHours%5FRegular%5FRecordings" target="_blank" rel="noopener noreferrer">here</a>.</p>]]></content:encoded>
-            <category>news</category>
-            <category>officehour</category>
-        </item>
-        <item>
-            <title><![CDATA[Office Hours 2023-07-14]]></title>
-            <link>https://catena-x.net/blog/Office Hours 2023-07-14</link>
-            <guid>https://catena-x.net/blog/Office Hours 2023-07-14</guid>
-            <pubDate>Fri, 14 Jul 2023 00:00:00 GMT</pubDate>
-            <description><![CDATA[General updates / information]]></description>
-            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="general-updates--information">General updates / information<a href="https://catena-x.net/blog/Office%20Hours%202023-07-14#general-updates--information" class="hash-link" aria-label="Direct link to General updates / information" title="Direct link to General updates / information">​</a></h2>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="devsecops">DevSecOps<a href="https://catena-x.net/blog/Office%20Hours%202023-07-14#devsecops" class="hash-link" aria-label="Direct link to DevSecOps" title="Direct link to DevSecOps">​</a></h3>
-<ul>
-<li>Keep in mind, that resources at Eclipse Foundation (IP-Team), System-Team and Security-Team will have only limited resources available during holiday season (August 2023).</li>
-<li>Gentle reminder to set <a href="https://eclipse-tractusx.github.io/docs/release/trg-5/trg-5-04/" target="_blank" rel="noopener noreferrer">proper lower</a> CPU pod ressource requests / limits on dev cluster (no improvements since the last office hour) and same problems occurs on Beta cluster now as well.<!-- -->
-<ul>
-<li>See the <a href="https://grafana.dev.demo.catena-x.net/d/efa86fd1d0c121a26444b636a3f509a8/kubernetes-compute-resources-cluster?orgId=1&amp;refresh=10s&amp;from=now-7d&amp;to=now&amp;viewPanel=8" target="_blank" rel="noopener noreferrer">CPU Quota Panel</a> which is part of this general <a href="https://grafana.dev.demo.catena-x.net/d/efa86fd1d0c121a26444b636a3f509a8/kubernetes-compute-resources-cluster?orgId=1&amp;refresh=10s&amp;from=now-7d&amp;to=now" target="_blank" rel="noopener noreferrer">dashboard</a> as reference
-unit for CPU fragments are the so called millicores, which means 1000m = 1 full CPU</li>
-<li>Hint: <a href="https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/#requests-and-limits" target="_blank" rel="noopener noreferrer">K8s documentation</a></li>
-</ul>
-</li>
-</ul>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="security">Security<a href="https://catena-x.net/blog/Office%20Hours%202023-07-14#security" class="hash-link" aria-label="Direct link to Security" title="Direct link to Security">​</a></h3>
-<ul>
-<li>Friendly Reminder: Please look at VeraCode</li>
-<li>Security assessments ongoing</li>
-</ul>
-<blockquote>
-<p><strong>Announcement</strong> VeraCode presentation session is planned for the Friday 21.7.2023</p>
-</blockquote>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="foss">FOSS<a href="https://catena-x.net/blog/Office%20Hours%202023-07-14#foss" class="hash-link" aria-label="Direct link to FOSS" title="Direct link to FOSS">​</a></h3>
-<ul>
-<li>Presentation from <a href="https://github.com/paullatzelsperger" target="_blank" rel="noopener noreferrer">Paul</a> "How to use a reusable <a href="https://github.com/eclipse-edc/.github/blob/main/.github/workflows/dependency-check.yml" target="_blank" rel="noopener noreferrer">Workflow</a> for gradle Dash Licence Check"</li>
-</ul>
-<div class="language-yaml codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-yaml codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token key atrule" style="color:#00a4db">jobs</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"> </span><span class="token key atrule" style="color:#00a4db">check</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token key atrule" style="color:#00a4db">uses</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> eclipse</span><span class="token punctuation" style="color:#393A34">-</span><span class="token plain">edc/.github/.github/workflows/dependency</span><span class="token punctuation" style="color:#393A34">-</span><span class="token plain">check.yml@main</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
-<ul>
-<li>Reminder from <a href="https://github.com/evegufy" target="_blank" rel="noopener noreferrer">Evelyn</a>  "How to use a reusable <a href="https://github.com/eclipse-tractusx/sig-infra/blob/main/.github/workflows/reusable-dependencies-dotnet.yaml" target="_blank" rel="noopener noreferrer">Workflow</a> for dotnet / yarn Dash Licence Check"</li>
-</ul>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="test-managment">Test-Managment<a href="https://catena-x.net/blog/Office%20Hours%202023-07-14#test-managment" class="hash-link" aria-label="Direct link to Test-Managment" title="Direct link to Test-Managment">​</a></h3>
-<ul>
-<li>Info from Test Management Feature Freeze on INT Environment 24.07.23 - 16.8.23<!-- -->
-<ul>
-<li>Contact: Rainer Herger, Peter Volk, Bernd Rothbrust</li>
-</ul>
-</li>
-</ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="open-discussions">Open discussions<a href="https://catena-x.net/blog/Office%20Hours%202023-07-14#open-discussions" class="hash-link" aria-label="Direct link to Open discussions" title="Direct link to Open discussions">​</a></h2>
-<ul>
-<li>Feedback and Live Demo to VeraCode <a href="https://github.com/eclipse-tractusx/sig-infra/issues/165" target="_blank" rel="noopener noreferrer">issue</a></li>
-<li>Contact person for ArgoCD / INT Environment shared to the <a href="https://teams.microsoft.com/l/channel/19%3a9a3c4a05a3514d07b973c13e7b468709%40thread.tacv2/CX%2520-%2520CoP%2520DevSecOps?groupId=17b1a2dc-67fb-4a49-a2ed-dd1344321439&amp;tenantId=1ad22c6d-2f08-4f05-a0ba-e17f6ce88380" target="_blank" rel="noopener noreferrer">CoP DevSecOps MS Teams channel</a></li>
-<li>Feedback to <a href="https://eclipse-tractusx.github.io/docs/release/trg-5/trg-5-09/" target="_blank" rel="noopener noreferrer">TRG 5.09</a> about Helm Testing</li>
-</ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="session-recording">Session recording<a href="https://catena-x.net/blog/Office%20Hours%202023-07-14#session-recording" class="hash-link" aria-label="Direct link to Session recording" title="Direct link to Session recording">​</a></h2>
-<p>You can find the
-recording <a href="https://bcgcatenax.sharepoint.com/:v:/r/sites/CommunitiesofPractises/Shared%20Documents/CX-CoP%20DevSecOps/Office_Hours_Regular_Recordings/20230714_DevSecOps%20Business%20Hours-Recording.mp4?csf=1&amp;web=1&amp;e=yuBcCw" target="_blank" rel="noopener noreferrer">here</a>.</p>]]></content:encoded>
             <category>news</category>
             <category>officehour</category>
         </item>
