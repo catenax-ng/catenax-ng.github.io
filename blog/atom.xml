@@ -2,11 +2,72 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://catena-x.net/blog</id>
     <title>Catena-X - DevSecOps Blog</title>
-    <updated>2023-12-15T00:00:00.000Z</updated>
+    <updated>2024-01-05T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://catena-x.net/blog"/>
     <subtitle>Catena-X - DevSecOps Blog</subtitle>
     <icon>https://catena-x.net/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[Office Hours 2024-01-05]]></title>
+        <id>https://catena-x.net/blog/Office Hours 2024-01-05</id>
+        <link href="https://catena-x.net/blog/Office Hours 2024-01-05"/>
+        <updated>2024-01-05T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[DevSecOps / System-Team]]></summary>
+        <content type="html"><![CDATA[<h3 class="anchor anchorWithStickyNavbar_LWe7" id="devsecops--system-team">DevSecOps / System-Team<a href="https://catena-x.net/blog/Office%20Hours%202024-01-05#devsecops--system-team" class="hash-link" aria-label="Direct link to DevSecOps / System-Team" title="Direct link to DevSecOps / System-Team">​</a></h3>
+<ul>
+<li>Happy New Year to all of you!</li>
+<li>Offboarding former Developer<br>
+<!-- -->If there are developers who left Catena-X, GH Team Maintainers are asked to do housekeeping in their
+Catenax-ng GH Teams. After removing accounts from a GH Team these accounts won't have access to Repos, ArgoCD and
+Vault any longer. To get deleted from GH Org catenax-ng get in contact with System-Team, who is managing the GH Org.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="security">Security<a href="https://catena-x.net/blog/Office%20Hours%202024-01-05#security" class="hash-link" aria-label="Direct link to Security" title="Direct link to Security">​</a></h3>
+<ul>
+<li>n/a</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="foss">FOSS<a href="https://catena-x.net/blog/Office%20Hours%202024-01-05#foss" class="hash-link" aria-label="Direct link to FOSS" title="Direct link to FOSS">​</a></h3>
+<ul>
+<li>n/a</li>
+<li>FOSS Team will be back starting the week 15. Jan 2024</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="open-planning--community">Open Planning / Community<a href="https://catena-x.net/blog/Office%20Hours%202024-01-05#open-planning--community" class="hash-link" aria-label="Direct link to Open Planning / Community" title="Direct link to Open Planning / Community">​</a></h3>
+<ul>
+<li>No contribution</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="open-discussions">Open discussions<a href="https://catena-x.net/blog/Office%20Hours%202024-01-05#open-discussions" class="hash-link" aria-label="Direct link to Open discussions" title="Direct link to Open discussions">​</a></h2>
+<ul>
+<li>
+<p>License/Copyright Header and new year - do we have to update all files in the repository?<br>
+<!-- -->No, you don't have to. When you touch a file, update the License/Copyright header like this:</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">/*******************************************************************************</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"> * Copyright (c) 2023, 2024 Contributors to the Eclipse Foundation</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">[...]</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+</li>
+<li>
+<p>How to contribute to the catena-x.net website<br>
+<!-- -->The catena-x.net website is owned by the Catena-X Association and not maintained by Eclipse Tractus-X. Please get in
+contact with Stephan Bauer, he will get you in contact with the correct contacts.</p>
+</li>
+<li>
+<p>How to contribute to Eclipse Tractus-X the first time<br>
+<!-- -->All contributions to Eclipse Tractus-X are appreciated, but you need to fulfill some requirements:</p>
+<ul>
+<li>You need to register an <a href="https://accounts.eclipse.org/user/register" target="_blank" rel="noopener noreferrer">Eclipse Account</a>.</li>
+<li>You need to sign the <a href="https://www.eclipse.org/legal/ECA.php" target="_blank" rel="noopener noreferrer">Eclipse Contributor Agreement</a> (ECA), otherwise your
+Pull Request check (for ECA) will fail and not be accepted/merged.</li>
+<li>Add your GitHub ID to your Eclipse profile (<em>Personal Information</em> → <em>Social Media Links</em> → <em>GitHub Username</em>).</li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="session-recording">Session recording<a href="https://catena-x.net/blog/Office%20Hours%202024-01-05#session-recording" class="hash-link" aria-label="Direct link to Session recording" title="Direct link to Session recording">​</a></h2>
+<ul>
+<li>n/a</li>
+</ul>]]></content>
+        <author>
+            <name>DevSecOps Team</name>
+            <uri>https://github.com/catenax-ng</uri>
+        </author>
+        <category label="news" term="news"/>
+        <category label="officehour" term="officehour"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Office Hours 2023-12-15]]></title>
         <id>https://catena-x.net/blog/Office Hours 2023-12-15</id>
@@ -1009,68 +1070,6 @@ recording <a href="https://bcgcatenax.sharepoint.com/sites/CommunitiesofPractise
 <ul>
 <li>tbd</li>
 </ul>]]></content>
-        <author>
-            <name>DevSecOps Team</name>
-            <uri>https://github.com/catenax-ng</uri>
-        </author>
-        <category label="news" term="news"/>
-        <category label="officehour" term="officehour"/>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Office Hours 2023-07-28]]></title>
-        <id>https://catena-x.net/blog/Office Hours 2023-07-28</id>
-        <link href="https://catena-x.net/blog/Office Hours 2023-07-28"/>
-        <updated>2023-07-28T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[General updates / information]]></summary>
-        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="general-updates--information">General updates / information<a href="https://catena-x.net/blog/Office%20Hours%202023-07-28#general-updates--information" class="hash-link" aria-label="Direct link to General updates / information" title="Direct link to General updates / information">​</a></h2>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="devsecops">DevSecOps<a href="https://catena-x.net/blog/Office%20Hours%202023-07-28#devsecops" class="hash-link" aria-label="Direct link to DevSecOps" title="Direct link to DevSecOps">​</a></h3>
-<ul>
-<li>
-<p>Infra components upgrades:</p>
-<ul>
-<li>
-<p>Kube prometheus stack upgraded to 48.2.0 (from 47.0.0) on all environments.</p>
-<ul>
-<li>Changelog <a href="https://github.com/prometheus-community/helm-charts/releases/tag/kube-prometheus-stack-48.2.0" target="_blank" rel="noopener noreferrer">v48.2.0</a></li>
-</ul>
-</li>
-<li>
-<p>Cert-manager upgraded to 1.12.2 (from 1.10.0) on all environments.</p>
-<ul>
-<li>Changelog <a href="https://cert-manager.io/docs/release-notes/release-notes-1.12/" target="_blank" rel="noopener noreferrer">v1.12.2</a></li>
-</ul>
-</li>
-<li>
-<p>Ingress-nginx upgraded to 4.7.1 (from 4.5.2) on all environments.</p>
-<ul>
-<li>Changelog <a href="https://github.com/kubernetes/ingress-nginx/releases/tag/controller-v1.8.1" target="_blank" rel="noopener noreferrer">v4.7.1</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li>
-<p>GitHub Action Minutes hit Quota Limit (catenax-ng org), workflows will not be executed until end of the month.</p>
-</li>
-<li>
-<p>Reminder on efficient usage/request of kubernetes' clusters CPU/Mem resources. Currently disproportion between really utilized resources vs allocated is very high what causes capacity constraints.</p>
-</li>
-</ul>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="security">Security<a href="https://catena-x.net/blog/Office%20Hours%202023-07-28#security" class="hash-link" aria-label="Direct link to Security" title="Direct link to Security">​</a></h3>
-<ul>
-<li>Veracode token expired. The token is used for GitHub Actions. Upload and scan feature doesn't work currently, expected to fix within a week.</li>
-<li>Request to check Veracode finding since many SCA findings are present. It's recommended to update dependencies.</li>
-</ul>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="foss">FOSS<a href="https://catena-x.net/blog/Office%20Hours%202023-07-28#foss" class="hash-link" aria-label="Direct link to FOSS" title="Direct link to FOSS">​</a></h3>
-<ul>
-<li>No presence.</li>
-</ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="open-discussions">Open discussions<a href="https://catena-x.net/blog/Office%20Hours%202023-07-28#open-discussions" class="hash-link" aria-label="Direct link to Open discussions" title="Direct link to Open discussions">​</a></h2>
-<ul>
-<li>Question rised about reviewing open IP issue for Digital Twin Registry application. Advised that Eclipse Foundation needs to review that, as it's not DevOps scope. With regards to PR review, it was stated that every committer can review PR. In general two step approach is followed, first legal stuff is verified and then application related by a team member.</li>
-<li>Question on rejected PR due to Eclipse Foundation Agreement, specifically what is the way to find who from involved committers doesn't have it valid/signed off. Normally it should be visible on a detailed page. For the given case seems like on of the member didn't sign it, name was given in the communication.</li>
-</ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="session-recording">Session recording<a href="https://catena-x.net/blog/Office%20Hours%202023-07-28#session-recording" class="hash-link" aria-label="Direct link to Session recording" title="Direct link to Session recording">​</a></h2>
-<p>You can find the recording <a href="https://bcgcatenax.sharepoint.com/:v:/r/sites/CommunitiesofPractises/Shared%20Documents/CX-CoP%20DevSecOps/Office_Hours_Regular_Recordings/20230728_DevSecOps%20Business%20Hours-Recording.mp4?csf=1&amp;web=1&amp;e=h8tfgU" target="_blank" rel="noopener noreferrer">here</a></p>]]></content>
         <author>
             <name>DevSecOps Team</name>
             <uri>https://github.com/catenax-ng</uri>
