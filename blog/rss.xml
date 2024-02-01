@@ -4,10 +4,23 @@
         <title>Catena-X - DevSecOps Blog</title>
         <link>https://catena-x.net/blog</link>
         <description>Catena-X - DevSecOps Blog</description>
-        <lastBuildDate>Fri, 12 Jan 2024 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 19 Jan 2024 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[Office Hours have a new home]]></title>
+            <link>https://catena-x.net/blog/Office Hours 2024-01-19</link>
+            <guid>https://catena-x.net/blog/Office Hours 2024-01-19</guid>
+            <pubDate>Fri, 19 Jan 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[- Heads up, the office hour news have moved to the Eclipse Tractus-X homepage.]]></description>
+            <content:encoded><![CDATA[<ul>
+<li>Heads up, the office hour news have moved to the <a href="https://eclipse-tractusx.github.io/community/meeting-minutes/" target="_blank" rel="noopener noreferrer">Eclipse Tractus-X homepage</a>.<br>
+<!-- -->Please remember to update your bookmarks.</li>
+</ul>]]></content:encoded>
+            <category>news</category>
+            <category>officehour</category>
+        </item>
         <item>
             <title><![CDATA[Office Hours 2024-01-12]]></title>
             <link>https://catena-x.net/blog/Office Hours 2024-01-12</link>
@@ -922,39 +935,6 @@ recording <a href="https://bcgcatenax.sharepoint.com/:v:/r/sites/CommunitiesofPr
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="session-recording">Session recording<a href="https://catena-x.net/blog/Office%20Hours%202023-08-18#session-recording" class="hash-link" aria-label="Direct link to Session recording" title="Direct link to Session recording">​</a></h2>
 <ul>
 <li>was broken this time, you can find the transcription <a href="https://bcgcatenax.sharepoint.com/:w:/r/sites/CommunitiesofPractises/Shared%20Documents/CX-CoP%20DevSecOps/Office_Hours_Regular_Recordings/20230818_DevSecOps%20Business%20Hours-Transkript.docx?d=w7cd30dd438694b3a8371bd9589606ce0&amp;csf=1&amp;web=1&amp;e=Wzkj1s" target="_blank" rel="noopener noreferrer">here</a>.</li>
-</ul>]]></content:encoded>
-            <category>news</category>
-            <category>officehour</category>
-        </item>
-        <item>
-            <title><![CDATA[Office Hours 2023-08-11]]></title>
-            <link>https://catena-x.net/blog/Office Hours 2023-08-11</link>
-            <guid>https://catena-x.net/blog/Office Hours 2023-08-11</guid>
-            <pubDate>Fri, 11 Aug 2023 00:00:00 GMT</pubDate>
-            <description><![CDATA[General updates / information]]></description>
-            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="general-updates--information">General updates / information<a href="https://catena-x.net/blog/Office%20Hours%202023-08-11#general-updates--information" class="hash-link" aria-label="Direct link to General updates / information" title="Direct link to General updates / information">​</a></h2>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="devsecops">DevSecOps<a href="https://catena-x.net/blog/Office%20Hours%202023-08-11#devsecops" class="hash-link" aria-label="Direct link to DevSecOps" title="Direct link to DevSecOps">​</a></h3>
-<ul>
-<li>Configuring the Eclipse Tractus-X GitHub organization is available through the <a href="https://github.com/eclipse-tractusx/.eclipsefdn" target="_blank" rel="noopener noreferrer">eclipsefdn</a> repository. The tool behind it is called <a href="https://gitlab.eclipse.org/eclipsefdn/security/otterdog" target="_blank" rel="noopener noreferrer">Otterdog</a> and the current configuration and available settings, organization secrets and more can be found <a href="https://eclipse-tractusx.github.io/.eclipsefdn/configuration/" target="_blank" rel="noopener noreferrer">here</a>. Opening a <a href="https://github.com/eclipse-tractusx/sig-infra/issues/new/choose" target="_blank" rel="noopener noreferrer">GitHub issue</a> with a request for the System Team is still supported.</li>
-</ul>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="security">Security<a href="https://catena-x.net/blog/Office%20Hours%202023-08-11#security" class="hash-link" aria-label="Direct link to Security" title="Direct link to Security">​</a></h3>
-<ul>
-<li>Security Team is getting ready for Quality Gate. Every team is encouraged to look at the security issues in time to have them fixed before the reviews.</li>
-</ul>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="foss">FOSS<a href="https://catena-x.net/blog/Office%20Hours%202023-08-11#foss" class="hash-link" aria-label="Direct link to FOSS" title="Direct link to FOSS">​</a></h3>
-<ul>
-<li>Each opened Eclipse Matrix chat room and thread needs a maintainer or a person responsible for answering questions/for requests there.</li>
-<li>EclipseCon will take place in October 16 - 19, 2023. Multiple people from the community will be there and also will host talks. Discounts are available for committers and member companies.</li>
-</ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="open-discussions">Open discussions<a href="https://catena-x.net/blog/Office%20Hours%202023-08-11#open-discussions" class="hash-link" aria-label="Direct link to Open discussions" title="Direct link to Open discussions">​</a></h2>
-<ul>
-<li><a href="https://app.swaggerhub.com/search" target="_blank" rel="noopener noreferrer">SwaggerHub</a> is used now to publish APIs from EDC in Eclipse Tractusx and also from the upstream EDC project. Different tools like maven plugins can be used to combine mulitple yaml files that can be posted in the end. The whole process can be put into a GitHub workflow with specifying some secrets for accessing SwaggerHub.</li>
-<li>A great demo was presented on how to handle postgres credentials in a helm chart when introduced as a dependency. It is available in detail <a href="https://bcgcatenax.sharepoint.com/sites/CommunitiesofPractises/Shared%20Documents/Forms/AllItems.aspx?FolderCTID=0x01200075F4DD2D705FA349B372CD3378FD1093&amp;id=%2Fsites%2FCommunitiesofPractises%2FShared%20Documents%2FCX%2DCoP%20DevSecOps%2FOffice%5FHours%5FRegular%5FRecordings%2F20230811%5FDevSecOps%20Business%20Hours%2DRecording%2Emp4&amp;parent=%2Fsites%2FCommunitiesofPractises%2FShared%20Documents%2FCX%2DCoP%20DevSecOps%2FOffice%5FHours%5FRegular%5FRecordings" target="_blank" rel="noopener noreferrer">in the recording starting at 26:56</a>.</li>
-</ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="session-recording">Session recording<a href="https://catena-x.net/blog/Office%20Hours%202023-08-11#session-recording" class="hash-link" aria-label="Direct link to Session recording" title="Direct link to Session recording">​</a></h2>
-<ul>
-<li>You can find the
-recording <a href="https://bcgcatenax.sharepoint.com/sites/CommunitiesofPractises/Shared%20Documents/Forms/AllItems.aspx?FolderCTID=0x01200075F4DD2D705FA349B372CD3378FD1093&amp;id=%2Fsites%2FCommunitiesofPractises%2FShared%20Documents%2FCX%2DCoP%20DevSecOps%2FOffice%5FHours%5FRegular%5FRecordings%2F20230811%5FDevSecOps%20Business%20Hours%2DRecording%2Emp4&amp;parent=%2Fsites%2FCommunitiesofPractises%2FShared%20Documents%2FCX%2DCoP%20DevSecOps%2FOffice%5FHours%5FRegular%5FRecordings" target="_blank" rel="noopener noreferrer">here</a>.</li>
 </ul>]]></content:encoded>
             <category>news</category>
             <category>officehour</category>
